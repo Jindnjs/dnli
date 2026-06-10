@@ -1,0 +1,265 @@
+{
+  "id": "108",
+  "core": "1핵심",
+  "coreColor": "core1",
+  "ctCode": "핵심기술3",
+  "ctTitle": "정밀상대 및 연속복합측위 기술",
+  "cteCode": "세부기술6",
+  "output_code": "성과물8",
+  "title": "Pseudo-GNSS 단말 및 기술",
+  "registeredAt": "",
+  "summaryInstitutions": [
+    "㈜지오스토리"
+  ],
+  "overview": {
+    "description": "실내공간의 GNSS 위성신호 음영지역을 분석하고, 현장특성에 따라 적합한 방식으로 Pseudo-GNSS으로 신호를 송출하는 시스템",
+    "descriptionNote": "",
+    "necessityRows": [
+      [
+        {
+          "html": "GNSS 위성신호가 단절되는 실내 지역에는 측위불가"
+        },
+        {
+          "html": "5m급 정밀도의 GNSS 위성신호로 실내외 연속측위 가능"
+        }
+      ],
+      [
+        {
+          "html": "기존 시제품 형태의 시스템으로 현장 적용 및 서비스 제공에 한계가 존재"
+        },
+        {
+          "html": "상용화를 추진하여 실내 공간정보 서비스의 정확도 향상"
+        }
+      ]
+    ]
+  },
+  "researchContent": {
+    "headerRows": [
+      [
+        {
+          "html": "구분",
+          "rowspan": 2
+        },
+        {
+          "html": "연구 수행 내용",
+          "colspan": 10
+        }
+      ],
+      [
+        {
+          "html": "'22 (1차년도)",
+          "colspan": 2
+        },
+        {
+          "html": "'23 (2차년도)",
+          "colspan": 2
+        },
+        {
+          "html": "'24 (3차년도)",
+          "colspan": 2
+        },
+        {
+          "html": "'25 (4차년도)",
+          "colspan": 2
+        },
+        {
+          "html": "'26 (5차년도)",
+          "colspan": 2
+        }
+      ]
+    ],
+    "rows": [
+      {
+        "label": "주요 연구 내용",
+        "cells": [
+          {
+            "html": "Pseudo-GNSS 설계",
+            "colspan": 2
+          },
+          {
+            "html": "Pseudo-GNSS 구현",
+            "colspan": 2
+          },
+          {
+            "html": "Pseudo-GNSS 운용S/W",
+            "colspan": 2
+          },
+          {
+            "html": "Pseudo-GNSS 차량이동환경 비교 분석",
+            "colspan": 2
+          },
+          {
+            "html": "Pseudo-GNSS 상용화 및 테스트베드 적용",
+            "colspan": 2
+          }
+        ]
+      },
+      {
+        "label": "정량적 성능목표",
+        "cells": [
+          {
+            "html": "설계서 산출 1건",
+            "colspan": 2
+          },
+          {
+            "html": "모듈시제품 1건 <br>펌웨어제작 1건",
+            "colspan": 2
+          },
+          {
+            "html": "운용 APP. 1건",
+            "colspan": 2
+          },
+          {
+            "html": "실증평가보고서 1건,<br>MMS비교분석서 1건",
+            "colspan": 2
+          },
+          {
+            "html": "상용화제품 1건, <br>테스트베드적용 1건",
+            "colspan": 2
+          }
+        ]
+      },
+      {
+        "label": "테스트 일정·결과",
+        "labelRowspan": 2,
+        "cells": [
+          {
+            "html": "'22.11.",
+            "rowspan": 2
+          },
+          {
+            "html": "단독측위 기술 설계서 산출",
+            "rowspan": 2
+          },
+          {
+            "html": "'23.07."
+          },
+          {
+            "html": "모듈시제품"
+          },
+          {
+            "html": "'24. 11.",
+            "rowspan": 2
+          },
+          {
+            "html": "단독측위 기술 운용SW APP.제작",
+            "rowspan": 2
+          },
+          {
+            "html": "'25.10.",
+            "rowspan": 2
+          },
+          {
+            "html": "실증시험 평가,<br>비교분석",
+            "rowspan": 2
+          },
+          {
+            "html": "'26.11. (예정)",
+            "rowspan": 2
+          },
+          {
+            "html": "-",
+            "rowspan": 2
+          }
+        ]
+      },
+      {
+        "cells": [
+          {
+            "html": "'23.11."
+          },
+          {
+            "html": "펌웨어 제작"
+          }
+        ]
+      },
+      {
+        "label": "주요 연구 성과",
+        "cells": [
+          {
+            "groupId": "y22",
+            "summaryHtml": "논문, 청년고용",
+            "colspan": 2
+          },
+          {
+            "groupId": "y23",
+            "summaryHtml": "특허출원, SW저작권",
+            "colspan": 2
+          },
+          {
+            "groupId": "y24",
+            "summaryHtml": "특허출원, 특허등록, SW저작권, 청년고용",
+            "colspan": 2
+          },
+          {
+            "groupId": "y25",
+            "summaryHtml": "특허 등록, 논문",
+            "colspan": 2
+          },
+          {
+            "groupId": "y26",
+            "summaryHtml": "논문, 사업화, KC인증",
+            "colspan": 2
+          }
+        ]
+      }
+    ]
+  },
+  "applications": {
+    "overview": "실내, 터널 및 지하공간 시설물 분야의 정밀 측위 서비스",
+    "cards": [
+      {
+        "title": "터널 작업자 안전 및 주행차량 실내외 연속 측위에 활용",
+        "current": "터널 작업시 공간정보 부재로 인해 작업자들의 위치 파악이 제대로 되지 않아 안전관리에 어려우며, 주행차량의 실시간 위치측위가 불가하여 관리업무 및 시설이용에 어려움이 있음",
+        "improved": "센텀-만덕 지하고속도로(총연장 9.62km)에 50m 간격으로 단가 500만원에 200개 정도 설치할 경우 10억(설치 및 운영비 별도) 정도 되며 실시간 주행안전 및 현장작업자 안전에 활용"
+      },
+      {
+        "title": "지하/실내공간의 재난대비 및 사후처리 관리 분야에 활용",
+        "current": "재난 대응 시 지하/실내공간의 재난 사고 위치가 좌표기반으로 특정되지 않아 현장출동자의 초동대응에 한계가 존재, 사후처리시 다수의 기관이 공동대응시 혼란이 가중됨",
+        "improved": "지하/실내공간 및 터널 지역의 사고는 연평균 820건이 발생하므로 본 시스템 설치시 30%이상 사고율 감소를 전망"
+      }
+    ]
+  },
+  "process": {
+    "processImage": {
+      "src": "data/contents/research/projects/108/images/process.png",
+      "alt": "데이터 처리 프로세스"
+    },
+    "inputHtml": "Slave 장비간 시각 딜레이값, Offset 좌표값, RF출력 조정값",
+    "outputHtml": "음영지역 전용 최대 12개의 GPS 위성신호 송출하여 실시간 좌표측량",
+    "outputImages": [
+      {
+        "src": "data/contents/research/projects/108/images/output1.png",
+        "alt": "",
+        "caption": ""
+      },
+      {
+        "src": "data/contents/research/projects/108/images/output2.png",
+        "alt": "<사용자 스마트기기 활용 실시간 위치측위>",
+        "caption": "<사용자 스마트기기 활용 실시간 위치측위>"
+      }
+    ]
+  },
+  "demo": {
+    "src": "",
+    "height": 1200
+  },
+  "institutions": {
+    "leadContacts": [
+      {
+        "name": "이호철",
+        "role": "개발",
+        "phone": "010-3786-2133",
+        "email": "myway57@naver.com"
+      }
+    ],
+    "partners": []
+  },
+  "downloads": {
+    "y22": [],
+    "y23": [],
+    "y24": [],
+    "y25": [],
+    "y26": []
+  }
+}

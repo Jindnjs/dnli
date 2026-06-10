@@ -1,0 +1,245 @@
+{
+  "id": "212",
+  "core": "2핵심",
+  "coreColor": "core2",
+  "ctCode": "핵심기술2",
+  "ctTitle": "다차원/다시점 공간 데이터 기반 변화인식 및 공간정보 자동갱신 기술",
+  "cteCode": "세부기술6",
+  "output_code": "성과물12",
+  "title": "국가공간정보DB 자동 구축 및 갱신 기술",
+  "registeredAt": "",
+  "summaryInstitutions": [
+    "제타럭스시스템"
+  ],
+  "overview": {
+    "description": "신규 입력된 공간정보 데이터에 대한 국가공간정보DB 자동 구축 및 갱신 기술",
+    "descriptionNote": "",
+    "necessityRows": [
+      [
+        {
+          "html": "국토공간 변화로 신규 3차원 공간정보 데이터가 지속적으로 생성되고 있으나, 국가공간정보DB 구축 및 갱신 과정이 수작업 중심으로 수행되고 있음"
+        },
+        {
+          "html": "신규 입력된 공간정보 데이터를 자동 분석하여 국가공간정보DB 구축 및 갱신을 자동화하는 기술을 적용"
+        }
+      ],
+      [
+        {
+          "html": "신규 공간정보 데이터의 DB 반영에 시간이 소요되어 국가공간정보DB의 최신성 유지와 효율적인 관리에 한계가 있음"
+        },
+        {
+          "html": "데이터 갱신 이력 관리 및 DB 연계를 지원하고 국가공간정보DB의 최신성과 운영 효율성 향상 도모"
+        }
+      ]
+    ]
+  },
+  "researchContent": {
+    "headerRows": [
+      [
+        {
+          "html": "구분",
+          "rowspan": 2
+        },
+        {
+          "html": "연구 수행 내용",
+          "colspan": 10
+        }
+      ],
+      [
+        {
+          "html": "'22 (1차년도)",
+          "colspan": 2
+        },
+        {
+          "html": "'23 (2차년도)",
+          "colspan": 2
+        },
+        {
+          "html": "'24 (3차년도)",
+          "colspan": 2
+        },
+        {
+          "html": "'25 (4차년도)",
+          "colspan": 2
+        },
+        {
+          "html": "'26 (5차년도)",
+          "colspan": 2
+        }
+      ]
+    ],
+    "rows": [
+      {
+        "label": "주요 연구 내용",
+        "cells": [
+          {
+            "html": "국가공간DB 갱신 기술 요구사항 정의 및 설계",
+            "colspan": 2
+          },
+          {
+            "html": "국가공간정보DB 갱신 기술 프로그램 개발 소스",
+            "colspan": 2
+          },
+          {
+            "html": "국가공간정보 DB 자동 구축 및 갱신 SW 고도화",
+            "colspan": 2
+          },
+          {
+            "html": "국가공간정보DB 갱신 기술 테스트",
+            "colspan": 2
+          },
+          {
+            "html": "국가공간정보DB 갱신 기술 매뉴얼 도출",
+            "colspan": 2
+          }
+        ]
+      },
+      {
+        "label": "정량적 성능목표",
+        "cells": [
+          {
+            "html": "설계서 적정판정",
+            "colspan": 2
+          },
+          {
+            "html": "기능동작 100%",
+            "colspan": 2
+          },
+          {
+            "html": "-",
+            "colspan": 2
+          },
+          {
+            "html": "테스트 결과서 적정판정",
+            "colspan": 2
+          },
+          {
+            "html": "매뉴얼 확인",
+            "colspan": 2
+          }
+        ]
+      },
+      {
+        "label": "테스트 일정·결과",
+        "cells": [
+          {
+            "html": "'22.10."
+          },
+          {
+            "html": "자문회의 적정성 판정"
+          },
+          {
+            "html": "'23.10."
+          },
+          {
+            "html": "기능동작 100%"
+          },
+          {
+            "html": "'24.10."
+          },
+          {
+            "html": "전문위원단 검증"
+          },
+          {
+            "html": "'25.10."
+          },
+          {
+            "html": "공인인증시험 적합 판정"
+          },
+          {
+            "html": "'26.10. (예정)"
+          },
+          {
+            "html": "전문위원단 검증 및 기술인증"
+          }
+        ]
+      },
+      {
+        "label": "주요 연구 성과",
+        "cells": [
+          {
+            "groupId": "y22",
+            "summaryHtml": "기술 문서 5건",
+            "colspan": 2
+          },
+          {
+            "groupId": "y23",
+            "summaryHtml": "기술 시연",
+            "colspan": 2
+          },
+          {
+            "groupId": "y24",
+            "summaryHtml": "-",
+            "colspan": 2
+          },
+          {
+            "groupId": "y25",
+            "summaryHtml": "기술 시연",
+            "colspan": 2
+          },
+          {
+            "groupId": "y26",
+            "summaryHtml": "SW 등록,<br>기술문서",
+            "colspan": 2
+          }
+        ]
+      }
+    ]
+  },
+  "applications": {
+    "overview": "국가 3차원 공간정보 구축·갱신 및 공간정보 기반 서비스 활용 분야",
+    "cards": [
+      {
+        "title": "공공기관 공간정보 구축 및 관리 업무 활용",
+        "current": "국토지리정보원 등 공공기관은 3차원 공간정보 구축사업 및 정밀도로지도 구축 사업을 추진하고 있으나, 공간정보 DB 자동 갱신 기술 및 서비스가 부족하여 최신 공간정보 유지 및 활용에 한계가 있음",
+        "improved": "고정밀 3차원 공간정보 데이터를 효율적으로 수집·갱신할 수 있는 기술이 제공됨으로써, 실시간으로 갱신된 데이터를 기존 국가공간정보 플랫폼에 반영할 수 있으며, 공공기관의 공간정보 서비스 신뢰도 향상 및 건축물 인허가 등 행정 업무 고도화에 활용 가능"
+      },
+      {
+        "title": "민간 공간정보 서비스 개발 및 활용",
+        "current": "민간에서는 다양한 공간정보 기반 서비스를 개발하고자 하나, 고정밀 공간데이터를 저비용으로 수집·갱신할 수 있는 데이터와 플랫폼이 부족하여 서비스 개발 및 확장에 제약이 존재",
+        "improved": "고정밀 3차원 공간정보 데이터의 수집·갱신 및 품질 검수 기준이 제공됨으로써, 민간 기업이 해당 데이터를 활용하여 다양한 응용 서비스 개발이 가능하며, 공간정보 데이터 유통 및 서비스 시장 확장 기반으로 활용 가능"
+      }
+    ]
+  },
+  "process": {
+    "processImage": {
+      "src": "data/contents/research/projects/212/images/process.png",
+      "alt": "데이터 처리 프로세스"
+    },
+    "inputHtml": "DEM 파일(.tif), 건물 모델 파일(.gml), 정사영상(.tif), 도로(.shp)",
+    "outputImages": [
+      {
+        "src": "data/contents/research/projects/212/images/output1.png",
+        "alt": "통합 플랫폼 연계 갱신 SW 웹 서비스 갱신 내역 조회 화면",
+        "caption": "통합 플랫폼 연계 갱신 SW 웹 서비스 갱신 내역 조회 화면"
+      },
+      {
+        "src": "data/contents/research/projects/212/images/output2.png",
+        "alt": "건물 갱신 내역 시각화",
+        "caption": "건물 갱신 내역 시각화"
+      }
+    ]
+  },
+  "demo": {
+    "src": "",
+    "height": 1200
+  },
+  "institutions": {
+    "leadContacts": [
+      {
+        "name": "조규성",
+        "role": "성과물 관리",
+        "phone": "010-5108-7077",
+        "email": "qsung1230@zetalux.co.kr"
+      }
+    ],
+    "partners": []
+  },
+  "downloads": {
+    "y22": [],
+    "y23": [],
+    "y24": [],
+    "y25": [],
+    "y26": []
+  }
+}

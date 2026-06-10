@@ -1,0 +1,246 @@
+{
+  "id": "407",
+  "core": "4핵심",
+  "coreColor": "core4",
+  "ctCode": "핵심기술3",
+  "ctTitle": "동적정보 분석, 예측 및 표현기술 개발",
+  "cteCode": "세부기술4",
+  "output_code": "성과물7",
+  "title": "동적정보 데이터 관리 기술",
+  "registeredAt": "",
+  "summaryInstitutions": [
+    "㈜제이비티"
+  ],
+  "overview": {
+    "description": "동적주제도 데이터베이스의 품질 및 표준화 점검·관리 통합 시스텝",
+    "descriptionNote": "",
+    "necessityRows": [
+      [
+        {
+          "html": "동적정보 데이터는 계속 수집되고 지속적으로 동적주제도를 생성되어 품질 관리 자동화 필요"
+        },
+        {
+          "html": "DB관리시스템은 동적정보 DB에 접근해 품질 관리 프로세스를 자동으로 수행하고 추적 관리"
+        }
+      ],
+      [
+        {
+          "html": "데이터베이스 표준은 시스템 성능과 유지관리를 위한 필수 항목으로 지속적인 관리 필요"
+        },
+        {
+          "html": "DB관리시스템은 데이터베이스 표준과 객체코드를 자동으로 점검하고 지속적으로 관리"
+        }
+      ]
+    ]
+  },
+  "researchContent": {
+    "headerRows": [
+      [
+        {
+          "html": "구분",
+          "rowspan": 2
+        },
+        {
+          "html": "연구 수행 내용",
+          "colspan": 10
+        }
+      ],
+      [
+        {
+          "html": "'22 (1차년도)",
+          "colspan": 2
+        },
+        {
+          "html": "'23 (2차년도)",
+          "colspan": 2
+        },
+        {
+          "html": "'24 (3차년도)",
+          "colspan": 2
+        },
+        {
+          "html": "'25 (4차년도)",
+          "colspan": 2
+        },
+        {
+          "html": "'26 (5차년도)",
+          "colspan": 2
+        }
+      ]
+    ],
+    "rows": [
+      {
+        "label": "주요 연구 내용",
+        "cells": [
+          {
+            "html": "동적 통합정보",
+            "colspan": 2
+          },
+          {
+            "html": "동적 통합정보 DB관리시스템 개발",
+            "colspan": 2
+          },
+          {
+            "html": "DB 구축 및",
+            "colspan": 2
+          },
+          {
+            "html": "객체별/주제별 동적정보 생성 개발",
+            "colspan": 2
+          },
+          {
+            "html": "DB 지속 구축 및 DB관리시스템 운영",
+            "colspan": 2
+          }
+        ]
+      },
+      {
+        "label": "정량적 성능목표",
+        "cells": [
+          {
+            "html": "DB표준화지침 준수 데이터모델정합성 90%",
+            "colspan": 2
+          },
+          {
+            "html": "시스템 운용률 90% <br>DB 구축 70%",
+            "colspan": 2
+          },
+          {
+            "html": "시스템 운용률 95% <br>데이터유효성 85%",
+            "colspan": 2
+          },
+          {
+            "html": "데이터유효성 92%",
+            "colspan": 2
+          },
+          {
+            "html": "데이터유효성 97%",
+            "colspan": 2
+          }
+        ]
+      },
+      {
+        "label": "테스트 일정·결과",
+        "cells": [
+          {
+            "html": "'22.11."
+          },
+          {
+            "html": "전문가 검증 (적합, 90.5%)"
+          },
+          {
+            "html": "'23.10."
+          },
+          {
+            "html": "전문가 검증 (시스템 92%, DB 81%)"
+          },
+          {
+            "html": "'24.11."
+          },
+          {
+            "html": "전문가 검증 (시스템 100%, DB 88.2%)"
+          },
+          {
+            "html": "'25.10."
+          },
+          {
+            "html": "전문가 검증 (99.8%)"
+          },
+          {
+            "html": "'26.10. (예정)"
+          },
+          {
+            "html": "-"
+          }
+        ]
+      },
+      {
+        "label": "주요 연구 성과",
+        "cells": [
+          {
+            "groupId": "y22",
+            "summaryHtml": "논문 비SCI 1건",
+            "colspan": 2
+          },
+          {
+            "groupId": "y23",
+            "summaryHtml": "특허출원 1건<br>SW등록 1건",
+            "colspan": 2
+          },
+          {
+            "groupId": "y24",
+            "summaryHtml": "특허출원 1건<br>SW등록 1건",
+            "colspan": 2
+          },
+          {
+            "groupId": "y25",
+            "summaryHtml": "-",
+            "colspan": 2
+          },
+          {
+            "groupId": "y26",
+            "summaryHtml": "-",
+            "colspan": 2
+          }
+        ]
+      }
+    ]
+  },
+  "applications": {
+    "overview": "(지방자치단체/스마트시티) 데이터 관리, 분석 등 데이터 품질 관리",
+    "cards": [
+      {
+        "title": "관리 대상 시스템의 데이터베이스 통합 조회",
+        "current": "개별 시스템에서 관리되는 데이터의 조회 및 품질관리를 위해서 사용자 또는 관리자는 각 시스템별로 접속해서 필요한 정보를 조회하고, 품질 관리를 위한 데이터 점검을 각각 수행",
+        "improved": "개별 시스템의 데이터를 DB 관리시스템과 연동시켜 각 시스템의 데이터를 한 곳에서 조회하고, 시스템 구축 데이터의 품질관리를 위한 프로세스를 DB 관리시스템에서 통합 수행"
+      },
+      {
+        "title": "정기적인 표준 점검 및 품질 관리 자동 수행",
+        "current": "데이터베이스 표준은 시스템 구축 시에 대부분 준수하지만, 관리 시스템이 없는 경우 유지관리 및 운영 과정에서 추적 관리가 되지 않아 성능 저하 및 유지관리 복잡도 증가",
+        "improved": "데이터베이스 표준은 시스템에 등록되어 관리되고, 자동화된 점검 체계에 의해 표준 준수 여부와 데이터베이스 품질을 정기적으로 추적 관리하고 관리자에게 분석 정보 제공"
+      }
+    ]
+  },
+  "process": {
+    "processImage": {
+      "src": "data/contents/research/projects/407/images/process.png",
+      "alt": "데이터 처리 프로세스"
+    },
+    "inputHtml": "동적주제도 관련 시스템의 데이터베이스 메타데이터 및 구축데이터",
+    "outputHtml": "연동 시스템 데이터베이스 조회 결과 및 DB 표준, 품질 점검 결과",
+    "outputImages": [
+      {
+        "src": "data/contents/research/projects/407/images/output1.png",
+        "alt": "데이터베이스 표준화 점검 설정 화면",
+        "caption": "데이터베이스 표준화 점검 설정 화면"
+      },
+      {
+        "src": "data/contents/research/projects/407/images/output2.png",
+        "alt": "데이터베이스 표준화 점검 결과 상세 조회",
+        "caption": "데이터베이스 표준화 점검 결과 상세 조회"
+      }
+    ]
+  },
+  "demo": {
+    "src": "",
+    "height": 1200
+  },
+  "institutions": {
+    "leadContacts": [
+      {
+        "name": "홍종유",
+        "role": "책임",
+        "phone": "070-8656-1596",
+        "email": "turk182@ejbt.co.kr"
+      }
+    ],
+    "partners": []
+  },
+  "downloads": {
+    "y22": [],
+    "y23": [],
+    "y24": [],
+    "y25": [],
+    "y26": []
+  }
+}

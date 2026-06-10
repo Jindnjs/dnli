@@ -1,0 +1,386 @@
+{
+  "id": "311",
+  "core": "3핵심",
+  "coreColor": "core3",
+  "ctCode": "핵심기술2",
+  "ctTitle": "건설/비공간정보연계 기술",
+  "cteCode": "세부기술4",
+  "output_code": "성과물11",
+  "title": "건설/비공간정보 매핑 연계 검증 기술",
+  "registeredAt": "",
+  "summaryInstitutions": [
+    "헬리오센㈜"
+  ],
+  "overview": {
+    "description": "기하·속성 정보가 부여된 3차원 CAD/BIM 모델과 매핑(저장)된 비공간정보 데이터의 정확도 및 신뢰성을 검증하는 기술",
+    "descriptionNote": "",
+    "necessityRows": [
+      [
+        {
+          "html": "실제 지도 기준의 기하·속성 정보가 부여된 3차원 CAD/BIM 모델의 검증 기준 및 기술 부재"
+        },
+        {
+          "html": "디지털 국토정보 연계 표준 및 OGC 국제 표준 기반의 GIS 3차원 데이터 자동 검증 기술 제공"
+        }
+      ],
+      [
+        {
+          "html": "사용자의 각자 다른 검증 작업 도구 또는 플랫폼에 따라 상이한 결과 제공"
+        },
+        {
+          "html": "사용자의 작업 도구 및 환경(Web·Desktop)에 구애받지 않는 일관된 검증 결과 제공"
+        }
+      ]
+    ]
+  },
+  "researchContent": {
+    "headerRows": [
+      [
+        {
+          "html": "구분",
+          "rowspan": 2
+        },
+        {
+          "html": "연구 수행 내용",
+          "colspan": 10
+        }
+      ],
+      [
+        {
+          "html": "'22 (1차년도)",
+          "colspan": 2
+        },
+        {
+          "html": "'23 (2차년도)",
+          "colspan": 2
+        },
+        {
+          "html": "'24 (3차년도)",
+          "colspan": 2
+        },
+        {
+          "html": "'25 (4차년도)",
+          "colspan": 2
+        },
+        {
+          "html": "'26 (5차년도)",
+          "colspan": 2
+        }
+      ]
+    ],
+    "rows": [
+      {
+        "label": "주요 연구 내용",
+        "cells": [
+          {
+            "html": "검증 방법 정의 및 3차원 비정형 데이터 렌더링 기술",
+            "colspan": 2
+          },
+          {
+            "html": "연계 매핑 대용량 데이터 검증 정합 기술",
+            "colspan": 2
+          },
+          {
+            "html": "비공간정보 및 연계 매핑 데이터 검증용 플랫폼 기술",
+            "colspan": 2
+          },
+          {
+            "html": "동적 매핑 데이터 검증 멀티 플랫폼 기술",
+            "colspan": 2
+          },
+          {
+            "html": "멀티 플랫폼 기반 테스트베드 검증 기술",
+            "colspan": 2
+          }
+        ]
+      },
+      {
+        "label": "정량적 성능목표",
+        "labelRowspan": 4,
+        "cells": [
+          {
+            "html": "FPS 24 이상",
+            "rowspan": 4,
+            "colspan": 2
+          },
+          {
+            "html": "정합률 90%",
+            "rowspan": 2,
+            "colspan": 2
+          },
+          {
+            "html": "검증속도 2배 향상",
+            "colspan": 2
+          },
+          {
+            "html": "신뢰성 90% 이상",
+            "colspan": 2
+          },
+          {
+            "html": "검증, Web기반, Desktop기반 기술 정확도, 신뢰성 90%",
+            "rowspan": 4,
+            "colspan": 2
+          }
+        ]
+      },
+      {
+        "cells": [
+          {
+            "html": "가시화 FPS 24 이상",
+            "colspan": 2
+          },
+          {
+            "html": "가시화 FPS 24 이상",
+            "colspan": 2
+          }
+        ]
+      },
+      {
+        "cells": [
+          {
+            "html": "검증속도 2배 향상",
+            "rowspan": 2,
+            "colspan": 2
+          },
+          {
+            "html": "표준 100% 준수",
+            "colspan": 2
+          },
+          {
+            "html": "(Web) 기능 정확도 100%",
+            "colspan": 2
+          }
+        ]
+      },
+      {
+        "cells": [
+          {
+            "html": "정확도,신뢰성 90%",
+            "colspan": 2
+          },
+          {
+            "html": "(Desktop) 기능 정확도 100%",
+            "colspan": 2
+          }
+        ]
+      },
+      {
+        "label": "테스트 일정·결과",
+        "labelRowspan": 6,
+        "cells": [
+          {
+            "html": "'22.10.",
+            "rowspan": 6
+          },
+          {
+            "html": "FPS 평균 30 이상",
+            "rowspan": 6
+          },
+          {
+            "html": "'23.11.",
+            "rowspan": 3
+          },
+          {
+            "html": "정합률 100%",
+            "rowspan": 3
+          },
+          {
+            "html": "'24.10."
+          },
+          {
+            "html": "검증속도 3배 향상"
+          },
+          {
+            "html": "'25.09."
+          },
+          {
+            "html": "검증신뢰성 100%"
+          },
+          {
+            "html": "'26.9. [예정]",
+            "rowspan": 2
+          },
+          {
+            "html": "",
+            "rowspan": 2
+          }
+        ]
+      },
+      {
+        "cells": [
+          {
+            "html": "'24.11.",
+            "rowspan": 2
+          },
+          {
+            "html": "FPS 평균 50 이상",
+            "rowspan": 2
+          },
+          {
+            "html": "'25.09.",
+            "rowspan": 2
+          },
+          {
+            "html": "FPS 평균 50 이상",
+            "rowspan": 2
+          }
+        ]
+      },
+      {
+        "cells": [
+          {
+            "html": "'26.9. [예정]",
+            "rowspan": 2
+          },
+          {
+            "html": "",
+            "rowspan": 2
+          }
+        ]
+      },
+      {
+        "cells": [
+          {
+            "html": "'23.11.",
+            "rowspan": 3
+          },
+          {
+            "html": "검증속도 2.1배(단층)(다층) 향상",
+            "rowspan": 3
+          },
+          {
+            "html": "'24.11.",
+            "rowspan": 2
+          },
+          {
+            "html": "표준 100% 준수",
+            "rowspan": 2
+          },
+          {
+            "html": "'25.09.",
+            "rowspan": 2
+          },
+          {
+            "html": "기능정확도 100%",
+            "rowspan": 2
+          }
+        ]
+      },
+      {
+        "cells": [
+          {
+            "html": "'26.9. [예정]",
+            "rowspan": 2
+          },
+          {
+            "html": "",
+            "rowspan": 2
+          }
+        ]
+      },
+      {
+        "cells": [
+          {
+            "html": "'24.11."
+          },
+          {
+            "html": "정확도,신뢰성 100%"
+          },
+          {
+            "html": "'25.09."
+          },
+          {
+            "html": "기능정확도 100%"
+          }
+        ]
+      },
+      {
+        "label": "주요 연구 성과",
+        "cells": [
+          {
+            "groupId": "y22",
+            "summaryHtml": "SW등록 1건<br>특허출원 1건<br>특허등록 1건",
+            "colspan": 2
+          },
+          {
+            "groupId": "y23",
+            "summaryHtml": "SW등록 1건<br>특허출원 1건<br>특허등록 1건",
+            "colspan": 2
+          },
+          {
+            "groupId": "y24",
+            "summaryHtml": "SW등록 4건<br>특허출원 2건<br>특허등록 2건<br>학술발표 1건<br>논문(비SCI)",
+            "colspan": 2
+          },
+          {
+            "groupId": "y25",
+            "summaryHtml": "SW등록 4건<br>특허출원 2건<br>학술발표 1건<br>공인인증 2건",
+            "colspan": 2
+          },
+          {
+            "groupId": "y26",
+            "summaryHtml": "공인인증 2건",
+            "colspan": 2
+          }
+        ]
+      }
+    ]
+  },
+  "applications": {
+    "overview": "3차원 CAD/BIM 데이터 디지털 트윈 데이터 구축·검증 사업 분야",
+    "cards": [
+      {
+        "title": "3차원 CAD/BIM 데이터 및 디지털 트윈 데이터 자동 검증 서비스",
+        "current": "디지털 국토정보 구축 과정에서 표준 기반 자동 검증 시스템이 부재하여 납품 이후 오류 수정과 재작업이 반복되고, 납품 지연 및 추가 비용이 발생함",
+        "improved": "3차원 모델을 디지털트윈 플랫폼에 반영하기 전 단계에서 오류 검증 및 표준 준수 여부를 자동으로 검증하고, 그 결과를 반영하여 데이터를 수정함으로써 반영 전 데이터 품질을 확보하고 오류 수정 등 재작업 비용을 절감"
+      },
+      {
+        "title": "비공간정보-3차원 CAD/BIM 데이터 연계 검증 서비스",
+        "current": "행정정보 등의 비공간정보와 3차원 BIM 데이터 간 연계 정확성을 검증하는 체계가 부재해 데이터 누락, 불일치, 최신 정보 미반영 등의 문제가 발생할 가능성 존재함",
+        "improved": "BIM 모델에 연계된 시설물 행정정보와 실제 행정 시스템 정보를 비교하여 오류를 자동으로 검출·수정함으로써 시설 정보의 누락 및 불일지를 방지(공공시설 관리 분야)"
+      }
+    ]
+  },
+  "process": {
+    "processImage": {
+      "src": "data/contents/research/projects/311/images/process.png",
+      "alt": "데이터 처리 프로세스"
+    },
+    "inputHtml": "위치, 속성 정보를 갖고 있는 표준 데이터(IFC, CityGML, DXF 파일)",
+    "outputHtml": "검증 결과 시각화 서비스, 검증 결과 보고서(PDF) 제공",
+    "outputImages": [
+      {
+        "src": "data/contents/research/projects/311/images/output1.png",
+        "alt": "검증 결과 시각화 서비스",
+        "caption": "검증 결과 시각화 서비스"
+      },
+      {
+        "src": "data/contents/research/projects/311/images/output2.png",
+        "alt": "검증 결과 보고서",
+        "caption": "검증 결과 보고서"
+      }
+    ]
+  },
+  "demo": {
+    "src": "",
+    "height": 1200
+  },
+  "institutions": {
+    "leadContacts": [
+      {
+        "name": "이슬기",
+        "role": "책임",
+        "phone": "031-697-0610",
+        "email": "leesg@heliosen.co.kr"
+      }
+    ],
+    "partners": []
+  },
+  "downloads": {
+    "y22": [],
+    "y23": [],
+    "y24": [],
+    "y25": [],
+    "y26": []
+  }
+}

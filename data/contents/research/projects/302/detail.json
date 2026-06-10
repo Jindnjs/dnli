@@ -1,0 +1,238 @@
+{
+  "id": "302",
+  "core": "3핵심",
+  "coreColor": "core3",
+  "ctCode": "핵심기술1",
+  "ctTitle": "디지털 국토정보 수집·연계·통합 및 제공 기술",
+  "cteCode": "세부기술1",
+  "output_code": "성과물2",
+  "title": "GeoDCAT 기반 데이터 카탈로그 서비스 관리 기술",
+  "registeredAt": "",
+  "summaryInstitutions": [
+    "㈜정도UIT"
+  ],
+  "overview": {
+    "description": "분산된 공간데이터를 쉽고 빠르게 검색 · 활용할 수 있도록 제공하는 기술",
+    "descriptionNote": "",
+    "necessityRows": [
+      [
+        {
+          "html": "데이터를 찾기 위해 포털별로 개별 접속하여 검색·확인 과정을 반복 수행해야 함"
+        },
+        {
+          "html": "표준 형태의 데이터 카탈로그를 통한 통합 검색으로 데이터 검색·확인을 일원화함"
+        }
+      ],
+      [
+        {
+          "html": "통합 검색을 지원하는 표준 데이터 카탈로그 서비스가 부재"
+        },
+        {
+          "html": "표준 규격 기반 데이터 카탈로그 서비스를 제공하여 데이터를 쉽게 검색·확인하고 활용할 수 있음"
+        }
+      ]
+    ]
+  },
+  "researchContent": {
+    "headerRows": [
+      [
+        {
+          "html": "구분",
+          "rowspan": 2
+        },
+        {
+          "html": "연구 수행 내용",
+          "colspan": 10
+        }
+      ],
+      [
+        {
+          "html": "'22 (1차년도)"
+        },
+        {
+          "html": "'23 (2차년도)"
+        },
+        {
+          "html": "'24 (3차년도)",
+          "colspan": 3
+        },
+        {
+          "html": "'25 (4차년도)",
+          "colspan": 3
+        },
+        {
+          "html": "'26 (5차년도)",
+          "colspan": 2
+        }
+      ]
+    ],
+    "rows": [
+      {
+        "label": "주요 연구 내용",
+        "cells": [
+          {
+            "html": "데이터카탈로그/ 메타데이터 관련 기술 조사 분석"
+          },
+          {
+            "html": "표준 기반 디지털 국토정보 데이터 관리 모듈 설계"
+          },
+          {
+            "html": "디지털 국토정보 카탈로그 관리 기능 개발",
+            "colspan": 3
+          },
+          {
+            "html": "디지털 국토정보 메타데이터 관리 기능 개발",
+            "colspan": 3
+          },
+          {
+            "html": "디지털 국토정보 관리 프로그램 실증",
+            "colspan": 2
+          }
+        ]
+      },
+      {
+        "label": "정량적 성능목표",
+        "cells": [
+          {
+            "html": "-"
+          },
+          {
+            "html": "-"
+          },
+          {
+            "html": "동작정확도100%",
+            "colspan": 3
+          },
+          {
+            "html": "동작정확도100%",
+            "colspan": 3
+          },
+          {
+            "html": "기능정확도 100%",
+            "colspan": 2
+          }
+        ]
+      },
+      {
+        "label": "테스트 일정·결과",
+        "cells": [
+          {
+            "html": ""
+          },
+          {
+            "html": ""
+          },
+          {
+            "html": "'24.6."
+          },
+          {
+            "html": "공인 인증"
+          },
+          {
+            "html": "100%"
+          },
+          {
+            "html": "'25.9."
+          },
+          {
+            "html": "공인 인증"
+          },
+          {
+            "html": "100%"
+          },
+          {
+            "html": "'26.10. (예정)"
+          },
+          {
+            "html": "-"
+          }
+        ]
+      },
+      {
+        "label": "주요 연구 성과",
+        "cells": [
+          {
+            "groupId": "y22",
+            "summaryHtml": "보고서 1건"
+          },
+          {
+            "groupId": "y23",
+            "summaryHtml": "설계서 1건<br>특허출원 1건"
+          },
+          {
+            "groupId": "y24",
+            "summaryHtml": "공인인증 1건<br>논문(비SCI)1건<br>특허등록 1건",
+            "colspan": 3
+          },
+          {
+            "groupId": "y25",
+            "summaryHtml": "SW등록 1건<br>공인인증 1건<br>논문(비SCI) 1건",
+            "colspan": 3
+          },
+          {
+            "groupId": "y26",
+            "summaryHtml": "보고서",
+            "colspan": 2
+          }
+        ]
+      }
+    ]
+  },
+  "applications": {
+    "overview": "공공데이터 통합 관리 및 개방 분야, AI.빅데이터 분석 활용",
+    "cards": [
+      {
+        "title": "공공데이터 활용 편의성 향상",
+        "current": "사용자는 국가 데이터 포털이나 기관별 시스템에 개별적으로 접속해 데이터를 검색·확인해야 하므로 데이터 탐색에 많은 시간이 소요됨. 또한 기관별 제공 방식 차이로 업무 부담이 가중되는 문제가 발생",
+        "improved": "여러 기관의 데이터를 단일 창구에서 통합 검색·확인할 수 있어 데이터 탐색 시간을 단축하고, 기관별 이질성으로 인한 업무 부담을 크게 완화할 수 있음"
+      },
+      {
+        "title": "공공데이터 품질 및 신뢰성 확보",
+        "current": "공공데이터 활용 시 메타데이터*를 별도로 확인해야 하고, 기관별 데이터 형식이 상이하여 분석 및 시스템 연계를 위해 반복적인 변환 작업이 필요 <br><br>*메타데이터:데이터 생상 기관, 생성 시점, 갱신 여부, 품질 정보, 공간정보 메타데이터 표준 항목등",
+        "improved": "데이터 제공 기관이 표준 기반 메타데이터를 함께 관리·제공함으로써 데이터 해석의 일관성과 신뢰성을 높이고, 별도의 변환 없이 분석 및 서비스에 바로 활용할 수 있음"
+      }
+    ]
+  },
+  "process": {
+    "processImage": {
+      "src": "data/contents/research/projects/302/images/process.png",
+      "alt": "데이터 처리 프로세스"
+    },
+    "inputHtml": "GeoDCAT 표준으로 작성된 카탈로그 데이터",
+    "outputHtml": "vWorld.ttl( 브이월드에서 제공하는 데이터의 카탈로그 파일)",
+    "outputImages": [
+      {
+        "src": "data/contents/research/projects/302/images/output1.png",
+        "alt": "배포 데이터에 대한 RDF(Resource Description Framework) 문서",
+        "caption": "배포 데이터에 대한 RDF(Resource Description Framework) 문서"
+      },
+      {
+        "src": "data/contents/research/projects/302/images/output2.png",
+        "alt": "데이터관리-데이터셋정보-배포정보",
+        "caption": "데이터관리-데이터셋정보-배포정보"
+      }
+    ]
+  },
+  "demo": {
+    "src": "",
+    "height": 1200
+  },
+  "institutions": {
+    "leadContacts": [
+      {
+        "name": "박윤희",
+        "role": "책임",
+        "phone": "010-4456-7212",
+        "email": "unicong@uitgis.com"
+      }
+    ],
+    "partners": []
+  },
+  "downloads": {
+    "y22": [],
+    "y23": [],
+    "y24": [],
+    "y25": [],
+    "y26": []
+  }
+}

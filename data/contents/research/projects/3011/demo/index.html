@@ -1,0 +1,1309 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>디지털국토정보 SW 데모</title>
+    <!-- CesiumJS 1.132 -->
+    <script src="https://cesium.com/downloads/cesiumjs/releases/1.132/Build/Cesium/Cesium.js"></script>
+    <link href="https://cesium.com/downloads/cesiumjs/releases/1.132/Build/Cesium/Widgets/widgets.css" rel="stylesheet">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Drawflow -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jerosoler/Drawflow/dist/drawflow.min.css">
+    <script src="https://cdn.jsdelivr.net/gh/jerosoler/Drawflow/dist/drawflow.min.js"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+        }
+        #cesiumContainer {
+            width: 100%;
+            height: 100%;
+        }
+        .cesium-viewer-bottom {
+            display: none !important;
+        }
+        /* 탭 스타일 */
+        .tab-btn {
+            transition: all 0.2s ease;
+        }
+        .tab-btn.active {
+            background-color: #3b82f6;
+            color: white;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        /* 카탈로그 아이템 */
+        .catalog-item {
+            transition: all 0.2s ease;
+        }
+        .catalog-item:hover {
+            background-color: #f3f4f6;
+        }
+        .catalog-item.selected {
+            background-color: #dbeafe;
+            border-color: #3b82f6;
+        }
+        /* 파이프라인 단계 스타일 */
+        .pipeline-step {
+            transition: all 0.3s ease;
+        }
+        .pipeline-step.running .flex.items-center {
+            animation: stepPulse 1.5s infinite;
+        }
+        @keyframes stepPulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.01); }
+        }
+        /* 레이어 아이템 */
+        .layer-item {
+            transition: all 0.2s ease;
+        }
+        .layer-item:hover {
+            background-color: #f3f4f6;
+        }
+        /* 스크롤바 스타일 */
+        .side-panel::-webkit-scrollbar {
+            width: 6px;
+        }
+        .side-panel::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        .side-panel::-webkit-scrollbar-thumb {
+            background: #c1c1c1;
+            border-radius: 3px;
+        }
+        .side-panel::-webkit-scrollbar-thumb:hover {
+            background: #a1a1a1;
+        }
+        /* Drawflow 커스텀 스타일 */
+        #drawflow {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, #f8f9fa 1px, transparent 1px) 0 0 / 20px 20px,
+                        linear-gradient(#f8f9fa 1px, transparent 1px) 0 0 / 20px 20px;
+            background-color: #fff;
+        }
+        .drawflow .drawflow-node {
+            background: white;
+            border: 2px solid #3b82f6;
+            border-radius: 8px;
+            min-width: 130px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            padding: 0;
+            display: block;
+            width: auto !important;
+            height: auto !important;
+        }
+        .drawflow .drawflow-node .drawflow_content_node {
+            padding: 10px 15px !important;
+            font-size: 14px;
+            font-weight: 500;
+            color: #374151;
+            white-space: nowrap;
+        }
+        .drawflow .drawflow-node:hover {
+            border-color: #2563eb;
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+        }
+        .drawflow .drawflow-node.selected {
+            background: #3b82f6;
+            border-color: #3b82f6;
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.4);
+        }
+        .drawflow .drawflow-node.selected .drawflow_content_node {
+            color: white !important;
+        }
+        /* 연결 포인트 - 좌측(입력)만 표시 */
+        .drawflow .drawflow-node .inputs {
+            position: absolute;
+            left: -6px;
+        }
+        .drawflow .drawflow-node .outputs {
+            position: absolute;
+            right: -6px;
+        }
+        .drawflow .drawflow-node .input {
+            width: 12px;
+            height: 12px;
+            background: #3b82f6;
+            border: 2px solid white;
+            border-radius: 50%;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+        }
+        /* 출력 포인트 숨김 */
+        .drawflow .drawflow-node .output {
+            width: 12px;
+            height: 12px;
+            background: #3b82f6;
+            border: 2px solid white;
+            border-radius: 50%;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+            opacity: 0.3;
+        }
+        .drawflow .drawflow-node:hover .output {
+            opacity: 1;
+        }
+        .drawflow .drawflow-node.selected .input,
+        .drawflow .drawflow-node.selected .output {
+            background: white;
+            border-color: #3b82f6;
+        }
+        .drawflow .connection .main-path {
+            stroke: #3b82f6;
+            stroke-width: 3;
+        }
+        .drawflow .connection .main-path:hover {
+            stroke: #2563eb;
+            stroke-width: 4;
+        }
+        /* 노드 팔레트 스타일 */
+        .node-palette {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 8px;
+        }
+        .palette-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 10px 8px;
+            background: #f9fafb;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            cursor: grab;
+            transition: all 0.2s;
+            font-size: 11px;
+            text-align: center;
+        }
+        .palette-item:hover {
+            background: #eff6ff;
+            border-color: #3b82f6;
+            transform: translateY(-2px);
+        }
+        .palette-item:active {
+            cursor: grabbing;
+        }
+        .palette-item .icon {
+            font-size: 20px;
+            margin-bottom: 4px;
+        }
+        /* 파이프라인 모드 탭 */
+        .pipeline-mode-tabs {
+            display: flex;
+            gap: 4px;
+            margin-bottom: 12px;
+        }
+        .pipeline-mode-tab {
+            flex: 1;
+            padding: 8px;
+            font-size: 12px;
+            border: 1px solid #e5e7eb;
+            background: #f9fafb;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .pipeline-mode-tab.active {
+            background: #3b82f6;
+            color: white;
+            border-color: #3b82f6;
+        }
+        .pipeline-mode-content {
+            display: none;
+        }
+        .pipeline-mode-content.active {
+            display: block;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <!-- 메인 레이아웃 -->
+    <div class="flex h-screen">
+        <!-- 사이드 패널 -->
+        <div class="w-[400px] bg-white shadow-lg flex flex-col z-10">
+            <!-- 헤더 -->
+            <div class="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-6 py-4">
+                <h1 class="text-xl font-bold">디지털국토정보 SW 데모</h1>
+                <p class="text-blue-100 text-sm mt-1">3D GIS 통합 플랫폼</p>
+            </div>
+
+            <!-- 탭 버튼 -->
+            <div class="flex border-b border-gray-200">
+                <button class="tab-btn active flex-1 py-3 text-sm font-medium" data-tab="catalog">
+                    카탈로그
+                </button>
+                <button class="tab-btn flex-1 py-3 text-sm font-medium text-gray-500 hover:text-gray-700" data-tab="pipeline">
+                    파이프라인
+                </button>
+                <button class="tab-btn flex-1 py-3 text-sm font-medium text-gray-500 hover:text-gray-700" data-tab="visualization">
+                    가시화
+                </button>
+            </div>
+
+            <!-- 탭 콘텐츠 -->
+            <div class="flex-1 overflow-y-auto side-panel">
+                <!-- 카탈로그 탭 -->
+                <div id="catalog-tab" class="tab-content active p-4">
+                    <div class="mb-4">
+                        <h3 class="text-sm font-semibold text-gray-700 mb-2">3D 데이터 카탈로그</h3>
+                        <p class="text-xs text-gray-500">항목을 선택하고 지도에 표시하세요</p>
+                    </div>
+                    <div id="catalog-list" class="space-y-3">
+                        <!-- 카탈로그 항목들이 여기에 렌더링됨 -->
+                    </div>
+                    <div class="mt-4 pt-4 border-t border-gray-200">
+                        <button id="show-on-map-btn" class="w-full bg-blue-600 text-white py-2.5 px-4 rounded-lg font-medium hover:bg-blue-700 transition disabled:bg-gray-300 disabled:cursor-not-allowed" disabled>
+                            지도에 표시
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 파이프라인 탭 -->
+                <div id="pipeline-tab" class="tab-content p-4">
+                    <!-- 모드 선택 탭 -->
+                    <div class="pipeline-mode-tabs">
+                        <button class="pipeline-mode-tab active" data-mode="simulation">시뮬레이션</button>
+                        <button class="pipeline-mode-tab" data-mode="editor">편집기</button>
+                    </div>
+
+                    <!-- 시뮬레이션 모드 -->
+                    <div id="simulation-mode" class="pipeline-mode-content active">
+                        <div class="mb-3">
+                            <h3 class="text-sm font-semibold text-gray-700 mb-1">IFC → 3D Tiles 변환</h3>
+                            <p class="text-xs text-gray-500">고정 워크플로우 시뮬레이션</p>
+                        </div>
+
+                        <!-- 파이프라인 단계 리스트 -->
+                        <div id="pipeline-steps" class="space-y-2 mb-4">
+                            <div class="pipeline-step pending" data-step="1">
+                                <div class="flex items-center gap-3 p-3 bg-white border border-gray-200 rounded-lg">
+                                    <div class="step-icon w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center">
+                                        <i data-lucide="file-text" class="w-4 h-4 text-gray-500"></i>
+                                    </div>
+                                    <div class="flex-1">
+                                        <div class="font-medium text-sm text-gray-800">IFC 파일 읽기</div>
+                                        <div class="text-xs text-gray-500">BIM 모델 파싱</div>
+                                    </div>
+                                    <span class="step-status text-xs px-2 py-0.5 rounded bg-gray-100 text-gray-500">대기</span>
+                                </div>
+                            </div>
+                            <div class="pipeline-step pending" data-step="2">
+                                <div class="flex items-center gap-3 p-3 bg-white border border-gray-200 rounded-lg">
+                                    <div class="step-icon w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center">
+                                        <i data-lucide="refresh-cw" class="w-4 h-4 text-gray-500"></i>
+                                    </div>
+                                    <div class="flex-1">
+                                        <div class="font-medium text-sm text-gray-800">CityGML 3.0 변환</div>
+                                        <div class="text-xs text-gray-500">OGC 표준 형식 변환</div>
+                                    </div>
+                                    <span class="step-status text-xs px-2 py-0.5 rounded bg-gray-100 text-gray-500">대기</span>
+                                </div>
+                            </div>
+                            <div class="pipeline-step pending" data-step="3">
+                                <div class="flex items-center gap-3 p-3 bg-white border border-gray-200 rounded-lg">
+                                    <div class="step-icon w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center">
+                                        <i data-lucide="check-circle" class="w-4 h-4 text-gray-500"></i>
+                                    </div>
+                                    <div class="flex-1">
+                                        <div class="font-medium text-sm text-gray-800">CityGML 검증</div>
+                                        <div class="text-xs text-gray-500">스키마 및 구조 검증</div>
+                                    </div>
+                                    <span class="step-status text-xs px-2 py-0.5 rounded bg-gray-100 text-gray-500">대기</span>
+                                </div>
+                            </div>
+                            <div class="pipeline-step pending" data-step="4">
+                                <div class="flex items-center gap-3 p-3 bg-white border border-gray-200 rounded-lg">
+                                    <div class="step-icon w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center">
+                                        <i data-lucide="box" class="w-4 h-4 text-gray-500"></i>
+                                    </div>
+                                    <div class="flex-1">
+                                        <div class="font-medium text-sm text-gray-800">B3DM 타일 생성</div>
+                                        <div class="text-xs text-gray-500">3D Tiles 형식 타일링</div>
+                                    </div>
+                                    <span class="step-status text-xs px-2 py-0.5 rounded bg-gray-100 text-gray-500">대기</span>
+                                </div>
+                            </div>
+                            <div class="pipeline-step pending" data-step="5">
+                                <div class="flex items-center gap-3 p-3 bg-white border border-gray-200 rounded-lg">
+                                    <div class="step-icon w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center">
+                                        <i data-lucide="package" class="w-4 h-4 text-gray-500"></i>
+                                    </div>
+                                    <div class="flex-1">
+                                        <div class="font-medium text-sm text-gray-800">tileset.json 생성</div>
+                                        <div class="text-xs text-gray-500">메타데이터 및 인덱스</div>
+                                    </div>
+                                    <span class="step-status text-xs px-2 py-0.5 rounded bg-gray-100 text-gray-500">대기</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="pipeline-progress" class="mb-3 hidden">
+                            <div class="h-2 bg-gray-200 rounded-full overflow-hidden">
+                                <div id="progress-bar" class="h-full bg-blue-600 transition-all duration-500" style="width: 0%"></div>
+                            </div>
+                            <p id="progress-text" class="text-xs text-gray-500 mt-1 text-center"></p>
+                        </div>
+
+                        <button id="start-pipeline-btn" class="w-full bg-green-600 text-white py-2 px-4 rounded-lg font-medium hover:bg-green-700 transition text-sm flex items-center justify-center gap-2">
+                            <i data-lucide="play" class="w-4 h-4"></i>
+                            파이프라인 시작
+                        </button>
+                        <button id="reset-pipeline-btn" class="w-full mt-2 bg-gray-500 text-white py-2 px-4 rounded-lg font-medium hover:bg-gray-600 transition hidden text-sm flex items-center justify-center gap-2">
+                            <i data-lucide="rotate-ccw" class="w-4 h-4"></i>
+                            초기화
+                        </button>
+                    </div>
+
+                    <!-- 편집기 모드 (Drawflow) -->
+                    <div id="editor-mode" class="pipeline-mode-content">
+                        <div class="mb-3">
+                            <h3 class="text-sm font-semibold text-gray-700 mb-1">워크플로우 편집기</h3>
+                            <p class="text-xs text-gray-500">노드를 드래그하여 DAG를 구성하세요</p>
+                        </div>
+
+                        <!-- 노드 팔레트 -->
+                        <div class="mb-3">
+                            <p class="text-xs font-medium text-gray-600 mb-2">컴포넌트</p>
+                            <div class="node-palette">
+                                <div class="palette-item" draggable="true" data-node="file">
+                                    <i data-lucide="file" class="w-5 h-5 text-blue-500"></i>
+                                    <span>파일</span>
+                                </div>
+                                <div class="palette-item" draggable="true" data-node="gmlVal">
+                                    <i data-lucide="shield-check" class="w-5 h-5 text-green-500"></i>
+                                    <span>GML 검증</span>
+                                </div>
+                                <div class="palette-item" draggable="true" data-node="trans">
+                                    <i data-lucide="map-pin" class="w-5 h-5 text-orange-500"></i>
+                                    <span>좌표계 변환</span>
+                                </div>
+                                <div class="palette-item" draggable="true" data-node="hierarchy">
+                                    <i data-lucide="git-branch" class="w-5 h-5 text-purple-500"></i>
+                                    <span>계층 구조화</span>
+                                </div>
+                                <div class="palette-item" draggable="true" data-node="save3d">
+                                    <i data-lucide="database" class="w-5 h-5 text-indigo-500"></i>
+                                    <span>3D 저장</span>
+                                </div>
+                                <div class="palette-item" draggable="true" data-node="download3d">
+                                    <i data-lucide="download" class="w-5 h-5 text-cyan-500"></i>
+                                    <span>3D 다운로드</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 편집기 컨트롤 -->
+                        <div class="flex gap-2 mb-3">
+                            <button id="run-editor-btn" class="flex-1 bg-green-600 text-white py-2 px-3 rounded-lg font-medium hover:bg-green-700 transition text-xs flex items-center justify-center gap-1">
+                                <i data-lucide="play" class="w-3 h-3"></i> 실행
+                            </button>
+                            <button id="clear-editor-btn" class="flex-1 bg-gray-500 text-white py-2 px-3 rounded-lg font-medium hover:bg-gray-600 transition text-xs flex items-center justify-center gap-1">
+                                <i data-lucide="trash-2" class="w-3 h-3"></i> 초기화
+                            </button>
+                        </div>
+
+                        <!-- 실행 로그 -->
+                        <div id="editor-log" class="bg-gray-900 rounded-lg p-3 h-32 overflow-y-auto text-xs font-mono hidden">
+                            <div class="text-green-400">워크플로우 준비 완료</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 가시화 탭 -->
+                <div id="visualization-tab" class="tab-content p-4">
+                    <div class="mb-4">
+                        <h3 class="text-sm font-semibold text-gray-700 mb-2">로드된 레이어</h3>
+                        <p class="text-xs text-gray-500">현재 지도에 표시된 3D 레이어 목록</p>
+                    </div>
+
+                    <div id="layer-list" class="space-y-2">
+                        <div class="text-sm text-gray-400 text-center py-8">
+                            로드된 레이어가 없습니다
+                        </div>
+                    </div>
+
+                    <div class="mt-4 pt-4 border-t border-gray-200">
+                        <button id="load-suseo-btn" class="w-full bg-blue-600 text-white py-2.5 px-4 rounded-lg font-medium hover:bg-blue-700 transition">
+                            수서역 3D 타일 로드
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cesium 뷰어 / Drawflow 편집기 -->
+        <div class="flex-1 relative">
+            <!-- Cesium 컨테이너 -->
+            <div id="cesiumContainer"></div>
+
+            <!-- Drawflow 편집기 (파이프라인 편집 모드에서만 표시) -->
+            <div id="drawflow-container" class="absolute inset-0 hidden z-10">
+                <div id="drawflow"></div>
+            </div>
+
+            <!-- 로딩 오버레이 -->
+            <div id="loading-overlay" class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-20">
+                <div class="bg-white rounded-lg p-6 text-center">
+                    <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto"></div>
+                    <p id="loading-text" class="mt-4 text-gray-700">로딩 중...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    // ============================================
+    // 설정 모듈
+    // ============================================
+    const Config = (function() {
+        return {
+            CESIUM_ION_TOKEN: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJlNzc4YzBkOC1jYjY3LTQ2YzktOTRhNC0zMjI5MmYwYmI0ODgiLCJpZCI6MjY3NzU2LCJpYXQiOjE3MzYzODU3Mjd9.I3Bb8nyBBIq8W0f0yreNksEmWlXPYf6xC0mb8UsQa4I',
+            SUSEO_TILESET_ID: 3689013,
+            SUSEO_POSITION: {
+                lon: 127.1025,
+                lat: 37.4859,
+                height: 500
+            },
+            PIPELINE_STEPS: [
+                { name: 'IFC 파일 읽기', duration: 2000 },
+                { name: 'CityGML 3.0 변환', duration: 3000 },
+                { name: 'CityGML 검증', duration: 2000 },
+                { name: 'B3DM 타일 생성', duration: 4000 },
+                { name: 'tileset.json 생성', duration: 1000 }
+            ]
+        };
+    })();
+
+    // ============================================
+    // Mock 데이터 모듈
+    // ============================================
+    const MockData = (function() {
+        const catalogs = [
+            {
+                id: 3689013,
+                title: '수서역 IFC',
+                type: 'VISUALIZE',
+                description: 'SRT 수서역 건물 BIM 모델 (IFC → CityGML → B3DM)',
+                updateDate: '2025-09-24',
+                provider: 'SYSTEM',
+                hasAsset: true,
+                assetId: 3689013
+            },
+            {
+                id: 3699270,
+                title: '수서LH1단지',
+                type: 'VISUALIZE',
+                description: '수서 LH 1단지 아파트 3D 모델',
+                updateDate: '2025-09-10',
+                provider: 'SYSTEM',
+                hasAsset: true,
+                assetId: 3699270
+            },
+            {
+                id: 3699286,
+                title: '수서LH2단지',
+                type: 'VISUALIZE',
+                description: '수서 LH 2단지 아파트 3D 모델',
+                updateDate: '2025-09-10',
+                provider: 'SYSTEM',
+                hasAsset: true,
+                assetId: 3699286
+            },
+            {
+                id: 9999,
+                title: '강남 디아크리움',
+                type: 'DATASET',
+                description: '강남 디아크리움 건물 데이터 (3D 타일 없음)',
+                updateDate: '2025-08-15',
+                provider: 'SYSTEM',
+                hasAsset: false,
+                assetId: null
+            }
+        ];
+
+        return {
+            getCatalogs: function() {
+                return catalogs;
+            },
+            getCatalogById: function(id) {
+                return catalogs.find(c => c.id === id);
+            }
+        };
+    })();
+
+    // ============================================
+    // Cesium 뷰어 모듈
+    // ============================================
+    const CesiumViewer = (function() {
+        let viewer = null;
+        let loadedTilesets = new Map(); // assetId -> tileset
+
+        async function init() {
+            Cesium.Ion.defaultAccessToken = Config.CESIUM_ION_TOKEN;
+
+            viewer = new Cesium.Viewer('cesiumContainer', {
+                animation: false,
+                timeline: false,
+                baseLayerPicker: false,
+                geocoder: false,
+                homeButton: false,
+                sceneModePicker: false,
+                selectionIndicator: false,
+                navigationHelpButton: false,
+                fullscreenButton: false,
+                infoBox: false
+            });
+
+            // Cesium 1.132 방식: 비동기로 World Terrain 설정
+            try {
+                const terrain = await Cesium.CesiumTerrainProvider.fromIonAssetId(1);
+                viewer.scene.terrainProvider = terrain;
+            } catch (e) {
+                console.warn('World Terrain 로드 실패, 기본 지형 사용:', e);
+            }
+
+            // 초기 카메라 위치 (대한민국)
+            viewer.camera.flyTo({
+                destination: Cesium.Cartesian3.fromDegrees(127.0, 37.5, 50000),
+                duration: 0
+            });
+
+            return viewer;
+        }
+
+        async function loadTileset(assetId, name) {
+            if (loadedTilesets.has(assetId)) {
+                console.log(`Tileset ${assetId} is already loaded`);
+                const existing = loadedTilesets.get(assetId);
+                viewer.zoomTo(existing.tileset);
+                return existing.tileset;
+            }
+
+            showLoading(`${name} 로딩 중...`);
+
+            try {
+                const tileset = await Cesium.Cesium3DTileset.fromIonAssetId(assetId);
+                viewer.scene.primitives.add(tileset);
+
+                loadedTilesets.set(assetId, {
+                    tileset: tileset,
+                    name: name,
+                    assetId: assetId
+                });
+
+                // 타일셋으로 줌
+                await viewer.zoomTo(tileset);
+
+                hideLoading();
+                return tileset;
+            } catch (error) {
+                console.error('타일셋 로딩 실패:', error);
+                hideLoading();
+                alert('3D 타일셋 로딩에 실패했습니다.');
+                return null;
+            }
+        }
+
+        function removeTileset(assetId) {
+            if (loadedTilesets.has(assetId)) {
+                const data = loadedTilesets.get(assetId);
+                viewer.scene.primitives.remove(data.tileset);
+                loadedTilesets.delete(assetId);
+                return true;
+            }
+            return false;
+        }
+
+        function zoomToTileset(assetId) {
+            if (loadedTilesets.has(assetId)) {
+                const data = loadedTilesets.get(assetId);
+                viewer.zoomTo(data.tileset);
+            }
+        }
+
+        function getLoadedTilesets() {
+            return Array.from(loadedTilesets.values());
+        }
+
+        function flyToSuseo() {
+            viewer.camera.flyTo({
+                destination: Cesium.Cartesian3.fromDegrees(
+                    Config.SUSEO_POSITION.lon,
+                    Config.SUSEO_POSITION.lat,
+                    Config.SUSEO_POSITION.height
+                ),
+                orientation: {
+                    heading: Cesium.Math.toRadians(0),
+                    pitch: Cesium.Math.toRadians(-45),
+                    roll: 0
+                },
+                duration: 2
+            });
+        }
+
+        function getViewer() {
+            return viewer;
+        }
+
+        return {
+            init: init,
+            loadTileset: loadTileset,
+            removeTileset: removeTileset,
+            zoomToTileset: zoomToTileset,
+            getLoadedTilesets: getLoadedTilesets,
+            flyToSuseo: flyToSuseo,
+            getViewer: getViewer
+        };
+    })();
+
+    // ============================================
+    // 카탈로그 모듈
+    // ============================================
+    const CatalogModule = (function() {
+        let selectedCatalog = null;
+
+        function init() {
+            renderCatalogList();
+            bindEvents();
+        }
+
+        function renderCatalogList() {
+            const container = document.getElementById('catalog-list');
+            const catalogs = MockData.getCatalogs();
+
+            container.innerHTML = catalogs.map(catalog => `
+                <div class="catalog-item p-4 border border-gray-200 rounded-lg cursor-pointer" data-id="${catalog.id}">
+                    <div class="flex items-start justify-between">
+                        <div class="flex-1">
+                            <div class="flex items-center gap-2 mb-1">
+                                <span class="text-xs px-2 py-0.5 rounded ${catalog.type === 'VISUALIZE' ? 'bg-blue-100 text-blue-700' : 'bg-gray-100 text-gray-700'}">
+                                    ${catalog.type === 'VISUALIZE' ? '시각화' : '데이터셋'}
+                                </span>
+                                ${catalog.hasAsset ? '<span class="text-xs px-2 py-0.5 rounded bg-green-100 text-green-700">3D</span>' : '<span class="text-xs px-2 py-0.5 rounded bg-red-100 text-red-700">3D 없음</span>'}
+                            </div>
+                            <h4 class="font-medium text-gray-800">${catalog.title}</h4>
+                            <p class="text-xs text-gray-500 mt-1">${catalog.description}</p>
+                            <div class="text-xs text-gray-400 mt-2">
+                                갱신일: ${catalog.updateDate} | 제공처: ${catalog.provider}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function bindEvents() {
+            const container = document.getElementById('catalog-list');
+            const showBtn = document.getElementById('show-on-map-btn');
+
+            container.addEventListener('click', function(e) {
+                const item = e.target.closest('.catalog-item');
+                if (!item) return;
+
+                // 이전 선택 해제
+                document.querySelectorAll('.catalog-item').forEach(el => el.classList.remove('selected'));
+
+                // 새 선택
+                item.classList.add('selected');
+                selectedCatalog = MockData.getCatalogById(parseInt(item.dataset.id));
+
+                // 버튼 활성화 (3D 에셋이 있는 경우만)
+                showBtn.disabled = !selectedCatalog.hasAsset;
+            });
+
+            showBtn.addEventListener('click', async function() {
+                if (!selectedCatalog || !selectedCatalog.hasAsset) return;
+
+                await CesiumViewer.loadTileset(selectedCatalog.assetId, selectedCatalog.title);
+                VisualizationModule.updateLayerList();
+                TabManager.switchTo('visualization');
+            });
+        }
+
+        return {
+            init: init
+        };
+    })();
+
+    // ============================================
+    // 파이프라인 모듈 (리스트 방식)
+    // ============================================
+    const PipelineModule = (function() {
+        let isRunning = false;
+
+        // 5단계 파이프라인 정의
+        const pipelineSteps = [
+            { step: 1, name: 'IFC 파일 읽기', duration: 2000 },
+            { step: 2, name: 'CityGML 3.0 변환', duration: 3000 },
+            { step: 3, name: 'CityGML 검증', duration: 2000 },
+            { step: 4, name: 'B3DM 타일 생성', duration: 4000 },
+            { step: 5, name: 'tileset.json 생성', duration: 1000 }
+        ];
+
+        function init() {
+            bindEvents();
+        }
+
+        function bindEvents() {
+            document.getElementById('start-pipeline-btn').addEventListener('click', startPipeline);
+            document.getElementById('reset-pipeline-btn').addEventListener('click', resetPipeline);
+        }
+
+        async function startPipeline() {
+            if (isRunning) return;
+
+            isRunning = true;
+
+            const startBtn = document.getElementById('start-pipeline-btn');
+            const resetBtn = document.getElementById('reset-pipeline-btn');
+            const progressDiv = document.getElementById('pipeline-progress');
+
+            startBtn.classList.add('hidden');
+            progressDiv.classList.remove('hidden');
+
+            const totalSteps = pipelineSteps.length;
+
+            // 순차적으로 각 단계 실행
+            for (let i = 0; i < pipelineSteps.length; i++) {
+                const stepConfig = pipelineSteps[i];
+
+                // 단계 시작
+                updateStepStatus(stepConfig.step, 'running');
+                updateProgress(i, totalSteps, `${stepConfig.name} 처리 중...`);
+
+                // 시뮬레이션 대기
+                await sleep(stepConfig.duration);
+
+                // 단계 완료
+                updateStepStatus(stepConfig.step, 'completed');
+                updateProgress(i + 1, totalSteps, `${stepConfig.name} 완료`);
+            }
+
+            // 파이프라인 완료
+            isRunning = false;
+            resetBtn.classList.remove('hidden');
+
+            document.getElementById('progress-text').textContent = '파이프라인 완료! 가시화 탭으로 이동합니다...';
+
+            // 수서역 로드 및 가시화 탭 전환
+            await sleep(1000);
+            await CesiumViewer.loadTileset(Config.SUSEO_TILESET_ID, '수서역 IFC');
+            VisualizationModule.updateLayerList();
+            TabManager.switchTo('visualization');
+        }
+
+        function updateStepStatus(stepNum, status) {
+            const stepEl = document.querySelector(`.pipeline-step[data-step="${stepNum}"]`);
+            if (!stepEl) return;
+
+            stepEl.classList.remove('pending', 'running', 'completed');
+            stepEl.classList.add(status);
+
+            const container = stepEl.querySelector('.flex.items-center');
+            const iconDiv = stepEl.querySelector('.step-icon');
+            const statusEl = stepEl.querySelector('.step-status');
+
+            if (status === 'running') {
+                container.classList.remove('border-gray-200', 'border-green-400');
+                container.classList.add('border-yellow-400', 'bg-yellow-50');
+                iconDiv.classList.remove('bg-gray-100', 'bg-green-100');
+                iconDiv.classList.add('bg-yellow-100');
+                statusEl.textContent = '진행 중';
+                statusEl.classList.remove('bg-gray-100', 'text-gray-500', 'bg-green-100', 'text-green-700');
+                statusEl.classList.add('bg-yellow-100', 'text-yellow-700');
+            } else if (status === 'completed') {
+                container.classList.remove('border-gray-200', 'border-yellow-400', 'bg-yellow-50');
+                container.classList.add('border-green-400', 'bg-green-50');
+                iconDiv.classList.remove('bg-gray-100', 'bg-yellow-100');
+                iconDiv.classList.add('bg-green-100');
+                statusEl.textContent = '완료';
+                statusEl.classList.remove('bg-gray-100', 'text-gray-500', 'bg-yellow-100', 'text-yellow-700');
+                statusEl.classList.add('bg-green-100', 'text-green-700');
+            } else {
+                container.classList.remove('border-yellow-400', 'border-green-400', 'bg-yellow-50', 'bg-green-50');
+                container.classList.add('border-gray-200');
+                iconDiv.classList.remove('bg-yellow-100', 'bg-green-100');
+                iconDiv.classList.add('bg-gray-100');
+                statusEl.textContent = '대기';
+                statusEl.classList.remove('bg-yellow-100', 'text-yellow-700', 'bg-green-100', 'text-green-700');
+                statusEl.classList.add('bg-gray-100', 'text-gray-500');
+            }
+        }
+
+        function updateProgress(completed, total, text) {
+            const percent = Math.round((completed / total) * 100);
+            document.getElementById('progress-bar').style.width = percent + '%';
+            document.getElementById('progress-text').textContent = text;
+        }
+
+        function resetPipeline() {
+            isRunning = false;
+
+            // 모든 단계 초기화
+            pipelineSteps.forEach(step => {
+                updateStepStatus(step.step, 'pending');
+            });
+
+            document.getElementById('start-pipeline-btn').classList.remove('hidden');
+            document.getElementById('reset-pipeline-btn').classList.add('hidden');
+            document.getElementById('pipeline-progress').classList.add('hidden');
+            document.getElementById('progress-bar').style.width = '0%';
+        }
+
+        function sleep(ms) {
+            return new Promise(resolve => setTimeout(resolve, ms));
+        }
+
+        return {
+            init: init
+        };
+    })();
+
+    // ============================================
+    // 가시화 모듈
+    // ============================================
+    const VisualizationModule = (function() {
+        function init() {
+            bindEvents();
+        }
+
+        function bindEvents() {
+            document.getElementById('load-suseo-btn').addEventListener('click', async function() {
+                await CesiumViewer.loadTileset(Config.SUSEO_TILESET_ID, '수서역 IFC');
+                updateLayerList();
+            });
+
+            // 레이어 리스트 이벤트 위임
+            document.getElementById('layer-list').addEventListener('click', function(e) {
+                const deleteBtn = e.target.closest('.layer-delete-btn');
+                const zoomBtn = e.target.closest('.layer-zoom-btn');
+
+                if (deleteBtn) {
+                    const assetId = parseInt(deleteBtn.dataset.assetId);
+                    CesiumViewer.removeTileset(assetId);
+                    updateLayerList();
+                }
+
+                if (zoomBtn) {
+                    const assetId = parseInt(zoomBtn.dataset.assetId);
+                    CesiumViewer.zoomToTileset(assetId);
+                }
+            });
+        }
+
+        function updateLayerList() {
+            const container = document.getElementById('layer-list');
+            const layers = CesiumViewer.getLoadedTilesets();
+
+            if (layers.length === 0) {
+                container.innerHTML = `
+                    <div class="text-sm text-gray-400 text-center py-8">
+                        로드된 레이어가 없습니다
+                    </div>
+                `;
+                return;
+            }
+
+            container.innerHTML = layers.map(layer => `
+                <div class="layer-item p-3 border border-gray-200 rounded-lg">
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-2">
+                            <span class="w-3 h-3 rounded-full bg-green-500"></span>
+                            <span class="text-sm font-medium text-gray-800">${layer.name}</span>
+                        </div>
+                        <div class="flex gap-1">
+                            <button class="layer-zoom-btn p-1.5 hover:bg-gray-100 rounded" data-asset-id="${layer.assetId}" title="이동">
+                                <svg class="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path>
+                                </svg>
+                            </button>
+                            <button class="layer-delete-btn p-1.5 hover:bg-red-50 rounded" data-asset-id="${layer.assetId}" title="삭제">
+                                <svg class="w-4 h-4 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="text-xs text-gray-500 mt-1">Asset ID: ${layer.assetId}</div>
+                </div>
+            `).join('');
+        }
+
+        return {
+            init: init,
+            updateLayerList: updateLayerList
+        };
+    })();
+
+    // ============================================
+    // 탭 관리 모듈
+    // ============================================
+    const TabManager = (function() {
+        function init() {
+            const tabBtns = document.querySelectorAll('.tab-btn');
+
+            tabBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    switchTo(this.dataset.tab);
+                });
+            });
+        }
+
+        function switchTo(tabName) {
+            // 버튼 상태 업데이트
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('active');
+                btn.classList.add('text-gray-500');
+            });
+            document.querySelector(`.tab-btn[data-tab="${tabName}"]`).classList.add('active');
+            document.querySelector(`.tab-btn[data-tab="${tabName}"]`).classList.remove('text-gray-500');
+
+            // 콘텐츠 전환
+            document.querySelectorAll('.tab-content').forEach(content => {
+                content.classList.remove('active');
+            });
+            document.getElementById(`${tabName}-tab`).classList.add('active');
+
+        }
+
+        return {
+            init: init,
+            switchTo: switchTo
+        };
+    })();
+
+    // ============================================
+    // Drawflow 편집기 모듈
+    // ============================================
+    const DrawflowEditor = (function() {
+        let editor = null;
+        let nodeId = 1;
+
+        const nodeTypes = {
+            'file': { label: '파일', icon: 'file', iconColor: 'text-blue-500', inputs: 0, outputs: 1 },
+            'gmlVal': { label: 'GML 검증', icon: 'shield-check', iconColor: 'text-green-500', inputs: 1, outputs: 1 },
+            'trans': { label: '좌표계 변환', icon: 'map-pin', iconColor: 'text-orange-500', inputs: 1, outputs: 1 },
+            'hierarchy': { label: '계층 구조화', icon: 'git-branch', iconColor: 'text-purple-500', inputs: 1, outputs: 1 },
+            'save3d': { label: '3D 저장', icon: 'database', iconColor: 'text-indigo-500', inputs: 1, outputs: 0 },
+            'download3d': { label: '3D 다운로드', icon: 'download', iconColor: 'text-cyan-500', inputs: 1, outputs: 0 }
+        };
+
+        function init() {
+            const container = document.getElementById('drawflow');
+            if (!container) return;
+
+            editor = new Drawflow(container);
+            editor.start();
+
+            // 드래그 이벤트 설정
+            setupDragAndDrop();
+
+            // 버튼 이벤트
+            document.getElementById('run-editor-btn')?.addEventListener('click', runWorkflow);
+            document.getElementById('clear-editor-btn')?.addEventListener('click', clearEditor);
+
+            // 연결 검증
+            editor.on('connectionCreated', validateConnection);
+        }
+
+        function setupDragAndDrop() {
+            const container = document.getElementById('drawflow');
+
+            // 팔레트 아이템 드래그
+            document.querySelectorAll('.palette-item').forEach(item => {
+                item.addEventListener('dragstart', function(e) {
+                    e.dataTransfer.setData('node', this.dataset.node);
+                });
+            });
+
+            // 드롭 영역
+            container.addEventListener('dragover', function(e) {
+                e.preventDefault();
+            });
+
+            container.addEventListener('drop', function(e) {
+                e.preventDefault();
+                const nodeType = e.dataTransfer.getData('node');
+                if (!nodeType) return;
+
+                const rect = container.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+
+                addNode(nodeType, x, y);
+            });
+        }
+
+        function addNode(type, x, y) {
+            const config = nodeTypes[type];
+            if (!config) return;
+
+            editor.addNode(
+                type,
+                config.inputs,
+                config.outputs,
+                x,
+                y,
+                type,
+                {},
+                config.label
+            );
+            nodeId++;
+        }
+
+        function validateConnection(connection) {
+            const targetNode = editor.getNodeFromId(connection.input_id);
+            const sourceNode = editor.getNodeFromId(connection.output_id);
+
+            // 파일/DB 노드는 첫 노드여야 함
+            if (targetNode && (targetNode.name === 'file')) {
+                addLog('파일 노드는 시작 노드여야 합니다.', 'error');
+                editor.removeSingleConnection(
+                    connection.output_id,
+                    connection.input_id,
+                    connection.output_class,
+                    connection.input_class
+                );
+                return;
+            }
+
+            // 저장/다운로드 노드는 마지막 노드여야 함
+            if (sourceNode && (sourceNode.name === 'save3d' || sourceNode.name === 'download3d')) {
+                addLog('저장/다운로드 노드는 마지막 노드여야 합니다.', 'error');
+                editor.removeSingleConnection(
+                    connection.output_id,
+                    connection.input_id,
+                    connection.output_class,
+                    connection.input_class
+                );
+            }
+        }
+
+        function clearEditor() {
+            if (editor) {
+                editor.clearModuleSelected();
+                nodeId = 1;
+                addLog('워크플로우가 초기화되었습니다.', 'info');
+            }
+        }
+
+        async function runWorkflow() {
+            const paths = getDependencyPaths();
+
+            if (paths.length === 0) {
+                addLog('실행할 워크플로우가 없습니다.', 'error');
+                return;
+            }
+
+            const logContainer = document.getElementById('editor-log');
+            logContainer.classList.remove('hidden');
+
+            addLog('워크플로우 실행 시작...', 'info');
+
+            for (const path of paths) {
+                for (const nodeId of path) {
+                    const node = editor.getNodeFromId(nodeId);
+                    const config = nodeTypes[node.name];
+
+                    addLog(`[실행] ${config?.label || node.name}`, 'running');
+
+                    // 시뮬레이션 딜레이
+                    await sleep(1000);
+
+                    addLog(`[완료] ${config?.label || node.name}`, 'success');
+                }
+            }
+
+            addLog('워크플로우 실행 완료!', 'success');
+
+            // 완료 후 수서역 로드
+            await CesiumViewer.loadTileset(Config.SUSEO_TILESET_ID, '수서역 IFC');
+            VisualizationModule.updateLayerList();
+
+            // Cesium 뷰어 표시
+            document.getElementById('drawflow-container').classList.add('hidden');
+
+            addLog('3D 타일셋이 로드되었습니다.', 'success');
+        }
+
+        function getDependencyPaths() {
+            if (!editor) return [];
+
+            const data = editor.drawflow.drawflow.Home.data;
+            const graph = {};
+            const inDegree = {};
+
+            // 그래프 초기화
+            for (const nodeId in data) {
+                graph[nodeId] = [];
+                inDegree[nodeId] = 0;
+            }
+
+            // 연결 정보 분석
+            for (const nodeId in data) {
+                const outputs = data[nodeId].outputs;
+                for (const outKey in outputs) {
+                    for (const conn of outputs[outKey].connections) {
+                        const target = conn.node;
+                        graph[nodeId].push(target);
+                        inDegree[target]++;
+                    }
+                }
+            }
+
+            // 시작 노드
+            const startNodes = Object.keys(inDegree).filter(id => inDegree[id] === 0);
+
+            // DFS로 경로 탐색
+            const paths = [];
+
+            function dfs(currentNode, path) {
+                const newPath = [...path, currentNode];
+                if (graph[currentNode].length === 0) {
+                    paths.push(newPath);
+                    return;
+                }
+                for (const next of graph[currentNode]) {
+                    dfs(next, newPath);
+                }
+            }
+
+            for (const start of startNodes) {
+                dfs(start, []);
+            }
+
+            return paths;
+        }
+
+        function addLog(message, type) {
+            const logContainer = document.getElementById('editor-log');
+            if (!logContainer) return;
+
+            logContainer.classList.remove('hidden');
+
+            const colors = {
+                'info': 'text-blue-400',
+                'success': 'text-green-400',
+                'error': 'text-red-400',
+                'running': 'text-yellow-400'
+            };
+
+            const time = new Date().toLocaleTimeString();
+            const div = document.createElement('div');
+            div.className = colors[type] || 'text-gray-400';
+            div.textContent = `[${time}] ${message}`;
+            logContainer.appendChild(div);
+            logContainer.scrollTop = logContainer.scrollHeight;
+        }
+
+        function sleep(ms) {
+            return new Promise(resolve => setTimeout(resolve, ms));
+        }
+
+        function show() {
+            document.getElementById('drawflow-container')?.classList.remove('hidden');
+        }
+
+        function hide() {
+            document.getElementById('drawflow-container')?.classList.add('hidden');
+        }
+
+        return {
+            init: init,
+            show: show,
+            hide: hide
+        };
+    })();
+
+    // ============================================
+    // 파이프라인 모드 전환 모듈
+    // ============================================
+    const PipelineModeManager = (function() {
+        let currentMode = 'simulation';
+
+        function init() {
+            const modeTabs = document.querySelectorAll('.pipeline-mode-tab');
+
+            modeTabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    switchMode(this.dataset.mode);
+                });
+            });
+        }
+
+        function switchMode(mode) {
+            currentMode = mode;
+
+            // 탭 버튼 상태 업데이트
+            document.querySelectorAll('.pipeline-mode-tab').forEach(tab => {
+                tab.classList.toggle('active', tab.dataset.mode === mode);
+            });
+
+            // 콘텐츠 전환
+            document.querySelectorAll('.pipeline-mode-content').forEach(content => {
+                content.classList.remove('active');
+            });
+            document.getElementById(`${mode}-mode`)?.classList.add('active');
+
+            // Drawflow 표시/숨김
+            if (mode === 'editor') {
+                DrawflowEditor.show();
+            } else {
+                DrawflowEditor.hide();
+            }
+
+        }
+
+        return {
+            init: init,
+            getCurrentMode: () => currentMode
+        };
+    })();
+
+    // ============================================
+    // 유틸리티 함수
+    // ============================================
+    function showLoading(text) {
+        document.getElementById('loading-text').textContent = text || '로딩 중...';
+        document.getElementById('loading-overlay').classList.remove('hidden');
+    }
+
+    function hideLoading() {
+        document.getElementById('loading-overlay').classList.add('hidden');
+    }
+
+    // ============================================
+    // 초기화
+    // ============================================
+    document.addEventListener('DOMContentLoaded', async function() {
+        // Lucide 아이콘 렌더링
+        lucide.createIcons();
+
+        // Cesium 뷰어 초기화
+        await CesiumViewer.init();
+
+        // 모듈 초기화
+        TabManager.init();
+        CatalogModule.init();
+        PipelineModule.init();
+        VisualizationModule.init();
+        DrawflowEditor.init();
+        PipelineModeManager.init();
+
+        console.log('SW Demo initialized');
+    });
+    </script>
+</body>
+</html>

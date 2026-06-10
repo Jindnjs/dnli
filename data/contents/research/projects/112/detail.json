@@ -1,0 +1,246 @@
+{
+  "id": "112",
+  "core": "1핵심",
+  "coreColor": "core1",
+  "ctCode": "핵심기술4",
+  "ctTitle": "정밀상대 및 연속복합측위 플랫폼 및 실증",
+  "cteCode": "세부기술7",
+  "output_code": "성과물12",
+  "title": "연속복합측위 지원 공간정보 서버 기술",
+  "registeredAt": "",
+  "summaryInstitutions": [
+    "아이씨티웨이㈜"
+  ],
+  "overview": {
+    "description": "실증지의 실내공간정보를 구축하고, 오픈 API 형태로 공간정보를 제공 및 구축된 공간정보를 시각화하는 시스템",
+    "descriptionNote": "",
+    "necessityRows": [
+      [
+        {
+          "html": "네이버, 카카오, 브이월드에서 자체 실내 시각화 서비스는 지원되나 외부로 서비스 되지 않음"
+        },
+        {
+          "html": "실내공간정보 자체 구축 및 외부 서비스를 위한 시스템 구축"
+        }
+      ],
+      [
+        {
+          "html": "실내·외 공간정보를 오픈 API 형태로 서비스되는 민간, 공공 서비스가 존재하지 않음"
+        },
+        {
+          "html": "다양한 이동체에 실내·외 공간정보를 서비스하기 위한 오픈 API 개발 및 배포"
+        }
+      ]
+    ]
+  },
+  "researchContent": {
+    "headerRows": [
+      [
+        {
+          "html": "구분",
+          "rowspan": 2
+        },
+        {
+          "html": "연구 수행 내용",
+          "colspan": 10
+        }
+      ],
+      [
+        {
+          "html": "'22 (1차년도)",
+          "colspan": 2
+        },
+        {
+          "html": "'23 (2차년도)",
+          "colspan": 2
+        },
+        {
+          "html": "'24 (3차년도)",
+          "colspan": 2
+        },
+        {
+          "html": "'25 (4차년도)",
+          "colspan": 2
+        },
+        {
+          "html": "'26 (5차년도)",
+          "colspan": 2
+        }
+      ]
+    ],
+    "rows": [
+      {
+        "label": "주요 연구 내용",
+        "cells": [
+          {
+            "html": "공간정보 플랫폼 및 공유 방안 설계",
+            "colspan": 2
+          },
+          {
+            "html": "공간정보 플랫폼 및 공유 방안 구현",
+            "colspan": 2
+          },
+          {
+            "html": "공간정보 플랫폼 및 공유 방안 고도화",
+            "colspan": 2
+          },
+          {
+            "html": "공간정보 플랫폼 및 공유 방안 최적화",
+            "colspan": 2
+          },
+          {
+            "html": "공간정보 플랫폼 연속복합측위 지원 서버 플랫폼 개발",
+            "colspan": 2
+          }
+        ]
+      },
+      {
+        "label": "정량적 성능목표",
+        "cells": [
+          {
+            "html": "기술설계 적절성",
+            "colspan": 2
+          },
+          {
+            "html": "기능동작 100%",
+            "colspan": 2
+          },
+          {
+            "html": "기능동작 100%",
+            "colspan": 2
+          },
+          {
+            "html": "공인인증",
+            "colspan": 2
+          },
+          {
+            "html": "공인인증",
+            "colspan": 2
+          }
+        ]
+      },
+      {
+        "label": "테스트 일정·결과",
+        "cells": [
+          {
+            "html": "'22.11."
+          },
+          {
+            "html": "자문회의 적정성 판정"
+          },
+          {
+            "html": "'23.10."
+          },
+          {
+            "html": "자문회의 적정성 판정"
+          },
+          {
+            "html": "'24.10."
+          },
+          {
+            "html": "자문회의 적정성 판정"
+          },
+          {
+            "html": "'25.10."
+          },
+          {
+            "html": "공인인증시험 적합 판정"
+          },
+          {
+            "html": "'26.10. (예정)"
+          },
+          {
+            "html": "공인인증 시험"
+          }
+        ]
+      },
+      {
+        "label": "주요 연구 성과",
+        "cells": [
+          {
+            "groupId": "y22",
+            "summaryHtml": "기술설계서, 학술발표, 인프라",
+            "colspan": 2
+          },
+          {
+            "groupId": "y23",
+            "summaryHtml": "실증지 공간정보 구축, 논문(비SCI), SW 등록",
+            "colspan": 2
+          },
+          {
+            "groupId": "y24",
+            "summaryHtml": "특허 출원, 학술발표, 성과홍보, 현장시험",
+            "colspan": 2
+          },
+          {
+            "groupId": "y25",
+            "summaryHtml": "특허 출원, 특허 등록, SW 등록, 성과홍보, 현장시험, 공인인증, 학술발표",
+            "colspan": 2
+          },
+          {
+            "groupId": "y26",
+            "summaryHtml": "성과홍보, 시제품, 현장시험, 공인인증",
+            "colspan": 2
+          }
+        ]
+      }
+    ]
+  },
+  "applications": {
+    "overview": "공간정보 기반 실내·외 네비게이션 서비스 산업",
+    "cards": [
+      {
+        "title": "실내공간정보 기반 외부 서비스 지원",
+        "current": "네이버, 카카오, 브이월드 등에서 구축된 실내공간정보를 자체적으로 시각화 및 위치 표시 서비스를 지원하지만 외부 서비스를 지원하지 않아 실내공간정보 활용에 한계가 있음",
+        "improved": "실내공간정보를 자체 측량 및 표준 데이터를 지원받아 시스템 구축 후 외부 서비스가 가능 하도록 실내 네비게이션 서비스 산업에 활용 가능"
+      },
+      {
+        "title": "오픈 API 서비스",
+        "current": "다양한 이동체(보행자, 차량, 드론등)에 실내외 공간정보를 끊김없이 지원하는 시스템 부재",
+        "improved": "다양한 이동체에 실내외 공간정보를 끊김없이 지원하기 위한 시스템 개발로 실내공간정보 지원으로 실내공간정보 기반 재난/안전 상황 회피 시뮬레이션 및 다양한 산업군에서 실내 네비게이션 서비스에 기초 공간정보로 활용 가능"
+      }
+    ]
+  },
+  "process": {
+    "processImage": {
+      "src": "data/contents/research/projects/112/images/process.png",
+      "alt": "데이터 처리 프로세스"
+    },
+    "inputHtml": "Shapefile, GML 3.0, GeoJSON, B3DM",
+    "outputHtml": "GML 3.0, GeoJSON",
+    "outputImages": [
+      {
+        "src": "data/contents/research/projects/112/images/output1.png",
+        "alt": "<공간정보 서버 서비스 화면>",
+        "caption": "<공간정보 서버 서비스 화면>"
+      },
+      {
+        "src": "data/contents/research/projects/112/images/output2.png",
+        "alt": "<실시간 위치정보 시각화 서비스 화면>",
+        "caption": "<실시간 위치정보 시각화 서비스 화면>"
+      }
+    ]
+  },
+  "demo": {
+    "src": "",
+    "height": 1200
+  },
+  "institutions": {
+    "leadContacts": [
+      {
+        "name": "강지연",
+        "role": "개발",
+        "phone": "010-4050-2618",
+        "email": "jiyeon@ictway.co.kr"
+      }
+    ],
+    "partners": []
+  },
+  "downloads": {
+    "y22": [],
+    "y23": [],
+    "y24": [],
+    "y25": [],
+    "y26": []
+  }
+}

@@ -1,0 +1,260 @@
+{
+  "id": "110",
+  "core": "1핵심",
+  "coreColor": "core1",
+  "ctCode": "핵심기술3",
+  "ctTitle": "정밀상대 및 연속복합측위 기술",
+  "cteCode": "세부기술6",
+  "output_code": "성과물10",
+  "title": "연속복합측위 기술",
+  "registeredAt": "",
+  "summaryInstitutions": [
+    "한국전자통신연구원"
+  ],
+  "overview": {
+    "description": "GNSS 가능지역 및 음영지역에서의 끊김없는 측위를 제공하는 기술",
+    "descriptionNote": "",
+    "necessityRows": [
+      [
+        {
+          "html": "GNSS기반 측위가 가능한 지역과 불능 지역의  측위 단절"
+        },
+        {
+          "html": "연속복합측위에 기반한 GNSS 가능 및 불능지역에서의 끊김없는 측위지원"
+        }
+      ],
+      [
+        {
+          "html": "연속적 측위를지원하기 위한 플랫폼 기술의 부족"
+        },
+        {
+          "html": "연속복합측위기술 활용을 위한 단말 및 서버 플랫폼 기술 확보"
+        }
+      ]
+    ]
+  },
+  "researchContent": {
+    "headerRows": [
+      [
+        {
+          "html": "구분",
+          "rowspan": 2
+        },
+        {
+          "html": "연구 수행 내용",
+          "colspan": 10
+        }
+      ],
+      [
+        {
+          "html": "'22 (1차년도)",
+          "colspan": 2
+        },
+        {
+          "html": "'23 (2차년도)",
+          "colspan": 2
+        },
+        {
+          "html": "'24 (3차년도)",
+          "colspan": 2
+        },
+        {
+          "html": "'25 (4차년도)",
+          "colspan": 2
+        },
+        {
+          "html": "'26 (5차년도)",
+          "colspan": 2
+        }
+      ]
+    ],
+    "rows": [
+      {
+        "label": "주요 연구 내용",
+        "cells": [
+          {
+            "html": "-연속복합측위 데이터 프레임워크 분석 및 설계 <br>-연속복합측위 및 이동단말탑재 SW설계",
+            "colspan": 2
+          },
+          {
+            "html": "-연속복합측위 데이터 프레임워크 개발 <br>-연속복합측위 및 이동단말탑재 SW 단위구현 및 기능검증",
+            "colspan": 2
+          },
+          {
+            "html": "-연속복합측위 데이터 프레임워크 고도화 및 표준개발 <br>-연속복합측위 및 이동단말 SW 통합, 안정화",
+            "colspan": 2
+          },
+          {
+            "html": "-연속복합측위 개선 및 고도화 <br>-수서SRT역 보행환경 단위기술 실증",
+            "colspan": 2
+          },
+          {
+            "html": "-보행이동환경에서의 연속복합측위 고도화 (“휠체어모니터링”을 위한 측위확장) <br>-이동(차량)환경 적용 및 실증",
+            "colspan": 2
+          }
+        ]
+      },
+      {
+        "label": "정량적 성능목표",
+        "cells": [
+          {
+            "html": "기술설계 적절성",
+            "colspan": 2
+          },
+          {
+            "html": "기능동작 100%",
+            "colspan": 2
+          },
+          {
+            "html": "연속복합측위 정확성 :　4.5m 이내",
+            "colspan": 2
+          },
+          {
+            "html": "연속복합측위 정확성 :　4m 이내 <br>측위전환 소요시간 :　0.5초",
+            "colspan": 2
+          },
+          {
+            "html": "연속복합측위 정확성 :　3m 이내",
+            "colspan": 2
+          }
+        ]
+      },
+      {
+        "label": "테스트 일정·결과",
+        "labelRowspan": 2,
+        "cells": [
+          {
+            "html": "'22.10",
+            "rowspan": 2
+          },
+          {
+            "html": "외부 전문가 확인/검증 : 설계서 결과확인",
+            "rowspan": 2
+          },
+          {
+            "html": "'23.10",
+            "rowspan": 2
+          },
+          {
+            "html": "외부 전문가 확인/검증 : 시험절차에 따른 결과확인",
+            "rowspan": 2
+          },
+          {
+            "html": "'24.10",
+            "rowspan": 2
+          },
+          {
+            "html": "외부 전문가 확인/검증 달성치 : 3.05m",
+            "rowspan": 2
+          },
+          {
+            "html": "'25.7~"
+          },
+          {
+            "html": "수서역 실증시험 등 약 6회"
+          },
+          {
+            "html": "'26.10 (예정)",
+            "rowspan": 2
+          },
+          {
+            "html": "-",
+            "rowspan": 2
+          }
+        ]
+      },
+      {
+        "cells": [
+          {
+            "html": "'25.10"
+          },
+          {
+            "html": "외부공인인증 [정확도]: 2.93m [전환시간]: 0.24초"
+          }
+        ]
+      },
+      {
+        "label": "주요 연구 성과",
+        "cells": [
+          {
+            "groupId": "y22",
+            "summaryHtml": "데이터 프레임워크 정의서<br>연속복합측위 지원 SW 설계<br>국내외 특허출원 1건<br>국내외 학술밸표 6건<br>성과홍보 2건 등",
+            "colspan": 2
+          },
+          {
+            "groupId": "y23",
+            "summaryHtml": "데이터 프레임워크 정의서(개정)<br>연속복합측위 지원 SW 구현<br>국내외 특허출원 7건<br>국내외 학술발표 8건<br>논문(비SCI) 1건<br>SW 등록 7건<br>성과홍보 2건 등",
+            "colspan": 2
+          },
+          {
+            "groupId": "y24",
+            "summaryHtml": "연속복합측위 및 단말탑재 SW 시험<br>국내외 특허출원 5건<br>국내외 학술발표 9건<br>논문(SCI) 1건<br>논문(비SCI) 3건<br>국내외 표준기고 2건 SW 등록 7건<br>성과홍보 2건<br>시제품 1건 등",
+            "colspan": 2
+          },
+          {
+            "groupId": "y25",
+            "summaryHtml": "국내외 특허출원 9건<br>국내 특허등록 3건<br>국내외 학술발표 7건 논문(SCI) 4건<br>논문(비SCI) 3건<br>국내외 표준기고 3건<br>SW 등록 5건<br>성과홍보 2건<br>사업화 2건 등",
+            "colspan": 2
+          },
+          {
+            "groupId": "y26",
+            "summaryHtml": "[목표]<br>국내외 특허출원 1건<br>국니왜 표준기고 2건<br>논문(SCI) 1건<br>사업화 2건<br>시제품 3건<br>SW 등록 4건 등",
+            "colspan": 2
+          }
+        ]
+      }
+    ]
+  },
+  "applications": {
+    "overview": "실내외를 연결하는 끊김없는 위치가 요구되는 다양한 위치기반 서비스 분야",
+    "cards": [
+      {
+        "title": "다양한 위치기반 서비스 활용",
+        "current": "GNSS기반 측위가 가능한 지역과 불능 지역의 측위 단절 되는 어려움이 있음",
+        "improved": "이동객체 및 자산 모니터링 등, 실내외환경을 연속적으로 연결하는 끊김없는 위치가 요구되는 다양한 위치기반 서비스 분야에서의 활용 가능"
+      },
+      {
+        "title": "사회적인 재난 안전 문제 해결에 활용",
+        "current": "재난 대응 시 GNSS 기반 측위가 가능한 지역과 불가능 지역의 측위 단절 되는 어려움이 있음",
+        "improved": "연속복합측위 기술을 적용함으로써, 일반 보행자들의 긴급상황 발생시 구급차, 경찰, 소방 등의 대응기관의 신속한 조치가 가능하여 사회적인 재난·안전 문제 해결에 활용 가능"
+      }
+    ]
+  },
+  "process": {
+    "processImage": {
+      "src": "data/contents/research/projects/110/images/process.png",
+      "alt": "데이터 처리 프로세스"
+    },
+    "inputHtml": "GNSS 수신신호값, GNSS 보정정보값, 실내측위를 위해 활용되는 자원값(WiFi, BLE, LTE, 영상, 가속도·자이로(IMU) 센서값 등), 실내측위지원 실내지도",
+    "outputHtml": "*주어진 입력값을 이용하여 계산된 이동단말의 위치값<br> - EPSG 3857 좌표값 (Web, 단위: 미터)<br> - EPSG 4326 좌표값 (WGS84 위경도)<br> - EPSG 5186 좌표값 (한국TM, 단위: 미터)",
+    "outputImages": [
+      {
+        "src": "data/contents/research/projects/110/images/output1.png",
+        "alt": "<실내지도 상에서 사용자 (이동 단말기) 위치값 가시화 사례>",
+        "caption": "<실내지도 상에서 사용자 (이동 단말기) 위치값 가시화 사례>"
+      }
+    ]
+  },
+  "demo": {
+    "src": "",
+    "height": 1200
+  },
+  "institutions": {
+    "leadContacts": [
+      {
+        "name": "유재준",
+        "role": "책임",
+        "phone": "010-9424-6257",
+        "email": "jjryu@etri.re.kr"
+      }
+    ],
+    "partners": []
+  },
+  "downloads": {
+    "y22": [],
+    "y23": [],
+    "y24": [],
+    "y25": [],
+    "y26": []
+  }
+}

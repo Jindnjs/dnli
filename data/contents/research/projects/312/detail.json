@@ -1,0 +1,251 @@
+{
+  "id": "312",
+  "core": "3핵심",
+  "coreColor": "core3",
+  "ctCode": "핵심기술3",
+  "ctTitle": "통합 테스트베드 플랫폼 구축",
+  "cteCode": "세부기술5",
+  "output_code": "성과물12",
+  "title": "통합 테스트베드 아키텍처 설계서",
+  "registeredAt": "",
+  "summaryInstitutions": [
+    "㈜선도소프트"
+  ],
+  "overview": {
+    "description": "기술 개발에 필요한 하드웨어 자원을 직접 구축하지 않고, 클라우드 환경에서 가상 자원으로 제공받아 사용하는 테스트 플랫폼 설계",
+    "descriptionNote": "",
+    "necessityRows": [
+      [
+        {
+          "html": "연구 종료 후 구축된 물리 하드웨어가 타연구에 재활용하기 어려워 자원 활용도가 낮음"
+        },
+        {
+          "html": "연구 성과를 디지털 자산으로 축적해 차기 연구에 재활용 가능한 선순환 구조 구축"
+        }
+      ],
+      [
+        {
+          "html": "하드웨어* 초기 도입 비용이 크고, 유지보수 및 운영 효율이 저하됨 <br><br>*서버, 스토리지 네트워크 등"
+        },
+        {
+          "html": "가상 자원*을 신속하게 확장·축소하여 인프라 구축·운영 비용을 최적화 <br><br>*K-PaaS·Kubernetes"
+        }
+      ]
+    ]
+  },
+  "researchContent": {
+    "headerRows": [
+      [
+        {
+          "html": "구분",
+          "rowspan": 2
+        },
+        {
+          "html": "연구 수행 내용",
+          "colspan": 10
+        }
+      ],
+      [
+        {
+          "html": "'22 (1차년도)",
+          "colspan": 2
+        },
+        {
+          "html": "'23 (2차년도)",
+          "colspan": 2
+        },
+        {
+          "html": "'24 (3차년도)",
+          "colspan": 2
+        },
+        {
+          "html": "'25 (4차년도)",
+          "colspan": 2
+        },
+        {
+          "html": "'26 (5차년도)",
+          "colspan": 2
+        }
+      ]
+    ],
+    "rows": [
+      {
+        "label": "주요 연구 내용",
+        "cells": [
+          {
+            "html": "단위기술 통합 시나리오 수립",
+            "colspan": 2
+          },
+          {
+            "html": "플랫폼 아키텍처 설계",
+            "colspan": 2
+          },
+          {
+            "html": "플랫폼 아키텍처 설계 고도화(1차)",
+            "colspan": 2
+          },
+          {
+            "html": "플랫폼 아키텍처 설계 고도화(2차)",
+            "colspan": 2
+          },
+          {
+            "html": "-",
+            "colspan": 2
+          }
+        ]
+      },
+      {
+        "label": "정량적 성능목표",
+        "cells": [
+          {
+            "html": "시나리오 적합성 검증 통과",
+            "colspan": 2
+          },
+          {
+            "html": "클라우드 및 연동 설계 적합성 70%",
+            "colspan": 2
+          },
+          {
+            "html": "클라우드 및 연동 설계 적합성 70%",
+            "colspan": 2
+          },
+          {
+            "html": "클라우드 설계 적합성 검증 통과",
+            "colspan": 2
+          },
+          {
+            "html": "-",
+            "colspan": 2
+          }
+        ]
+      },
+      {
+        "label": "테스트 일정·결과",
+        "cells": [
+          {
+            "html": "-"
+          },
+          {
+            "html": "적정성 판정"
+          },
+          {
+            "html": "'23.10."
+          },
+          {
+            "html": "50%"
+          },
+          {
+            "html": "'24.11."
+          },
+          {
+            "html": "70%"
+          },
+          {
+            "html": "'25.10"
+          },
+          {
+            "html": "통과"
+          },
+          {
+            "html": "-"
+          },
+          {
+            "html": "-"
+          }
+        ]
+      },
+      {
+        "label": "주요 연구 성과",
+        "cells": [
+          {
+            "groupId": "y22",
+            "summaryHtml": "보고서7건 <br>학술발표1건",
+            "colspan": 2
+          },
+          {
+            "groupId": "y23",
+            "summaryHtml": "설계서4건 <br>특허출원1건 <br>논문(비SCI)1건",
+            "colspan": 2
+          },
+          {
+            "groupId": "y24",
+            "summaryHtml": "보고서1건<br>설계서5건<br>논문(비SCI)1건<br>특허출원1건",
+            "colspan": 2
+          },
+          {
+            "groupId": "y25",
+            "summaryHtml": "보고서1건<br>설계서2건<br>특허등록1건",
+            "colspan": 2
+          },
+          {
+            "groupId": "y26",
+            "summaryHtml": "-",
+            "colspan": 2
+          }
+        ]
+      }
+    ]
+  },
+  "applications": {
+    "overview": "국가 R&D 연구 통합 플랫폼, 공공 클라우드 플랫폼, 공간정보 테스트베드 분야",
+    "cards": [
+      {
+        "title": "디지털 국토정보 기술개발 사업 4개 핵심 연구 통합 실증",
+        "current": "연구자가 위성영상 분석, 공간DB 구축, AI 분석 등 핵심 연구 성과를 검증하려면 서로 다른 실험 환경에서 개별 시험을 수행해야 해 통합 검증에 시간이 많이 소요됨",
+        "improved": "클라우드 기반 통합 테스트베드에서 핵심 연구기술을 하나의 실증 환경에서 연계 검증할 수 있어 연구 통합 검증 시간이 약 60% 단축"
+      },
+      {
+        "title": "AI/ML 연구, 대용량 3D데이터 처리",
+        "current": "AI 학습과 대용량 3D 데이터 분석 시 GPU 사용 현황을 실시간 확인하기 어려워 GPU 자원 활용 효율이 낮고 대기 시간이 발생함",
+        "improved": "NVIDIA MIG 기술을 활용해 GPU를 논리적으로 분할하여 여러 연구자가 동시에 사용할 수 있어 GPU 자원 활용률 약 70% 이상 향상 <br><br>*Multi-Instance GPU"
+      },
+      {
+        "title": "V-World / K-GeoP 등 국가 공간정보 플랫폼",
+        "current": "V-World와 K-GeoP 등 국가 공간정보 플랫폼을 연계하려면 표준이 달라 플랫폼별 개별 연계 개발이 필요해 데이터 연계에 시간이 많이 소요됨",
+        "improved": "OGC 표준 API 기반 연계를 적용해 동일 방식으로 플랫폼을 연동할 수 있어 데이터 연계 개발 시간이 약 70% 이상 단축"
+      }
+    ]
+  },
+  "process": {
+    "processImage": {
+      "src": "data/contents/research/projects/312/images/process.png",
+      "alt": "데이터 처리 프로세스"
+    },
+    "inputHtml": "Json (가상머신 설정 정보), YAML (컨테이너 설정 정보)",
+    "outputHtml": "Json (가상 자원 할당 결과 및 구성 정보)",
+    "outputImages": [
+      {
+        "src": "data/contents/research/projects/312/images/output1.png",
+        "alt": "가상머신 할당 현황",
+        "caption": "가상머신 할당 현황"
+      },
+      {
+        "src": "data/contents/research/projects/312/images/output2.png",
+        "alt": "컨테이너 할당 현황",
+        "caption": "컨테이너 할당 현황"
+      }
+    ]
+  },
+  "demo": {
+    "src": "",
+    "height": 1200
+  },
+  "institutions": {
+    "leadContacts": [
+      {
+        "name": "민현기",
+        "role": "개발",
+        "phone": "02-856-1900",
+        "email": "hgmin@sundosoft.co.kr"
+      }
+    ],
+    "partners": []
+  },
+  "downloads": {
+    "y22": [],
+    "y23": [],
+    "y24": [],
+    "y25": [],
+    "y26": []
+  }
+}

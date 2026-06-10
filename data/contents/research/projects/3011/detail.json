@@ -1,0 +1,259 @@
+{
+  "id": "3011",
+  "core": "3핵심",
+  "coreColor": "core3",
+  "ctCode": "핵심기술1",
+  "ctTitle": "디지털 국토정보 수집·연계·통합 및 제공 기술",
+  "cteCode": "세부기술1",
+  "output_code": "성과물1-1",
+  "title": "3D 데이터 파이프라인 기술",
+  "registeredAt": "",
+  "summaryInstitutions": [
+    "㈜선도소프트"
+  ],
+  "overview": {
+    "description": "연구를 통해 개발된 산출물*을 시각화하기 위한 자동 수집-변환-적재 과정이 이루어지는 기술",
+    "descriptionNote": "*산출물:CityGML,변화영상,공간·비공간데이터",
+    "necessityRows": [
+      [
+        {
+          "html": "수동 공정에 의존하여 대규모 데이터를 처리하는데 과도한 시간과 비용 발생"
+        },
+        {
+          "html": "데이터 수집부터 적재까지 전 과정을 자동화하여, 구축 시간 단축과 데이터 최신성 유지 가능"
+        }
+      ],
+      [
+        {
+          "html": "공간정보(지도, 좌표 등)와 속성정보(건물 용도, 교통량 등)를 결합한 융복합 데이터를 표준 기반으로 구축·제공할 수 있는 기술이 부재"
+        },
+        {
+          "html": "표준 규격에 따라 공간정보와 속성정보가 결합된 공간정보 융복합 데이터를 구축하여, 분석 및 서비스 활용 기반 마련"
+        }
+      ]
+    ]
+  },
+  "researchContent": {
+    "headerRows": [
+      [
+        {
+          "html": "구분",
+          "rowspan": 2
+        },
+        {
+          "html": "연구 수행 내용",
+          "colspan": 10
+        }
+      ],
+      [
+        {
+          "html": "'22 (1차년도)",
+          "colspan": 2
+        },
+        {
+          "html": "'23 (2차년도)",
+          "colspan": 2
+        },
+        {
+          "html": "'24 (3차년도)",
+          "colspan": 2
+        },
+        {
+          "html": "'25 (4차년도)",
+          "colspan": 2
+        },
+        {
+          "html": "'26 (5차년도)",
+          "colspan": 2
+        }
+      ]
+    ],
+    "rows": [
+      {
+        "label": "주요 연구 내용",
+        "cells": [
+          {
+            "html": "3D 데이터 파이프라인 및 객체 생성 기술 조사",
+            "colspan": 2
+          },
+          {
+            "html": "3D 데이터 파이프라인 및 객체 생성 기술 개발",
+            "colspan": 2
+          },
+          {
+            "html": "3D 데이터 파이프라인 및 객체 생성 개발",
+            "colspan": 2
+          },
+          {
+            "html": "3D 데이터 파이프라인 기술 고도화",
+            "colspan": 2
+          },
+          {
+            "html": "3D 파이프라인 자동화 기술 적용 및 실증 지원",
+            "colspan": 2
+          }
+        ]
+      },
+      {
+        "label": "정량적 성능목표",
+        "labelRowspan": 2,
+        "cells": [
+          {
+            "html": "조사 적정성 판정",
+            "rowspan": 2,
+            "colspan": 2
+          },
+          {
+            "html": "동작 정확도 100%",
+            "rowspan": 2,
+            "colspan": 2
+          },
+          {
+            "html": "프로세스 자동화율 50%",
+            "rowspan": 2,
+            "colspan": 2
+          },
+          {
+            "html": "프로세스 자동화율 90%",
+            "rowspan": 2,
+            "colspan": 2
+          },
+          {
+            "html": "프로세스 자동화율 90%",
+            "colspan": 2
+          }
+        ]
+      },
+      {
+        "cells": [
+          {
+            "html": "TTA 인증 시행 예정",
+            "colspan": 2
+          }
+        ]
+      },
+      {
+        "label": "테스트 일정·결과",
+        "cells": [
+          {
+            "html": "'22.11."
+          },
+          {
+            "html": "자문회의 적정성 판정"
+          },
+          {
+            "html": "'23.10."
+          },
+          {
+            "html": "동작 정확도 100%"
+          },
+          {
+            "html": "'24.10."
+          },
+          {
+            "html": "자동화율 56%"
+          },
+          {
+            "html": "'25.10."
+          },
+          {
+            "html": "프로세스 자동화율 95%"
+          },
+          {
+            "html": "'26.10. (예정)"
+          },
+          {
+            "html": "-"
+          }
+        ]
+      },
+      {
+        "label": "주요 연구 성과",
+        "cells": [
+          {
+            "groupId": "y22",
+            "summaryHtml": "보고서 1건",
+            "colspan": 2
+          },
+          {
+            "groupId": "y23",
+            "summaryHtml": "특허 출원 2건",
+            "colspan": 2
+          },
+          {
+            "groupId": "y24",
+            "summaryHtml": "논문 SCI1건 <br>비SCI1건<br>특허출원1건 <br>특허등록1건",
+            "colspan": 2
+          },
+          {
+            "groupId": "y25",
+            "summaryHtml": "SW등록 2건",
+            "colspan": 2
+          },
+          {
+            "groupId": "y26",
+            "summaryHtml": "TTA 공인인증 결과 문서",
+            "colspan": 2
+          }
+        ]
+      }
+    ]
+  },
+  "applications": {
+    "overview": "디지털 트윈국토 플랫폼 / 스마트시티 분야",
+    "cards": [
+      {
+        "title": "국가·지자체 공간정보 플랫폼 운영 분야",
+        "current": "V-World 등 공간정보 플랫폼 관리자가 3D 데이터를 CityGML 형식으로 변환하려 할 때 외산 상용 도구(FME)에 의존해야 하며, 최신 CityGML 3.0 변환을 지원하지 않아 최신 데이터 활용에 한계가 있음",
+        "improved": "자동 변환 파이프라인을 적용해 외산 도구 없이 CityGML 3.0 기반 변환·통합이 가능해지며, 데이터 변환 작업 시간이 약 70% 이상 단축되어 공간정보 정책 활용 효율 향상"
+      },
+      {
+        "title": "스마트시티·도시개발 디지털트윈 구축·운영 분야",
+        "current": "스마트시티 구축 시 건물·도로·지하시설 등 다양한 3D 데이터를 플랫폼에 적용하려면 데이터 형식이 달라 수동 정합·변환 작업을 반복해야 하며 구축 기간이 길어짐",
+        "improved": "자동 데이터 파이프라인을 통해 다양한 3D 데이터를 표준 형식으로 자동 통합하여 데이터 구축 시간이 기존 대비 약 60% 이상 단축되고 디지털트윈 운영 효율 향상"
+      }
+    ]
+  },
+  "process": {
+    "processImage": {
+      "src": "data/contents/research/projects/3011/images/process.png",
+      "alt": "데이터 처리 프로세스"
+    },
+    "inputHtml": "CityGML 3.0",
+    "outputHtml": "B3DM, tileset.json (시각화 파일)",
+    "outputImages": [
+      {
+        "src": "data/contents/research/projects/3011/images/output1.png",
+        "alt": "",
+        "caption": ""
+      },
+      {
+        "src": "data/contents/research/projects/3011/images/output2.png",
+        "alt": "수서역 부근 3D 건물 파일 3D 시각화 결과",
+        "caption": "수서역 부근 3D 건물 파일 3D 시각화 결과"
+      }
+    ]
+  },
+  "demo": {
+    "src": "data/contents/research/projects/3011/demo/index.html",
+    "height": 1200
+  },
+  "institutions": {
+    "leadContacts": [
+      {
+        "name": "민현기",
+        "role": "개발",
+        "phone": "02-856-1900",
+        "email": "hgmin@sundosoft.co.kr"
+      }
+    ],
+    "partners": []
+  },
+  "downloads": {
+    "y22": [],
+    "y23": [],
+    "y24": [],
+    "y25": [],
+    "y26": []
+  }
+}

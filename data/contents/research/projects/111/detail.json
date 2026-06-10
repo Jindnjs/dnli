@@ -1,0 +1,246 @@
+{
+  "id": "111",
+  "core": "1핵심",
+  "coreColor": "core1",
+  "ctCode": "핵심기술4",
+  "ctTitle": "정밀상대 및 연속복합측위 플랫폼 및 실증",
+  "cteCode": "세부기술7",
+  "output_code": "성과물11",
+  "title": "연속복합측위 지원 위치정보 서버 기술",
+  "registeredAt": "",
+  "summaryInstitutions": [
+    "지오소프트"
+  ],
+  "overview": {
+    "description": "연속복합측위에 사용되는 측위 데이터를 수집, 저장, 분석, 정제, 가공하고, 단말 모니터링 기능을 제공하는 서버 SW 플랫폼",
+    "descriptionNote": "",
+    "necessityRows": [
+      [
+        {
+          "html": "측위기술 개발 주체마다 독점적이고 폐쇄적인 신호데이터베이스 측위정보 구축 문제"
+        },
+        {
+          "html": "오픈 신호데이터베이스를 오픈 API를 통해 주고받으면서 통합 측위정보 제공 생태계 조성"
+        }
+      ],
+      [
+        {
+          "html": "기존 측위 서비스는 타 시스템 데이터 교환 지원이 미흡"
+        },
+        {
+          "html": "다른 시스템간 데이터 교환을 위한 데이터마켓 플랫폼으로 활용 가능"
+        }
+      ]
+    ]
+  },
+  "researchContent": {
+    "headerRows": [
+      [
+        {
+          "html": "구분",
+          "rowspan": 2
+        },
+        {
+          "html": "연구 수행 내용",
+          "colspan": 10
+        }
+      ],
+      [
+        {
+          "html": "'22 (1차년도)",
+          "colspan": 2
+        },
+        {
+          "html": "'23 (2차년도)",
+          "colspan": 2
+        },
+        {
+          "html": "'24 (3차년도)",
+          "colspan": 2
+        },
+        {
+          "html": "'25 (4차년도)",
+          "colspan": 2
+        },
+        {
+          "html": "'26 (5차년도)",
+          "colspan": 2
+        }
+      ]
+    ],
+    "rows": [
+      {
+        "label": "주요 연구 내용",
+        "cells": [
+          {
+            "html": "요구사항 분석 및 시스템 설계",
+            "colspan": 2
+          },
+          {
+            "html": "위치정보서버 구현 및 기능검증",
+            "colspan": 2
+          },
+          {
+            "html": "위치정보서버 기능 고도화 및 기능검증",
+            "colspan": 2
+          },
+          {
+            "html": "보행이동환경 실증 및 차량이동환경 적용",
+            "colspan": 2
+          },
+          {
+            "html": "차량 및 보행 이동환경확장 실증",
+            "colspan": 2
+          }
+        ]
+      },
+      {
+        "label": "정량적 성능목표",
+        "cells": [
+          {
+            "html": "-",
+            "colspan": 2
+          },
+          {
+            "html": "-",
+            "colspan": 2
+          },
+          {
+            "html": "-",
+            "colspan": 2
+          },
+          {
+            "html": "서비스가동률 98%",
+            "colspan": 2
+          },
+          {
+            "html": "서비스가동률 99.5%",
+            "colspan": 2
+          }
+        ]
+      },
+      {
+        "label": "테스트 일정·결과",
+        "cells": [
+          {
+            "html": "'22.11."
+          },
+          {
+            "html": "자문회의 적정성 판정"
+          },
+          {
+            "html": "'23.11."
+          },
+          {
+            "html": "자문회의 적정성 판정"
+          },
+          {
+            "html": "'24.11."
+          },
+          {
+            "html": "자문회의 적정성 판정"
+          },
+          {
+            "html": "'25.10."
+          },
+          {
+            "html": "자문회의 적정성 판정"
+          },
+          {
+            "html": "'26.10. (예정)"
+          },
+          {
+            "html": "공인인증시험"
+          }
+        ]
+      },
+      {
+        "label": "주요 연구 성과",
+        "cells": [
+          {
+            "groupId": "y22",
+            "summaryHtml": "특허 출원, S/W 등록, 성과홍보, 일자리창출",
+            "colspan": 2
+          },
+          {
+            "groupId": "y23",
+            "summaryHtml": "특허 출원, S/W 등록",
+            "colspan": 2
+          },
+          {
+            "groupId": "y24",
+            "summaryHtml": "특허 출원, 학술발표, 성과홍보, 시제품, 현장시험, 일자리창출",
+            "colspan": 2
+          },
+          {
+            "groupId": "y25",
+            "summaryHtml": "특허 출원, 학술발표, 성과홍보, 시제품, 현장시험, 일자리창출",
+            "colspan": 2
+          },
+          {
+            "groupId": "y26",
+            "summaryHtml": "특허 등록, 성과홍보, 현장시험, 일자리창출<br>(예정)",
+            "colspan": 2
+          }
+        ]
+      }
+    ]
+  },
+  "applications": {
+    "overview": "지자체·공공기관, 도서관·박물관, 물류센터·병원·쇼핑몰 등 실내 측위가 필요한 민간 및 공공 분야 전반.",
+    "cards": [
+      {
+        "title": "공공 서비스 분야의 위치 안내 활용",
+        "current": "지자체 민원실, 공공기관, 도서관·박물관 등에서 단순 안내 표지나 직원 안내 중심의 민원 서비스가 제공되며, 실내 위치 기반 경로 안내나 방문자 위치 확인 기능은 제한적임.",
+        "improved": "모바일 앱 기반 민원실 길찾기, 고령자·장애인 위치 지원, 대기 민원인 위치 확인 등 스마트 행정 안내 서비스를 제공하고 공공 Wi-Fi·BLE 인프라를 활용한 효율적 운영 가능."
+      },
+      {
+        "title": "민간 서비스 분야의 위치 안애 활용",
+        "current": "물류센터, 병원, 쇼핑몰 등에서 GPS 기반 배송 추적이나 CCTV·수기 관리 중심의 자산·환자 위치 관리가 이루어지며, 실내 위치 기반 작업 동선 분석이나 고객 위치 서비스는 제한적임.",
+        "improved": "Wi-Fi·BLE 기반 실내외 연속 측위를 통해 물류 작업자 동선 최적화, 창고 자산 관리, 병동 환자 위치 추적, 쇼핑몰 고객 위치 기반 안내·마케팅 등 운영효율과 서비스 품질 향상 가능."
+      }
+    ]
+  },
+  "process": {
+    "processImage": {
+      "src": "data/contents/research/projects/111/images/process.png",
+      "alt": "데이터 처리 프로세스"
+    },
+    "inputHtml": "측위에 사용되는 전파 신호 등의 수집 원시 데이터 (ZIP, json 포맷)",
+    "outputHtml": "측위 지원 데이터 (ZIP, json 포맷)",
+    "outputImages": [
+      {
+        "src": "data/contents/research/projects/111/images/output1.png",
+        "alt": "<입력된 측위 데이터를 지도 기반에서 조회 및 분석>",
+        "caption": "<입력된 측위 데이터를 지도 기반에서 조회 및 분석>"
+      },
+      {
+        "src": "data/contents/research/projects/111/images/output2.png",
+        "alt": "<특정 지점의 신호 데이터 및 사진 정보를 조회>",
+        "caption": "<특정 지점의 신호 데이터 및 사진 정보를 조회>"
+      }
+    ]
+  },
+  "demo": {
+    "src": "",
+    "height": 1200
+  },
+  "institutions": {
+    "leadContacts": [
+      {
+        "name": "조성일",
+        "role": "책임",
+        "phone": "031-758-8211",
+        "email": "chosi@geosoft.co.kr"
+      }
+    ],
+    "partners": []
+  },
+  "downloads": {
+    "y22": [],
+    "y23": [],
+    "y24": [],
+    "y25": [],
+    "y26": []
+  }
+}

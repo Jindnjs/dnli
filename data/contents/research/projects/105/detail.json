@@ -1,0 +1,242 @@
+{
+  "id": "105",
+  "core": "1핵심",
+  "coreColor": "core1",
+  "ctCode": "핵심기술2",
+  "ctTitle": "모바일환경 Multi-GNSS 정밀측위기술",
+  "cteCode": "세부기술4",
+  "output_code": "성과물5",
+  "title": "Multi-GNSS 건설현장 적용 기술",
+  "registeredAt": "",
+  "summaryInstitutions": [
+    "㈜삼안"
+  ],
+  "overview": {
+    "description": "제조형 교량 공법의 하나인 프리팹 공법에 대한 부재관리(제작, 타설, 양생, 야적장 운반, 야적, 출하 등) 시스템의 관리 효율성을 위한 Multi-GNSS 정밀측위기술 활용 SW",
+    "descriptionNote": "",
+    "necessityRows": [
+      [
+        {
+          "html": "프리팹 공장에서 생산된 부재의 관리시스템에 위치정보 부재"
+        },
+        {
+          "html": "생산 부재에 대한 GNSS 정밀 위치기반 부재 관리시스템 적용"
+        }
+      ],
+      [
+        {
+          "html": "부재 제작 후 야적장 위치 이동에 따른 부재 위치 파악 및 부재 출하를 위한 차량 동선 파악에 필요"
+        },
+        {
+          "html": "프리팹 부재의 제작, 야적 및 이동에 대한 실시간 관리시스템을 통해 작업 안전 및 효율성 증대"
+        }
+      ]
+    ]
+  },
+  "researchContent": {
+    "headerRows": [
+      [
+        {
+          "html": "구분",
+          "rowspan": 2
+        },
+        {
+          "html": "연구 수행 내용",
+          "colspan": 10
+        }
+      ],
+      [
+        {
+          "html": "'22 (1차년도)",
+          "colspan": 2
+        },
+        {
+          "html": "'23 (2차년도)",
+          "colspan": 2
+        },
+        {
+          "html": "'24 (3차년도)",
+          "colspan": 2
+        },
+        {
+          "html": "'25 (4차년도)",
+          "colspan": 2
+        },
+        {
+          "html": "'26 (5차년도)",
+          "colspan": 2
+        }
+      ]
+    ],
+    "rows": [
+      {
+        "label": "주요 연구 내용",
+        "cells": [
+          {
+            "html": "미참여",
+            "rowspan": 5,
+            "colspan": 2
+          },
+          {
+            "html": "모바일 환경 Multi-GNSS 정밀측위기술 검증 및 건설현장 적용계획 수립",
+            "colspan": 2
+          },
+          {
+            "html": "Multi-GNSS 스마트폰 네트워크 RTK 측위기술 개발, 검증 및 현장테스트",
+            "colspan": 2
+          },
+          {
+            "html": "모바일 환경 GNSS 정밀측위 보행 및 차량이동환경 고도화 및 실증",
+            "colspan": 2
+          },
+          {
+            "html": "모바일 환경 GNSS 정밀측위 드론이동환경 고도화 및 실증",
+            "colspan": 2
+          }
+        ]
+      },
+      {
+        "label": "정량적 성능목표",
+        "cells": [
+          {
+            "html": "성과지표 없음",
+            "colspan": 2
+          },
+          {
+            "html": "성과지표 없음",
+            "colspan": 2
+          },
+          {
+            "html": "도심지: &lt; 50cm (∼100km/h, 3차원)",
+            "colspan": 2
+          },
+          {
+            "html": "&lt; 50cm (3차원)",
+            "colspan": 2
+          }
+        ]
+      },
+      {
+        "label": "테스트 일정·결과",
+        "labelRowspan": 2,
+        "cells": [
+          {
+            "html": "'23.09. 자체 테스트",
+            "rowspan": 2
+          },
+          {
+            "html": "건설현장 적용 시나리오 확인",
+            "rowspan": 2
+          },
+          {
+            "html": "'24.11. 현장시험",
+            "rowspan": 2
+          },
+          {
+            "html": "정지측위 실험을 통한 수평정확도 분석 (RMSE 5.0cm &lt; 10cm)",
+            "rowspan": 2
+          },
+          {
+            "html": "'25.09. 현장시험"
+          },
+          {
+            "html": "측위 정보 데이터 수집 및 연동 체계 검증 완료"
+          },
+          {
+            "html": "'26.09. (예정)",
+            "rowspan": 2
+          },
+          {
+            "html": "-",
+            "rowspan": 2
+          }
+        ]
+      },
+      {
+        "cells": [
+          {
+            "html": "'25.09. 현장시험"
+          },
+          {
+            "html": "드론이동환경 측위 테스트 선행 수행"
+          }
+        ]
+      },
+      {
+        "label": "주요 연구 성과",
+        "cells": [
+          {
+            "html": "기술문서, S/W 등록",
+            "colspan": 2
+          },
+          {
+            "groupId": "y24",
+            "summaryHtml": "기술문서, 논문,<br>S/W 등록, 현장시험",
+            "colspan": 2
+          },
+          {
+            "groupId": "y25",
+            "summaryHtml": "기술문서, S/W 등록, 현장시험",
+            "colspan": 2
+          },
+          {
+            "html": "",
+            "colspan": 2
+          }
+        ]
+      }
+    ]
+  },
+  "applications": {
+    "overview": "스마트건설, 건설시공, 건설관리, 부재관리 분야",
+    "cards": [
+      {
+        "title": "BIM 정보를 이용한 건설 부재의 정밀 공간 좌표 및 이력 관리 시스템에 활용",
+        "current": "프리팹(Prefab) 공장 및 시공 현장 내 건설 정보 관리 시스템의 부재. <br>BIM 활용성 증대에 따른 정밀한 위치 정보 연계 필요성의 대두.",
+        "improved": "GNSS 기반 실시간 데이터 획득 시스템 구축: 위치 정보와 부재 속성(상태, 일정 등)을 결합하여 BIM 모델에 즉각 반영. <br>디지털 트윈 기반 통합 관리 체계 구현: 현장 상황을 BIM 환경 내에서 실시간으로 확인·수정·적용함으로써 시공 정확도 및 관리 효율 극대화."
+      }
+    ]
+  },
+  "process": {
+    "processImage": {
+      "src": "data/contents/research/projects/105/images/process.png",
+      "alt": "데이터 처리 프로세스"
+    },
+    "inputHtml": "부재 위치 좌표, 부재 식별 코드, 생산 정보, 품질 검사 결과, 작업 단계 정보, 손상/결함 정보",
+    "outputHtml": "3D 가시화된 부재 배치도, 야적 현황 맵, 실시간 위치 표시 인터페이스, 부재 상태 이력 데이터, 품질 관리 리포트",
+    "outputImages": [
+      {
+        "src": "data/contents/research/projects/105/images/output1.png",
+        "alt": "<작업단계별 부재 현황 및 속성정보 표출>",
+        "caption": "<작업단계별 부재 현황 및 속성정보 표출>"
+      },
+      {
+        "src": "data/contents/research/projects/105/images/output2.png",
+        "alt": "<실시간 위치표시 맵 및 야적 현황>",
+        "caption": "<실시간 위치표시 맵 및 야적 현황>"
+      }
+    ]
+  },
+  "demo": {
+    "src": "",
+    "height": 1200
+  },
+  "institutions": {
+    "leadContacts": [
+      {
+        "name": "이동원",
+        "role": "책임",
+        "phone": "010-2910-3133",
+        "email": "dwlee2@samaneng.com"
+      }
+    ],
+    "partners": []
+  },
+  "downloads": {
+    "y22": [],
+    "y23": [],
+    "y24": [],
+    "y25": [],
+    "y26": []
+  }
+}

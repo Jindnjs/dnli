@@ -1,0 +1,257 @@
+{
+  "id": "310",
+  "core": "3핵심",
+  "coreColor": "core3",
+  "ctCode": "핵심기술2",
+  "ctTitle": "건설/비공간정보연계 기술",
+  "cteCode": "세부기술4",
+  "output_code": "성과물10",
+  "title": "시맨틱 기반 위치검색 및 추정 기술",
+  "registeredAt": "",
+  "summaryInstitutions": [
+    "(주)에스지앤아이"
+  ],
+  "overview": {
+    "description": "위치 문구나 속성질의에 대해서 AI가 해석하여 좌표 및 정보를 반환하는 기술",
+    "descriptionNote": "",
+    "necessityRows": [
+      [
+        {
+          "html": "특정 상호나 시설명이 아닌 앞·뒤·옆 등의 위치명사로는 정확한 위치 추정·제공 불가능"
+        },
+        {
+          "html": "사용자가 언급하는 위치명사에 대한 정확한 좌표 및 정보 제공 가능"
+        }
+      ],
+      [
+        {
+          "html": "기존 행정데이터의 속성 정보 활용성 미흡"
+        },
+        {
+          "html": "비공간 데이터의 속성 정보를 활용하여 다양한 정보*를 사용자에게 제공 <br><br>* 다양한 정보: 영업시간, 메뉴, 가격 등"
+        }
+      ]
+    ]
+  },
+  "researchContent": {
+    "headerRows": [
+      [
+        {
+          "html": "구분",
+          "rowspan": 2
+        },
+        {
+          "html": "연구 수행 내용",
+          "colspan": 9
+        }
+      ],
+      [
+        {
+          "html": "'22 (1차년도)"
+        },
+        {
+          "html": "'23 (2차년도)",
+          "colspan": 2
+        },
+        {
+          "html": "'24 (3차년도)",
+          "colspan": 2
+        },
+        {
+          "html": "'25 (4차년도)",
+          "colspan": 2
+        },
+        {
+          "html": "'26 (5차년도)",
+          "colspan": 2
+        }
+      ]
+    ],
+    "rows": [
+      {
+        "label": "주요 연구 내용",
+        "cells": [
+          {
+            "html": "-"
+          },
+          {
+            "html": "시맨틱 LOD 정의 및 적용방안 도출",
+            "colspan": 2
+          },
+          {
+            "html": "시맨틱 기반의 위치 검색 및 추정 기술",
+            "colspan": 2
+          },
+          {
+            "html": "시맨틱 기반 위치검색 및 추정 SW, 크롤링을 통한 비정형 정보의 위치정보 추정 SW",
+            "colspan": 2
+          },
+          {
+            "html": "비공간정보의 디지털 국토정보 맵핑을 위한 통합 SW 개발",
+            "colspan": 2
+          }
+        ]
+      },
+      {
+        "label": "정량적 성능목표",
+        "cells": [
+          {
+            "html": "-"
+          },
+          {
+            "html": "연구관련성 판정",
+            "colspan": 2
+          },
+          {
+            "html": "알고리즘 실용성 통과",
+            "colspan": 2
+          },
+          {
+            "html": "추정률: 70% 기능동작: 100%",
+            "colspan": 2
+          },
+          {
+            "html": "기능동작: 100% 테스트베도 실증 적성성 통과",
+            "colspan": 2
+          }
+        ]
+      },
+      {
+        "label": "테스트 일정·결과",
+        "labelRowspan": 2,
+        "cells": [
+          {
+            "html": "-",
+            "rowspan": 2
+          },
+          {
+            "html": "'23.11.",
+            "rowspan": 2
+          },
+          {
+            "html": "기술분석을 통한 연구관련 성 적합",
+            "rowspan": 2
+          },
+          {
+            "html": "'24.11.",
+            "rowspan": 2
+          },
+          {
+            "html": "알고리즘 실용성 통과",
+            "rowspan": 2
+          },
+          {
+            "html": "'25.11."
+          },
+          {
+            "html": "추정률 80% 달성"
+          },
+          {
+            "html": "'26.09. (예정)",
+            "rowspan": 2
+          },
+          {
+            "html": "",
+            "rowspan": 2
+          }
+        ]
+      },
+      {
+        "cells": [
+          {
+            "html": "'25.11."
+          },
+          {
+            "html": "기능동작 100%달성"
+          }
+        ]
+      },
+      {
+        "label": "주요 연구 성과",
+        "cells": [
+          {
+            "groupId": "y22",
+            "summaryHtml": "-"
+          },
+          {
+            "groupId": "y23",
+            "summaryHtml": "보고서 1건",
+            "colspan": 2
+          },
+          {
+            "groupId": "y24",
+            "summaryHtml": "보고서 1건<br>특허출원 1건<br>논문(비SCI) 1건<br>학술발표 1건",
+            "colspan": 2
+          },
+          {
+            "groupId": "y25",
+            "summaryHtml": "논문(비SCI) 1건<br>SW등록 2건<br>공인인증 2건",
+            "colspan": 2
+          },
+          {
+            "groupId": "y26",
+            "summaryHtml": "논문 1건<br>특허출원 1건<br>SW 등록 1건<br>공인인증 1건<br>보고서 1건",
+            "colspan": 2
+          }
+        ]
+      }
+    ]
+  },
+  "applications": {
+    "overview": "시설 안내 보조 서비스",
+    "cards": [
+      {
+        "title": "교통약자 편의시설 안내",
+        "current": "교통약자가 직접 특정 지역을 방문하고 확인하지 않으면 엘리베이터가 있는 출구 확인이 불가",
+        "improved": "지하철역, 환승 통로, 엘리베이터 등 편의시설 정보가 공간화되어 “엘리베이터 있는 출구” 등의 속성 기반 위치 질의를 통해 시설 위치 및 접근 정보 확인이 가능"
+      },
+      {
+        "title": "복합 속성 검색",
+        "current": "사용자가 보육종사자수 10명 이상 어린이집의 위치를 지도상에 조회하기 위해서 전국어린이집표준데이터(공공데이터포털)에서 보육종사자수데이터를 수동으로 분석하고, 각 어린이집의 위치를 직접 검색해서 지도상에 확인",
+        "improved": "“보육 종사자 수 10명 이상 어린이집”을 연구통합플랫폼 검색창에 검색하면 공공데이터포털의 데이터를 자동으로 활용하여 각 어린이집의 위치 결과를 자동으로 *표출 <br><br>* 성과물 8 비공간정보 SW를 통해 행정데이터 연계 필요"
+      }
+    ]
+  },
+  "process": {
+    "processImage": {
+      "src": "data/contents/research/projects/310/images/process.png",
+      "alt": "데이터 처리 프로세스"
+    },
+    "inputHtml": "위치 추정 문구나 대상에 대한 속성 질의",
+    "outputHtml": "질의 대상에 맞는 LLM 답변(마크다운 형식)",
+    "outputImages": [
+      {
+        "src": "data/contents/research/projects/310/images/output1.png",
+        "alt": "“수서역사에서 커피마시고 싶어” 답변 결과",
+        "caption": "“수서역사에서 커피마시고 싶어” 답변 결과"
+      },
+      {
+        "src": "data/contents/research/projects/310/images/output2.png",
+        "alt": "“수서역사에서 간단하게 먹을때 없을까” 답변 결과",
+        "caption": "“수서역사에서 간단하게 먹을때 없을까” 답변 결과"
+      }
+    ]
+  },
+  "demo": {
+    "src": "",
+    "height": 1200
+  },
+  "institutions": {
+    "leadContacts": [
+      {
+        "name": "조필구",
+        "role": "책임",
+        "phone": "032-501-2550",
+        "email": "pilku.jo@esgi.co.kr"
+      }
+    ],
+    "partners": []
+  },
+  "downloads": {
+    "y22": [],
+    "y23": [],
+    "y24": [],
+    "y25": [],
+    "y26": []
+  }
+}

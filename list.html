@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<title>대표 연구성과</title>
+
+<link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
+<link rel="stylesheet" type="text/css" href="css/slick.css">
+<link rel="stylesheet" type="text/css" href="css/common.css">
+<link rel="stylesheet" type="text/css" href="css/responsive.css">
+<link rel="stylesheet" type="text/css" href="css/dgt.css">
+
+<script type="text/javascript">
+var cmAppUrl = {
+	po   : "https://www.vworld.kr",
+	data : "https://www.vworld.kr",
+	dev  : "https://www.vworld.kr",
+	user : "https://www.vworld.kr",
+	desk : "https://www.vworld.kr",
+	eng  : "https://www.vworld.kr",
+	map  : "https://map.vworld.kr",
+	apis : "https://apis.vworld.kr",
+	api  : "https://api.vworld.kr"
+}
+</script>
+<script type="text/javascript" src="js/jquery-3.6.1.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="js/jquery.cookie.js"></script>
+<script type="text/javascript" src="js/moment.min.js"></script>
+<script type="text/javascript" src="js/slick.min.js"></script>
+<script type="text/javascript" src="js/vue.min.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/common_fnc.js"></script>
+<script type="text/javascript" src="js/common_login.js"></script>
+<script type="text/javascript" src="js/common_msg.js"></script>
+<script type="text/javascript" src="js/common_valid_msg.js"></script>
+<script type="text/javascript" src="js/common_valid.js"></script>
+<script type="text/javascript" src="js/common_menu.js"></script>
+<script type="text/javascript" src="js/common_file.js"></script>
+<script type="text/javascript">
+var depth1=0; var depth2=0; var depth3=0; var depth4=0; var depth5=0;
+</script>
+</head>
+
+<body>
+	<div class="blind">
+		<a href="#sitemapMenu">전체메뉴 바로가기</a>
+		<a href="#headerMenu" class="mHide">메인메뉴 바로가기</a>
+		<a href="#section">본문 바로가기</a>
+	</div>
+	<div id="app" class="container">
+		<div class="template sub">
+
+			<header class="header fix">
+				<h1 class="logo"><a href="javascript:urlFnc.goMain();" title="메인화면으로 이동"><strong>V-world</strong>디지털트윈국토</a></h1>
+				<nav class="gnb mHide" id="headerMenu"><ul><li class="toggle"><a href="javascript:menuFnc.move('4');" class="menu">지도조회</a><ul class="dropbox"><li><a href="javascript:menuFnc.move('https://map.vworld.kr/map/dtkmap.do');" class="menu">주제도</a></li><li><a href="javascript:menuFnc.move('https://map.vworld.kr/map/dtkmap.do?mode=MAPD101');" class="menu">분석 및 시뮬레이션</a></li><li><a href="javascript:menuFnc.move('https://map.vworld.kr/map/dtkmap.do?mode=MAPD100');" class="menu">실내지도</a></li></ul></li><li class="toggle"><a href="javascript:menuFnc.move('/dtmk/dtmk_main_s001.do');" class="menu">다운로드</a><ul class="dropbox"><li><a href="javascript:menuFnc.move('/dtmk/dtmk_intdtmk_s001.do');" class="menu">공간정보 소개</a></li><li><a href="javascript:menuFnc.move('/dtmk/dtmk_ntads_s001.do');" class="menu">공간정보 다운로드</a></li></ul></li><li class="toggle"><a href="javascript:menuFnc.move('/v4po_openapi_s001.do');" class="menu">오픈API</a><ul class="dropbox"><li><a href="javascript:menuFnc.move('/dev/v4apiRefer.do');" class="menu">API레퍼런스</a></li><li><a href="javascript:menuFnc.move('/dev/v4dv_icbbeta_s001.do');" class="menu">API인큐베이터</a></li><li><a href="javascript:menuFnc.move('https://v-world.github.io/Utilization-Model/');" class="menu">브이월드 활용모델</a></li></ul></li><li class="toggle"><a href="javascript:menuFnc.move('/v4po_svi_s001.do');" class="menu">서비스</a><ul class="dropbox"><li><a href="javascript:menuFnc.move('88');" class="menu">부동산 서비스</a></li><li><a href="javascript:menuFnc.move('95');" class="menu">3D데스크톱</a></li></ul></li><li class="toggle"><a href="javascript:menuFnc.move('103');" class="menu">활용지원</a><ul class="dropbox"><li><a href="javascript:menuFnc.move('/v4po_cdntr_s004.do');" class="menu">코디네이터</a></li><li><a href="javascript:menuFnc.move('/v4po_brdfaq_s001.do');" class="menu">자주 묻는 질문</a></li><li><a href="javascript:menuFnc.move('/v4po_brdqna_s001.do');" class="menu">질의응답</a></li></ul></li><li class="toggle"><a href="javascript:menuFnc.move('134');" class="menu">소통공간</a><ul class="dropbox"><li><a href="javascript:menuFnc.move('/v4po_brdnotice_s001.do');" class="menu">공지사항</a></li><li><a href="javascript:menuFnc.move('/v4po_brddata_s001.do');" class="menu">자료실</a></li><li><a href="javascript:menuFnc.move('/v4po_brdmedia_s001.do');" class="menu">미디어소식</a></li></ul></li><li class="toggle"><a href="javascript:menuFnc.move('/dtac/dtac_search_s001.do');" class="menu">기업정보</a><ul class="dropbox"><li><a href="javascript:menuFnc.move('/dtac/dtac_search_s002.do');" class="menu">기업정보 조회</a></li><li><a href="javascript:menuFnc.move('/dtac/dtac_search_s002.do?detailTyp=02');" class="menu">기업상품 조회</a></li></ul></li></ul></nav>
+				<div class="btns">
+					<div class="toggle one">
+						<button type="button" class="bt max ico only find" title="통합검색">통합검색</button>
+						<div class="overbox rt">
+							<div class="set find">
+								<label for="header_searchIdw" class="blind">통합검색</label>
+								<input type="text" class="input validate[required]" id="header_searchIdw" name="searchIdw" value="" placeholder="통합검색" title="검색어">
+								<a href="javascript:void(0);" class="bt ico only find" id="header_searchBtn">검색</a>
+								<button type="button" class="bt ico only close">취소</button>
+							</div>
+						</div>
+					</div>
+					<div class="toggle one" id="login-before">
+						<button type="button" id="btLogin" class="bt max ico only lock customToggle" title="로그인" onclick="loginFnc.def(undefined,'Y');">로그인/회원가입</button>
+						<div class="dropbox">
+							<div class="headline">
+								<h4 class="title">로그인</h4>
+								<button type="button" class="bt ico only close">닫기</button>
+							</div>
+							<form class="field">
+								<label for="loginUsrIde" class="blind">아이디</label>
+								<input type="text" id="loginUsrIde" class="input validate[required]" placeholder="아이디" title="아이디" maxlength="18">
+								<label for="loginUsrPwd" class="blind">비밀번호</label>
+								<input type="password" id="loginUsrPwd" class="input validate[required]" placeholder="비밀번호" title="비밀번호" autocomplete="on" maxlength="18">
+								<div class="check"><input type="checkbox" id="chkUsrIde"><label for="chkUsrIde">아이디저장</label></div>
+							</form>
+							<div class="btns col">
+								<button type="button" class="bt bg primary" onclick="loginFnc.login('loginUsrIde','loginUsrPwd','chkUsrIde');">로그인</button>
+								<button type="button" class="bt bd primary" onclick="urlFnc.goJoin();">회원가입</button>
+							</div>
+							<div class="btns fs">
+								<a class="linktxt" onclick="urlFnc.goFindId();">아이디찾기</a>
+								<a class="linktxt" onclick="urlFnc.goFindPwd();">비밀번호찾기</a>
+							</div>
+						</div>
+					</div>
+					<button type="button" class="bt max ico only menu" title="전체메뉴" aria-haspopup="dialog" aria-controls="pop-sitemap">전체메뉴열기</button>
+				</div>
+			</header>
+
+			<article class="sitemap hide" aria-hidden="true" id="pop-sitemap">
+				<div class="conWrap">
+					<div class="conHead">
+						<h2 class="blind">전체메뉴</h2>
+						<button type="button" class="bt max ico only home" title="메인화면 바로가기" onclick="urlFnc.goMain();">홈</button>
+						<p class="infotxt">로그인 후 디지털트윈국토의 모든 서비스를 이용해 보세요.</p>
+						<div class="btns ml">
+							<a class="bt bd" href="javascript:anyidAdaptor.ssoLoginPage(window.location.pathname+window.location.search,'3');">로그인</a>
+							<a class="bt bd" href="javascript:urlFnc.goJoin();">회원가입</a>
+						</div>
+						<button type="button" class="bt max ico only close" title="전체메뉴 닫기">전체메뉴 닫기</button>
+					</div>
+					<div class="conBody">
+						<nav class="gnb" id="sitemapMenu"><ul><li class="toggle"><a href="javascript:menuFnc.move('/v4po_intbiz_a001.do','Y');" class="menu">브이월드 소개</a></li><li class="toggle"><a href="javascript:menuFnc.move('4','Y');" class="menu">지도조회</a><button type="button" class="bt ico only arrow">메뉴 열고닫기</button><ul class="slipbox"><li><a href="javascript:menuFnc.move('https://map.vworld.kr/map/dtkmap.do','Y');" class="menu">주제도</a></li><li><a href="javascript:menuFnc.move('https://map.vworld.kr/map/dtkmap.do?mode=MAPD101','Y');" class="menu">분석 및 시뮬레이션</a></li><li><a href="javascript:menuFnc.move('https://map.vworld.kr/map/dtkmap.do?mode=MAPD100','Y');" class="menu">실내지도</a></li></ul></li><li class="toggle"><a href="javascript:menuFnc.move('/dtmk/dtmk_main_s001.do','Y');" class="menu">다운로드</a><button type="button" class="bt ico only arrow">메뉴 열고닫기</button><ul class="slipbox"><li><a href="javascript:menuFnc.move('/dtmk/dtmk_intdtmk_s001.do','Y');" class="menu">공간정보 소개</a></li><li><a href="javascript:menuFnc.move('/dtmk/dtmk_ntads_s001.do','Y');" class="menu">공간정보 다운로드</a></li></ul></li><li class="toggle"><a href="javascript:menuFnc.move('/v4po_openapi_s001.do','Y');" class="menu">오픈API</a><button type="button" class="bt ico only arrow">메뉴 열고닫기</button><ul class="slipbox"><li><a href="javascript:menuFnc.move('/dev/v4apiRefer.do','Y');" class="menu">API레퍼런스</a></li><li><a href="javascript:menuFnc.move('/dev/v4dv_icbbeta_s001.do','Y');" class="menu">API인큐베이터</a></li></ul></li><li class="toggle"><a href="javascript:menuFnc.move('/v4po_svi_s001.do','Y');" class="menu">서비스</a><button type="button" class="bt ico only arrow">메뉴 열고닫기</button><ul class="slipbox"><li><a href="javascript:menuFnc.move('88','Y');" class="menu">부동산 서비스</a></li><li><a href="javascript:menuFnc.move('95','Y');" class="menu">3D데스크톱</a></li></ul></li><li class="toggle"><a href="javascript:menuFnc.move('103','Y');" class="menu">활용지원</a><button type="button" class="bt ico only arrow">메뉴 열고닫기</button><ul class="slipbox"><li><a href="javascript:menuFnc.move('/v4po_cdntr_s004.do','Y');" class="menu">코디네이터</a></li><li><a href="javascript:menuFnc.move('/v4po_brdfaq_s001.do','Y');" class="menu">자주 묻는 질문</a></li><li><a href="javascript:menuFnc.move('/v4po_brdqna_s001.do','Y');" class="menu">질의응답</a></li></ul></li><li class="toggle"><a href="javascript:menuFnc.move('134','Y');" class="menu">소통공간</a><button type="button" class="bt ico only arrow">메뉴 열고닫기</button><ul class="slipbox"><li><a href="javascript:menuFnc.move('/v4po_brdnotice_s001.do','Y');" class="menu">공지사항</a></li><li><a href="javascript:menuFnc.move('/v4po_brddata_s001.do','Y');" class="menu">자료실</a></li><li><a href="javascript:menuFnc.move('/v4po_brdmedia_s001.do','Y');" class="menu">미디어소식</a></li></ul></li></ul></nav>
+					</div>
+				</div>
+			</article>
+
+			<section class="section" id="section">
+				<nav class="lnb">
+					<div class="inner" id="lnbMenu">
+						<a href="index.html" class="bt ico only home" title="메인 바로가기">메인</a>
+						<h2 id="depth1" class="title"><a href="intro.html" class="menu">활용지원</a></h2>
+						<div class="one toggle" id="depth2"><a href="list.html" class="menu">연구성과</a><p class="menu"></p><button type="button" class="bt ico arrow only">메뉴선택</button></div>
+					</div>
+				</nav>
+				<aside class="location">
+					<div class="inner">
+						<div class="path" id="locationMenu"><span>홈</span><span>활용지원</span><span>연구성과</span></div>
+					</div>
+				</aside>
+
+				<script type="text/javascript">
+				$(document).ready(function() {menuFnc.locationYn = "Y";});
+				var footerObj = {
+					move : function(){
+						if($("#footerPageMove").val() == ""){
+							msgFnc.alert({text : "이동할 사이트를 선택해주세요.", callBackConfirmFnc : function(){$("#footerPageMove").focus();}});
+							return;
+						}
+						window.open($("#footerPageMove").val(), '_blank');
+					}
+				};
+				</script>
+
+				<article class="article sds table">
+					<div class="headline">
+						<div class="inner">
+							<h3 class="title">디지털 국토정보 기술개발 사업 연구성과 시스템</h3>
+						</div>
+					</div>
+
+					<article class="content">
+						<div class="inner sds-page-main">
+							<nav class="tabs bd br fix">
+								<ul>
+									<li><a href="index.html" class="tab" title="">메인</a></li>
+									<li><a href="intro.html" class="tab" title="">전체개요</a></li>
+									<li><a href="tech.html" class="tab" title="">주요핵심기술</a></li>
+									<li><a href="list.html" class="tab on" title="선택된 탭">대표연구성과</a></li>
+								</ul>
+							</nav>
+
+							<div class="sds-main-content sds-block sds-animate-fade-in">
+								<div class="sds-achievements-head">
+									<div>
+										<h3 class="sds-achievements-title">대표 연구성과 요약표</h3>
+										<p class="sds-achievements-desc">1~4 핵심별 세부기술 대표 연구성과 목록입니다.</p>
+									</div>
+								</div>
+
+								<div class="grid sds-achievements-grid sds-desktop-achievements">
+									<table>
+										<caption class="blind">핵심, 핵심기술, 세부기술, 성과번호, 대표 연구성과명으로 구성된 대표 연구성과 요약표</caption>
+										<colgroup>
+											<col class="sds-col-core">
+											<col class="sds-col-ct">
+											<col class="sds-col-title">
+											<col class="sds-col-cte">
+											<col class="sds-col-cte-title">
+											<col class="sds-col-code">
+											<col class="sds-col-output">
+										</colgroup>
+										<thead>
+											<tr>
+												<th scope="col">핵심</th>
+												<th scope="col" colspan="2">핵심기술</th>
+												<th scope="col" colspan="2">세부기술</th>
+												<th scope="col">성과번호</th>
+												<th scope="col">대표 연구성과명</th>
+											</tr>
+										</thead>
+										<tbody id="achievementsTableBody">
+											<tr><td colspan="7" class="sds-table-msg">목록을 불러오는 중...</td></tr>
+										</tbody>
+									</table>
+								</div>
+
+								<div id="achievementsResponsiveList" class="sds-achievements-mobile" aria-live="polite">
+									<div class="sds-table-msg">목록을 불러오는 중...</div>
+								</div>
+							</div>
+						</div>
+					</article><!-- /content -->
+				</article><!-- /article.sds.table -->
+			</section>
+
+			<footer class="footer">
+				<nav class="nav">
+					<ul>
+						<li><a href="javascript:urlFnc.goAgree();" class="menu">이용약관</a></li>
+						<li><a href="javascript:urlFnc.goPrivacy();" class="menu"><strong>개인정보처리방침</strong></a></li>
+						<li><a href="javascript:urlFnc.goUnauthEmail();" class="menu">이메일무단수집거부</a></li>
+						<li><a href="javascript:urlFnc.goCpyrht();" class="menu">저작권정책</a></li>
+						<li><a href="javascript:urlFnc.goIntrcn();" class="menu">브이월드소개</a></li>
+					</ul>
+				</nav>
+				<div class="cscenter">
+					<h6 class="title">고객센터
+						<em>
+							<div class="btns">
+								<a href="tel:16610115" class="bt ico call bg">1661 - 0115</a>
+								<a href="mailto:vworld@spacen.or.kr" class="bt ico mail bg">vworld@spacen.or.kr</a>
+							</div>
+						</em>
+					</h6>
+					<div class="btns"><em>평일 09:00 ~ 18:00 (중식 12:00 ~ 13:00) / 주말 및 공휴일 휴무</em></div>
+					<div class="spacen">
+						<div class="logo"><strong>공간정보산업진흥원</strong></div>
+						<p class="address">[13487] 경기 성남시 분당구 판교로 242 PDC타워 C동 601호 공간정보산업진흥원</p>
+					</div>
+				</div>
+				<div class="organizer">
+					<div class="logo"><strong>V-world</strong>디지털트윈국토</div>
+					<p class="address">[30103] 세종특별자치시 도움6로 11 국토교통부</p>
+					<p class="copyright">Copyright (C) Ministry of Land, Infrastructure and Transport 2023. All Rights Reserved.</p>
+				</div>
+				<div class="set">
+					<label for="footerPageMove" class="blind">사이트 바로가기</label>
+					<select class="select" id="footerPageMove">
+						<option value="" selected="">사이트 바로가기</option>
+						<option value="https://www.molit.go.kr/">국토교통부</option>
+						<option value="https://www.ngii.go.kr/">국토지리정보원</option>
+						<option value="http://spacen.or.kr/">공간정보산업진흥원</option>
+						<option value="https://www.spacein.kr/">공간정보교육포털</option>
+						<option value="https://www.lx.or.kr/kor.do">한국국토정보공사</option>
+					</select>
+					<button class="bt bg" onclick="footerObj.move();">이동</button>
+				</div>
+				<a href="#top" class="bt ico go only">상단 이동</a>
+			</footer>
+
+		</div>
+	</div>
+
+	<script>
+		(function () {
+		const CORE_CLASSES = {
+			'1핵심': 'sds-core1',
+			'2핵심': 'sds-core2',
+			'3핵심': 'sds-core3',
+			'4핵심': 'sds-core4'
+		};
+		const CORE_LABELS = {
+			'1핵심': '초정밀 디지털 국토 구축',
+			'2핵심': '디지털 국토의 구축 효율화',
+			'3핵심': '초연결 디지털 국토 실현',
+			'4핵심': '차세대 디지털 국토 구축'
+		};
+		const detailPage = 'detail.html';
+		let allItems = [];
+
+		const dom = {
+			tbody: document.getElementById('achievementsTableBody'),
+			mobileList: document.getElementById('achievementsResponsiveList')
+		};
+
+		function escapeHtml(value) {
+			return String(value ?? '')
+				.replace(/&/g, '&amp;')
+				.replace(/</g, '&lt;')
+				.replace(/>/g, '&gt;')
+				.replace(/"/g, '&quot;')
+				.replace(/'/g, '&#39;');
+		}
+
+		function buildDetailUrl(id) {
+			return `${detailPage}?id=${encodeURIComponent(id)}`;
+		}
+
+		function groupBy(items, keyGetter) {
+			const groups = [];
+			const map = new Map();
+			items.forEach(item => {
+				const key = keyGetter(item);
+				if (!map.has(key)) {
+					const group = { key, items: [] };
+					map.set(key, group);
+					groups.push(group);
+				}
+				map.get(key).items.push(item);
+			});
+			return groups;
+		}
+
+		function renderDesktopTable(items) {
+			if (!dom.tbody) return;
+
+			if (!items.length) {
+				dom.tbody.innerHTML = '<tr><td colspan="7" class="sds-table-msg">조건에 맞는 연구성과가 없습니다.</td></tr>';
+				return;
+			}
+
+				const coreCount = {};
+				items.forEach(it => { coreCount[it.core] = (coreCount[it.core] || 0) + 1; });
+
+				const ctCount = {};
+				items.forEach(it => {
+					const key = it.core + '|' + it.ct_code;
+					ctCount[key] = (ctCount[key] || 0) + 1;
+				});
+
+				const cteCount = {};
+				items.forEach(it => {
+					const key = it.core + '|' + it.ct_code + '|' + it.cte_code;
+					cteCount[key] = (cteCount[key] || 0) + 1;
+				});
+
+				const seenCore = new Set();
+				const seenCt = new Set();
+				const seenCte = new Set();
+
+				const rows = [];
+				items.forEach(it => {
+					const ctKey = it.core + '|' + it.ct_code;
+					const cteKey = ctKey + '|' + it.cte_code;
+					let cells = '';
+
+					if (!seenCore.has(it.core)) {
+						seenCore.add(it.core);
+						const span = coreCount[it.core];
+						const coreClass = CORE_CLASSES[it.core] || '';
+						cells += `<td rowspan="${span}" class="sds-code-cell"><span class="sds-badge-mini ${coreClass}">${escapeHtml(it.core)}</span></td>`;
+					}
+
+					if (!seenCt.has(ctKey)) {
+						seenCt.add(ctKey);
+						const span = ctCount[ctKey];
+						cells += `<td rowspan="${span}" class="sds-code-cell">${escapeHtml(it.ct_code)}</td><td rowspan="${span}" class="sds-title-cell">${escapeHtml(it.ct_title)}</td>`;
+					}
+
+					if (!seenCte.has(cteKey)) {
+						seenCte.add(cteKey);
+						const span = cteCount[cteKey];
+						cells += `<td rowspan="${span}" class="sds-code-cell">${escapeHtml(it.cte_code)}</td><td rowspan="${span}" class="sds-title-cell">${escapeHtml(it.cte_title)}</td>`;
+					}
+
+					const href = `${detailPage}?id=${encodeURIComponent(it.id)}`;
+					cells += `<td class="sds-code-cell">${escapeHtml(it.output_code)}</td><td class="sds-output-cell"><a href="${href}" class="sds-output-link">${escapeHtml(it.output_title)}</a></td>`;
+
+					rows.push(`<tr>${cells}</tr>`);
+				});
+
+			dom.tbody.innerHTML = rows.join('');
+		}
+
+		function renderMobileGroups(items) {
+			if (!dom.mobileList) return;
+
+			if (!items.length) {
+				dom.mobileList.innerHTML = '<div class="sds-table-msg">조건에 맞는 연구성과가 없습니다.</div>';
+				return;
+			}
+
+			dom.mobileList.innerHTML = groupBy(items, item => item.core).map(coreGroup => {
+				const core = coreGroup.key;
+				const coreClass = CORE_CLASSES[core] || '';
+				const ctGroups = groupBy(coreGroup.items, item => item.ct_code);
+
+				return `
+					<section class="sds-mobile-core-group">
+						<div class="sds-mobile-core-head">
+							<span class="sds-badge-mini ${coreClass}">${escapeHtml(core)}</span>
+							<strong>${escapeHtml(CORE_LABELS[core] || core)}</strong>
+						</div>
+							<div class="grid sds-mobile-achievement-grid">
+								<table>
+									<caption class="blind">${escapeHtml(core)} 대표 연구성과 반응형 표</caption>
+									<colgroup>
+										<col class="sds-mobile-output-code-col">
+										<col class="sds-mobile-output-title-col">
+									</colgroup>
+									<tbody>
+									${ctGroups.map(ctGroup => {
+										const ct = ctGroup.items[0];
+										const cteGroups = groupBy(ctGroup.items, item => item.cte_code);
+										return `
+											<tr class="sds-mobile-tech-row">
+												<th scope="row" colspan="2">
+													<span>${escapeHtml(ct.ct_code)}</span>
+													<strong>${escapeHtml(ct.ct_title)}</strong>
+												</th>
+											</tr>
+											${cteGroups.map(cteGroup => {
+												const cte = cteGroup.items[0];
+												return `
+													<tr class="sds-mobile-detail-row">
+														<th scope="row" colspan="2">
+															<span>${escapeHtml(cte.cte_code)}</span>
+															<strong>${escapeHtml(cte.cte_title)}</strong>
+														</th>
+													</tr>
+													${cteGroup.items.map(output => `
+														<tr class="sds-mobile-output-row">
+															<td class="sds-code-cell"><a href="${buildDetailUrl(output.id)}">${escapeHtml(output.output_code)}</a></td>
+															<td class="sds-output-cell"><a href="${buildDetailUrl(output.id)}" class="sds-output-link">${escapeHtml(output.output_title)}</a></td>
+														</tr>
+													`).join('')}
+												`;
+											}).join('')}
+										`;
+									}).join('')}
+								</tbody>
+							</table>
+						</div>
+					</section>
+				`;
+			}).join('');
+		}
+
+		function renderAll() {
+			renderDesktopTable(allItems);
+			renderMobileGroups(allItems);
+		}
+
+		fetch('data/contents/research/list.json')
+			.then(r => r.json())
+			.then(data => {
+				allItems = Array.isArray(data.items) ? data.items : [];
+				renderAll();
+			})
+			.catch(() => {
+				if (dom.tbody) dom.tbody.innerHTML = '<tr><td colspan="7" class="sds-table-msg err">데이터를 불러오지 못했습니다. Live Server 등 정적 서버에서 열어 주세요.</td></tr>';
+				if (dom.mobileList) dom.mobileList.innerHTML = '<div class="sds-table-msg err">데이터를 불러오지 못했습니다. Live Server 등 정적 서버에서 열어 주세요.</div>';
+			});
+	})();
+	</script>
+</body>
+</html>

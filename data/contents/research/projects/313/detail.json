@@ -1,0 +1,258 @@
+{
+  "id": "313",
+  "core": "3핵심",
+  "coreColor": "core3",
+  "ctCode": "핵심기술3",
+  "ctTitle": "통합 테스트베드 플랫폼 구축",
+  "cteCode": "세부기술5",
+  "output_code": "성과물13",
+  "title": "통합 테스트베드 플랫폼 운영 기술",
+  "registeredAt": "",
+  "summaryInstitutions": [
+    "㈜선도소프트"
+  ],
+  "overview": {
+    "description": "통합 테스트베드 시스템을 모니터링하기 위한 SW",
+    "descriptionNote": "",
+    "necessityRows": [
+      [
+        {
+          "html": "서버·VM·컨테이너 정보가 분산 관리되어 시스템 상태를 한눈에 파악하기 어려움"
+        },
+        {
+          "html": "클라우드 인프라 자원·성능·장애 로그를 단일 대시보드에서 한눈에 파악"
+        }
+      ],
+      [
+        {
+          "html": "서비스별 개별 인증 체계로 사용자 관리와 보안 정책 운영이 복잡함"
+        },
+        {
+          "html": "통합 인증·권한 관리 체계를 구축하여 보안 수준을 강화하고 운영·관리 효율을 향상"
+        }
+      ]
+    ]
+  },
+  "researchContent": {
+    "headerRows": [
+      [
+        {
+          "html": "구분",
+          "rowspan": 2
+        },
+        {
+          "html": "연구 수행 내용",
+          "colspan": 10
+        }
+      ],
+      [
+        {
+          "html": "'22 (1차년도)",
+          "colspan": 2
+        },
+        {
+          "html": "'23 (2차년도)",
+          "colspan": 2
+        },
+        {
+          "html": "'24 (3차년도)",
+          "colspan": 2
+        },
+        {
+          "html": "'25 (4차년도)",
+          "colspan": 2
+        },
+        {
+          "html": "'26 (5차년도)",
+          "colspan": 2
+        }
+      ]
+    ],
+    "rows": [
+      {
+        "label": "주요 연구 내용",
+        "cells": [
+          {
+            "html": "-",
+            "colspan": 2
+          },
+          {
+            "html": "플랫폼 구축",
+            "colspan": 2
+          },
+          {
+            "html": "플랫폼 구축 고도화(1차)",
+            "colspan": 2
+          },
+          {
+            "html": "플랫폼 구축 고도화(2차)",
+            "colspan": 2
+          },
+          {
+            "html": "플랫폼 구축 고도화(3차)",
+            "colspan": 2
+          }
+        ]
+      },
+      {
+        "label": "정량적 성능목표",
+        "cells": [
+          {
+            "html": "-",
+            "colspan": 2
+          },
+          {
+            "html": "클라우드 적합성 50%",
+            "colspan": 2
+          },
+          {
+            "html": "클라우드 적합성 70%",
+            "colspan": 2
+          },
+          {
+            "html": "클라우드 적합성 80%",
+            "colspan": 2
+          },
+          {
+            "html": "클라우드 구축 적합성 검증 통과",
+            "colspan": 2
+          }
+        ]
+      },
+      {
+        "label": "테스트 일정·결과",
+        "cells": [
+          {
+            "html": "-"
+          },
+          {
+            "html": "-"
+          },
+          {
+            "html": "'23.10."
+          },
+          {
+            "html": "50%"
+          },
+          {
+            "html": "'24.10."
+          },
+          {
+            "html": "70%"
+          },
+          {
+            "html": "'25.10."
+          },
+          {
+            "html": "80%"
+          },
+          {
+            "html": "'26.09. (예정)"
+          },
+          {
+            "html": "-"
+          }
+        ]
+      },
+      {
+        "label": "주요 연구 성과",
+        "cells": [
+          {
+            "groupId": "y22",
+            "summaryHtml": "-",
+            "colspan": 2
+          },
+          {
+            "groupId": "y23",
+            "summaryHtml": "설치계획서3건 설치결과서3건",
+            "colspan": 2
+          },
+          {
+            "groupId": "y24",
+            "summaryHtml": "보고서 3건",
+            "colspan": 2
+          },
+          {
+            "groupId": "y25",
+            "summaryHtml": "보고서4건 <br>특허출원1건 <br>특허등록2건 <br>논문(비SCI)2건",
+            "colspan": 2
+          },
+          {
+            "groupId": "y26",
+            "summaryHtml": "",
+            "colspan": 2
+          }
+        ]
+      }
+    ]
+  },
+  "applications": {
+    "overview": "연구자 통합 포털, 공공 클라우드 플랫폼",
+    "cards": [
+      {
+        "title": "통합 테스트베드 기반 연구 인프라 운영",
+        "current": "연구자가 실험 환경을 구축하려면 서버·VM 자원을 개별 설정해야 해 환경 구축과 자원 재배치에 시간이 많이 소요되고 장애 발생 시 원인 파악이 어려움",
+        "improved": "통합 테스트베드 플랫폼에서 VM·네트워크 자원을 중앙 관리하여 연구 환경 구축 시간이 기존 대비 약 70% 단축되고 실시간 모니터링으로 장애 대응 속도 향상"
+      },
+      {
+        "title": "디지털 국토정보 기술개발 사업 참여 연구기관",
+        "current": "연구자가 3D 건물 데이터를 활용하려면 기관별 계정과 서버에 각각 접속해야 해 연구 환경 준비에 평균 1~2시간 소요됨",
+        "improved": "웹 기반 통합 포털과 단일 로그인(SSO)을 적용해 한 번 로그인으로 VM·데이터 접근이 가능해져 연구 환경 준비 시간이 약 80% 이상 단축"
+      },
+      {
+        "title": "TTA 공인시험기관 인증 / 성과물 품질 검증",
+        "current": "연구 성과물 검증과 시험이 수작업으로 진행되어 테스트 준비와 환경 구성에 시간이 오래 걸리고 반복 시험 시 비용 부담 발생",
+        "improved": "CI/CD 기반 자동 빌드·시험·배포 체계를 구축해 시험 준비 시간을 기존 대비 약 60% 단축하고 표준화된 검증 프로세스로 인증 대응 효율 향상"
+      }
+    ]
+  },
+  "process": {
+    "processImage": {
+      "src": "data/contents/research/projects/313/images/process.png",
+      "alt": "데이터 처리 프로세스"
+    },
+    "inputHtml": "Json (가상머신 및 컨테이너 식별자 / 사용자, 그룹, 권한 설정 정보)",
+    "outputHtml": "Json (가상 자원 성능 및 로그 정보 / 사용자 정보)",
+    "outputImages": [
+      {
+        "src": "data/contents/research/projects/313/images/output1.png",
+        "alt": "대시보드 실시간 통합 관제 현황",
+        "caption": "대시보드 실시간 통합 관제 현황"
+      },
+      {
+        "src": "data/contents/research/projects/313/images/output2.png",
+        "alt": "사용자 통합 인증·권한 관리 현황",
+        "caption": "사용자 통합 인증·권한 관리 현황"
+      }
+    ]
+  },
+  "demo": {
+    "src": "",
+    "height": 1200
+  },
+  "institutions": {
+    "leadContacts": [
+      {
+        "name": "민현기",
+        "role": "개발",
+        "phone": "02-856-1900",
+        "email": "hgmin@sundosoft.co.kr"
+      }
+    ],
+    "partners": [
+      {
+        "name": "이종찬",
+        "role": "개발",
+        "phone": "02-6246-1400",
+        "email": "jclee1@wise.co.kr"
+      }
+    ]
+  },
+  "downloads": {
+    "y22": [],
+    "y23": [],
+    "y24": [],
+    "y25": [],
+    "y26": []
+  }
+}

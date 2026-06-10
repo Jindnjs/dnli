@@ -1,0 +1,239 @@
+{
+  "id": "315",
+  "core": "3핵심",
+  "coreColor": "core3",
+  "ctCode": "핵심기술3",
+  "ctTitle": "통합 테스트베드 플랫폼 구축",
+  "cteCode": "세부기술5",
+  "output_code": "성과물15",
+  "title": "디지털 국토정보 보안기술",
+  "registeredAt": "",
+  "summaryInstitutions": [
+    "선도"
+  ],
+  "overview": {
+    "description": "디지털 국토정보 계정별 권한에 따라 가시화와 접근성을 차등 부여하여",
+    "descriptionNote": "",
+    "necessityRows": [
+      [
+        {
+          "html": "공간 데이터의 연계·통합 시 데이터 보안 및 접근 제어가 체계적으로 관리되지 않음"
+        },
+        {
+          "html": "DCS* 기반 통합 보안 아키텍처 구축으로 데이터 접근성과 보안성을 동시에 확보 *DCS: Data Centric Security, 데이터 중심 보안 아키텍처"
+        }
+      ],
+      [
+        {
+          "html": "실내·외 위치정보 수집 시 개인정보 보호 및 접근 권한 통제 미흡"
+        },
+        {
+          "html": "역할 기반 접근 제어(RBAC*)로 실내외 위치정보에 대한 체계적 권한 관리* RBAC: Role-Based Access Control"
+        }
+      ]
+    ]
+  },
+  "researchContent": {
+    "headerRows": [
+      [
+        {
+          "html": "구분",
+          "rowspan": 2
+        },
+        {
+          "html": "연구 수행 내용",
+          "colspan": 10
+        }
+      ],
+      [
+        {
+          "html": "'22 (1차년도)",
+          "colspan": 2
+        },
+        {
+          "html": "'23 (2차년도)",
+          "colspan": 2
+        },
+        {
+          "html": "'24 (3차년도)",
+          "colspan": 2
+        },
+        {
+          "html": "'25 (4차년도)",
+          "colspan": 2
+        },
+        {
+          "html": "'26 (5차년도)",
+          "colspan": 2
+        }
+      ]
+    ],
+    "rows": [
+      {
+        "label": "주요 연구 내용",
+        "cells": [
+          {
+            "html": "보안 아키텍처 기술 요구사항 분석",
+            "colspan": 2
+          },
+          {
+            "html": "DCS 기반 Testbed-16 프레임워크 설계",
+            "colspan": 2
+          },
+          {
+            "html": "DCS Testbed-17 확장 및 접근제어 Testbed 구축",
+            "colspan": 2
+          },
+          {
+            "html": "공간정보 데이터 접근성 보안 모델 통합 가이드라인",
+            "colspan": 2
+          },
+          {
+            "html": "공간정보 데이터 접근성 보안 기술 통합 연동 실증 테스트",
+            "colspan": 2
+          }
+        ]
+      },
+      {
+        "label": "정량적 성능목표",
+        "cells": [
+          {
+            "html": "데이터 접근성 보안 요구사항 정의 적정성 판정",
+            "colspan": 2
+          },
+          {
+            "html": "데이터 연계 통합 보안 모델 개념 검증 SW 저작 등록",
+            "colspan": 2
+          },
+          {
+            "html": "데이터 접근성 보안 단위 기술 적정성 통과",
+            "colspan": 2
+          },
+          {
+            "html": "데이터 접근성 보안 모델 통합 기술 적정성 통과",
+            "colspan": 2
+          },
+          {
+            "html": "데이터 접근성 보안 연동 기술 적정성 판단",
+            "colspan": 2
+          }
+        ]
+      },
+      {
+        "label": "테스트 일정·결과",
+        "cells": [
+          {
+            "html": "'22.10."
+          },
+          {
+            "html": "자문회의 적정성 판정"
+          },
+          {
+            "html": "'23.11."
+          },
+          {
+            "html": "저작권 등록"
+          },
+          {
+            "html": "'24.10."
+          },
+          {
+            "html": "자문회의 적정성 판정"
+          },
+          {
+            "html": "'25.10."
+          },
+          {
+            "html": "자문회의 적정성 판정"
+          },
+          {
+            "html": "'26.10. (예정)"
+          },
+          {
+            "html": "-"
+          }
+        ]
+      },
+      {
+        "label": "주요 연구 성과",
+        "cells": [
+          {
+            "groupId": "y22",
+            "summaryHtml": "보안 아키텍처 구축",
+            "colspan": 2
+          },
+          {
+            "groupId": "y23",
+            "summaryHtml": "Testbed 기반 소프트웨어 구축,<br>특허 출원, 논문",
+            "colspan": 2
+          },
+          {
+            "groupId": "y24",
+            "summaryHtml": "접근제어 소프트웨어 구축,<br>특허 출원",
+            "colspan": 2
+          },
+          {
+            "groupId": "y25",
+            "summaryHtml": "특허 출원,<br>보고서 작성",
+            "colspan": 2
+          },
+          {
+            "groupId": "y26",
+            "summaryHtml": "특허 출원, 논문",
+            "colspan": 2
+          }
+        ]
+      }
+    ]
+  },
+  "applications": {
+    "overview": "공간정보 기반 운영 분야",
+    "cards": [
+      {
+        "title": "계정 기반 공간정보 데이터 접근제어 및 보안 처리",
+        "current": "모든 사용자에게 동일한 권한이 부여되어 민감한 공간정보에 무분별하게 접근 가능하며, 보안성이 떨어짐",
+        "improved": "사용자별로 차등화된 접근 권한을 부여하여 필요한 공간정보만 접근하도록 제어하고, 실시간 이상 접근 탐지로 보안 강화"
+      },
+      {
+        "title": "공간정보의 안전한 연계·통합 및 활용 관리",
+        "current": "다중이용시설 내 여러 시스템(측위, 출입관리, 혼잡도 센서 등)에서 수집되는 공간정보를 통합할 때 보안 표준이 없어 데이터 보호가 미흡하고 외부 공유 시 위험 존재",
+        "improved": "데이터 파이프라인 전체에 암호화와 접근 제어를 적용하여 안전하게 수집·가공·저장하고, 권한 있는 사용자만 활용 가능하도록 관리"
+      }
+    ]
+  },
+  "process": {
+    "processImage": {
+      "src": "data/contents/research/projects/315/images/process.png",
+      "alt": "데이터 처리 프로세스"
+    },
+    "inputHtml": "사용자 계정 정보(ID, Password)",
+    "outputHtml": "계정에 해당하는 위치 정보를 반영한 지리 데이터",
+    "outputImages": [
+      {
+        "src": "data/contents/research/projects/315/images/output1.png",
+        "alt": "데이터 접근이 가능 시 접근 가능한 데이터를 지도에 마커로 표시",
+        "caption": "데이터 접근이 가능 시 접근 가능한 데이터를 지도에 마커로 표시"
+      },
+      {
+        "src": "data/contents/research/projects/315/images/output2.png",
+        "alt": "접근 금지된 사용자 정보는 익명화 표시한 뒤 지도에 표시",
+        "caption": "접근 금지된 사용자 정보는 익명화 표시한 뒤 지도에 표시"
+      }
+    ]
+  },
+  "demo": {
+    "src": "",
+    "height": 1200
+  },
+  "institutions": {
+    "leadContacts": [],
+    "partners": []
+  },
+  "downloads": {
+    "y22": [],
+    "y23": [],
+    "y24": [],
+    "y25": [],
+    "y26": []
+  }
+}

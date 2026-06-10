@@ -1,0 +1,330 @@
+{
+  "id": "203",
+  "core": "2핵심",
+  "coreColor": "core2",
+  "ctCode": "핵심기술1",
+  "ctTitle": "크라우드 소싱 기반 다차원/다시점 공간 데이터 전처리 및 품질 관리 기술",
+  "cteCode": "세부기술2",
+  "output_code": "성과물3",
+  "title": "드론데이터 품질 검증 및 향상 기술",
+  "registeredAt": "",
+  "summaryInstitutions": [
+    "국토연구원"
+  ],
+  "overview": {
+    "description": "크라우드 소싱으로 수집된 드론 공간데이터(영상/라이다)의 품질 검증 및 향상 알고리즘 모듈을 탑재한 S/W",
+    "descriptionNote": "",
+    "necessityRows": [
+      [
+        {
+          "html": "수집된 크라우드 소싱(대중참여형) 드론 데이터→ 공간정보 갱신에 즉각적인 활용 어려움"
+        },
+        {
+          "html": "크라우드 소싱 드론 데이터를 공간정보 갱신에 활용 가능한 품질인지 검증하고, 품질 향상 가능한 경우 품질 확보 가능"
+        }
+      ],
+      [
+        {
+          "html": "다양한 시계열의 드론 데이터를 수동으로 검수, 향상하는 과정에서 많은 인적, 물적 자원 소모"
+        },
+        {
+          "html": "자동화된 소프트웨어 기반으로 품질 검증 및 향상 수행함으로써 효율적인 처리 수행 가능"
+        }
+      ]
+    ]
+  },
+  "researchContent": {
+    "headerRows": [
+      [
+        {
+          "html": "구분",
+          "rowspan": 2
+        },
+        {
+          "html": "연구 수행 내용",
+          "colspan": 13
+        }
+      ],
+      [
+        {
+          "html": "'22 (1차년도)",
+          "colspan": 2
+        },
+        {
+          "html": "'23 (2차년도)",
+          "colspan": 3
+        },
+        {
+          "html": "'24 (3차년도)",
+          "colspan": 3
+        },
+        {
+          "html": "'25 (4차년도)",
+          "colspan": 2
+        },
+        {
+          "html": "'26 (5차년도)",
+          "colspan": 3
+        }
+      ]
+    ],
+    "rows": [
+      {
+        "label": "주요 연구 내용",
+        "cells": [
+          {
+            "html": "다종 공간 데이터 품질 요소와 검증 기준 관련 동향조사 및 기술분석",
+            "colspan": 2
+          },
+          {
+            "html": "드론 영상 품질 검증 자동화, 검증 결과 가시화 기술 개발",
+            "colspan": 3
+          },
+          {
+            "html": "드론 공간 데이터 품질 향상 기술 개발, 드론 데이터 품질 검증 및 향상 SW 개발",
+            "colspan": 3
+          },
+          {
+            "html": "-",
+            "colspan": 2
+          },
+          {
+            "html": "다종 공간데이터 품질 검증 가이드라인 및 품질 검증 및 향상 통합 SW",
+            "colspan": 3
+          }
+        ]
+      },
+      {
+        "label": "정량적 성능목표",
+        "labelRowspan": 2,
+        "cells": [
+          {
+            "html": "조사서 및 정의서 적정 판정",
+            "rowspan": 2,
+            "colspan": 2
+          },
+          {
+            "html": "알고리즘 자동화율 90%",
+            "colspan": 3
+          },
+          {
+            "html": "유효데이터비율 95% 이상",
+            "colspan": 3
+          },
+          {
+            "html": "-",
+            "rowspan": 2,
+            "colspan": 2
+          },
+          {
+            "html": "가이드라인 확인",
+            "colspan": 3
+          }
+        ]
+      },
+      {
+        "cells": [
+          {
+            "html": "기능동작여부 100%",
+            "colspan": 3
+          },
+          {
+            "html": "기능동작여부 100%",
+            "colspan": 3
+          },
+          {
+            "html": "기능동작여부 100%",
+            "colspan": 3
+          }
+        ]
+      },
+      {
+        "label": "테스트 일정·결과",
+        "labelRowspan": 4,
+        "cells": [
+          {
+            "html": "'22.10.",
+            "rowspan": 4
+          },
+          {
+            "html": "전문 위원단 검증 적합 판정",
+            "rowspan": 4
+          },
+          {
+            "html": "'23.10.",
+            "rowspan": 4
+          },
+          {
+            "html": "전문위원 검증",
+            "rowspan": 3
+          },
+          {
+            "html": "자동화율 90%",
+            "rowspan": 3
+          },
+          {
+            "html": "'24. 11.",
+            "rowspan": 4
+          },
+          {
+            "html": "전문 위원 검증",
+            "rowspan": 3
+          },
+          {
+            "html": "검증 적합 판정"
+          },
+          {
+            "html": "-",
+            "rowspan": 4
+          },
+          {
+            "html": "-",
+            "rowspan": 4
+          },
+          {
+            "html": "'26. 10. (예정)",
+            "rowspan": 4
+          },
+          {
+            "html": "전문 위원 검증",
+            "rowspan": 2
+          },
+          {
+            "html": "-",
+            "rowspan": 2
+          }
+        ]
+      },
+      {
+        "cells": [
+          {
+            "html": "유효 95% 이상",
+            "rowspan": 2
+          }
+        ]
+      },
+      {
+        "cells": [
+          {
+            "html": "외부 공인 시험",
+            "rowspan": 2
+          },
+          {
+            "html": "-",
+            "rowspan": 2
+          }
+        ]
+      },
+      {
+        "cells": [
+          {
+            "html": "외부공인시험통과"
+          },
+          {
+            "html": "기능동작 100%"
+          },
+          {
+            "html": "외부공인시험통과"
+          },
+          {
+            "html": "기능동작 100%"
+          }
+        ]
+      },
+      {
+        "label": "주요 연구 성과",
+        "cells": [
+          {
+            "groupId": "y22",
+            "summaryHtml": "논문(비SCI) 2건<br>S/W등록 1건<br>기술문서 7건<br>학술대회 4건",
+            "colspan": 2
+          },
+          {
+            "groupId": "y23",
+            "summaryHtml": "논문(비SCI) 1건<br>SW 등록 1건<br>기술문서 2건<br>학술대회 3건",
+            "colspan": 3
+          },
+          {
+            "groupId": "y24",
+            "summaryHtml": "논문(비SCI) 1건<br>기술문서 4건<br>학술대회 1건<br>고용창출 1건<br>현장시험 2건<br>SW 등록 1건",
+            "colspan": 3
+          },
+          {
+            "groupId": "y25",
+            "summaryHtml": "-",
+            "colspan": 2
+          },
+          {
+            "groupId": "y26",
+            "summaryHtml": "-",
+            "colspan": 3
+          }
+        ]
+      }
+    ]
+  },
+  "applications": {
+    "overview": "국가 공간정보 갱신 및 관리, 지도 기반 서비스 시스템 구축 및 운용 솔루션",
+    "cards": [
+      {
+        "title": "공공서비스 분야",
+        "current": "다양한 데이터 수집 기기의 발달로 대중이 공간데이터를 쉽게 수집할 수 있으나, 해당 데이터를 공간정보 생산에 활용하는 데 신뢰도 검증 과정이 적절히 마련되어있지 않음",
+        "improved": "크라우드 소싱으로 수집된 드론 데이터를 입력받아 자동으로 품질을 검증하고 향상한 후, 검증 완료 데이터를 공간정보 갱신 및 생산 시스템에 연계하여 갱신 후보 데이터 선별이나 신규 데이터 생성에 활용"
+      },
+      {
+        "title": "민간 서비스 분야",
+        "current": "실시간 공간정보를 반영한 서비스 수요가 증가함에 따라 공간데이터의 최신성 확보에 대한 요구가 확대되고 있으나, 다양한 데이터를 신속하게 검증, 향상할 수 있는 기술이 미흡",
+        "improved": "크라우드 소싱 데이터를 입력받아 자동으로 품질을 검증·향상한 뒤, 데이터를 지도 제작, 내비게이션 업데이트, 시설물 안내, 도로 상태 정보 서비스 등에 신속한 적용 가능"
+      }
+    ]
+  },
+  "process": {
+    "processImage": {
+      "src": "data/contents/research/projects/203/images/process.png",
+      "alt": "데이터 처리 프로세스"
+    },
+    "inputHtml": "①드론 영상<br> : 크라우드 소싱으로 수집된 드론 영상 데이터<br> : 드론 촬영 EO/IO 정보 <br>②드론 라이다<br> : 크라우드 소싱으로 수집된 드론 라이다 데이터<br> : 위치 기준 좌표를 포함하는 정사영상, DSM(또는 DEM)",
+    "outputHtml": "①드론 영상<br> : 드론 영상 기하학적/방사학적 품질의 적합/부적합 유효데이터 목록 (csv)<br> : 드론 영상 방사학적 개선 후 품질의 적합/부적합 유효데이터 목록 (csv)<br> : 방사학적 품질향상된 드론 영상 데이터 (jpg) <br>②드론 라이다<br> : 점밀도/결측률/공간해상도 산출 로그, 이상점 검출 로그 (txt)<br> : 이상점 라벨링된 드론 라이다 데이터 (las)<br> : 이격거리 측정 로그 (txt)<br> : 검출된 이상점이 제거된 드론 라이다 데이터 (las)<br> : 이격거리 개선된 드론 라이다 데이터 (las)<br> : 개선된 이격거리 측정 로그 (txt)",
+    "outputImages": [
+      {
+        "src": "data/contents/research/projects/203/images/output1.png",
+        "alt": "드론 영상 품질 검증 및 향상 SW' 검증 결과 이미지 가시화 화면",
+        "caption": "드론 영상 품질 검증 및 향상 SW' 검증 결과 이미지 가시화 화면"
+      },
+      {
+        "src": "data/contents/research/projects/203/images/output2.png",
+        "alt": "'드론 라이다 품질 검증 및 향상 SW' 통계 분석 가시화 화면",
+        "caption": "'드론 라이다 품질 검증 및 향상 SW' 통계 분석 가시화 화면"
+      }
+    ]
+  },
+  "demo": {
+    "src": "",
+    "height": 1200
+  },
+  "institutions": {
+    "leadContacts": [
+      {
+        "name": "임륭혁",
+        "role": "성과물 관리",
+        "phone": "010-4499-3328",
+        "email": "rhim@krihs.re.kr"
+      }
+    ],
+    "partners": [
+      {
+        "name": "양진호",
+        "role": "성과물 관리",
+        "phone": "010-3171-7993",
+        "email": "gc7207@esgi.co.kr"
+      }
+    ]
+  },
+  "downloads": {
+    "y22": [],
+    "y23": [],
+    "y24": [],
+    "y25": [],
+    "y26": []
+  }
+}

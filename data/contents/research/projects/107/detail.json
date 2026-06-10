@@ -1,0 +1,265 @@
+{
+  "id": "107",
+  "core": "1핵심",
+  "coreColor": "core1",
+  "ctCode": "핵심기술3",
+  "ctTitle": "정밀상대 및 연속복합측위 기술",
+  "cteCode": "세부기술5",
+  "output_code": "성과물7",
+  "title": "신호 및 센서기반 위치결정 기술",
+  "registeredAt": "",
+  "summaryInstitutions": [
+    "인하대학교"
+  ],
+  "overview": {
+    "description": "위성 신호가 닿지 않는 실내에서 가용한 다양한 신호 (Wi-Fi, Bluetooth, 내장 센서 등)를 동시에 수신하여 위치를 결정하는 기술",
+    "descriptionNote": "",
+    "necessityRows": [
+      [
+        {
+          "html": "위성 기반 측위가 불가능한 지역에서의 위치기반서비스 제공 불가능"
+        },
+        {
+          "html": "실내에서의 다중복합신호 기반 측위 기술을 통해 위치기반서비스 제공"
+        }
+      ],
+      [
+        {
+          "html": "실외에서 실내로 이동할 경우 위치기반서비스 단절"
+        },
+        {
+          "html": "실외와 실내를 아우르는 위치기반서비스 제공"
+        }
+      ]
+    ]
+  },
+  "researchContent": {
+    "headerRows": [
+      [
+        {
+          "html": "구분",
+          "rowspan": 2
+        },
+        {
+          "html": "연구 수행 내용",
+          "colspan": 10
+        }
+      ],
+      [
+        {
+          "html": "'22 (1차년도)",
+          "colspan": 2
+        },
+        {
+          "html": "'23 (2차년도)",
+          "colspan": 2
+        },
+        {
+          "html": "'24 (3차년도)",
+          "colspan": 2
+        },
+        {
+          "html": "'25 (4차년도)",
+          "colspan": 2
+        },
+        {
+          "html": "'26 (5차년도)",
+          "colspan": 2
+        }
+      ]
+    ],
+    "rows": [
+      {
+        "label": "주요 연구 내용",
+        "cells": [
+          {
+            "html": "다중복합신호의 특성과 정확도, 정밀도 분석",
+            "colspan": 2
+          },
+          {
+            "html": "공간지문 텐서 데이터베이스 및 측위 SW 구현",
+            "colspan": 2
+          },
+          {
+            "html": "연속복합측위 통합 지원 설계, 다중복합신호 측위 시스템 고도화",
+            "colspan": 2
+          },
+          {
+            "html": "보행, 차량이동환경 실증, 측위 솔루션 고도화, 체계 통합 지원",
+            "colspan": 2
+          },
+          {
+            "html": "휠체어 관제 시스템 구현, 측위 솔루션 고도화, 연구통합체계 지원",
+            "colspan": 2
+          }
+        ]
+      },
+      {
+        "label": "정량적 성능목표",
+        "labelRowspan": 2,
+        "cells": [
+          {
+            "html": "설계서 적정판정",
+            "rowspan": 2,
+            "colspan": 2
+          },
+          {
+            "html": "수평/수직 위치 정밀도 5m",
+            "colspan": 2
+          },
+          {
+            "html": "보고서 적정판정",
+            "rowspan": 2,
+            "colspan": 2
+          },
+          {
+            "html": "수평/수직 위치 정밀도 4m",
+            "colspan": 2
+          },
+          {
+            "html": "수평/수직 위치 정밀도 3m",
+            "colspan": 2
+          }
+        ]
+      },
+      {
+        "cells": [
+          {
+            "html": "이상점 탐지 정확도 80%",
+            "colspan": 2
+          },
+          {
+            "html": "이상점 탐지 정확도 85%",
+            "colspan": 2
+          },
+          {
+            "html": "이상점 탐지 정확도 90%",
+            "colspan": 2
+          }
+        ]
+      },
+      {
+        "label": "테스트 일정·결과",
+        "cells": [
+          {
+            "html": "'22.11."
+          },
+          {
+            "html": "자문회의 적정성 판정"
+          },
+          {
+            "html": "'23.9."
+          },
+          {
+            "html": "위치 정밀도 4.365m 탐지 정확도 81.82%"
+          },
+          {
+            "html": "'24.10."
+          },
+          {
+            "html": "자문회의 적정성 판정"
+          },
+          {
+            "html": "'25.10."
+          },
+          {
+            "html": "위치 정밀도 2.34m 탐지 정확도 91%"
+          },
+          {
+            "html": "'26.10. (예정)"
+          },
+          {
+            "html": "-"
+          }
+        ]
+      },
+      {
+        "label": "주요 연구 성과",
+        "cells": [
+          {
+            "groupId": "y22",
+            "summaryHtml": "다중신호 및 센서복합측위 시스템 설계서, 논문",
+            "colspan": 2
+          },
+          {
+            "groupId": "y23",
+            "summaryHtml": "기술 시연 프로토타입 구축,, 특허 출원, 논문, SW등록 등",
+            "colspan": 2
+          },
+          {
+            "groupId": "y24",
+            "summaryHtml": "Open API, 라이브러리, 논문, SW등록, 성과홍보 등",
+            "colspan": 2
+          },
+          {
+            "groupId": "y25",
+            "summaryHtml": "실내측위 솔루션 고도화, 통합 지원<br>SW등록, 성과홍보 등",
+            "colspan": 2
+          },
+          {
+            "groupId": "y26",
+            "summaryHtml": "특허 등록, SW 등록,<br>공인인증 등",
+            "colspan": 2
+          }
+        ]
+      }
+    ]
+  },
+  "applications": {
+    "overview": "실내 대상 위치정보기반 서비스 분야, 인물 및 사물 위치 관제 분야",
+    "cards": [
+      {
+        "title": "인물 및 사물 위치 관제",
+        "current": "컨벤션 산업에서 고객의 실제 동선을 파악하기 어렵고, 방문객을 대상으로 하는 길안내 시스템의 구축이 까다로우며, 실내 물품 대여 서비스의 관리가 어려움",
+        "improved": "실내에서의 정밀한 위치 관제가 가능해짐으로써, 고객 길안내, 방문객 동선 분석, 역사 및 병원 등에서 휠체어 등의 물품 관제 등 실내위치기반 IT 서비스에 기여"
+      },
+      {
+        "title": "실내 대상 위치정보기반 서비스",
+        "current": "위성 항법 시스템에 대응하는 실내에서의 위치기반 서비스를 제공할 수 있는 위치 추정 시스템이 없으며, 행정주소의 실내 서비스 확장이 어려움",
+        "improved": "실내에서의 사용자 위치 측정이 가능해짐으로써, 실내에서의 위치기반 서비스를 제공하고 건물의 호실별 실내 행정주소 부여와 서비스 제공에 기여"
+      }
+    ]
+  },
+  "process": {
+    "processImage": {
+      "src": "data/contents/research/projects/107/images/process.png",
+      "alt": "데이터 처리 프로세스"
+    },
+    "inputHtml": "공간지문 텐서, 실시간 수집 신호 및 센서 데이터(Wi-Fi, Bluetooth, 내장 센서 등)",
+    "outputHtml": "실시간 기기 위치 추정 결과 (위도, 경도, 층수, 실내 여부 포함)",
+    "outputImages": [
+      {
+        "src": "data/contents/research/projects/107/images/output1.png",
+        "alt": "<실시간 실내 위치 측정 어플리케이션>",
+        "caption": "<실시간 실내 위치 측정 어플리케이션>"
+      },
+      {
+        "src": "data/contents/research/projects/107/images/output2.png",
+        "alt": "<인하대 – SG&I 실내 측위 기술 연동>",
+        "caption": "<인하대 – SG&I 실내 측위 기술 연동>"
+      }
+    ]
+  },
+  "demo": {
+    "src": "",
+    "height": 1200
+  },
+  "institutions": {
+    "leadContacts": [
+      {
+        "name": "이충헌",
+        "role": "개발",
+        "phone": "010-7229-1241",
+        "email": "pillarofcode@gmail.com"
+      }
+    ],
+    "partners": []
+  },
+  "downloads": {
+    "y22": [],
+    "y23": [],
+    "y24": [],
+    "y25": [],
+    "y26": []
+  }
+}

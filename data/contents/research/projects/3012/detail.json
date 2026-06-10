@@ -1,0 +1,277 @@
+{
+  "id": "3012",
+  "core": "3핵심",
+  "coreColor": "core3",
+  "ctCode": "핵심기술1",
+  "ctTitle": "디지털 국토정보 수집·연계·통합 및 제공 기술",
+  "cteCode": "세부기술1",
+  "output_code": "성과물1-2",
+  "title": "2D 데이터 파이프라인 기술",
+  "registeredAt": "",
+  "summaryInstitutions": [
+    "㈜정도UIT"
+  ],
+  "overview": {
+    "description": "연구를 통해 개발된 산출물*을 시각화하기 위한 자동 수집-변환-적개 과정이 이루어지는 기술",
+    "descriptionNote": "*산출물:CityGML,변화영상,공간·비공간데이터",
+    "necessityRows": [
+      [
+        {
+          "html": "연구통합플랫폼 내 CityGML을 포함한 공간·비공간 데이터 시각화를 위해 복잡한 전처리 필요"
+        },
+        {
+          "html": "CityGML, 변화영상, 공간·비공간 데이터를 시각화하기 위한 과정 자동화"
+        }
+      ],
+      [
+        {
+          "html": "수작업 및 상용툴을 병행한 전처리 과정이 복잡하고 각 분야 전문가 필요"
+        },
+        {
+          "html": "수작업과 상용툴을 이용했던 과정이 자동 처리됨에 따라 비전문가도 이용이 가능"
+        }
+      ]
+    ]
+  },
+  "researchContent": {
+    "headerRows": [
+      [
+        {
+          "html": "구분",
+          "rowspan": 2
+        },
+        {
+          "html": "연구 수행 내용",
+          "colspan": 10
+        }
+      ],
+      [
+        {
+          "html": "'22 (1차년도)"
+        },
+        {
+          "html": "'23 (2차년도)"
+        },
+        {
+          "html": "'24 (3차년도)",
+          "colspan": 3
+        },
+        {
+          "html": "'25 (4차년도)",
+          "colspan": 3
+        },
+        {
+          "html": "'26 (5차년도)",
+          "colspan": 2
+        }
+      ]
+    ],
+    "rows": [
+      {
+        "label": "주요 연구 내용",
+        "cells": [
+          {
+            "html": "파이프라인 관련 기술 및 사례조사 분석"
+          },
+          {
+            "html": "CityGML,비공간 데이터를 이용한 파이프라인 설계"
+          },
+          {
+            "html": "연구통합플랫폼 기반의 CityGML,비공간데이터파이프라인 모듈 개발",
+            "colspan": 3
+          },
+          {
+            "html": "CityGML,비공간데이터,정사영상 등 수집데이터 파이프라인 자동화 개발",
+            "colspan": 3
+          },
+          {
+            "html": "연구통합플랫폼상 디지털 국토정보 파이프라인 실증 및 검증",
+            "colspan": 2
+          }
+        ]
+      },
+      {
+        "label": "정량적 성능목표",
+        "cells": [
+          {
+            "html": "-"
+          },
+          {
+            "html": "-"
+          },
+          {
+            "html": "자동화율 50%",
+            "colspan": 3
+          },
+          {
+            "html": "자동화율 90%",
+            "colspan": 3
+          },
+          {
+            "html": "오류처리율 100%",
+            "colspan": 2
+          }
+        ]
+      },
+      {
+        "label": "테스트 일정·결과",
+        "labelRowspan": 2,
+        "cells": [
+          {
+            "html": "-",
+            "rowspan": 2
+          },
+          {
+            "html": "-",
+            "rowspan": 2
+          },
+          {
+            "html": "'24.10."
+          },
+          {
+            "html": "자체 정량 평가"
+          },
+          {
+            "html": "자동화율 50%"
+          },
+          {
+            "html": "'24.10."
+          },
+          {
+            "html": "자체 정량 평가"
+          },
+          {
+            "html": "자동화율 50%"
+          },
+          {
+            "html": "'26.10. (예정)",
+            "rowspan": 2
+          },
+          {
+            "html": "-",
+            "rowspan": 2
+          }
+        ]
+      },
+      {
+        "cells": [
+          {
+            "html": "'24.10."
+          },
+          {
+            "html": "전문가 검증"
+          },
+          {
+            "html": "자동화율 50%"
+          },
+          {
+            "html": "'24.10."
+          },
+          {
+            "html": "전문가 검증"
+          },
+          {
+            "html": "자동화율 50%"
+          }
+        ]
+      },
+      {
+        "label": "주요 연구 성과",
+        "cells": [
+          {
+            "groupId": "y22",
+            "summaryHtml": "보고서 1건"
+          },
+          {
+            "groupId": "y23",
+            "summaryHtml": "설계서 1건<br>특허출원 1건"
+          },
+          {
+            "groupId": "y24",
+            "summaryHtml": "특허등록 1건<br>SW등록 1건",
+            "colspan": 3
+          },
+          {
+            "groupId": "y25",
+            "summaryHtml": "SW등록1건<br>논문(비SCI)1건",
+            "colspan": 3
+          },
+          {
+            "groupId": "y26",
+            "summaryHtml": "공인인증 1건",
+            "colspan": 2
+          }
+        ]
+      }
+    ]
+  },
+  "applications": {
+    "overview": "도시계획 및 국토관리 분야, 재난·안전관리 분야",
+    "cards": [
+      {
+        "title": "국토의 빠른 변화 상황 파악을 위한 지도 서비스",
+        "current": "도시개발 사업지나 재난·재해 발생지를 촬영해 지도에 반영하기까지 시간과 비용이 과다하게 소요됨",
+        "improved": "변화지역에 대한 항공영상 또는 드론 영상을 등록하는 것만으로 시각화까지의 과정이 자동으로 수행되어 실시간에 가까운 수준의 지도 서비스가 가능해짐"
+      },
+      {
+        "title": "건물 표준 모델 규격(CityGML) 기반 웹 지도 서비스",
+        "current": "건물 표준 모델 데이터는 구조가 복잡하여 웹 지도에서 즉시 확인이 어려움",
+        "improved": "건물 표준 모델 규격(CityGML) 데이터를 시스템에 입력하면 자동 변환 과정을 통해 웹 지도 시각화 가능"
+      }
+    ]
+  },
+  "process": {
+    "processImage": {
+      "src": "data/contents/research/projects/3012/images/process.png",
+      "alt": "데이터 처리 프로세스"
+    },
+    "inputHtml": "연구를 통해 개발된 산출물(CityGML, 변화영상(geoTiff), 공간·비공간데이터) <br>*DGIS(연구통합플랫폼내 2D시각화)",
+    "outputHtml": "geojson(CityGML Geometry, Semantic Attribute 포함)",
+    "outputImages": [
+      {
+        "src": "data/contents/research/projects/3012/images/output1.png",
+        "alt": "첨부한 CityGML을 V-World 항공영상 위에 시각화",
+        "caption": "첨부한 CityGML을 V-World 항공영상 위에 시각화"
+      },
+      {
+        "src": "data/contents/research/projects/3012/images/output2.png",
+        "alt": "변화지역의 영상데이터를 V-World 배경 지도 위에 시각화",
+        "caption": "변화지역의 영상데이터를 V-World 배경 지도 위에 시각화"
+      }
+    ]
+  },
+  "demo": {
+    "src": "data/contents/research/projects/3012/demo/index.html",
+    "height": 1200
+  },
+  "institutions": {
+    "leadContacts": [
+      {
+        "name": "박윤희",
+        "role": "책임",
+        "phone": "010-4456-7212",
+        "email": "unicong@uitgis.com"
+      }
+    ],
+    "partners": []
+  },
+  "downloads": {
+    "y22": [
+      {
+        "folder": "보고서",
+        "items": [
+          {
+            "name": "예시 보고서.txt",
+            "ext": "TXT",
+            "size": "",
+            "fileKey": "data/contents/research/projects/3012/downloads/y22/보고서/예시 보고서.txt"
+          }
+        ]
+      }
+    ],
+    "y23": [],
+    "y24": [],
+    "y25": [],
+    "y26": []
+  }
+}

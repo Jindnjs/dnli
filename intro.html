@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<title>기술 소개</title>
+
+<link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
+<link rel="stylesheet" type="text/css" href="css/slick.css">
+<link rel="stylesheet" type="text/css" href="css/common.css">
+<link rel="stylesheet" type="text/css" href="css/responsive.css">
+<link rel="stylesheet" type="text/css" href="css/dgt.css">
+
+<script type="text/javascript">
+var cmAppUrl = {
+	po   : "https://www.vworld.kr",
+	data : "https://www.vworld.kr",
+	dev  : "https://www.vworld.kr",
+	user : "https://www.vworld.kr",
+	desk : "https://www.vworld.kr",
+	eng  : "https://www.vworld.kr",
+	map  : "https://map.vworld.kr",
+	apis : "https://apis.vworld.kr",
+	api  : "https://api.vworld.kr"
+}
+</script>
+<script type="text/javascript" src="js/jquery-3.6.1.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="js/jquery.cookie.js"></script>
+<script type="text/javascript" src="js/moment.min.js"></script>
+<script type="text/javascript" src="js/slick.min.js"></script>
+<script type="text/javascript" src="js/vue.min.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/common_fnc.js"></script>
+<script type="text/javascript" src="js/common_login.js"></script>
+<script type="text/javascript" src="js/common_msg.js"></script>
+<script type="text/javascript" src="js/common_valid_msg.js"></script>
+<script type="text/javascript" src="js/common_valid.js"></script>
+<script type="text/javascript" src="js/common_menu.js"></script>
+<script type="text/javascript" src="js/common_file.js"></script>
+<script type="text/javascript">
+var depth1=0; var depth2=0; var depth3=0; var depth4=0; var depth5=0;
+</script>
+</head>
+
+<body>
+	<div class="blind">
+		<a href="#sitemapMenu">전체메뉴 바로가기</a>
+		<a href="#headerMenu" class="mHide">메인메뉴 바로가기</a>
+		<a href="#section">본문 바로가기</a>
+	</div>
+	<div id="app" class="container">
+		<div class="template sub">
+
+			<header class="header fix">
+				<h1 class="logo"><a href="javascript:urlFnc.goMain();" title="메인화면으로 이동"><strong>V-world</strong>디지털트윈국토</a></h1>
+				<nav class="gnb mHide" id="headerMenu"><ul><li class="toggle"><a href="javascript:menuFnc.move('4');" class="menu">지도조회</a><ul class="dropbox"><li><a href="javascript:menuFnc.move('https://map.vworld.kr/map/dtkmap.do');" class="menu">주제도</a></li><li><a href="javascript:menuFnc.move('https://map.vworld.kr/map/dtkmap.do?mode=MAPD101');" class="menu">분석 및 시뮬레이션</a></li><li><a href="javascript:menuFnc.move('https://map.vworld.kr/map/dtkmap.do?mode=MAPD100');" class="menu">실내지도</a></li></ul></li><li class="toggle"><a href="javascript:menuFnc.move('/dtmk/dtmk_main_s001.do');" class="menu">다운로드</a><ul class="dropbox"><li><a href="javascript:menuFnc.move('/dtmk/dtmk_intdtmk_s001.do');" class="menu">공간정보 소개</a></li><li><a href="javascript:menuFnc.move('/dtmk/dtmk_ntads_s001.do');" class="menu">공간정보 다운로드</a></li></ul></li><li class="toggle"><a href="javascript:menuFnc.move('/v4po_openapi_s001.do');" class="menu">오픈API</a><ul class="dropbox"><li><a href="javascript:menuFnc.move('/dev/v4apiRefer.do');" class="menu">API레퍼런스</a></li><li><a href="javascript:menuFnc.move('/dev/v4dv_icbbeta_s001.do');" class="menu">API인큐베이터</a></li><li><a href="javascript:menuFnc.move('https://v-world.github.io/Utilization-Model/');" class="menu">브이월드 활용모델</a></li></ul></li><li class="toggle"><a href="javascript:menuFnc.move('/v4po_svi_s001.do');" class="menu">서비스</a><ul class="dropbox"><li><a href="javascript:menuFnc.move('88');" class="menu">부동산 서비스</a></li><li><a href="javascript:menuFnc.move('95');" class="menu">3D데스크톱</a></li></ul></li><li class="toggle"><a href="javascript:menuFnc.move('103');" class="menu">활용지원</a><ul class="dropbox"><li><a href="javascript:menuFnc.move('/v4po_cdntr_s004.do');" class="menu">코디네이터</a></li><li><a href="javascript:menuFnc.move('/v4po_brdfaq_s001.do');" class="menu">자주 묻는 질문</a></li><li><a href="javascript:menuFnc.move('/v4po_brdqna_s001.do');" class="menu">질의응답</a></li></ul></li><li class="toggle"><a href="javascript:menuFnc.move('134');" class="menu">소통공간</a><ul class="dropbox"><li><a href="javascript:menuFnc.move('/v4po_brdnotice_s001.do');" class="menu">공지사항</a></li><li><a href="javascript:menuFnc.move('/v4po_brddata_s001.do');" class="menu">자료실</a></li><li><a href="javascript:menuFnc.move('/v4po_brdmedia_s001.do');" class="menu">미디어소식</a></li></ul></li><li class="toggle"><a href="javascript:menuFnc.move('/dtac/dtac_search_s001.do');" class="menu">기업정보</a><ul class="dropbox"><li><a href="javascript:menuFnc.move('/dtac/dtac_search_s002.do');" class="menu">기업정보 조회</a></li><li><a href="javascript:menuFnc.move('/dtac/dtac_search_s002.do?detailTyp=02');" class="menu">기업상품 조회</a></li></ul></li></ul></nav>
+				<div class="btns">
+					<div class="toggle one">
+						<button type="button" class="bt max ico only find" title="통합검색">통합검색</button>
+						<div class="overbox rt">
+							<div class="set find">
+								<label for="header_searchIdw" class="blind">통합검색</label>
+								<input type="text" class="input validate[required]" id="header_searchIdw" name="searchIdw" value="" placeholder="통합검색" title="검색어">
+								<a href="javascript:void(0);" class="bt ico only find" id="header_searchBtn">검색</a>
+								<button type="button" class="bt ico only close">취소</button>
+							</div>
+						</div>
+					</div>
+					<div class="toggle one" id="login-before">
+						<button type="button" id="btLogin" class="bt max ico only lock customToggle" title="로그인" onclick="loginFnc.def(undefined,'Y');">로그인/회원가입</button>
+						<div class="dropbox">
+							<div class="headline">
+								<h4 class="title">로그인</h4>
+								<button type="button" class="bt ico only close">닫기</button>
+							</div>
+							<form class="field">
+								<label for="loginUsrIde" class="blind">아이디</label>
+								<input type="text" id="loginUsrIde" class="input validate[required]" placeholder="아이디" title="아이디" maxlength="18">
+								<label for="loginUsrPwd" class="blind">비밀번호</label>
+								<input type="password" id="loginUsrPwd" class="input validate[required]" placeholder="비밀번호" title="비밀번호" autocomplete="on" maxlength="18">
+								<div class="check"><input type="checkbox" id="chkUsrIde"><label for="chkUsrIde">아이디저장</label></div>
+							</form>
+							<div class="btns col">
+								<button type="button" class="bt bg primary" onclick="loginFnc.login('loginUsrIde','loginUsrPwd','chkUsrIde');">로그인</button>
+								<button type="button" class="bt bd primary" onclick="urlFnc.goJoin();">회원가입</button>
+							</div>
+							<div class="btns fs">
+								<a class="linktxt" onclick="urlFnc.goFindId();">아이디찾기</a>
+								<a class="linktxt" onclick="urlFnc.goFindPwd();">비밀번호찾기</a>
+							</div>
+						</div>
+					</div>
+					<button type="button" class="bt max ico only menu" title="전체메뉴" aria-haspopup="dialog" aria-controls="pop-sitemap">전체메뉴열기</button>
+				</div>
+			</header>
+
+			<article class="sitemap hide" aria-hidden="true" id="pop-sitemap">
+				<div class="conWrap">
+					<div class="conHead">
+						<h2 class="blind">전체메뉴</h2>
+						<button type="button" class="bt max ico only home" title="메인화면 바로가기" onclick="urlFnc.goMain();">홈</button>
+						<p class="infotxt">로그인 후 디지털트윈국토의 모든 서비스를 이용해 보세요.</p>
+						<div class="btns ml">
+							<a class="bt bd" href="javascript:anyidAdaptor.ssoLoginPage(window.location.pathname+window.location.search,'3');">로그인</a>
+							<a class="bt bd" href="javascript:urlFnc.goJoin();">회원가입</a>
+						</div>
+						<button type="button" class="bt max ico only close" title="전체메뉴 닫기">전체메뉴 닫기</button>
+					</div>
+					<div class="conBody">
+						<nav class="gnb" id="sitemapMenu"><ul><li class="toggle"><a href="javascript:menuFnc.move('/v4po_intbiz_a001.do','Y');" class="menu">브이월드 소개</a></li><li class="toggle"><a href="javascript:menuFnc.move('4','Y');" class="menu">지도조회</a><button type="button" class="bt ico only arrow">메뉴 열고닫기</button><ul class="slipbox"><li><a href="javascript:menuFnc.move('https://map.vworld.kr/map/dtkmap.do','Y');" class="menu">주제도</a></li><li><a href="javascript:menuFnc.move('https://map.vworld.kr/map/dtkmap.do?mode=MAPD101','Y');" class="menu">분석 및 시뮬레이션</a></li><li><a href="javascript:menuFnc.move('https://map.vworld.kr/map/dtkmap.do?mode=MAPD100','Y');" class="menu">실내지도</a></li></ul></li><li class="toggle"><a href="javascript:menuFnc.move('/dtmk/dtmk_main_s001.do','Y');" class="menu">다운로드</a><button type="button" class="bt ico only arrow">메뉴 열고닫기</button><ul class="slipbox"><li><a href="javascript:menuFnc.move('/dtmk/dtmk_intdtmk_s001.do','Y');" class="menu">공간정보 소개</a></li><li><a href="javascript:menuFnc.move('/dtmk/dtmk_ntads_s001.do','Y');" class="menu">공간정보 다운로드</a></li></ul></li><li class="toggle"><a href="javascript:menuFnc.move('/v4po_openapi_s001.do','Y');" class="menu">오픈API</a><button type="button" class="bt ico only arrow">메뉴 열고닫기</button><ul class="slipbox"><li><a href="javascript:menuFnc.move('/dev/v4apiRefer.do','Y');" class="menu">API레퍼런스</a></li><li><a href="javascript:menuFnc.move('/dev/v4dv_icbbeta_s001.do','Y');" class="menu">API인큐베이터</a></li></ul></li><li class="toggle"><a href="javascript:menuFnc.move('/v4po_svi_s001.do','Y');" class="menu">서비스</a><button type="button" class="bt ico only arrow">메뉴 열고닫기</button><ul class="slipbox"><li><a href="javascript:menuFnc.move('88','Y');" class="menu">부동산 서비스</a></li><li><a href="javascript:menuFnc.move('95','Y');" class="menu">3D데스크톱</a></li></ul></li><li class="toggle"><a href="javascript:menuFnc.move('103','Y');" class="menu">활용지원</a><button type="button" class="bt ico only arrow">메뉴 열고닫기</button><ul class="slipbox"><li><a href="javascript:menuFnc.move('/v4po_cdntr_s004.do','Y');" class="menu">코디네이터</a></li><li><a href="javascript:menuFnc.move('/v4po_brdfaq_s001.do','Y');" class="menu">자주 묻는 질문</a></li><li><a href="javascript:menuFnc.move('/v4po_brdqna_s001.do','Y');" class="menu">질의응답</a></li></ul></li><li class="toggle"><a href="javascript:menuFnc.move('134','Y');" class="menu">소통공간</a><button type="button" class="bt ico only arrow">메뉴 열고닫기</button><ul class="slipbox"><li><a href="javascript:menuFnc.move('/v4po_brdnotice_s001.do','Y');" class="menu">공지사항</a></li><li><a href="javascript:menuFnc.move('/v4po_brddata_s001.do','Y');" class="menu">자료실</a></li><li><a href="javascript:menuFnc.move('/v4po_brdmedia_s001.do','Y');" class="menu">미디어소식</a></li></ul></li></ul></nav>
+					</div>
+				</div>
+			</article>
+
+			<section class="section" id="section">
+				<nav class="lnb">
+					<div class="inner" id="lnbMenu">
+						<a href="index.html" class="bt ico only home" title="메인 바로가기">메인</a>
+						<h2 id="depth1" class="title"><a href="intro.html" class="menu">활용지원</a></h2>
+						<div class="one toggle" id="depth2"><a href="list.html" class="menu">연구성과</a><p class="menu"></p><button type="button" class="bt ico arrow only">메뉴선택</button></div>
+					</div>
+				</nav>
+				<aside class="location">
+					<div class="inner">
+						<div class="path" id="locationMenu"><span>홈</span><span>활용지원</span><span>연구성과</span></div>
+					</div>
+				</aside>
+
+				<script type="text/javascript">
+				$(document).ready(function() {menuFnc.locationYn = "Y";});
+				var footerObj = {
+					move : function(){
+						if($("#footerPageMove").val() == ""){
+							msgFnc.alert({text : "이동할 사이트를 선택해주세요.", callBackConfirmFnc : function(){$("#footerPageMove").focus();}});
+							return;
+						}
+						window.open($("#footerPageMove").val(), '_blank');
+					}
+				};
+
+				function navigateToCore(coreNum) {
+					window.location.href = 'tech.html#cores-' + coreNum;
+				}
+				</script>
+
+				<article class="article sds intro">
+
+					<div class="headline">
+						<div class="inner">
+							<h3 class="title">디지털 국토정보 기술개발 사업 연구성과 시스템</h3>
+						</div>
+					</div>
+
+					<article class="content">
+						<div class="inner sds-page-main">
+							<nav class="tabs bd br fix">
+								<ul>
+									<li><a href="index.html" class="tab" title="">메인</a></li>
+									<li><a href="intro.html" class="tab on" title="선택된 탭">전체개요</a></li>
+									<li><a href="tech.html" class="tab" title="">주요핵심기술</a></li>
+									<li><a href="list.html" class="tab" title="">대표연구성과</a></li>
+								</ul>
+							</nav>
+
+							<div class="sds-intro-stage">
+								<!-- Content Overall -->
+								<div id="content-overall" class="sds-main-content sds-block sds-animate-fade-in">
+									<div class="sds-intro-panel sds-intro-panel-hero">
+										<div class="sds-intro-panel-pattern sds-dotted-bg"></div>
+										<div class="sds-intro-panel-body">
+											<div class="sds-intro-kicker">사업 전체 소개</div><br>
+											<h3 class="sds-intro-title">초정밀·초연결 디지털 국토 실현</h3>
+
+											<div class="sds-intro-summary-grid">
+												<div class="sds-intro-summary-card emphasis wide">
+													<div class="sds-intro-summary-icon">
+														<img src="data/static/icons/target.svg" width="24" height="24" aria-hidden="true">
+													</div>
+													<div>
+														<div class="sds-intro-summary-label">사업 목적</div>
+														<div class="sds-intro-summary-copy">
+															고정밀·고품질의 <strong>3차원 디지털국토 구축 기술</strong> 및 <strong>동적정보를 실시간 연계 기술</strong> 등 국가공간정보체계를 고도화하기 위한 핵심기술 개발
+														</div>
+													</div>
+												</div>
+											</div>
+
+											<div class="sds-intro-summary-grid">
+												<div class="sds-intro-summary-card">
+													<div class="sds-intro-summary-icon">
+														<img src="data/static/icons/coins.svg" width="24" height="24" aria-hidden="true">
+													</div>
+													<div>
+														<div class="sds-intro-summary-label">사업 규모</div>
+														<div class="sds-intro-summary-value">총 775.1억원</div>
+													</div>
+												</div>
+												<div class="sds-intro-summary-card">
+													<div class="sds-intro-summary-icon">
+														<img src="data/static/icons/calendar.svg" width="24" height="24" aria-hidden="true">
+													</div>
+													<div>
+														<div class="sds-intro-summary-label">추진 기간</div>
+														<div class="sds-intro-summary-value">2022.04 ~ 2026.12</div>
+													</div>
+												</div>
+												<div class="sds-intro-summary-card wide">
+													<div class="sds-intro-summary-icon">
+														<img src="data/static/icons/building.svg" width="24" height="24" aria-hidden="true">
+													</div>
+													<div>
+														<div class="sds-intro-summary-label">참여 기관</div>
+														<div class="sds-intro-summary-value">LX 공간정보연구원 포함 총 43개 산학연 기관</div>
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<!-- 사업 내용 -->
+										<div class="sds-intro-section-divider">
+											<div class="sds-intro-kicker">사업 내용</div>
+
+											<div class="sds-intro-topic-list">
+												<div class="sds-intro-topic-item">
+													<span class="sds-intro-topic-badge">정밀측위</span>
+													<span class="sds-intro-topic-text">초정밀 디지털 국토정보 획득을 위한 절대, 상대, 연속복합측위 고도화 기술 개발</span>
+												</div>
+												<div class="sds-intro-topic-item">
+													<span class="sds-intro-topic-badge">자동갱신</span>
+													<span class="sds-intro-topic-text">디지털 국토정보 구축 효율화를 위한 다차원·다시점 공간데이터 기반 국토정보 변화인식 및 자동갱신 기술 개발</span>
+												</div>
+												<div class="sds-intro-topic-item">
+													<span class="sds-intro-topic-badge">통합연계</span>
+													<span class="sds-intro-topic-text">초연결 디지털 국토 실현을 위한 융복합 데이터의 통합 활용 및 운영 검증 체계 구축 기술 개발</span>
+												</div>
+												<div class="sds-intro-topic-item">
+													<span class="sds-intro-topic-badge">동적주제도</span>
+													<span class="sds-intro-topic-text">차세대 디지털 국토정보 구축을 위한 고정·이동플랫폼 기반 동적 주제도 구축 기술 개발</span>
+												</div>
+											</div>
+										</div>
+
+										<!-- 주요 핵심 기술 카드 -->
+										<div class="sds-intro-section-divider loose">
+											<div class="sds-intro-heading">
+												<div class="sds-intro-heading-icon core">
+													<img src="data/static/icons/layers.svg" width="24" height="24" aria-hidden="true">
+												</div>
+												<h4 class="sds-intro-heading-title">주요 핵심 기술 요약</h4>
+											</div>
+
+											<div class="sds-intro-card-grid">
+												<div onclick="navigateToCore(1)" class="sds-intro-core-card core1">
+													<div class="sds-intro-core-card-head">
+														<div class="sds-intro-core-card-no">1</div>
+														<div class="sds-intro-core-card-title">초정밀 디지털 국토 구축</div>
+													</div>
+													<div class="sds-intro-core-card-body">
+														영상 및 다중 신호 데이터를 융합하여 실내외 고정밀 연속 위치정보를 취득하여 초정밀 디지털 국토를 구축합니다.
+													</div>
+												</div>
+
+												<div onclick="navigateToCore(2)" class="sds-intro-core-card core2">
+													<div class="sds-intro-core-card-head">
+														<div class="sds-intro-core-card-no">2</div>
+														<div class="sds-intro-core-card-title">디지털 국토의 구축 효율화</div>
+													</div>
+													<div class="sds-intro-core-card-body">
+														다양하게 수집되는 공간데이터를 기반으로 국토변화정보를 자동으로 인식 및 갱신하여 효율적인 국가공간정보 구축 기반을 마련합니다.
+													</div>
+												</div>
+
+												<div onclick="navigateToCore(3)" class="sds-intro-core-card core3">
+													<div class="sds-intro-core-card-head">
+														<div class="sds-intro-core-card-no">3</div>
+														<div class="sds-intro-core-card-title">초연결 디지털 국토 실현</div>
+													</div>
+													<div class="sds-intro-core-card-body">
+														행정, 통계, 센서스 및 건설정보 등 비공간정보를 공간DB에 자동연계하여 생산되고 있는 다양한 정보가 결합된 초연결 디지털 국토를 실현합니다.
+													</div>
+												</div>
+
+												<div onclick="navigateToCore(4)" class="sds-intro-core-card core4">
+													<div class="sds-intro-core-card-head">
+														<div class="sds-intro-core-card-no">4</div>
+														<div class="sds-intro-core-card-title">차세대 디지털 국토 구축</div>
+													</div>
+													<div class="sds-intro-core-card-body">
+														도시 생활 구역 내 활동하는 이동체와 사물의 상황/예측정보를 취득하여 다양한 사회문제 해결에 지원 가능한 차세대 디지털 국토를 구축합니다.
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<!-- 전체 핵심 소개 영상 -->
+										<div class="sds-intro-media-section">
+											<h4 class="sds-intro-media-title"><img src="data/static/icons/play-circle.svg" width="24" height="24" aria-hidden="true"> 전체 핵심 소개 영상</h4>
+											<div class="sds-intro-media-frame">
+												<a href="https://www.youtube.com/watch?v=IfgxECKqwlU" target="_blank" rel="noopener noreferrer" class="sds-intro-video-link">
+													<img src="https://img.youtube.com/vi/IfgxECKqwlU/hqdefault.jpg" class="sds-intro-video-thumb" alt="전체 핵심 소개 영상 썸네일">
+													<div class="sds-intro-video-overlay">
+														<div class="sds-intro-play-button">
+															<svg class="sds-intro-play-icon" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+														</div>
+													</div>
+													<div class="sds-intro-video-badge">새 창에서 보기</div>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</article><!-- /content -->
+				</article><!-- /article.sds.intro -->
+			</section>
+
+			<footer class="footer">
+				<nav class="nav">
+					<ul>
+						<li><a href="javascript:urlFnc.goAgree();" class="menu">이용약관</a></li>
+						<li><a href="javascript:urlFnc.goPrivacy();" class="menu"><strong>개인정보처리방침</strong></a></li>
+						<li><a href="javascript:urlFnc.goUnauthEmail();" class="menu">이메일무단수집거부</a></li>
+						<li><a href="javascript:urlFnc.goCpyrht();" class="menu">저작권정책</a></li>
+						<li><a href="javascript:urlFnc.goIntrcn();" class="menu">브이월드소개</a></li>
+					</ul>
+				</nav>
+				<div class="cscenter">
+					<h6 class="title">고객센터
+						<em>
+							<div class="btns">
+								<a href="tel:16610115" class="bt ico call bg">1661 - 0115</a>
+								<a href="mailto:vworld@spacen.or.kr" class="bt ico mail bg">vworld@spacen.or.kr</a>
+							</div>
+						</em>
+					</h6>
+					<div class="btns"><em>평일 09:00 ~ 18:00 (중식 12:00 ~ 13:00) / 주말 및 공휴일 휴무</em></div>
+					<div class="spacen">
+						<div class="logo"><strong>공간정보산업진흥원</strong></div>
+						<p class="address">[13487] 경기 성남시 분당구 판교로 242 PDC타워 C동 601호 공간정보산업진흥원</p>
+					</div>
+				</div>
+				<div class="organizer">
+					<div class="logo"><strong>V-world</strong>디지털트윈국토</div>
+					<p class="address">[30103] 세종특별자치시 도움6로 11 국토교통부</p>
+					<p class="copyright">Copyright (C) Ministry of Land, Infrastructure and Transport 2023. All Rights Reserved.</p>
+				</div>
+				<div class="set">
+					<label for="footerPageMove" class="blind">사이트 바로가기</label>
+					<select class="select" id="footerPageMove">
+						<option value="" selected="">사이트 바로가기</option>
+						<option value="https://www.molit.go.kr/">국토교통부</option>
+						<option value="https://www.ngii.go.kr/">국토지리정보원</option>
+						<option value="http://spacen.or.kr/">공간정보산업진흥원</option>
+						<option value="https://www.spacein.kr/">공간정보교육포털</option>
+						<option value="https://www.lx.or.kr/kor.do">한국국토정보공사</option>
+					</select>
+					<button class="bt bg" onclick="footerObj.move();">이동</button>
+				</div>
+				<a href="#top" class="bt ico go only">상단 이동</a>
+			</footer>
+
+		</div>
+	</div>
+</body>
+</html>

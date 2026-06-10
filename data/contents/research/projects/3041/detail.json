@@ -1,0 +1,251 @@
+{
+  "id": "3041",
+  "core": "3핵심",
+  "coreColor": "core3",
+  "ctCode": "핵심기술1",
+  "ctTitle": "디지털 국토정보 수집·연계·통합 및 제공 기술",
+  "cteCode": "세부기술24",
+  "output_code": "성과물4-1",
+  "title": "디지털 국토정보 3D 시각화 기술",
+  "registeredAt": "",
+  "summaryInstitutions": [
+    "㈜선도소프트"
+  ],
+  "overview": {
+    "description": "Web기반의 3차원 데이터 시각화 프로그램",
+    "descriptionNote": "",
+    "necessityRows": [
+      [
+        {
+          "html": "공간정보와 속성정보가 결합된 고정밀·대용량 데이터로 인한 웹 렌더링 부하 발생"
+        },
+        {
+          "html": "3D Tiles 적용으로 대용량 데이터 분할 로딩을 구현해 끊김 없는 시각화 실현"
+        }
+      ],
+      [
+        {
+          "html": "하드웨어 리소스가 제한적인 모바일 환경에서 시각화 처리 속도가 저하되어 사용자 경험이 떨어짐"
+        },
+        {
+          "html": "최적화·경량화 알고리즘으로 모바일·웹 환경에서 빠른 데이터 표출 지원"
+        }
+      ]
+    ]
+  },
+  "researchContent": {
+    "headerRows": [
+      [
+        {
+          "html": "구분",
+          "rowspan": 2
+        },
+        {
+          "html": "연구 수행 내용",
+          "colspan": 10
+        }
+      ],
+      [
+        {
+          "html": "'22 (1차년도)",
+          "colspan": 2
+        },
+        {
+          "html": "'23 (2차년도)",
+          "colspan": 2
+        },
+        {
+          "html": "'24 (3차년도)",
+          "colspan": 2
+        },
+        {
+          "html": "'25 (4차년도)",
+          "colspan": 2
+        },
+        {
+          "html": "'26 (5차년도)",
+          "colspan": 2
+        }
+      ]
+    ],
+    "rows": [
+      {
+        "label": "주요 연구 내용",
+        "cells": [
+          {
+            "html": "3D 데이터 시각화, 경량화/최적화기술 조사",
+            "colspan": 2
+          },
+          {
+            "html": "-",
+            "colspan": 2
+          },
+          {
+            "html": "3D 데이터 시각화, 경량화/최적화 기술 개발",
+            "colspan": 2
+          },
+          {
+            "html": "3D 데이터 시각화, 경량화/최적화 기술 고도화(1차)",
+            "colspan": 2
+          },
+          {
+            "html": "3D 데이터 시각화, 경량화/최적화 기술 고도화(2차)",
+            "colspan": 2
+          }
+        ]
+      },
+      {
+        "label": "정량적 성능목표",
+        "cells": [
+          {
+            "html": "조사 적정성 판정",
+            "colspan": 2
+          },
+          {
+            "html": "-",
+            "colspan": 2
+          },
+          {
+            "html": "데이터용량 10%감소 시각화처리속도 5%향상",
+            "colspan": 2
+          },
+          {
+            "html": "데이터용량 20%감소 시각화처리속도 10%향상",
+            "colspan": 2
+          },
+          {
+            "html": "데이터용량 20%감소 시각화처리속도 10%향상",
+            "colspan": 2
+          }
+        ]
+      },
+      {
+        "label": "테스트 일정·결과",
+        "cells": [
+          {
+            "html": "-"
+          },
+          {
+            "html": "적정성 판정"
+          },
+          {
+            "html": "-"
+          },
+          {
+            "html": "적정성 판정"
+          },
+          {
+            "html": "'24.10."
+          },
+          {
+            "html": "10%감소 5%향상"
+          },
+          {
+            "html": "'25.10."
+          },
+          {
+            "html": "20%감소 10%향상"
+          },
+          {
+            "html": "'26.10. (예정)"
+          },
+          {
+            "html": "-"
+          }
+        ]
+      },
+      {
+        "label": "주요 연구 성과",
+        "cells": [
+          {
+            "groupId": "y22",
+            "summaryHtml": "보고서 2건",
+            "colspan": 2
+          },
+          {
+            "groupId": "y23",
+            "summaryHtml": "-",
+            "colspan": 2
+          },
+          {
+            "groupId": "y24",
+            "summaryHtml": "보고서2건 <br>특허출원 1건<br>특허등록 1건<br>논문(비SCI)1건",
+            "colspan": 2
+          },
+          {
+            "groupId": "y25",
+            "summaryHtml": "보고서1건 <br>SW등록1건",
+            "colspan": 2
+          },
+          {
+            "groupId": "y26",
+            "summaryHtml": "품질평가보고서 1건",
+            "colspan": 2
+          }
+        ]
+      }
+    ]
+  },
+  "applications": {
+    "overview": "디지털 트윈 플랫폼 / 스마트시티 / 도시계획 시뮬레이션 분야",
+    "cards": [
+      {
+        "title": "부산·서울(S-Map) / 글로벌 디지털 트윈",
+        "current": "플랫폼 관리자가 도시 3D 모델을 조회할 때, 대용량 데이터로 인해 로딩 및 시각화 속도가 저하되어 실시간 활용이 어려움",
+        "improved": "3D Tiles 기반 분할 로딩과 데이터 경량화를 적용해 초기 로딩 3초 이내, 데이터 용량 90% 이상 감소를 달성하여, 도시 3D 모델의 실시간 조회 가능"
+      },
+      {
+        "title": "중앙재난안전상황실 / 지자체 통합관제센터",
+        "current": "재난 발생 시 3D 지도 로딩 지연으로 침수·화재·지진 상황을 즉시 확인하기 어려워 대응 판단이 지연됨",
+        "improved": "경량화된 3D 데이터 시각화를 통해 재난 지역을 즉시 확인할 수 있어 재난 상황 분석 및 대응 시간을 약 60% 단축 가능"
+      },
+      {
+        "title": "LH 스마트시티 / 지자체 도시계획과",
+        "current": "도시 3D 분석을 위해 고사양 PC 기반 오프라인 프로그램을 사용해야 하여 현장 또는 협업 환경에서 활용이 제한됨",
+        "improved": "웹 브라우저 기반 3D 시각화를 통해 별도 프로그램 없이 도시 모델을 조회하고, 일조·조망·경관·수목 배치 시뮬레이션을 실시간으로 수행할 수 있음"
+      }
+    ]
+  },
+  "process": {
+    "processImage": {
+      "src": "data/contents/research/projects/3041/images/process.png",
+      "alt": "데이터 처리 프로세스"
+    },
+    "inputHtml": "CityGML 3.0",
+    "outputHtml": "B3DM, tileset.json (시각화 파일)",
+    "outputImages": [
+      {
+        "src": "data/contents/research/projects/3041/images/output1.png",
+        "alt": "V-World, 서울시 3D건물정보등을 활용하여 시각화 기능 개발",
+        "caption": "V-World, 서울시 3D건물정보등을 활용하여 시각화 기능 개발"
+      },
+      {
+        "src": "data/contents/research/projects/3041/images/output2.png",
+        "alt": "",
+        "caption": ""
+      }
+    ]
+  },
+  "demo": {
+    "src": "",
+    "height": 1200
+  },
+  "institutions": {
+    "leadContacts": [
+      {
+        "name": "민현기",
+        "role": "개발",
+        "phone": "02-856-1900",
+        "email": "hgmin@sundosoft.co.kr"
+      }
+    ],
+    "partners": []
+  },
+  "downloads": {
+    "y22": [],
+    "y23": [],
+    "y24": [],
+    "y25": [],
+    "y26": []
+  }
+}

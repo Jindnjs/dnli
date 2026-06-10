@@ -1,0 +1,13 @@
+S-Core Dream font files
+
+Source:
+https://s-core.co.kr/company/font/
+https://s-core.co.kr/wp-content/uploads/2020/03/S-Core_Dream_OTF.zip
+
+Copyright:
+S-Core Co., Ltd.
+
+License note:
+S-Core Dream is distributed for free use and redistribution by S-Core.
+Do not modify or sell the font files themselves. Keep this source notice
+when bundling the font files with this project.

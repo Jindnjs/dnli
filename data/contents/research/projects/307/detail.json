@@ -1,0 +1,271 @@
+{
+  "id": "307",
+  "core": "3핵심",
+  "coreColor": "core3",
+  "ctCode": "핵심기술2",
+  "ctTitle": "건설/비공간정보연계 기술",
+  "cteCode": "세부기술3",
+  "output_code": "성과물7",
+  "title": "건설정보 위치정보 생성 기술",
+  "registeredAt": "",
+  "summaryInstitutions": [
+    "(주)수성엔지니어링"
+  ],
+  "overview": {
+    "description": "상대 좌표계로 설계된 BIM 모델의 위치정보 수준을 분석하고, 수준에 따라 적합한 방식으로 절대 좌표계 위치 정보를 자동 부여하는 시스템",
+    "descriptionNote": "",
+    "necessityRows": [
+      [
+        {
+          "html": "BIM 위치정보 확인 및 좌표 변환을 사용자가 판단하여 수작업으로 수행"
+        },
+        {
+          "html": "IFC 위치정보 수준을 자동 분석하고 결과에 따라 위치 부여를 자동 적용"
+        }
+      ],
+      [
+        {
+          "html": "기존 위치정보 자동화 기술은 오차가 커 실용성에 한계가 있음"
+        },
+        {
+          "html": "위치정보 수준별 자동 부여로 사용자 개입을 줄이고 정확도 향상"
+        }
+      ]
+    ]
+  },
+  "researchContent": {
+    "headerRows": [
+      [
+        {
+          "html": "구분",
+          "rowspan": 2
+        },
+        {
+          "html": "연구 수행 내용",
+          "colspan": 11
+        }
+      ],
+      [
+        {
+          "html": "'22 (1차년도)",
+          "colspan": 2
+        },
+        {
+          "html": "'23 (2차년도)",
+          "colspan": 2
+        },
+        {
+          "html": "'24 (3차년도)",
+          "colspan": 3
+        },
+        {
+          "html": "'25 (4차년도)",
+          "colspan": 2
+        },
+        {
+          "html": "'26 (5차년도)",
+          "colspan": 2
+        }
+      ]
+    ],
+    "rows": [
+      {
+        "label": "주요 연구 내용",
+        "cells": [
+          {
+            "html": "위치정보 자동 부여 기술 현황 분석",
+            "colspan": 2
+          },
+          {
+            "html": "비공간정보 위치정보 자동부여 기술 개발",
+            "colspan": 2
+          },
+          {
+            "html": "디지털 국토정보 연계 S/W 모듈 개발",
+            "colspan": 3
+          },
+          {
+            "html": "디지털 국토정보 연계 SW 검증방법 정의서",
+            "colspan": 2
+          },
+          {
+            "html": "자동 연계 S/W 개발",
+            "colspan": 2
+          }
+        ]
+      },
+      {
+        "label": "정량적 성능목표",
+        "cells": [
+          {
+            "html": "분석서 적정 판정",
+            "colspan": 2
+          },
+          {
+            "html": "정확도 70%",
+            "colspan": 2
+          },
+          {
+            "html": "변환 자동화율 70%",
+            "colspan": 3
+          },
+          {
+            "html": "정의서 적정 판정",
+            "colspan": 2
+          },
+          {
+            "html": "정확도 90%, <br>변환 자동화율 90%",
+            "colspan": 2
+          }
+        ]
+      },
+      {
+        "label": "테스트 일정·결과",
+        "labelRowspan": 2,
+        "cells": [
+          {
+            "html": "'22.11.",
+            "rowspan": 2
+          },
+          {
+            "html": "자문회의 적정성 판정",
+            "rowspan": 2
+          },
+          {
+            "html": "'23.10.",
+            "rowspan": 2
+          },
+          {
+            "html": "위치 정확도 70%",
+            "rowspan": 2
+          },
+          {
+            "html": "'24. 10."
+          },
+          {
+            "html": "자체 정량 평가"
+          },
+          {
+            "html": "자동화율 70%"
+          },
+          {
+            "html": "'25.09.",
+            "rowspan": 2
+          },
+          {
+            "html": "공인인증 시험 적합 판정",
+            "rowspan": 2
+          },
+          {
+            "html": "'26.10. (예정)",
+            "rowspan": 2
+          },
+          {
+            "html": "-",
+            "rowspan": 2
+          }
+        ]
+      },
+      {
+        "cells": [
+          {
+            "html": "'24. 11."
+          },
+          {
+            "html": "전문가 검증"
+          },
+          {
+            "html": "자동화율 70%"
+          }
+        ]
+      },
+      {
+        "label": "주요 연구 성과",
+        "cells": [
+          {
+            "groupId": "y22",
+            "summaryHtml": "보고서 1건",
+            "colspan": 2
+          },
+          {
+            "groupId": "y23",
+            "summaryHtml": "보고서 1건<br>논분(비SCI)) 1건<br>특허 출원 1건",
+            "colspan": 2
+          },
+          {
+            "groupId": "y24",
+            "summaryHtml": "보고서 1건<br>논분(비SCI) 1건<br>특허 출원 1건",
+            "colspan": 3
+          },
+          {
+            "groupId": "y25",
+            "summaryHtml": "보고서 1건<br>특허출원 1건<br>공인인증 1건<br>SW등록 2건",
+            "colspan": 2
+          },
+          {
+            "groupId": "y26",
+            "summaryHtml": "SW등록 1건<br>특허등록 1건<br>공인인증 1건",
+            "colspan": 2
+          }
+        ]
+      }
+    ]
+  },
+  "applications": {
+    "overview": "국가 건설행정 시스템(세움터 등), 공간정보 기반 분석·시뮬레이션·운영 분야",
+    "cards": [
+      {
+        "title": "BIM 기반 건설 정보의 공간 기반 시설 관리 활용",
+        "current": "BIM 모델의 위치 좌표가 실제 지도와 정합되지 않은 경우가 많아, 시설관리 담당자는 건물 위치를 별도로 확인하거나 위치를 수동으로 보정해야하는 불편함이 있음. 이로 인해 건물 단위 시설 정보 확인과 공간 기반 시설관리 업무에 BIM 데이터를 활용하는 데 한계가 있음",
+        "improved": "BIM 모델의 위치가 실제 지도 기준으로 변환되어 제공됨으로써, 담당자가 건물시설 객체를 선택해 구조·공간 정보를 바로 조회하고 유지 관리 업무에 활용 가능"
+      },
+      {
+        "title": "BIM 위치 정보 기반 시뮬레이션·분석 활용",
+        "current": "재난 대응 시 건물 외형 위주의 3차원 지도 정보와 건축 BIM 데이터가 분리되어 활용되는 경우가 많아, 건물 내부 구조·층별 공간·출입구 정보를 고려한 대피 경로 및 대응 판단에는 한계가 있음",
+        "improved": "정확한 지도 기준 위치 기반의 BIM 기반 공간정보가 제공됨으로써 지상–지하–층별 구조와 출입 동선을 포함한 위치 기반 재난 분석 및 시뮬레이션에 활용 가능"
+      }
+    ]
+  },
+  "process": {
+    "processImage": {
+      "src": "data/contents/research/projects/307/images/process.png",
+      "alt": "데이터 처리 프로세스"
+    },
+    "inputHtml": "LoGeoRef0~50 위치 정보를 갖고 있는 IFC 데이터, 수치지도, DEM 파일",
+    "outputHtml": "절대 좌표계 기반의 기준 좌표를 갖고 있는 IFC",
+    "outputImages": [
+      {
+        "src": "data/contents/research/projects/307/images/output1.png",
+        "alt": "입력 IFC 파일(좌)과 출력 IFC 파일(우) 좌표 비교",
+        "caption": "입력 IFC 파일(좌)과 출력 IFC 파일(우) 좌표 비교"
+      },
+      {
+        "src": "data/contents/research/projects/307/images/output2.png",
+        "alt": "위치 기반 디지털 트윈을 통한 층별 내부 구조 및 동선 설계 예시",
+        "caption": "위치 기반 디지털 트윈을 통한 층별 내부 구조 및 동선 설계 예시"
+      }
+    ]
+  },
+  "demo": {
+    "src": "",
+    "height": 1200
+  },
+  "institutions": {
+    "leadContacts": [
+      {
+        "name": "이현아",
+        "role": "개발",
+        "phone": "02-2142-9291",
+        "email": "halee@soosungeng.com"
+      }
+    ],
+    "partners": []
+  },
+  "downloads": {
+    "y22": [],
+    "y23": [],
+    "y24": [],
+    "y25": [],
+    "y26": []
+  }
+}

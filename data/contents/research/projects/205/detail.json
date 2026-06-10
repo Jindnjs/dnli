@@ -1,0 +1,246 @@
+{
+  "id": "205",
+  "core": "2핵심",
+  "coreColor": "core2",
+  "ctCode": "핵심기술1",
+  "ctTitle": "크라우드 소싱 기반 다차원/다시점 공간 데이터 전처리 및 품질 관리 기술",
+  "cteCode": "세부기술3",
+  "output_code": "성과물5",
+  "title": "2차원 다종 시계열 영상정보 정합 기술",
+  "registeredAt": "",
+  "summaryInstitutions": [
+    "연세대학교"
+  ],
+  "overview": {
+    "description": "상이한 기하 및 방사의 2차원 영상정보를 정합하는 기술",
+    "descriptionNote": "",
+    "necessityRows": [
+      [
+        {
+          "html": "분광정보·해상도가 상이한 이종 센서 영상(광학-IR, 드론 등) 간 직접 매칭 시 정확도 저하 발생"
+        },
+        {
+          "html": "에지 강화 합성 영상 생성을 통해 이종 센서 영상 간 특징 일관성을 확보하여 매칭 정확도 향상"
+        }
+      ],
+      [
+        {
+          "html": "에지 강화 합성 영상 생성을 통해 이종 센서 영상 간 특징 일관성을 확보하여 매칭 정확도 향상"
+        },
+        {
+          "html": "히스토그램 매칭 및 어파인 변환 기반 특징점 추출로 다양한 센서 취득 데이터 간 자동 정합 실현"
+        }
+      ]
+    ]
+  },
+  "researchContent": {
+    "headerRows": [
+      [
+        {
+          "html": "구분",
+          "rowspan": 2
+        },
+        {
+          "html": "연구 수행 내용",
+          "colspan": 10
+        }
+      ],
+      [
+        {
+          "html": "'22 (1차년도)",
+          "colspan": 2
+        },
+        {
+          "html": "'23 (2차년도)",
+          "colspan": 2
+        },
+        {
+          "html": "'24 (3차년도)",
+          "colspan": 2
+        },
+        {
+          "html": "'25 (4차년도)",
+          "colspan": 2
+        },
+        {
+          "html": "'26 (5차년도)",
+          "colspan": 2
+        }
+      ]
+    ],
+    "rows": [
+      {
+        "label": "주요 연구 내용",
+        "cells": [
+          {
+            "html": "-",
+            "colspan": 2
+          },
+          {
+            "html": "2차원 다종 시계열 영상 매칭 기술 개발",
+            "colspan": 2
+          },
+          {
+            "html": "2차원 다종 시계열 영상 매칭 기술 검증",
+            "colspan": 2
+          },
+          {
+            "html": "-",
+            "colspan": 2
+          },
+          {
+            "html": "2차원 다종 시계열 영상 매칭 기술 고도화",
+            "colspan": 2
+          }
+        ]
+      },
+      {
+        "label": "정량적 성능목표",
+        "cells": [
+          {
+            "html": "-",
+            "colspan": 2
+          },
+          {
+            "html": "정합 상대 정밀도 수평 20cm 이내",
+            "colspan": 2
+          },
+          {
+            "html": "정합 상대 정밀도 수평 15cm 이내",
+            "colspan": 2
+          },
+          {
+            "html": "-",
+            "colspan": 2
+          },
+          {
+            "html": "정합 상대 정밀도 수평 10cm 이내",
+            "colspan": 2
+          }
+        ]
+      },
+      {
+        "label": "테스트 일정·결과",
+        "cells": [
+          {
+            "html": "-"
+          },
+          {
+            "html": "-"
+          },
+          {
+            "html": "'23.10."
+          },
+          {
+            "html": "전문가 검증"
+          },
+          {
+            "html": "'24.10."
+          },
+          {
+            "html": "공인인증 시험 적합 판정"
+          },
+          {
+            "html": "-"
+          },
+          {
+            "html": "-"
+          },
+          {
+            "html": "'26.10. (예정)"
+          },
+          {
+            "html": "-"
+          }
+        ]
+      },
+      {
+        "label": "주요 연구 성과",
+        "cells": [
+          {
+            "groupId": "y22",
+            "summaryHtml": "-",
+            "colspan": 2
+          },
+          {
+            "groupId": "y23",
+            "summaryHtml": "기술 시연 프로토타입 구축",
+            "colspan": 2
+          },
+          {
+            "groupId": "y24",
+            "summaryHtml": "TTA 공인인증",
+            "colspan": 2
+          },
+          {
+            "groupId": "y25",
+            "summaryHtml": "-",
+            "colspan": 2
+          },
+          {
+            "groupId": "y26",
+            "summaryHtml": "논문, TTA 공인인증",
+            "colspan": 2
+          }
+        ]
+      }
+    ]
+  },
+  "applications": {
+    "overview": "디지털 트윈 기반 도시관리·공간정보 기반 분석·시뮬레이션 분야",
+    "cards": [
+      {
+        "title": "항공·드론 정사영상 통합을 통한 국토 공간정보 갱신 활용",
+        "current": "광학·IR 등 분광정보 및 해상도가 상이한 이종 센서 영상 간 직접 매칭 시 오매칭 발생으로 2차원 공간정보 생산 정확도 저하",
+        "improved": "에지 강화 합성 영상 및 어파인 변환 기반 특징점 매칭을 통해 이종 센서 영상 간 정합 정확도를 향상시켜, 기존 1~2년 주기의 항공정사영상 갱신을 고해상도 드론 영상으로 단주기 자동 갱신 가능"
+      },
+      {
+        "title": "드론·로봇 다중 센서 데이터 통합을 통한 재난 대응 및 실시간 모니터링 활용",
+        "current": "드론, 위성, 항공 등 다양한 센서 기반 데이터가 개별 관리되어 재난 상황 시 통합 분석 및 신속 대응에 한계 존재",
+        "improved": "히스토그램 매칭 및 어파인 변환 기반 자동 정합 기술을 적용하여 다중 센서 데이터를 실시간 통합, 재난 대응 시뮬레이션 및 피해지역 모니터링 정밀도 향상 가능"
+      }
+    ]
+  },
+  "process": {
+    "processImage": {
+      "src": "data/contents/research/projects/205/images/process.png",
+      "alt": "데이터 처리 프로세스"
+    },
+    "inputHtml": "①광학 영상, IR 영상, Nadir 영상, Oblique 영상, 항공영상, 위성영상",
+    "outputHtml": "①매칭 결과, Feature Point 위치 특성 파악, 정확도 평가",
+    "outputImages": [
+      {
+        "src": "data/contents/research/projects/205/images/output1.png",
+        "alt": "항공사진(정사영상)과 드론(oblique) 매칭 실험 결과",
+        "caption": "항공사진(정사영상)과 드론(oblique) 매칭 실험 결과"
+      },
+      {
+        "src": "data/contents/research/projects/205/images/output2.png",
+        "alt": "위성과 드론(oblique) 매칭 실험 결과",
+        "caption": "위성과 드론(oblique) 매칭 실험 결과"
+      }
+    ]
+  },
+  "demo": {
+    "src": "",
+    "height": 1200
+  },
+  "institutions": {
+    "leadContacts": [
+      {
+        "name": "권영목",
+        "role": "성과물 관리",
+        "phone": "02-2123-2809",
+        "email": "polosport104@yonsei.ac.kr"
+      }
+    ],
+    "partners": []
+  },
+  "downloads": {
+    "y22": [],
+    "y23": [],
+    "y24": [],
+    "y25": [],
+    "y26": []
+  }
+}

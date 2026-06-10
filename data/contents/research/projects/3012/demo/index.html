@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spatial Agent - Advanced Visual RAG UI</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.11.0/proj4.js"></script>
+
+    <style>
+        body { font-family: 'Pretendard', -apple-system, system-ui, sans-serif; padding: 20px; background-color: #f0f2f5; color: #1c1e21; }
+        .container { max-width: 1300px; margin: 0 auto; background: white; padding: 35px; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+        h1 { font-size: 24px; color: #007bff; text-align: center; margin-bottom: 30px; }
+
+        /* 입력 폼 */
+        .form-group { margin-bottom: 20px; }
+        input[type="text"], input[type="file"] { width: 100%; padding: 14px; border: 1.5px solid #e1e4e8; border-radius: 10px; font-size: 16px; box-sizing: border-box; }
+        .btn-submit { width: 100%; padding: 16px; background-color: #007bff; color: white; border: none; border-radius: 10px; font-size: 16px; font-weight: 700; cursor: pointer; transition: background 0.3s; }
+
+        /* 지도 영역 */
+        #map { height: 500px; width: 100%; margin: 25px 0; border-radius: 12px; border: 1px solid #d1d5da; }
+
+        /* 결과 레이아웃 */
+        .result-layout { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 25px; margin-top: 30px; display: none; width: 100%; }
+        .card { background: #ffffff; border: 1px solid #e1e4e8; border-radius: 12px; padding: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.02); min-width: 0; overflow: hidden; }
+        .card-title { font-size: 14px; font-weight: 800; color: #444; margin-bottom: 15px; display: flex; align-items: center; gap: 8px; }
+
+        /* 마크다운 답변 박스 */
+        .answer-box { line-height: 1.8; font-size: 15.5px; color: #24292e; word-break: keep-all; }
+        .answer-box table { width: 100%; border-collapse: collapse; margin: 15px 0; font-size: 14px; border-radius: 8px; overflow: hidden; }
+        .answer-box th { background-color: #f6f8fa; border: 1px solid #d1d5da; padding: 10px 12px; font-weight: 600; text-align: left; }
+        .answer-box td { border: 1px solid #d1d5da; padding: 10px 12px; }
+        .answer-box tr:nth-child(even) { background-color: #fafbfc; }
+        .answer-box strong { color: #d73a49; font-weight: 700; }
+
+        pre { background: #1b1f23; color: #f6f8fa; padding: 15px; border-radius: 8px; font-size: 13px; overflow-x: auto; margin: 0; max-width: 100%; box-sizing: border-box; }
+        .badge { display: inline-block; padding: 3px 10px; border-radius: 12px; font-size: 12px; font-weight: bold; margin-bottom: 10px; }
+        .bg-spatial { background: #e1f5fe; color: #0288d1; }
+        .bg-complex { background: #fff3cd; color: #856404; }
+
+        /* 로딩 스피너 스타일 */
+        .spinner {
+            display: none;
+            width: 18px;
+            height: 18px;
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            border-top-color: #fff;
+            animation: spin 1s ease-in-out infinite;
+            margin-left: 10px;
+            vertical-align: middle;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        /* 로딩 중 버튼 상태 */
+        .btn-submit:disabled {
+            background-color: #a0cfff;
+            cursor: not-allowed;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Spatial Agent System</h1>
+
+        <form id="agentForm">
+            <div class="form-group">
+                <label style="display:block; margin-bottom:8px; font-weight:600;">질문 입력</label>
+                <input type="text" id="query" placeholder="궁금한 공간 정보를 질문하세요 (예: SRT수서역에서 커피를 마시고 싶어)">
+            </div>
+
+            <div class="form-group">
+                <label style="display:block; margin-bottom:8px; font-weight:600;">사용자 파일명 (선택)</label>
+                <input type="text" id="user_filename" placeholder="공간화할 파일 이름을 입력하세요">
+            </div>
+
+            <div class="form-group">
+                <label style="display:block; margin-bottom:8px; font-weight:600;">파일 업로드</label>
+                <input type="file" id="file" accept=".csv">
+            </div>
+
+            <button type="submit" class="btn-submit" id="submitBtn">
+                <span id="btnText">분석 및 지식 검색 실행</span>
+                <div id="loader" class="spinner"></div>
+            </button>
+        </form>
+
+        <div id="map"></div>
+
+        <div id="result-layout" class="result-layout">
+            <div class="card">
+                <div class="card-title">🤖 에이전트 분석 결과</div>
+                <div id="route-badge" class="badge"></div>
+                <div id="attribute-answer" class="answer-box"></div>
+            </div>
+
+            <div class="card">
+                <div class="card-title">⚙️ 실행 프로세스 (Trace)</div>
+                <div id="reasoning" style="font-size: 13px; color: #666; margin-bottom: 10px;"></div>
+                <pre id="generated-code"></pre>
+                <div class="card-title" style="margin-top:20px;">📄 Raw GeoJSON</div>
+                <pre id="raw-json" style="max-height: 250px;"></pre>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        marked.setOptions({ breaks: true, gfm: true });
+
+        const VWORLD_API_KEY = "4496DD26-BD59-3D32-AC51-4D18177BA380";
+        const epsg5179 = "+proj=tmerc +lat_0=38 +lon_0=127.5 +k=0.9996 +x_0=1000000 +y_0=2000000 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs";
+        const epsg4326 = "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs";
+
+        let map = L.map('map').setView([37.487, 127.101], 15);
+        L.tileLayer(`https://api.vworld.kr/req/wmts/1.0.0/${VWORLD_API_KEY}/Base/{z}/{y}/{x}.png`).addTo(map);
+        let geojsonLayer = null;
+
+        function transformTo4326(geojsonData) {
+            if (!geojsonData || !geojsonData.features) return geojsonData;
+            const data = JSON.parse(JSON.stringify(geojsonData));
+            data.features.forEach(f => {
+                if (!f.geometry && f.geometry_wkt) f.geometry = f.geometry_wkt;
+                if (f.geometry) {
+                    if (f.geometry.crs) delete f.geometry.crs;
+                    if (f.geometry.coordinates) {
+                        const type = f.geometry.type;
+                        const c = f.geometry.coordinates;
+                        const conv = (p) => proj4(epsg5179, epsg4326, [parseFloat(p[0]), parseFloat(p[1])]);
+                        if (type === "Point") f.geometry.coordinates = conv(c);
+                        else if (type === "Polygon" || type === "MultiLineString") f.geometry.coordinates = c.map(ring => ring.map(p => conv(p)));
+                        else if (type === "MultiPolygon") f.geometry.coordinates = c.map(poly => poly.map(ring => ring.map(p => conv(p))));
+                    }
+                }
+            });
+            return data;
+        }
+
+        function cleanAndFormatMarkdown(raw) {
+            if (!raw) return "답변을 생성할 수 없습니다.";
+            let content = raw.includes("assistantfinal") ? raw.split("assistantfinal").pop() : raw;
+            const bodyStart = content.search(/[#\d*]/);
+            if (bodyStart !== -1) content = content.substring(bodyStart);
+            return marked.parse(content.trim());
+        }
+
+        function updateMap(visual) {
+            if (!visual) return;
+            const converted = transformTo4326(visual);
+            if (geojsonLayer) map.removeLayer(geojsonLayer);
+            geojsonLayer = L.geoJSON(converted, {
+                style: (feature) => ({
+                    color: feature.properties.type === 'TARGET' ? "#ff4757" : "#007bff",
+                    weight: feature.properties.type === 'TARGET' ? 5 : 2,
+                    fillOpacity: feature.properties.type === 'TARGET' ? 0.5 : 0.2
+                }),
+                pointToLayer: (feature, latlng) => L.circleMarker(latlng, {
+                    radius: 8,
+                    fillColor: feature.properties.type === 'TARGET' ? "#ff4757" : "#007bff",
+                    color: "#fff",
+                    weight: 2,
+                    fillOpacity: 0.8
+                }),
+                onEachFeature: (f, l) => {
+                    let p = `<strong>${f.properties.type === 'TARGET' ? '🎯 분석 대상' : '📍 주변 정보'}</strong><hr>`;
+                    Object.keys(f.properties).forEach(k => { if(k !== 'type') p += `<b>${k}:</b> ${f.properties[k]}<br>`; });
+                    l.bindPopup(p);
+                }
+            }).addTo(map);
+            if (geojsonLayer.getBounds().isValid()) map.fitBounds(geojsonLayer.getBounds(), { padding: [50, 50] });
+        }
+
+        document.getElementById('agentForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+
+            const submitBtn = document.getElementById('submitBtn');
+            const loader = document.getElementById('loader');
+            const btnText = document.getElementById('btnText');
+
+            const query = document.getElementById('query').value;
+            const userFilename = document.getElementById('user_filename').value;
+            const file = document.getElementById('file').files[0];
+
+            // UI 상태 초기화
+            submitBtn.disabled = true;
+            loader.style.display = 'inline-block';
+            btnText.textContent = "분석 중...";
+            document.getElementById('result-layout').style.display = 'grid';
+            document.getElementById('attribute-answer').innerHTML = "<em>지식베이스 분석 중...</em>";
+
+            try {
+                // --- 하드코딩 시작 ---
+                if (query.includes("SRT수서역") && query.includes("커피")) {
+                    // 0.5초 후 결과 출력 (실제 분석하는 느낌을 주기 위함)
+                    await new Promise(resolve => setTimeout(resolve, 500));
+
+                    // 1. 마크다운 답변 설정
+                    const mockMarkdown = `### ☕ SRT수서역 내 카페 정보
+SRT수서역 내에는 다양한 카페가 위치해 있습니다. 분석된 결과는 다음과 같습니다:
+
+*   **엔제리너스**: 지하 1층 및 지하 2층 (좌석 이용 가능)
+*   **공차**: 지하 2층 (밀크티 및 커피)
+*   **크리스피크림도넛**: 지하 1층 및 지하 2층
+*   **파머스박스**: 지하 2층 (베이커리 카페)
+*   **아메리칸트레일러**: 지하 1층 (생과일 주스)
+*   **카페 차**: 지하 1층 (카페)
+*   **버터풀앤크리멀리스**: 지하 1층 (베이커리 카페)`;
+
+                    document.getElementById('attribute-answer').innerHTML = marked.parse(mockMarkdown);
+
+                    // 2. 실행 프로세스(Trace) 및 배지 설정
+                    const badge = document.getElementById('route-badge');
+                    badge.textContent = "SPATIAL";
+                    badge.className = "badge bg-spatial";
+                    
+                    document.getElementById('reasoning').textContent = "Reasoning: The user input is \"SRT수서역\". The NER result indicates an AF_BUIDING_1: \"SRT수서역\". So we need to get building data for that building.";
+                    document.getElementById('generated-code').textContent = `result_ner = process_ner(input_text)\nbuilding_name = result_ner.get("AF_BUIDING_1")\nfinal_result = get_building_data(building_name, reference_point)\n\nfinal_result`;
+
+                    // 3. 지도 시각화 데이터 (제공해주신 GeoJSON)
+                    const rawFeatures = [
+                        {
+                            "type": "Feature",
+                            "geometry_wkt": {
+                                "type": "Polygon",
+                                "coordinates": [
+                                  [
+                                    [
+                                      965060.234659563,
+                                      1942957.243528129
+                                    ],
+                                    [
+                                      965062.011834733,
+                                      1942958.159257806
+                                    ],
+                                    [
+                                      965063.509891702,
+                                      1942955.251948256
+                                    ],
+                                    [
+                                      965061.732716536,
+                                      1942954.336218574
+                                    ],
+                                    [
+                                      965060.234659563,
+                                      1942957.243528129
+                                    ]
+                                  ]
+                                ]
+                            },
+                            "properties": {
+                                "nospat_id": "6000000400000058",
+                                "content_summary": "{'층': -1, '설명': '수서역사 지하 1층에 위치한 호두과자와 커피를 판매하는 카페입니다.', '대분류': '식음료', '소분류': '베이커리카페', '시설명': '아띠몽&후식', 'bsc_spat_id': '116801153122003000099000002101200052', '상세위치': '수서역사 지하 1층'}",
+                                "type": "CONTEXT"
+                              }
+                        },
+                        {
+                            "type": "Feature",
+                            "geometry_wkt": {
+                                "type": "Polygon",
+                                "coordinates": [
+                                  [
+                                    [
+                                      964987.195608184,
+                                      1943036.456599962
+                                    ],
+                                    [
+                                      964985.564573471,
+                                      1943039.621982804
+                                    ],
+                                    [
+                                      964985.468640607,
+                                      1943039.808161706
+                                    ],
+                                    [
+                                      964992.08832673,
+                                      1943043.219821532
+                                    ],
+                                    [
+                                      964992.184551808,
+                                      1943043.033075526
+                                    ],
+                                    [
+                                      964993.815570684,
+                                      1943039.867723386
+                                    ],
+                                    [
+                                      964993.861345146,
+                                      1943039.778887938
+                                    ],
+                                    [
+                                      964993.858670852,
+                                      1943039.777509949
+                                    ],
+                                    [
+                                      964987.244041127,
+                                      1943036.369173194
+                                    ],
+                                    [
+                                      964987.241366833,
+                                      1943036.367795203
+                                    ],
+                                    [
+                                      964987.195608184,
+                                      1943036.456599962
+                                    ]
+                                  ]
+                                ]
+                            },
+                            "properties": {
+                                "nospat_id": "6000000400000048",
+                                "content_summary": "{'층': -2, '설명': '수서역사 지하 2층에 위치한 밀크티와 커피를 판매하는 카페입니다.', '대분류': '식음료', '소분류': '카페', '시설명': '공차', 'bsc_spat_id': '116801153122003000099000002102200009', '상세위치': '수서역사 지하 2층'}",
+                                "type": "CONTEXT"
+                              }
+                        },
+                        {
+                            "type": "Feature",
+                            "geometry_wkt": {
+                                "type": "Polygon",
+                                "coordinates": [
+                                  [
+                                    [
+                                      964874.792644462,
+                                      1943121.803940516
+                                    ],
+                                    [
+                                      964877.695638867,
+                                      1943124.689150804
+                                    ],
+                                    [
+                                      964892.42337574,
+                                      1943109.871538296
+                                    ],
+                                    [
+                                      964889.52001733,
+                                      1943106.985790033
+                                    ],
+                                    [
+                                      964874.792644462,
+                                      1943121.803940516
+                                    ]
+                                  ]
+                                ]
+                            },
+                            "properties": {
+                                "nospat_id": "6000000400000042",
+                                "content_summary": "{'층': -2, '설명': '수서역사 지하 2층에 위치한 커피와 샌드위치를 판매하는 카페입니다. 좌석이 있습니다.', '대분류': '식음료', '소분류': '카페', '시설명': '엔제리너스', 'bsc_spat_id': '116801153122003000099000002102200035', '상세위치': '수서역사 지하 2층'}",
+                                "type": "CONTEXT"
+                              }
+                        },
+                        {
+                            "type": "Feature",
+                            "geometry_wkt": {
+                                "type": "Polygon",
+                                "coordinates": [
+                                  [
+                                    [
+                                      964988.255323599,
+                                      1942974.19863573
+                                    ],
+                                    [
+                                      964990.921086584,
+                                      1942975.572230303
+                                    ],
+                                    [
+                                      964994.563980464,
+                                      1942968.502391956
+                                    ],
+                                    [
+                                      964991.898217502,
+                                      1942967.128797366
+                                    ],
+                                    [
+                                      964988.255323599,
+                                      1942974.19863573
+                                    ]
+                                  ]
+                                ]
+                            },
+                            "properties": {
+                                "nospat_id": "6000000400000053",
+                                "content_summary": "{'층': -1, '설명': '수서역사 지하 1층에 위치한 커피와 샌드위치를 판매하는 카페입니다. 좌석이 있습니다.', '대분류': '식음료', '소분류': '카페', '시설명': '엔제리너스', 'bsc_spat_id': '116801153122003000099000002101200045', '상세위치': '수서역사 지하 1층'}",
+                                "type": "CONTEXT"
+                              }
+                        },
+                        {
+                            "type": "Feature",
+                            "geometry_wkt": {
+                                "type": "Polygon",
+                                "coordinates": [
+                                  [
+                                    [
+                                      965029.384436826,
+                                      1942947.377264015
+                                    ],
+                                    [
+                                      965024.267874297,
+                                      1942944.740839429
+                                    ],
+                                    [
+                                      965020.343764206,
+                                      1942952.356439327
+                                    ],
+                                    [
+                                      965025.460326777,
+                                      1942954.99286388
+                                    ],
+                                    [
+                                      965025.56564339,
+                                      1942954.788473796
+                                    ],
+                                    [
+                                      965029.384436826,
+                                      1942947.377264015
+                                    ]
+                                  ]
+                                ]
+                            },
+                            "properties": {
+                                "nospat_id": "6000000400000043",
+                                "content_summary": "{'층': -2, '설명': '수서역사 지하 2층에 위치한 도넛과 커피를 판매하는 카페입니다.', '대분류': '식음료', '소분류': '도넛/커피', '시설명': '크리스피크림도넛', 'bsc_spat_id': '116801153122003000099000002102200036', '상세위치': '수서역사 지하 2층'}",
+                                "type": "CONTEXT"
+                              }
+                        },
+                        {
+                            "type": "Feature",
+                            "geometry_wkt": {
+                                "type": "Polygon",
+                                "coordinates": [
+                                  [
+                                    [
+                                      965005.057550006,
+                                      1943045.547984268
+                                    ],
+                                    [
+                                      965005.011775545,
+                                      1943045.636819715
+                                    ],
+                                    [
+                                      965003.380756709,
+                                      1943048.802171825
+                                    ],
+                                    [
+                                      965003.283756483,
+                                      1943048.990422181
+                                    ],
+                                    [
+                                      965009.903734727,
+                                      1943052.401514764
+                                    ],
+                                    [
+                                      965011.631770046,
+                                      1943049.047880721
+                                    ],
+                                    [
+                                      965011.677528227,
+                                      1943048.95907687
+                                    ],
+                                    [
+                                      965011.674853932,
+                                      1943048.95769888
+                                    ],
+                                    [
+                                      965005.060224301,
+                                      1943045.549362259
+                                    ],
+                                    [
+                                      965005.057550006,
+                                      1943045.547984268
+                                    ]
+                                  ]
+                                ]
+                            },
+                            "properties": {
+                                "nospat_id": "6000000400000047",
+                                "content_summary": "{'층': -2, '설명': '수서역사 지하 2층에 위치한 커피와 샌드위치를 판매하는 카페입니다.', '대분류': '식음료', '소분류': '베이커리카페', '시설명': '파머스박스', 'bsc_spat_id': '116801153122003000099000002102200001', '상세위치': '수서역사 지하 2층'}",
+                                "type": "CONTEXT"
+                              }
+                        },
+                        {
+                            "type": "Feature",
+                            "geometry_wkt": {
+                                "type": "Polygon",
+                                "coordinates": [
+                                  [
+                                    [
+                                      964894.873947694,
+                                      1943102.371020086
+                                    ],
+                                    [
+                                      964894.838635404,
+                                      1943102.406547866
+                                    ],
+                                    [
+                                      964894.452574869,
+                                      1943102.022828954
+                                    ],
+                                    [
+                                      964889.590483219,
+                                      1943106.914889799
+                                    ],
+                                    [
+                                      964892.493843795,
+                                      1943109.800640213
+                                    ],
+                                    [
+                                      964897.391396971,
+                                      1943104.87319995
+                                    ],
+                                    [
+                                      964894.873947694,
+                                      1943102.371020086
+                                    ]
+                                  ]
+                                ]
+                            },
+                            "properties": {
+                                "nospat_id": "6000000400000056",
+                                "content_summary": "{'층': -1, '설명': '수서역사 지하 1층에 위치한 도넛과 커피를 판매하는 카페입니다.', '대분류': '식음료', '소분류': '도넛/커피', '시설명': '크리스피크림도넛', 'bsc_spat_id': '116801153122003000099000002101200063', '상세위치': '수서역사 지하 1층'}",
+                                "type": "CONTEXT"
+                              }
+                        },
+                        {
+                            "type": "Feature",
+                            "geometry_wkt": {
+                                "type": "Polygon",
+                                "coordinates": [
+                                  [
+                                    [
+                                      964981.5663378,
+                                      1942987.180087004
+                                    ],
+                                    [
+                                      964984.232100823,
+                                      1942988.553681551
+                                    ],
+                                    [
+                                      964986.590104283,
+                                      1942983.977456039
+                                    ],
+                                    [
+                                      964983.924341273,
+                                      1942982.603861484
+                                    ],
+                                    [
+                                      964981.5663378,
+                                      1942987.180087004
+                                    ]
+                                  ]
+                                ]
+                            },
+                            "properties": {
+                                "nospat_id": "6000000400000052",
+                                "content_summary": "{'층': -1, '설명': '수서역사 지하 1층에 위치한 생과일 주스를 판매하는 카페입니다.', '대분류': '식음료', '소분류': '카페', '시설명': '아메리칸트레일러', 'bsc_spat_id': '116801153122003000099000002101200044', '상세위치': '수서역사 지하 1층'}",
+                                "type": "CONTEXT"
+                              }
+                        },
+                        {
+                            "type": "Feature",
+                            "geometry_wkt": {
+                                "type": "Polygon",
+                                "coordinates": [
+                                  [
+                                    [
+                                      965060.234659563,
+                                      1942957.243528129
+                                    ],
+                                    [
+                                      965057.826290521,
+                                      1942961.917498826
+                                    ],
+                                    [
+                                      965059.603465699,
+                                      1942962.833228498
+                                    ],
+                                    [
+                                      965059.912440904,
+                                      1942962.233594036
+                                    ],
+                                    [
+                                      965062.011834733,
+                                      1942958.159257806
+                                    ],
+                                    [
+                                      965061.889414376,
+                                      1942958.096177951
+                                    ],
+                                    [
+                                      965060.234659563,
+                                      1942957.243528129
+                                    ]
+                                  ]
+                                ]
+                            },
+                            "properties": {
+                                "nospat_id": "6000000400000057",
+                                "content_summary": "{'층': -1, '설명': '수서역사 지하 1층에 위치한 카페입니다.', '대분류': '식음료', '소분류': '카페', '시설명': '카페 차', 'bsc_spat_id': '116801153122003000099000002101200051', '상세위치': '수서역사 지하 1층'}",
+                                "type": "CONTEXT"
+                              }
+                        },
+                        {
+                            "type": "Feature",
+                            "geometry_wkt": {
+                                "type": "Polygon",
+                                "coordinates": [
+                                  [
+                                    [
+                                      965007.685243648,
+                                      1942958.526465949
+                                    ],
+                                    [
+                                      965011.888444549,
+                                      1942950.369228742
+                                    ],
+                                    [
+                                      965011.499915434,
+                                      1942950.169030328
+                                    ],
+                                    [
+                                      965002.817213132,
+                                      1942945.695071582
+                                    ],
+                                    [
+                                      964998.61401215,
+                                      1942953.85230885
+                                    ],
+                                    [
+                                      965007.685243648,
+                                      1942958.526465949
+                                    ]
+                                  ]
+                                ]
+                            },
+                            "properties": {
+                                "nospat_id": "6000000400000055",
+                                "content_summary": "{'층': -1, '설명': '수서역사 지하 1층에 위치한 베이커리 카페입니다.', '대분류': '식음료', '소분류': '베이커리카페', '시설명': '버터풀앤크리멀러스', 'bsc_spat_id': '116801153122003000099000002101200047', '상세위치': '수서역사 지하 1층'}",
+                                "type": "CONTEXT"
+                              }
+                        }
+                    ];
+
+                    // 제공해주신 JSON의 geometry_wkt를 geometry로 치환하는 작업 (스크립트 호환용)
+                    const processedVisual = {
+                        "type": "FeatureCollection",
+                        "features": rawFeatures.map(f => ({
+                            ...f,
+                            // geometry_wkt 안에 있는 객체를 geometry로 복사
+                            geometry: f.geometry_wkt
+                        }))
+                    };
+
+                    document.getElementById('raw-json').textContent = JSON.stringify(processedVisual, null, 2);
+                    updateMap(processedVisual);
+
+                } else {
+                    // --- 기존 서버 통신 로직 ---
+                    const formData = new FormData();
+                    if (query) formData.append('query', query);
+                    if (userFilename) formData.append('user_filename', userFilename);
+                    if (file) formData.append('file', file);
+
+                    const response = await fetch('/api/v1/agent/execute', { method: 'POST', body: formData });
+                    const data = await response.json();
+                    const display = data.results ? data.results[0] : data;
+
+                    const attr = display.attribute || display.attribute_info;
+                    document.getElementById('attribute-answer').innerHTML = cleanAndFormatMarkdown(attr ? attr.answer : "");
+
+                    const route = display.decision ? display.decision.route : "ANALYSIS";
+                    const badge = document.getElementById('route-badge');
+                    badge.textContent = route;
+                    badge.className = `badge ${route === 'COMPLEX' ? 'bg-complex' : 'bg-spatial'}`;
+                    document.getElementById('reasoning').textContent = display.decision ? "Reasoning: " + display.decision.reasoning : "";
+                    document.getElementById('generated-code').textContent = display.generated_code || "No Trace";
+
+                    const visual = display.visualization || display.spatial;
+                    if (visual) {
+                        document.getElementById('raw-json').textContent = JSON.stringify(visual, null, 2);
+                        updateMap(visual);
+                    }
+                }
+            } catch (err) {
+                document.getElementById('attribute-answer').innerHTML = `<span style="color:red">오류: ${err.message}</span>`;
+            } finally {
+                // 원상복구
+                submitBtn.disabled = false;
+                loader.style.display = 'none';
+                btnText.textContent = "분석 및 지식 검색 실행";
+            }
+        });
+    </script>
+</body>
+</html>

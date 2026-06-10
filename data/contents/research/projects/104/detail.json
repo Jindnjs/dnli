@@ -1,0 +1,246 @@
+{
+  "id": "104",
+  "core": "1핵심",
+  "coreColor": "core1",
+  "ctCode": "핵심기술2",
+  "ctTitle": "모바일환경 Multi-GNSS 정밀측위기술",
+  "cteCode": "세부기술4",
+  "output_code": "성과물4",
+  "title": "Multi-GNSS 저가형 모듈기반 정밀측위 기술",
+  "registeredAt": "",
+  "summaryInstitutions": [
+    "㈜피피솔"
+  ],
+  "overview": {
+    "description": "다양한 모바일 환경에서 정밀한 절대위치 정보를 확보하기 위한 저가 모듈 Multi-GNSS 이중주파수 신호 기반 정밀 절대측위 기술",
+    "descriptionNote": "",
+    "necessityRows": [
+      [
+        {
+          "html": "고가의 측량 장비로 자율주행, 로봇 서비스 양산에 한계"
+        },
+        {
+          "html": "저가모듈+SW 탑재로 단가를 90% 이상 절감하여 보급형 모빌리티 대중화 가속"
+        }
+      ],
+      [
+        {
+          "html": "장비 가격 부담으로 시설물 감시가 일부 지점에 국한되어 광역 실시간 모니터링 사각지대 발생"
+        },
+        {
+          "html": "동일 예산 대비 5배 이상의 관측망 구축으로 변위 감시 확대하여 선제적 시설물 안전관리 체계 구현"
+        }
+      ]
+    ]
+  },
+  "researchContent": {
+    "headerRows": [
+      [
+        {
+          "html": "구분",
+          "rowspan": 2
+        },
+        {
+          "html": "연구 수행 내용",
+          "colspan": 10
+        }
+      ],
+      [
+        {
+          "html": "'22 (1차년도)",
+          "colspan": 2
+        },
+        {
+          "html": "'23 (2차년도)",
+          "colspan": 2
+        },
+        {
+          "html": "'24 (3차년도)",
+          "colspan": 2
+        },
+        {
+          "html": "'25 (4차년도)",
+          "colspan": 2
+        },
+        {
+          "html": "'26 (5차년도)",
+          "colspan": 2
+        }
+      ]
+    ],
+    "rows": [
+      {
+        "label": "주요 연구 내용",
+        "cells": [
+          {
+            "html": "저가형 모듈 기반 GNSS 측위 설계",
+            "colspan": 2
+          },
+          {
+            "html": "모바일 환경 정밀측위 오차보정 모델링 구현",
+            "colspan": 2
+          },
+          {
+            "html": "저가형 모듈기반 GNSS 정밀측위 기술 고도화",
+            "colspan": 2
+          },
+          {
+            "html": "이동체 특성을 반영한 저가모듈 필터 최적화",
+            "colspan": 2
+          },
+          {
+            "html": "실증 확대/최적화 및 고도화",
+            "colspan": 2
+          }
+        ]
+      },
+      {
+        "label": "정량적 성능목표",
+        "cells": [
+          {
+            "html": "측위 정확도 &lt; 10cm(정지, 3차원)",
+            "colspan": 2
+          },
+          {
+            "html": "측위 정확도 &lt; 10cm(100km/h, 3차원)",
+            "colspan": 2
+          },
+          {
+            "html": "측위 정확도 &lt; 5cm(개활지), 1m(도심지)",
+            "colspan": 2
+          },
+          {
+            "html": "측위 정확도 &lt; 50cm(100km/h, 도심지)",
+            "colspan": 2
+          },
+          {
+            "html": "측위 정확도 &lt; 50cm(드론이동환경, 도심지)",
+            "colspan": 2
+          }
+        ]
+      },
+      {
+        "label": "테스트 일정·결과",
+        "cells": [
+          {
+            "html": "'22.11."
+          },
+          {
+            "html": "측위 정확도 &lt; 2.4cm(정지, 3차원)"
+          },
+          {
+            "html": "'23.9."
+          },
+          {
+            "html": "측위 정확도 &lt; 9.8cm(100km/h, 3차원)"
+          },
+          {
+            "html": "'24. 10."
+          },
+          {
+            "html": "측위 정확도 &lt; 4.2cm(개활지), 0.72m(도심지)"
+          },
+          {
+            "html": "'25.06., '25.09."
+          },
+          {
+            "html": "측위 정확도 &lt; 38cm(100km/h, 도심지)"
+          },
+          {
+            "html": "'26.10. (예정)"
+          },
+          {
+            "html": "-"
+          }
+        ]
+      },
+      {
+        "label": "주요 연구 성과",
+        "cells": [
+          {
+            "groupId": "y22",
+            "summaryHtml": "논문, 학술발표, 성과홍보, SW 등록 등",
+            "colspan": 2
+          },
+          {
+            "groupId": "y23",
+            "summaryHtml": "저가모듈 정밀측위 SW, 특허 출원, 논문, SW등록, 시제품 등",
+            "colspan": 2
+          },
+          {
+            "groupId": "y24",
+            "summaryHtml": "저가모듈 현장시험 보고서, 논문, 학술발표, 특허 출원 등",
+            "colspan": 2
+          },
+          {
+            "groupId": "y25",
+            "summaryHtml": "저가모듈 현장시험 보고서, 논문, 학술발표, 특허 출원 등",
+            "colspan": 2
+          },
+          {
+            "groupId": "y26",
+            "summaryHtml": "논문, SW 등록,<br>일자리 창출, 학술발표 등",
+            "colspan": 2
+          }
+        ]
+      }
+    ]
+  },
+  "applications": {
+    "overview": "자율주행 셔틀·배달 로봇 운용 플랫폼 및 지능형 교통 시스템, 시설물 미세 변위 모니터링 사업 분야",
+    "cards": [
+      {
+        "title": "자율주행 모빌리티 및 무인 배달 로봇 보급 확산",
+        "current": "대당 수백~천만 원에 달하는 고정밀 GNSS 수신기 설치 비용 부담으로 인해, 소형 배달 로봇이나 보급형 자율주행 차량의 양산 및 대중화에 큰 비용 장벽이 존재함",
+        "improved": "저가형 모듈에 최적화된 필터링 및 오차 보정 기술을 적용하여 모듈 단가를 1/10 수준으로 낮추면서도, 위치 오차를 수십 cm 이내로 유지함으로써 물류 로봇 및 퍼스널 모빌리티의 대규모 확산 가속화"
+      },
+      {
+        "title": "지능형 교통 시스템(ITS) 및 인프라 안전 모니터링 체계 구축",
+        "current": "도로변 시설물이나 교량의 미세 변위 감시를 위해 정밀 측위기를 설치할 경우, 높은 구축 비용으로 인해 주요 지점에만 한정적으로 설치되어 광역적인 실시간 모니터링에 한계가 있음",
+        "improved": "저가형 Multi-GNSS 모듈 기반의 정밀 센서를 촘촘하게 배치함으로써, 기존 대비 동일 예산으로 5배 이상의 관측망 구축 가능. 이를 통해 도로 침하, 시설물 변형 등을 mm~cm급으로 실시간 감지하여 선제적 안전 관리 체계 구현"
+      }
+    ]
+  },
+  "process": {
+    "processImage": {
+      "src": "data/contents/research/projects/104/images/process.png",
+      "alt": "데이터 처리 프로세스"
+    },
+    "inputHtml": "- 저가 모듈 기반 임베디드 시스템 위치 <br>\n- 저가 모듈 기반 임베디드 시스템 위치에 적합한 GNSS 보정정보(단일기준국, 또는 네트워크 RTK, PPP-RTK)",
+    "outputHtml": "저가 모듈 기반 임베디드 시스템 정밀좌표",
+    "outputImages": [
+      {
+        "src": "data/contents/research/projects/104/images/output1.png",
+        "alt": "<저가모듈 기반 임베디드 시스템 측위 결과(도심지 환경)>",
+        "caption": "<저가모듈 기반 임베디드 시스템 측위 결과(도심지 환경)>"
+      },
+      {
+        "src": "data/contents/research/projects/104/images/output2.png",
+        "alt": "<저가모듈 기반 임베디드 시스템 측위 결과(고속도로 환경)>",
+        "caption": "<저가모듈 기반 임베디드 시스템 측위 결과(고속도로 환경)>"
+      }
+    ]
+  },
+  "demo": {
+    "src": "",
+    "height": 1200
+  },
+  "institutions": {
+    "leadContacts": [
+      {
+        "name": "박관동",
+        "phone": "02-6925-1516",
+        "email": "ppsol@ppsol.com",
+        "role": "책임"
+      }
+    ],
+    "partners": []
+  },
+  "downloads": {
+    "y22": [],
+    "y23": [],
+    "y24": [],
+    "y25": [],
+    "y26": []
+  }
+}

@@ -1,0 +1,246 @@
+{
+  "id": "402",
+  "core": "4핵심",
+  "coreColor": "core4",
+  "ctCode": "핵심기술1",
+  "ctTitle": "고정플랫폼 기반 동적정보 수집 기술 개발",
+  "cteCode": "세부기술1",
+  "output_code": "성과물2",
+  "title": "이동객체 위치 상태 정보 식별 기술",
+  "registeredAt": "",
+  "summaryInstitutions": [
+    "㈜웨이버스"
+  ],
+  "overview": {
+    "description": "영상·비영상 센서로부터 수집된 데이터를 통합 생성-관리-검증하여 이동체(보행자·차량·PM)의 위치/상태를 식별 및 시각화하는 시스템",
+    "descriptionNote": "",
+    "necessityRows": [
+      [
+        {
+          "html": "카메라 정보·스테레오 기반 위치추출은 환경 의존성이 높아 기존 카메라 적용에 한계"
+        },
+        {
+          "html": "영상-지도 매핑 기반 위치추출로 기존 카메라 환경에 유연한 이동체 위치추출 적용체계 가능"
+        }
+      ],
+      [
+        {
+          "html": "센서별 위치 추출 및 적재 방식이 상이하여 통합 관리 및 검증 체계 미비"
+        },
+        {
+          "html": "센서별 특성에 기반한 이종센서 이동체 위치정보 통합 생성-관리-검증체계 마련"
+        }
+      ]
+    ]
+  },
+  "researchContent": {
+    "headerRows": [
+      [
+        {
+          "html": "구분",
+          "rowspan": 2
+        },
+        {
+          "html": "연구 수행 내용",
+          "colspan": 10
+        }
+      ],
+      [
+        {
+          "html": "'22 (1차년도)",
+          "colspan": 2
+        },
+        {
+          "html": "'23 (2차년도)",
+          "colspan": 2
+        },
+        {
+          "html": "'24 (3차년도)",
+          "colspan": 2
+        },
+        {
+          "html": "'25 (4차년도)",
+          "colspan": 2
+        },
+        {
+          "html": "'26 (5차년도)",
+          "colspan": 2
+        }
+      ]
+    ],
+    "rows": [
+      {
+        "label": "주요 연구 내용",
+        "cells": [
+          {
+            "html": "위치추출 프로토타입",
+            "colspan": 2
+          },
+          {
+            "html": "영상객체 및 이종센서 기반 위치 추출기술",
+            "colspan": 2
+          },
+          {
+            "html": "이동체 위치 보정 기술",
+            "colspan": 2
+          },
+          {
+            "html": "위치 빅데이터 쿼리, 위치정보 API 제공 기술",
+            "colspan": 2
+          },
+          {
+            "html": "통합 이동체 위치정보 추출시스템",
+            "colspan": 2
+          }
+        ]
+      },
+      {
+        "label": "정량적 성능목표",
+        "cells": [
+          {
+            "html": "기능 동작 적성 판정",
+            "colspan": 2
+          },
+          {
+            "html": "영상객체 위치 정확도 90% 이상",
+            "colspan": 2
+          },
+          {
+            "html": "정확도 95% 이상",
+            "colspan": 2
+          },
+          {
+            "html": "쿼리 정확도 98%",
+            "colspan": 2
+          },
+          {
+            "html": "시스템 운용률 95%",
+            "colspan": 2
+          }
+        ]
+      },
+      {
+        "label": "테스트 일정·결과",
+        "cells": [
+          {
+            "html": "이종센서 기반 위치 정확도 80% 이상"
+          },
+          {
+            "html": "API응답성공률 98%"
+          },
+          {
+            "html": "'23.10."
+          },
+          {
+            "html": "전문가 검증 (완료)"
+          },
+          {
+            "html": "'24.10."
+          },
+          {
+            "html": "전문가 검증 (90.5%)"
+          },
+          {
+            "html": "'25.11."
+          },
+          {
+            "html": "전문가 검증 (완료)"
+          },
+          {
+            "html": "'26.10. (예정)"
+          },
+          {
+            "html": "-"
+          }
+        ]
+      },
+      {
+        "label": "주요 연구 성과",
+        "cells": [
+          {
+            "groupId": "y22",
+            "summaryHtml": "-",
+            "colspan": 2
+          },
+          {
+            "groupId": "y23",
+            "summaryHtml": "특허출원 1건<br>S/W등록 1건",
+            "colspan": 2
+          },
+          {
+            "groupId": "y24",
+            "summaryHtml": "특허등록 1건<br>S/W등록 2건",
+            "colspan": 2
+          },
+          {
+            "groupId": "y25",
+            "summaryHtml": "특허출원 1건<br>S/W등록 2건",
+            "colspan": 2
+          },
+          {
+            "groupId": "y26",
+            "summaryHtml": "특허등록 1건",
+            "colspan": 2
+          }
+        ]
+      }
+    ]
+  },
+  "applications": {
+    "overview": "(지방자치단체/안전·방범·스마트시티) 도시 공간정보 기반 동적데이터 구축 분야, 스마트시티 데이터 플랫폼 활용 분야",
+    "cards": [
+      {
+        "title": "도시 공간 기반 이동체 위치 데이터 구축 및 관리",
+        "current": "CCTV, LiDAR 등 센서별로 이동체 감지 방식과 데이터 형식이 달라 이동체 위치정보를 통합적으로 관리하기 어려우며, 센서 간 데이터 연계 및 활용에 한계가 있음",
+        "improved": "이종센서에서 수집된 이동체 정보를 통합하여 공간 좌표 기반 위치정보로 생성·관리할 수 있으며, 도시 내 이동체 위치 데이터를 체계적으로 구축하여 다양한 도시 서비스와 분석 시스템에서 활용 가능한 기반 데이터를 제공"
+      },
+      {
+        "title": "스마트시티 서비스 및 분석 시스템을 위한 위치 데이터 제공",
+        "current": "도시 서비스에서 이동체 정보를 활용하기 위해서는 각 센서 또는 영상 분석 결과를 개별적으로 처리해야 하며, 서비스별 데이터 연계 및 활용에 많은 시간이 소요됨",
+        "improved": "이종센서 기반 이동체 위치정보를 통합 생성하고 API 및 데이터 조회 기능을 통해 제공함으로써 교통, 안전, 도시 운영 등 다양한 스마트시티 서비스에서 활용 가능한 공통 위치데이터를 빠르게 활용할 수 있는 기반을 제공"
+      }
+    ]
+  },
+  "process": {
+    "processImage": {
+      "src": "data/contents/research/projects/402/images/process.png",
+      "alt": "데이터 처리 프로세스"
+    },
+    "inputHtml": "이동체 위치 정보(CCTV,LiDAR,GPS,드론), 이동체 감지 정보(WiFi,Bluetooth), GPS 취득 데이터, CCTV 대표 이미지",
+    "outputHtml": "영상센서 기반 통합 이동체 위치추출 저작도구 및 통합 이동체 위치정보 결과 시각화 화면",
+    "outputImages": [
+      {
+        "src": "data/contents/research/projects/402/images/output1.png",
+        "alt": "영상센서 기반 통합 이동체 위치추출 저작도구 화면",
+        "caption": "영상센서 기반 통합 이동체 위치추출 저작도구 화면"
+      },
+      {
+        "src": "data/contents/research/projects/402/images/output2.png",
+        "alt": "실시간 통합 이동체 위치정보 결과 시각화 화면",
+        "caption": "실시간 통합 이동체 위치정보 결과 시각화 화면"
+      }
+    ]
+  },
+  "demo": {
+    "src": "",
+    "height": 1200
+  },
+  "institutions": {
+    "leadContacts": [
+      {
+        "name": "양재유",
+        "role": "책임",
+        "phone": "02-851-9640",
+        "email": "umeb00@wavus.co.kr"
+      }
+    ],
+    "partners": []
+  },
+  "downloads": {
+    "y22": [],
+    "y23": [],
+    "y24": [],
+    "y25": [],
+    "y26": []
+  }
+}

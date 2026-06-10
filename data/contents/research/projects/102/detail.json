@@ -1,0 +1,246 @@
+{
+  "id": "102",
+  "core": "1핵심",
+  "coreColor": "core1",
+  "ctCode": "핵심기술1",
+  "ctTitle": "고정밀 실시간 GNSS 보정정보제공서버 SW",
+  "cteCode": "세부기술2",
+  "output_code": "성과물2",
+  "title": "고정밀 실시간 GNSS 보정정보 디코딩 기술",
+  "registeredAt": "",
+  "summaryInstitutions": [
+    "한국방송공사"
+  ],
+  "overview": {
+    "description": "차세대방송(ATSC 3.0) 데이터캐스팅 신호를 복조하여 GNSS 보정정보 패킷을 추출하고 분석하는 시스템",
+    "descriptionNote": "",
+    "necessityRows": [
+      [
+        {
+          "html": "GNSS 정밀측위서비스의 외산 솔루션 의존으로 기술자립도와 확장성 낮음"
+        },
+        {
+          "html": "방송기반 위치정보 제공 기술을 국산화로 공공 및 산업 분야에서 활용 가능한 위치정보 인프라 확보."
+        }
+      ],
+      [
+        {
+          "html": "모빌리티 단말의 경우 통신망 모뎀의 운영이 어려운 경우가 많음"
+        },
+        {
+          "html": "방송망 데이터캐스팅을 활용하여 전국 단위로 안정적인 GNSS 보정정보 제공 가능"
+        }
+      ]
+    ]
+  },
+  "researchContent": {
+    "headerRows": [
+      [
+        {
+          "html": "구분",
+          "rowspan": 2
+        },
+        {
+          "html": "연구 수행 내용",
+          "colspan": 10
+        }
+      ],
+      [
+        {
+          "html": "'22 (1차년도)",
+          "colspan": 2
+        },
+        {
+          "html": "'23 (2차년도)",
+          "colspan": 2
+        },
+        {
+          "html": "'24 (3차년도)",
+          "colspan": 2
+        },
+        {
+          "html": "'25 (4차년도)",
+          "colspan": 2
+        },
+        {
+          "html": "'26 (5차년도)",
+          "colspan": 2
+        }
+      ]
+    ],
+    "rows": [
+      {
+        "label": "주요 연구 내용",
+        "cells": [
+          {
+            "html": "GNSS 보정정보 전송규격 프로토콜 개발",
+            "colspan": 2
+          },
+          {
+            "html": "GNSS 보정정보 송출기술개발",
+            "colspan": 2
+          },
+          {
+            "html": "GNSS 보정정보 활용기술",
+            "colspan": 2
+          },
+          {
+            "html": "보정정보 전송규격 표준화",
+            "colspan": 2
+          },
+          {
+            "html": "보정정보서비스 테스트베드 적용",
+            "colspan": 2
+          }
+        ]
+      },
+      {
+        "label": "정량적 성능목표",
+        "cells": [
+          {
+            "html": "보정정보 전송규격 적정성 판단",
+            "colspan": 2
+          },
+          {
+            "html": "보정정보 전송 지연시간",
+            "colspan": 2
+          },
+          {
+            "html": "보정정보 디코딩 가능 여부 판정",
+            "colspan": 2
+          },
+          {
+            "html": "표준화 채택여부",
+            "colspan": 2
+          },
+          {
+            "html": "송출서비스 적용성공 여부 판정",
+            "colspan": 2
+          }
+        ]
+      },
+      {
+        "label": "테스트 일정·결과",
+        "cells": [
+          {
+            "html": "'22.11."
+          },
+          {
+            "html": "외부전문가 적정성 판정"
+          },
+          {
+            "html": "'23.11."
+          },
+          {
+            "html": "지연 시간 1초이내"
+          },
+          {
+            "html": "'24.11."
+          },
+          {
+            "html": "95%이상 정확도"
+          },
+          {
+            "html": "'25.06."
+          },
+          {
+            "html": "TTA 표준 제정"
+          },
+          {
+            "html": "'26.10. (예정)"
+          },
+          {
+            "html": "-"
+          }
+        ]
+      },
+      {
+        "label": "주요 연구 성과",
+        "cells": [
+          {
+            "groupId": "y22",
+            "summaryHtml": "성과홍보, 학술발표<br>기술보고서",
+            "colspan": 2
+          },
+          {
+            "groupId": "y23",
+            "summaryHtml": "성과홍보, 시험인증, 현장시험",
+            "colspan": 2
+          },
+          {
+            "groupId": "y24",
+            "summaryHtml": "현장시험, 성과홍보, 국내표준제정",
+            "colspan": 2
+          },
+          {
+            "groupId": "y25",
+            "summaryHtml": "특허 출원, 성과홍보<br>국내표준제정<br>현장시험",
+            "colspan": 2
+          },
+          {
+            "groupId": "y26",
+            "summaryHtml": "특허 등록,<br>성과홍보, 표준<br>현장시험",
+            "colspan": 2
+          }
+        ]
+      }
+    ]
+  },
+  "applications": {
+    "overview": "국토지리분야 인프라로서 모빌리티 단말 대상의 정밀위치 및 위치기반 서비스 플랫폼",
+    "cards": [
+      {
+        "title": "스마트 모빌리티 및 자율주행 위치 서비스 활용",
+        "current": "도시 지역 및 이동 환경에서 GNSS 음영지역이 발생하며 고정밀 위치정보 사용을 위해서는 고가 장비를 도입해야 하여 소형 경제형 단말보급에 어려움이 있음",
+        "improved": "방송망 기반 GNSS 보정정보 제공으로 대규모 사용자 동시 서비스 가능하며, 차량·드론·모빌리티 환경에서 저가형 단말 기반의 정밀측위 서비스 확대 활용 가능"
+      },
+      {
+        "title": "디지털 국토 및 공간정보 서비스 활용",
+        "current": "디지털 트윈, 스마트시티 등 공간정보 서비스에 필요한 초정밀 위치정보 인프라의 확보 등 다양한 위치정보 서비스의 통합 운용에 어려움이 있음",
+        "improved": "초정밀 위치정보 제공을 통한 디지털 국토 구축을 지원하며, 방송망 기반 전국 커버리지 위치정보 서비스로 공간정보 플랫폼과 용이하게 연결 가능함"
+      }
+    ]
+  },
+  "process": {
+    "processImage": {
+      "src": "data/contents/research/projects/102/images/process.png",
+      "alt": "데이터 처리 프로세스"
+    },
+    "inputHtml": "국토지리정보원 등의 위치정보서버로 부터의 보정정보, 3D지도, ATSC3.0 복조데이터, GPS신호",
+    "outputHtml": "보정된 정밀위치 지도상 표시 (위도경도, 복조데이터 상태, Fixed, Float표시 포함)",
+    "outputImages": [
+      {
+        "src": "data/contents/research/projects/102/images/output1.png",
+        "alt": "",
+        "caption": ""
+      },
+      {
+        "src": "data/contents/research/projects/102/images/output2.png",
+        "alt": "<지도상에 RTK 정밀측위 보정이 적용된 결과를 표시.  파란색 Fixed, 붉은색 Float 상태 표시>",
+        "caption": "<지도상에 RTK 정밀측위 보정이 적용된 결과를 표시.  파란색 Fixed, 붉은색 Float 상태 표시>"
+      }
+    ]
+  },
+  "demo": {
+    "src": "",
+    "height": 1200
+  },
+  "institutions": {
+    "leadContacts": [
+      {
+        "name": "서영우",
+        "role": "책임",
+        "phone": "010-5151-7272",
+        "email": "ysuh@kbs.co.kr"
+      }
+    ],
+    "partners": []
+  },
+  "downloads": {
+    "y22": [],
+    "y23": [],
+    "y24": [],
+    "y25": [],
+    "y26": []
+  }
+}

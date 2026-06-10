@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<title>주요 핵심 기술</title>
+
+<link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
+<link rel="stylesheet" type="text/css" href="css/slick.css">
+<link rel="stylesheet" type="text/css" href="css/common.css">
+<link rel="stylesheet" type="text/css" href="css/responsive.css">
+<link rel="stylesheet" type="text/css" href="css/dgt.css">
+
+<script type="text/javascript">
+var cmAppUrl = {
+	po   : "https://www.vworld.kr",
+	data : "https://www.vworld.kr",
+	dev  : "https://www.vworld.kr",
+	user : "https://www.vworld.kr",
+	desk : "https://www.vworld.kr",
+	eng  : "https://www.vworld.kr",
+	map  : "https://map.vworld.kr",
+	apis : "https://apis.vworld.kr",
+	api  : "https://api.vworld.kr"
+}
+</script>
+<script type="text/javascript" src="js/jquery-3.6.1.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="js/jquery.cookie.js"></script>
+<script type="text/javascript" src="js/moment.min.js"></script>
+<script type="text/javascript" src="js/slick.min.js"></script>
+<script type="text/javascript" src="js/vue.min.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/common_fnc.js"></script>
+<script type="text/javascript" src="js/common_login.js"></script>
+<script type="text/javascript" src="js/common_msg.js"></script>
+<script type="text/javascript" src="js/common_valid_msg.js"></script>
+<script type="text/javascript" src="js/common_valid.js"></script>
+<script type="text/javascript" src="js/common_menu.js"></script>
+<script type="text/javascript" src="js/common_file.js"></script>
+<script type="text/javascript">
+var depth1=0; var depth2=0; var depth3=0; var depth4=0; var depth5=0;
+</script>
+</head>
+
+<body>
+	<div class="blind">
+		<a href="#sitemapMenu">전체메뉴 바로가기</a>
+		<a href="#headerMenu" class="mHide">메인메뉴 바로가기</a>
+		<a href="#section">본문 바로가기</a>
+	</div>
+	<div id="app" class="container">
+		<div class="template sub">
+
+			<header class="header fix">
+				<h1 class="logo"><a href="javascript:urlFnc.goMain();" title="메인화면으로 이동"><strong>V-world</strong>디지털트윈국토</a></h1>
+				<nav class="gnb mHide" id="headerMenu"><ul><li class="toggle"><a href="javascript:menuFnc.move('4');" class="menu">지도조회</a><ul class="dropbox"><li><a href="javascript:menuFnc.move('https://map.vworld.kr/map/dtkmap.do');" class="menu">주제도</a></li><li><a href="javascript:menuFnc.move('https://map.vworld.kr/map/dtkmap.do?mode=MAPD101');" class="menu">분석 및 시뮬레이션</a></li><li><a href="javascript:menuFnc.move('https://map.vworld.kr/map/dtkmap.do?mode=MAPD100');" class="menu">실내지도</a></li></ul></li><li class="toggle"><a href="javascript:menuFnc.move('/dtmk/dtmk_main_s001.do');" class="menu">다운로드</a><ul class="dropbox"><li><a href="javascript:menuFnc.move('/dtmk/dtmk_intdtmk_s001.do');" class="menu">공간정보 소개</a></li><li><a href="javascript:menuFnc.move('/dtmk/dtmk_ntads_s001.do');" class="menu">공간정보 다운로드</a></li></ul></li><li class="toggle"><a href="javascript:menuFnc.move('/v4po_openapi_s001.do');" class="menu">오픈API</a><ul class="dropbox"><li><a href="javascript:menuFnc.move('/dev/v4apiRefer.do');" class="menu">API레퍼런스</a></li><li><a href="javascript:menuFnc.move('/dev/v4dv_icbbeta_s001.do');" class="menu">API인큐베이터</a></li><li><a href="javascript:menuFnc.move('https://v-world.github.io/Utilization-Model/');" class="menu">브이월드 활용모델</a></li></ul></li><li class="toggle"><a href="javascript:menuFnc.move('/v4po_svi_s001.do');" class="menu">서비스</a><ul class="dropbox"><li><a href="javascript:menuFnc.move('88');" class="menu">부동산 서비스</a></li><li><a href="javascript:menuFnc.move('95');" class="menu">3D데스크톱</a></li></ul></li><li class="toggle"><a href="javascript:menuFnc.move('103');" class="menu">활용지원</a><ul class="dropbox"><li><a href="javascript:menuFnc.move('/v4po_cdntr_s004.do');" class="menu">코디네이터</a></li><li><a href="javascript:menuFnc.move('/v4po_brdfaq_s001.do');" class="menu">자주 묻는 질문</a></li><li><a href="javascript:menuFnc.move('/v4po_brdqna_s001.do');" class="menu">질의응답</a></li></ul></li><li class="toggle"><a href="javascript:menuFnc.move('134');" class="menu">소통공간</a><ul class="dropbox"><li><a href="javascript:menuFnc.move('/v4po_brdnotice_s001.do');" class="menu">공지사항</a></li><li><a href="javascript:menuFnc.move('/v4po_brddata_s001.do');" class="menu">자료실</a></li><li><a href="javascript:menuFnc.move('/v4po_brdmedia_s001.do');" class="menu">미디어소식</a></li></ul></li><li class="toggle"><a href="javascript:menuFnc.move('/dtac/dtac_search_s001.do');" class="menu">기업정보</a><ul class="dropbox"><li><a href="javascript:menuFnc.move('/dtac/dtac_search_s002.do');" class="menu">기업정보 조회</a></li><li><a href="javascript:menuFnc.move('/dtac/dtac_search_s002.do?detailTyp=02');" class="menu">기업상품 조회</a></li></ul></li></ul></nav>
+				<div class="btns">
+					<div class="toggle one">
+						<button type="button" class="bt max ico only find" title="통합검색">통합검색</button>
+						<div class="overbox rt">
+							<div class="set find">
+								<label for="header_searchIdw" class="blind">통합검색</label>
+								<input type="text" class="input validate[required]" id="header_searchIdw" name="searchIdw" value="" placeholder="통합검색" title="검색어">
+								<a href="javascript:void(0);" class="bt ico only find" id="header_searchBtn">검색</a>
+								<button type="button" class="bt ico only close">취소</button>
+							</div>
+						</div>
+					</div>
+					<div class="toggle one" id="login-before">
+						<button type="button" id="btLogin" class="bt max ico only lock customToggle" title="로그인" onclick="loginFnc.def(undefined,'Y');">로그인/회원가입</button>
+						<div class="dropbox">
+							<div class="headline">
+								<h4 class="title">로그인</h4>
+								<button type="button" class="bt ico only close">닫기</button>
+							</div>
+							<form class="field">
+								<label for="loginUsrIde" class="blind">아이디</label>
+								<input type="text" id="loginUsrIde" class="input validate[required]" placeholder="아이디" title="아이디" maxlength="18">
+								<label for="loginUsrPwd" class="blind">비밀번호</label>
+								<input type="password" id="loginUsrPwd" class="input validate[required]" placeholder="비밀번호" title="비밀번호" autocomplete="on" maxlength="18">
+								<div class="check"><input type="checkbox" id="chkUsrIde"><label for="chkUsrIde">아이디저장</label></div>
+							</form>
+							<div class="btns col">
+								<button type="button" class="bt bg primary" onclick="loginFnc.login('loginUsrIde','loginUsrPwd','chkUsrIde');">로그인</button>
+								<button type="button" class="bt bd primary" onclick="urlFnc.goJoin();">회원가입</button>
+							</div>
+							<div class="btns fs">
+								<a class="linktxt" onclick="urlFnc.goFindId();">아이디찾기</a>
+								<a class="linktxt" onclick="urlFnc.goFindPwd();">비밀번호찾기</a>
+							</div>
+						</div>
+					</div>
+					<button type="button" class="bt max ico only menu" title="전체메뉴" aria-haspopup="dialog" aria-controls="pop-sitemap">전체메뉴열기</button>
+				</div>
+			</header>
+
+			<article class="sitemap hide" aria-hidden="true" id="pop-sitemap">
+				<div class="conWrap">
+					<div class="conHead">
+						<h2 class="blind">전체메뉴</h2>
+						<button type="button" class="bt max ico only home" title="메인화면 바로가기" onclick="urlFnc.goMain();">홈</button>
+						<p class="infotxt">로그인 후 디지털트윈국토의 모든 서비스를 이용해 보세요.</p>
+						<div class="btns ml">
+							<a class="bt bd" href="javascript:anyidAdaptor.ssoLoginPage(window.location.pathname+window.location.search,'3');">로그인</a>
+							<a class="bt bd" href="javascript:urlFnc.goJoin();">회원가입</a>
+						</div>
+						<button type="button" class="bt max ico only close" title="전체메뉴 닫기">전체메뉴 닫기</button>
+					</div>
+					<div class="conBody">
+						<nav class="gnb" id="sitemapMenu"><ul><li class="toggle"><a href="javascript:menuFnc.move('/v4po_intbiz_a001.do','Y');" class="menu">브이월드 소개</a></li><li class="toggle"><a href="javascript:menuFnc.move('4','Y');" class="menu">지도조회</a><button type="button" class="bt ico only arrow">메뉴 열고닫기</button><ul class="slipbox"><li><a href="javascript:menuFnc.move('https://map.vworld.kr/map/dtkmap.do','Y');" class="menu">주제도</a></li><li><a href="javascript:menuFnc.move('https://map.vworld.kr/map/dtkmap.do?mode=MAPD101','Y');" class="menu">분석 및 시뮬레이션</a></li><li><a href="javascript:menuFnc.move('https://map.vworld.kr/map/dtkmap.do?mode=MAPD100','Y');" class="menu">실내지도</a></li></ul></li><li class="toggle"><a href="javascript:menuFnc.move('/dtmk/dtmk_main_s001.do','Y');" class="menu">다운로드</a><button type="button" class="bt ico only arrow">메뉴 열고닫기</button><ul class="slipbox"><li><a href="javascript:menuFnc.move('/dtmk/dtmk_intdtmk_s001.do','Y');" class="menu">공간정보 소개</a></li><li><a href="javascript:menuFnc.move('/dtmk/dtmk_ntads_s001.do','Y');" class="menu">공간정보 다운로드</a></li></ul></li><li class="toggle"><a href="javascript:menuFnc.move('/v4po_openapi_s001.do','Y');" class="menu">오픈API</a><button type="button" class="bt ico only arrow">메뉴 열고닫기</button><ul class="slipbox"><li><a href="javascript:menuFnc.move('/dev/v4apiRefer.do','Y');" class="menu">API레퍼런스</a></li><li><a href="javascript:menuFnc.move('/dev/v4dv_icbbeta_s001.do','Y');" class="menu">API인큐베이터</a></li></ul></li><li class="toggle"><a href="javascript:menuFnc.move('/v4po_svi_s001.do','Y');" class="menu">서비스</a><button type="button" class="bt ico only arrow">메뉴 열고닫기</button><ul class="slipbox"><li><a href="javascript:menuFnc.move('88','Y');" class="menu">부동산 서비스</a></li><li><a href="javascript:menuFnc.move('95','Y');" class="menu">3D데스크톱</a></li></ul></li><li class="toggle"><a href="javascript:menuFnc.move('103','Y');" class="menu">활용지원</a><button type="button" class="bt ico only arrow">메뉴 열고닫기</button><ul class="slipbox"><li><a href="javascript:menuFnc.move('/v4po_cdntr_s004.do','Y');" class="menu">코디네이터</a></li><li><a href="javascript:menuFnc.move('/v4po_brdfaq_s001.do','Y');" class="menu">자주 묻는 질문</a></li><li><a href="javascript:menuFnc.move('/v4po_brdqna_s001.do','Y');" class="menu">질의응답</a></li></ul></li><li class="toggle"><a href="javascript:menuFnc.move('134','Y');" class="menu">소통공간</a><button type="button" class="bt ico only arrow">메뉴 열고닫기</button><ul class="slipbox"><li><a href="javascript:menuFnc.move('/v4po_brdnotice_s001.do','Y');" class="menu">공지사항</a></li><li><a href="javascript:menuFnc.move('/v4po_brddata_s001.do','Y');" class="menu">자료실</a></li><li><a href="javascript:menuFnc.move('/v4po_brdmedia_s001.do','Y');" class="menu">미디어소식</a></li></ul></li></ul></nav>
+					</div>
+				</div>
+			</article>
+
+			<section class="section" id="section">
+				<nav class="lnb">
+					<div class="inner" id="lnbMenu">
+						<a href="index.html" class="bt ico only home" title="메인 바로가기">메인</a>
+						<h2 id="depth1" class="title"><a href="intro.html" class="menu">활용지원</a></h2>
+						<div class="one toggle" id="depth2"><a href="list.html" class="menu">연구성과</a><p class="menu"></p><button type="button" class="bt ico arrow only">메뉴선택</button></div>
+					</div>
+				</nav>
+				<aside class="location">
+					<div class="inner">
+						<div class="path" id="locationMenu"><span>홈</span><span>활용지원</span><span>연구성과</span></div>
+					</div>
+				</aside>
+
+				<script type="text/javascript">
+				$(document).ready(function() {menuFnc.locationYn = "Y";});
+				var footerObj = {
+					move : function(){
+						if($("#footerPageMove").val() == ""){
+							msgFnc.alert({text : "이동할 사이트를 선택해주세요.", callBackConfirmFnc : function(){$("#footerPageMove").focus();}});
+							return;
+						}
+						window.open($("#footerPageMove").val(), '_blank');
+					}
+				};
+
+				function activateSubTab(index) {
+					const btns = document.querySelectorAll('.sds-sub-tab-btn');
+					btns.forEach((btn) => btn.classList.remove('on'));
+
+					const safeIndex = Math.max(0, Math.min(index, btns.length - 1));
+					if (btns[safeIndex]) btns[safeIndex].classList.add('on');
+
+					document.querySelectorAll('.sds-sub-content').forEach((content) => {
+						content.classList.add('hide');
+						content.classList.remove('sds-block');
+					});
+
+					const subContent = document.getElementById('sub-core-' + (safeIndex + 1));
+					if (subContent) {
+						subContent.classList.remove('hide');
+						subContent.classList.add('sds-block');
+					}
+				}
+
+				function applyTechHash(hash, scroll) {
+					if (scroll) window.scrollTo({ top: 0, behavior: 'smooth' });
+					const match = hash && hash.match(/#cores-(\d+)/);
+					const coreNum = match ? parseInt(match[1], 10) : 1;
+					activateSubTab(coreNum - 1);
+				}
+
+				window.addEventListener('hashchange', () => applyTechHash(location.hash, true));
+				window.addEventListener('DOMContentLoaded', () => applyTechHash(location.hash, false));
+				</script>
+
+				<article class="article sds tech">
+
+					<div class="headline">
+						<div class="inner">
+							<h3 class="title">디지털 국토정보 기술개발 사업 연구성과 시스템</h3>
+						</div>
+					</div>
+
+					<article class="content">
+						<div class="inner sds-page-main">
+							<nav class="tabs bd br fix">
+								<ul>
+									<li><a href="index.html" class="tab" title="">메인</a></li>
+									<li><a href="intro.html" class="tab" title="">전체개요</a></li>
+									<li><a href="tech.html" class="tab on" title="선택된 탭">주요핵심기술</a></li>
+									<li><a href="list.html" class="tab" title="">대표연구성과</a></li>
+								</ul>
+							</nav>
+
+							<div class="sds-intro-stage">
+								<div id="content-cores" class="sds-main-content sds-block sds-animate-fade-in">
+									<div class="sds-intro-panel sds-intro-panel-shell">
+										<h4 class="sds-intro-section-title"><img src="data/static/icons/layers.svg" width="24" height="24" aria-hidden="true"> 주요 핵심 기술</h4>
+
+										<nav class="tabs bd fix">
+											<ul>
+												<li><button type="button" onclick="location.hash='#cores-1'" class="tab sds-sub-tab-btn on">1핵심</button></li>
+												<li><button type="button" onclick="location.hash='#cores-2'" class="tab sds-sub-tab-btn">2핵심</button></li>
+												<li><button type="button" onclick="location.hash='#cores-3'" class="tab sds-sub-tab-btn">3핵심</button></li>
+												<li><button type="button" onclick="location.hash='#cores-4'" class="tab sds-sub-tab-btn">4핵심</button></li>
+												<li><button type="button" onclick="location.hash='#cores-5'" class="tab sds-sub-tab-btn">기술 통합활용</button></li>
+											</ul>
+										</nav>
+
+										<!-- 1핵심 -->
+										<div id="sub-core-1" class="sds-sub-content sds-intro-core-panel core1 sds-block sds-animate-fade-in">
+											<div class="sds-intro-core-badge">1핵심 소개</div>
+											<h3 class="sds-intro-core-title">초정밀 디지털 국토정보 획득을 위한 절대/상대 연속복합 측위 고도화 기술 개발</h3>
+
+											<div class="sds-intro-detail-stack">
+												<!-- 연구 목표 -->
+												<div class="sds-intro-detail-block">
+													<h4 class="sds-intro-detail-title">
+														<div class="sds-intro-detail-accent"></div> 연구 목표
+													</h4>
+													<p class="sds-intro-detail-text">
+														Multi-GNSS, 영상, 다중신호, 센서융합 등을 이용하여 다양한 이동환경(보행, 차량, 드론 등)에서 GNSS 음영지역(지하, 터널, 실내 등)을 해소하고 끊김없는 실시간 위치정보를 제공하기 위한 초정밀 절대, 상대, 연속복합측위 및 측위지원 단말·서버 플랫폼 기술개발
+													</p>
+												</div>
+
+												<!-- 주요 기술 -->
+												<div class="sds-intro-detail-block">
+													<h4 class="sds-intro-detail-title">
+														<div class="sds-intro-detail-accent"></div> 주요 기술
+													</h4>
+													<ul class="sds-intro-detail-list">
+														<li class="sds-intro-detail-item">
+															<strong class="sds-intro-detail-item-title">① (절대측위 기술) Multi-GNSS 다중주파수 신호 기반 실시간 고정밀 측위보정 정보 서버 인프라 및 모바일 환경기반 고정밀 위치정보 기술개발</strong>
+															<ul class="sds-intro-bullet-list">
+																<li>고정밀 실시간 Multi-GNSS 보정정보 서버 SW 국산화 및 활용 서비스 기술개발</li>
+																<li>GNSS 불량·음영지역 최소화를 위한 Pseudo-GNSS 실증적용 기술개발</li>
+															</ul>
+														</li>
+														<li class="sds-intro-detail-item">
+															<strong class="sds-intro-detail-item-title">② (상대연속복합측위) 영상기반 상대측위, 비영상 신호기반 복합측위 및 GNSS 기반 절대측위 연계 연속측위 기술 고도화</strong>
+															<ul class="sds-intro-bullet-list">
+																<li>영상기반 정밀상대측위, 다중신호 복합측위 및 연속복합측위 기술개발</li>
+																<li>연속복합측위 지원을 위한 프레임워크 기술개발 및 표준화</li>
+																<li>이동환경별(보행, 차량, 드론 등) 연속복합 측위 최적화 및 실증 적용 기술개발</li>
+															</ul>
+														</li>
+													</ul>
+												</div>
+
+												<!-- 기대 효과 -->
+												<div class="sds-intro-detail-block">
+													<h4 class="sds-intro-detail-title">
+														<div class="sds-intro-detail-accent"></div> 기대 효과
+													</h4>
+													<ul class="sds-intro-bullet-list effect">
+														<li>실내외 고정밀 측위정보가 필요한 자율주행차 상용화 및 드론을 활용한 물류 분야 등 미래형 위치서비스 산업에 기여</li>
+														<li>실내외 끊김없는 위치정보관련 서비스 개발 및 확산을 통해 위치정보 기반 공간정보 서비스 산업 활성화 기여</li>
+													</ul>
+												</div>
+
+												<!-- 수행업체 -->
+												<div class="sds-intro-detail-block">
+													<h4 class="sds-intro-detail-title">
+														<div class="sds-intro-detail-accent"></div> 수행업체
+													</h4>
+													<div class="sds-intro-org-stack">
+														<div>
+															<div class="sds-intro-org-label primary">주관기관</div>
+															<div class="sds-intro-org-logos">
+																<div class="sds-intro-logo-card main"><img src="data/static/logos/etri.png" alt="한국전자통신연구원"></div>
+															</div>
+														</div>
+														<div>
+															<div class="sds-intro-org-label">공동기관</div>
+															<div class="sds-intro-org-logos">
+																<div class="sds-intro-logo-card"><img src="data/static/logos/ppsol.png" alt=""></div>
+																<div class="sds-intro-logo-card"><img src="data/static/logos/kbs.png" alt=""></div>
+																<div class="sds-intro-logo-card"><img src="data/static/logos/saman.png" alt=""></div>
+																<div class="sds-intro-logo-card"><img src="data/static/logos/geostory.png" alt=""></div>
+																<div class="sds-intro-logo-card"><img src="data/static/logos/3d.png" alt=""></div>
+																<div class="sds-intro-logo-card"><img src="data/static/logos/inha.png" alt=""></div>
+																<div class="sds-intro-logo-card"><img src="data/static/logos/anyang.png" alt=""></div>
+																<div class="sds-intro-logo-card"><img src="data/static/logos/geosoft.png" alt=""></div>
+																<div class="sds-intro-logo-card"><img src="data/static/logos/ictway.png" alt=""></div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+
+											<div class="sds-intro-media-section">
+												<h4 class="sds-intro-media-title"><img src="data/static/icons/monitor-play.svg" width="24" height="24" aria-hidden="true"> 1핵심 기술 이해하기 (만화)</h4>
+												<div class="sds-intro-media-frame">
+													<img src="data/static/comics/core-1.png" class="sds-intro-media-image" alt="1핵심 만화">
+												</div>
+											</div>
+
+											<div class="sds-intro-media-section">
+												<h4 class="sds-intro-media-title"><img src="data/static/icons/play-circle.svg" width="24" height="24" aria-hidden="true"> 1핵심 소개 영상</h4>
+												<div class="sds-intro-media-frame">
+													<!-- 내부 재생 방식은 배포 시 재사용할 수 있도록 보관
+													<div class="sds-intro-video-link" onclick="this.innerHTML='<iframe src=\'https://www.youtube.com/embed/fs42Yw-u0x0?autoplay=1\' class=\'absolute inset-0 w-full h-full\' frameborder=\'0\' allow=\'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\' allowfullscreen></iframe>'">
+														<img src="https://img.youtube.com/vi/fs42Yw-u0x0/hqdefault.jpg" class="sds-intro-video-thumb" alt="1핵심 소개 영상 썸네일">
+														<div class="sds-intro-video-overlay">
+															<div class="sds-intro-play-button">
+																<svg class="sds-intro-play-icon" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+															</div>
+														</div>
+													</div>
+													-->
+													<a href="https://www.youtube.com/watch?v=fs42Yw-u0x0" target="_blank" rel="noopener noreferrer" class="sds-intro-video-link">
+														<img src="https://img.youtube.com/vi/fs42Yw-u0x0/hqdefault.jpg" class="sds-intro-video-thumb" alt="1핵심 소개 영상 썸네일">
+														<div class="sds-intro-video-overlay">
+															<div class="sds-intro-play-button">
+																<svg class="sds-intro-play-icon" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+															</div>
+														</div>
+														<div class="sds-intro-video-badge">새 창에서 보기</div>
+													</a>
+												</div>
+											</div>
+
+											<div class="sds-intro-media-section tight">
+												<h4 class="sds-intro-media-title"><img src="data/static/icons/book-open.svg" width="24" height="24" aria-hidden="true"> 1핵심 브로슈어</h4>
+												<div class="sds-intro-brochure-frame">
+													<iframe src="data/contents/brochures/core-1-brochure.pdf#view=FitH" class="sds-intro-brochure-embed" frameborder="0"></iframe>
+												</div>
+											</div>
+										</div>
+
+										<!-- 2핵심 -->
+										<div id="sub-core-2" class="sds-sub-content sds-intro-core-panel core2 hide sds-animate-fade-in">
+											<div class="sds-intro-core-badge">2핵심 소개</div>
+											<h3 class="sds-intro-core-title">디지털 국토정보 구축 효율화를 위한 국토정보 변화인식 및 자동갱신 기술개발</h3>
+
+											<div class="sds-intro-detail-stack">
+												<!-- 연구 목표 -->
+												<div class="sds-intro-detail-block">
+													<h4 class="sds-intro-detail-title">
+														<div class="sds-intro-detail-accent"></div> 연구 목표
+													</h4>
+													<p class="sds-intro-detail-text">
+														고정밀·고품질의 3차원 디지털 국토정보를 구축하고 신속 정확한 국가공간 DB 자동갱신을 위한 다차원·다시점 공간데이터 상호운용성 확보
+													</p>
+												</div>
+
+												<!-- 주요 기술 -->
+												<div class="sds-intro-detail-block">
+													<h4 class="sds-intro-detail-title">
+														<div class="sds-intro-detail-accent"></div> 주요 기술
+													</h4>
+													<ul class="sds-intro-detail-list">
+														<li class="sds-intro-detail-item">
+															<strong class="sds-intro-detail-item-title">① (데이터 전처리 기술) 크라우드 소싱 기반 다차원·다시점 공간데이터 전처리 기술 개발</strong>
+															<ul class="sds-intro-bullet-list">
+																<li>크라우드 소싱 데이터 취득 환경을 반영한 다차원·다시점·다종 시계열 공간데이터 효과적인 구축을 위한 저장·연동·관리 기술개발</li>
+																<li>다차원·다시점 시계열 공간 데이터 간 상호운영성 확보를 위한 마스터 데이터 생성 기술개발 및 신뢰성 검증</li>
+															</ul>
+														</li>
+														<li class="sds-intro-detail-item">
+															<strong class="sds-intro-detail-item-title">② (품질 검증 및 향상 기술) 크라우드 소싱 기반 다종 공간 데이터 품질 요소, 기준 정의 및 품질 검증·향상 기술 개발</strong>
+															<ul class="sds-intro-bullet-list">
+																<li>크라우드 소싱 데이터를 공간정보 구축에 활용하기 위해 요구되는 소정의 품질 검증 기준을 도출하고, 이를 바탕으로 품질검증을 자동으로 수행</li>
+															</ul>
+														</li>
+														<li class="sds-intro-detail-item">
+															<strong class="sds-intro-detail-item-title">③ (변화인식 자동화 기술) 다종 플랫폼· 센서 기반 공간정보 변화인식 자동화 기술 개발</strong>
+															<ul class="sds-intro-bullet-list">
+																<li>국가공간정보 DB 자동갱신을 위한 변화인식 대상-범위 선정 최적 프로세스 개발</li>
+																<li>변화탐지 지역 공간정보 객체 자동인식·모델링 기술 및 공간정보 시맨틱 매핑 기술 개발</li>
+															</ul>
+														</li>
+														<li class="sds-intro-detail-item">
+															<strong class="sds-intro-detail-item-title">④ (국가공간 DB 자동 생성 기술) 변화인식 대상지역의 국가공간 DB 자동 구축·갱신 기술</strong>
+															<ul class="sds-intro-bullet-list">
+																<li>LoD(Level of Detail, 세밀도) 수준 간 객체의 공간모델 동적 변환 및 정합기술 개발</li>
+															</ul>
+														</li>
+													</ul>
+												</div>
+
+												<!-- 기대 효과 -->
+												<div class="sds-intro-detail-block">
+													<h4 class="sds-intro-detail-title">
+														<div class="sds-intro-detail-accent"></div> 기대 효과
+													</h4>
+													<ul class="sds-intro-bullet-list effect">
+														<li>국가 공간DB 갱신의 최신성을 확보함으로써 디지털트윈, 스마트시티 등 관련 산업의 활성화를 도모할 뿐만 아니라 국가 공간정보 브랜드 가치 향상</li>
+													</ul>
+												</div>
+
+												<!-- 수행업체 -->
+												<div class="sds-intro-detail-block">
+													<h4 class="sds-intro-detail-title">
+														<div class="sds-intro-detail-accent"></div> 수행업체
+													</h4>
+													<div class="sds-intro-org-stack">
+														<div>
+															<div class="sds-intro-org-label primary">주관기관</div>
+															<div class="sds-intro-org-logos">
+																<div class="sds-intro-logo-card main"><img src="data/static/logos/yonsei.png" alt="연세대학교"></div>
+															</div>
+														</div>
+														<div>
+															<div class="sds-intro-org-label">공동기관</div>
+															<div class="sds-intro-org-logos">
+																<div class="sds-intro-logo-card"><img src="data/static/logos/soosung.png" alt=""></div>
+																<div class="sds-intro-logo-card"><img src="data/static/logos/inha.png" alt=""></div>
+																<div class="sds-intro-logo-card"><img src="data/static/logos/krihs.png" alt=""></div>
+																<div class="sds-intro-logo-card"><img src="data/static/logos/gni.png" alt=""></div>
+																<div class="sds-intro-logo-card"><img src="data/static/logos/kap.png" alt=""></div>
+																<div class="sds-intro-logo-card"><img src="data/static/logos/saman.png" alt=""></div>
+																<div class="sds-intro-logo-card"><img src="data/static/logos/etri.png" alt=""></div>
+																<div class="sds-intro-logo-card"><img src="data/static/logos/innopam.png" alt=""></div>
+																<div class="sds-intro-logo-card"><img src="data/static/logos/mj.png" alt=""></div>
+																<div class="sds-intro-logo-card"><img src="data/static/logos/geostory.png" alt=""></div>
+																<div class="sds-intro-logo-card"><img src="data/static/logos/zetalux.png" alt=""></div>
+																<div class="sds-intro-logo-card"><img src="data/static/logos/anyang.png" alt=""></div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+
+											<div class="sds-intro-media-section">
+												<h4 class="sds-intro-media-title"><img src="data/static/icons/monitor-play.svg" width="24" height="24" aria-hidden="true"> 2핵심 기술 이해하기 (만화)</h4>
+												<div class="sds-intro-media-frame">
+													<img src="data/static/comics/core-2.png" class="sds-intro-media-image" alt="2핵심 만화">
+												</div>
+											</div>
+
+											<div class="sds-intro-media-section">
+												<h4 class="sds-intro-media-title"><img src="data/static/icons/play-circle.svg" width="24" height="24" aria-hidden="true"> 2핵심 소개 영상</h4>
+												<div class="sds-intro-media-frame">
+													<!-- 내부 재생 방식은 배포 시 재사용할 수 있도록 보관
+													<div class="sds-intro-video-link" onclick="this.innerHTML='<iframe src=\'https://www.youtube.com/embed/jfhK2LWQA4U?autoplay=1\' class=\'absolute inset-0 w-full h-full\' frameborder=\'0\' allow=\'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\' allowfullscreen></iframe>'">
+														<img src="https://img.youtube.com/vi/jfhK2LWQA4U/hqdefault.jpg" class="sds-intro-video-thumb" alt="2핵심 소개 영상 썸네일">
+														<div class="sds-intro-video-overlay">
+															<div class="sds-intro-play-button">
+																<svg class="sds-intro-play-icon" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+															</div>
+														</div>
+													</div>
+													-->
+													<a href="https://www.youtube.com/watch?v=jfhK2LWQA4U" target="_blank" rel="noopener noreferrer" class="sds-intro-video-link">
+														<img src="https://img.youtube.com/vi/jfhK2LWQA4U/hqdefault.jpg" class="sds-intro-video-thumb" alt="2핵심 소개 영상 썸네일">
+														<div class="sds-intro-video-overlay">
+															<div class="sds-intro-play-button">
+																<svg class="sds-intro-play-icon" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+															</div>
+														</div>
+														<div class="sds-intro-video-badge">새 창에서 보기</div>
+													</a>
+												</div>
+											</div>
+
+											<div class="sds-intro-media-section tight">
+												<h4 class="sds-intro-media-title"><img src="data/static/icons/book-open.svg" width="24" height="24" aria-hidden="true"> 2핵심 브로슈어</h4>
+												<div class="sds-intro-brochure-frame">
+													<iframe src="data/contents/brochures/core-2-brochure.pdf#view=FitH" class="sds-intro-brochure-embed" frameborder="0"></iframe>
+												</div>
+											</div>
+										</div>
+
+										<!-- 3핵심 -->
+										<div id="sub-core-3" class="sds-sub-content sds-intro-core-panel core3 hide sds-animate-fade-in">
+											<div class="sds-intro-core-badge">3핵심 소개</div>
+											<h3 class="sds-intro-core-title">초연결 디지털 국토 실현을 위한 융복합 데이터의 통합 활용 체계 선도</h3>
+
+											<div class="sds-intro-detail-stack">
+												<!-- 연구 목표 -->
+												<div class="sds-intro-detail-block">
+													<h4 class="sds-intro-detail-title">
+														<div class="sds-intro-detail-accent"></div> 연구 목표
+													</h4>
+													<p class="sds-intro-detail-text">
+														디지털 국토정보를 체계적으로 자원화하고 안정적이고 확장성 높은 통합테스트베드 플랫폼 구축 기술 개발
+													</p>
+												</div>
+
+												<!-- 주요 기술 -->
+												<div class="sds-intro-detail-block">
+													<h4 class="sds-intro-detail-title">
+														<div class="sds-intro-detail-accent"></div> 주요 기술
+													</h4>
+													<ul class="sds-intro-detail-list">
+														<li class="sds-intro-detail-item">
+															<strong class="sds-intro-detail-item-title">① (디지털 국토정보 표준) 디지털 국토정보 데이터의 상호운영성 확보에 필요한 융복합 데이터 표준 모델 및 관리체계 마련</strong>
+															<ul class="sds-intro-bullet-list">
+																<li>통합테스트베드 플랫폼을 중심으로 데이터 원활한 연계 및 활용을 위한 융복합데이터 표준 및 품질관리 기술개발</li>
+																<li>디지털 국토정보의 개방 및 활용을 지원하는 데이터파이프라인 자동화 및 가시화 기술개발</li>
+															</ul>
+														</li>
+														<li class="sds-intro-detail-item">
+															<strong class="sds-intro-detail-item-title">② (비공간정보 연계) 국가공간정보 활용성 확대를 위한 비공간정보의 디지털 국토정보 연계 및 매핑 기술개발</strong>
+															<ul class="sds-intro-bullet-list">
+																<li>CAD/BIM 데이터 위치정보 자동부여 및 속성정보 연계 기술</li>
+																<li>비공간정보의 디지털 국토정보 자동 매핑 소프트웨어 개발</li>
+															</ul>
+														</li>
+														<li class="sds-intro-detail-item">
+															<strong class="sds-intro-detail-item-title">③ (통합테스트베드 인프라 구축) 디지털 국토정보 기술개발에 필요한 안정적인 통합테스트베드 플랫폼 환경 구축 및 국가플랫폼으로 확산·정착시킬 수 있는 기반 마련</strong>
+															<ul class="sds-intro-bullet-list">
+																<li>핵심과제 별 연구성과 실험·검증을 위한 안정적이고 확장성 높은 클라우드 기반 통합테스트베드 인프라 구축 기술</li>
+																<li>전체 연구성과물 개방·연계·활용성 증대를 위한 국가 공간정보 플랫폼(V-World) 연동 API 기술 개발</li>
+															</ul>
+														</li>
+													</ul>
+												</div>
+
+												<!-- 기대 효과 -->
+												<div class="sds-intro-detail-block">
+													<h4 class="sds-intro-detail-title">
+														<div class="sds-intro-detail-accent"></div> 기대 효과
+													</h4>
+													<ul class="sds-intro-bullet-list effect">
+														<li>디지털 국토정보 활용체계 구축을 통해 보다 다양한 공간정보 서비스 산업 활성화를 촉진할 수 있는 기술적 기반 조성</li>
+														<li>최신 연구성과를 제공하는 개방형 통합플랫폼을 활용한 정부기술사업화정책지원을 통해 국토교통부 R&D 연구성과 가치 극대화</li>
+													</ul>
+												</div>
+
+												<!-- 수행업체 -->
+												<div class="sds-intro-detail-block">
+													<h4 class="sds-intro-detail-title">
+														<div class="sds-intro-detail-accent"></div> 수행업체
+													</h4>
+													<div class="sds-intro-org-stack">
+														<div>
+															<div class="sds-intro-org-label primary">주관기관</div>
+															<div class="sds-intro-org-logos">
+																<div class="sds-intro-logo-card main"><img src="data/static/logos/lx.jpg" alt="LX 한국국토정보공사"></div>
+															</div>
+														</div>
+														<div>
+															<div class="sds-intro-org-label">공동기관</div>
+															<div class="sds-intro-org-logos">
+																<div class="sds-intro-logo-card"><img src="data/static/logos/hk.png" alt=""></div>
+																<div class="sds-intro-logo-card"><img src="data/static/logos/soosung.png" alt=""></div>
+																<div class="sds-intro-logo-card"><img src="data/static/logos/wisei.png" alt=""></div>
+																<div class="sds-intro-logo-card"><img src="data/static/logos/kk.png" alt=""></div>
+																<div class="sds-intro-logo-card"><img src="data/static/logos/krihs.png" alt=""></div>
+																<div class="sds-intro-logo-card"><img src="data/static/logos/anyang.png" alt=""></div>
+																<div class="sds-intro-logo-card"><img src="data/static/logos/jungdo.png" alt=""></div>
+																<div class="sds-intro-logo-card"><img src="data/static/logos/gni.png" alt=""></div>
+																<div class="sds-intro-logo-card"><img src="data/static/logos/kouno.png" alt=""></div>
+																<div class="sds-intro-logo-card"><img src="data/static/logos/heliosen.png" alt=""></div>
+																<div class="sds-intro-logo-card"><img src="data/static/logos/sundosoft.png" alt=""></div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+
+											<div class="sds-intro-media-section">
+												<h4 class="sds-intro-media-title"><img src="data/static/icons/monitor-play.svg" width="24" height="24" aria-hidden="true"> 3핵심 기술 이해하기 (만화)</h4>
+												<div class="sds-intro-media-frame">
+													<img src="data/static/comics/core-3.png" class="sds-intro-media-image" alt="3핵심 만화">
+												</div>
+											</div>
+
+											<div class="sds-intro-media-section">
+												<h4 class="sds-intro-media-title"><img src="data/static/icons/play-circle.svg" width="24" height="24" aria-hidden="true"> 3핵심 소개 영상</h4>
+												<div class="sds-intro-media-frame">
+													<!-- 내부 재생 방식은 배포 시 재사용할 수 있도록 보관
+													<div class="sds-intro-video-link" onclick="this.innerHTML='<iframe src=\'https://www.youtube.com/embed/GifYxCyR2W0?autoplay=1\' class=\'absolute inset-0 w-full h-full\' frameborder=\'0\' allow=\'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\' allowfullscreen></iframe>'">
+														<img src="https://img.youtube.com/vi/GifYxCyR2W0/hqdefault.jpg" class="sds-intro-video-thumb" alt="3핵심 소개 영상 썸네일">
+														<div class="sds-intro-video-overlay">
+															<div class="sds-intro-play-button">
+																<svg class="sds-intro-play-icon" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+															</div>
+														</div>
+													</div>
+													-->
+													<a href="https://www.youtube.com/watch?v=GifYxCyR2W0" target="_blank" rel="noopener noreferrer" class="sds-intro-video-link">
+														<img src="https://img.youtube.com/vi/GifYxCyR2W0/hqdefault.jpg" class="sds-intro-video-thumb" alt="3핵심 소개 영상 썸네일">
+														<div class="sds-intro-video-overlay">
+															<div class="sds-intro-play-button">
+																<svg class="sds-intro-play-icon" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+															</div>
+														</div>
+														<div class="sds-intro-video-badge">새 창에서 보기</div>
+													</a>
+												</div>
+											</div>
+
+											<div class="sds-intro-media-section tight">
+												<h4 class="sds-intro-media-title"><img src="data/static/icons/book-open.svg" width="24" height="24" aria-hidden="true"> 3핵심 브로슈어</h4>
+												<div class="sds-intro-brochure-frame">
+													<iframe src="data/contents/brochures/core-3-brochure.pdf#view=FitH" class="sds-intro-brochure-embed" frameborder="0"></iframe>
+												</div>
+											</div>
+										</div>
+
+										<!-- 4핵심 -->
+										<div id="sub-core-4" class="sds-sub-content sds-intro-core-panel core4 hide sds-animate-fade-in">
+											<div class="sds-intro-core-badge">4핵심 소개</div>
+											<h3 class="sds-intro-core-title">차세대 디지털 국토정보 구축을 위한 각종 동적주제도 실시간 구축</h3>
+
+											<div class="sds-intro-detail-stack">
+												<!-- 연구 목표 -->
+												<div class="sds-intro-detail-block">
+													<h4 class="sds-intro-detail-title">
+														<div class="sds-intro-detail-accent"></div> 연구 목표
+													</h4>
+													<p class="sds-intro-detail-text">
+														도시 내 이동하는 객체와 변화하는 현상 등의 생활 SOC 동적공간정보를 고정·이동 플랫폼으로 지속적으로 준 실시간 감지·추적하여 다양한 사회문제 해결을 위한 동적주제도 구축 기술개발
+													</p>
+												</div>
+
+												<!-- 주요 기술 -->
+												<div class="sds-intro-detail-block">
+													<h4 class="sds-intro-detail-title">
+														<div class="sds-intro-detail-accent"></div> 주요 기술
+													</h4>
+													<ul class="sds-intro-detail-list">
+														<li class="sds-intro-detail-item">
+															<strong class="sds-intro-detail-item-title">① (고정플랫폼 기반 동적정보) 다기종·다중 고정센서 기반 동적 정보 수집 시스템 개발</strong>
+															<ul class="sds-intro-bullet-list">
+																<li>CCTV, WI-FI, 블루투스, 초음파 등 기존 고정 및 신규설치 센서 정보를 연계하여 실시간 객체 검출 및 추적 기술 개발</li>
+																<li>고정플랫폼 연계기반 시계열 이동체정보 연속 추적 기술 개발</li>
+															</ul>
+														</li>
+														<li class="sds-intro-detail-item">
+															<strong class="sds-intro-detail-item-title">② (이동플랫폼 기반 동적정보) 드론 등 이동플랫폼 기반 동적정보 수집 시스템 개발</strong>
+															<ul class="sds-intro-bullet-list">
+																<li>동적정보 수집용 드론 스테이션 구축/운영, 동적데이터 수집을 통한 학습데이터 변환, 자동분류 기술 개발</li>
+																<li>이동플랫폼 관측 데이터를 이용한 지식/학습기반 동적정보 인식/통합 알고리즘 개발</li>
+															</ul>
+														</li>
+														<li class="sds-intro-detail-item">
+															<strong class="sds-intro-detail-item-title">③ (동적정보 분석 및 표현) 고정·이동 플랫폼 수집 동적정보 분석 및 표현 기술 등 동적주제도 구축기술개발</strong>
+															<ul class="sds-intro-bullet-list">
+																<li>객체단위 이동체 정보와 정적데이터를 연계한 이동체 시계열 패턴, 맥락정보 생성 및 맥락기반 이동체 분석·예측</li>
+																<li>공공·민간분야 동적 주제도 서비스 모델 발굴, 사용자 맞춤형 동적주제도 구축기술 개발 및 테스트베드 실증·검증</li>
+															</ul>
+														</li>
+													</ul>
+												</div>
+
+												<!-- 기대 효과 -->
+												<div class="sds-intro-detail-block">
+													<h4 class="sds-intro-detail-title">
+														<div class="sds-intro-detail-accent"></div> 기대 효과
+													</h4>
+													<ul class="sds-intro-bullet-list effect">
+														<li>도로교통, 보행환경, 시설물 관리 등 다양한 도시문제의 직접적 원인이 되는 동적정보의 실시간 감지-예측을 통해 지능형 공공서비스 구현 기여</li>
+													</ul>
+												</div>
+
+												<!-- 수행업체 -->
+												<div class="sds-intro-detail-block">
+													<h4 class="sds-intro-detail-title">
+														<div class="sds-intro-detail-accent"></div> 수행업체
+													</h4>
+													<div class="sds-intro-org-stack">
+														<div>
+															<div class="sds-intro-org-label primary">주관기관</div>
+															<div class="sds-intro-org-logos">
+																<div class="sds-intro-logo-card main"><img src="data/static/logos/kict.png" alt="한국건설기술연구원"></div>
+															</div>
+														</div>
+														<div>
+															<div class="sds-intro-org-label">공동기관</div>
+															<div class="sds-intro-org-logos">
+																<div class="sds-intro-logo-card"><img src="data/static/logos/wavers.png" alt=""></div>
+																<div class="sds-intro-logo-card"><img src="data/static/logos/ian.png" alt=""></div>
+																<div class="sds-intro-logo-card"><img src="data/static/logos/jbt.png" alt=""></div>
+																<div class="sds-intro-logo-card"><img src="data/static/logos/yonsei.png" alt=""></div>
+																<div class="sds-intro-logo-card"><img src="data/static/logos/ewha.png" alt=""></div>
+																<div class="sds-intro-logo-card"><img src="data/static/logos/intellivix.png" alt=""></div>
+																<div class="sds-intro-logo-card"><img src="data/static/logos/mj.png" alt=""></div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+
+											<div class="sds-intro-media-section">
+												<h4 class="sds-intro-media-title"><img src="data/static/icons/monitor-play.svg" width="24" height="24" aria-hidden="true"> 4핵심 기술 이해하기 (만화)</h4>
+												<div class="sds-intro-media-frame">
+													<img src="data/static/comics/core-4.png" class="sds-intro-media-image" alt="4핵심 만화">
+												</div>
+											</div>
+
+											<div class="sds-intro-media-section">
+												<h4 class="sds-intro-media-title"><img src="data/static/icons/play-circle.svg" width="24" height="24" aria-hidden="true"> 4핵심 소개 영상</h4>
+												<div class="sds-intro-media-frame">
+													<!-- 내부 재생 방식은 배포 시 재사용할 수 있도록 보관
+													<div class="sds-intro-video-link" onclick="this.innerHTML='<iframe src=\'https://www.youtube.com/embed/0X01YsVIuaU?autoplay=1\' class=\'absolute inset-0 w-full h-full\' frameborder=\'0\' allow=\'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\' allowfullscreen></iframe>'">
+														<img src="https://img.youtube.com/vi/0X01YsVIuaU/hqdefault.jpg" class="sds-intro-video-thumb" alt="4핵심 소개 영상 썸네일">
+														<div class="sds-intro-video-overlay">
+															<div class="sds-intro-play-button">
+																<svg class="sds-intro-play-icon" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+															</div>
+														</div>
+													</div>
+													-->
+													<a href="https://www.youtube.com/watch?v=0X01YsVIuaU" target="_blank" rel="noopener noreferrer" class="sds-intro-video-link">
+														<img src="https://img.youtube.com/vi/0X01YsVIuaU/hqdefault.jpg" class="sds-intro-video-thumb" alt="4핵심 소개 영상 썸네일">
+														<div class="sds-intro-video-overlay">
+															<div class="sds-intro-play-button">
+																<svg class="sds-intro-play-icon" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+															</div>
+														</div>
+														<div class="sds-intro-video-badge">새 창에서 보기</div>
+													</a>
+												</div>
+											</div>
+
+											<div class="sds-intro-media-section tight">
+												<h4 class="sds-intro-media-title"><img src="data/static/icons/book-open.svg" width="24" height="24" aria-hidden="true"> 4핵심 브로슈어</h4>
+												<div class="sds-intro-brochure-frame">
+													<iframe src="data/contents/brochures/core-4-brochure.pdf#view=FitH" class="sds-intro-brochure-embed" frameborder="0"></iframe>
+												</div>
+											</div>
+										</div>
+
+										<!-- 5: 통합활용 -->
+										<div id="sub-core-5" class="sds-sub-content sds-intro-core-panel core5 hide sds-animate-fade-in">
+											<div class="sds-intro-core-badge">기술 통합활용 예시</div>
+											<h3 class="sds-intro-title tight">각 핵심 기술이 통합되면 어떻게 활용될까요?</h3>
+											<p class="sds-intro-note">
+												<strong>1핵심부터 4핵심까지의 기술들이 완전히 하나로 조화롭게 통합</strong>되어 우리의 일상과 도시에 적용되었을 때, 디지털 지능형 서비스가 어떤 혁신적인 형태로 실현될 수 있는지 보여주는 <strong>직관적인 예시 상황 만화</strong>입니다. 다양한 사회 현안과 도시 문제들이 정밀한 데이터와 기술 융합을 통해 해결되는 과정을 만나보세요.
+											</p>
+											<h4 class="sds-intro-media-title"><img src="data/static/icons/monitor-play.svg" width="24" height="24" aria-hidden="true"> 통합활용 활용 예시 상황 만화</h4>
+											<div class="sds-intro-media-frame">
+												<img src="data/static/comics/integrated.png" class="sds-intro-media-image" alt="기술 통합활용 만화">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</article><!-- /content -->
+				</article><!-- /article.sds.tech -->
+			</section>
+
+			<footer class="footer">
+				<nav class="nav">
+					<ul>
+						<li><a href="javascript:urlFnc.goAgree();" class="menu">이용약관</a></li>
+						<li><a href="javascript:urlFnc.goPrivacy();" class="menu"><strong>개인정보처리방침</strong></a></li>
+						<li><a href="javascript:urlFnc.goUnauthEmail();" class="menu">이메일무단수집거부</a></li>
+						<li><a href="javascript:urlFnc.goCpyrht();" class="menu">저작권정책</a></li>
+						<li><a href="javascript:urlFnc.goIntrcn();" class="menu">브이월드소개</a></li>
+					</ul>
+				</nav>
+				<div class="cscenter">
+					<h6 class="title">고객센터
+						<em>
+							<div class="btns">
+								<a href="tel:16610115" class="bt ico call bg">1661 - 0115</a>
+								<a href="mailto:vworld@spacen.or.kr" class="bt ico mail bg">vworld@spacen.or.kr</a>
+							</div>
+						</em>
+					</h6>
+					<div class="btns"><em>평일 09:00 ~ 18:00 (중식 12:00 ~ 13:00) / 주말 및 공휴일 휴무</em></div>
+					<div class="spacen">
+						<div class="logo"><strong>공간정보산업진흥원</strong></div>
+						<p class="address">[13487] 경기 성남시 분당구 판교로 242 PDC타워 C동 601호 공간정보산업진흥원</p>
+					</div>
+				</div>
+				<div class="organizer">
+					<div class="logo"><strong>V-world</strong>디지털트윈국토</div>
+					<p class="address">[30103] 세종특별자치시 도움6로 11 국토교통부</p>
+					<p class="copyright">Copyright (C) Ministry of Land, Infrastructure and Transport 2023. All Rights Reserved.</p>
+				</div>
+				<div class="set">
+					<label for="footerPageMove" class="blind">사이트 바로가기</label>
+					<select class="select" id="footerPageMove">
+						<option value="" selected="">사이트 바로가기</option>
+						<option value="https://www.molit.go.kr/">국토교통부</option>
+						<option value="https://www.ngii.go.kr/">국토지리정보원</option>
+						<option value="http://spacen.or.kr/">공간정보산업진흥원</option>
+						<option value="https://www.spacein.kr/">공간정보교육포털</option>
+						<option value="https://www.lx.or.kr/kor.do">한국국토정보공사</option>
+					</select>
+					<button class="bt bg" onclick="footerObj.move();">이동</button>
+				</div>
+				<a href="#top" class="bt ico go only">상단 이동</a>
+			</footer>
+
+		</div>
+	</div>
+</body>
+</html>

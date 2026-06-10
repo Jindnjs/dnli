@@ -1,0 +1,291 @@
+{
+  "id": "103",
+  "core": "1핵심",
+  "coreColor": "core1",
+  "ctCode": "핵심기술2",
+  "ctTitle": "모바일환경 Multi-GNSS 정밀측위기술",
+  "cteCode": "세부기술3",
+  "output_code": "성과물3",
+  "title": "Multi-GNSS 스마트폰 정밀측위 기술",
+  "registeredAt": "",
+  "summaryInstitutions": [
+    "㈜피피솔"
+  ],
+  "overview": {
+    "description": "다양한 모바일 환경에서 정밀한 절대위치 정보를 확보하기 위한 스마트폰 Multi-GNSS 이중주파수 신호 기반 정밀 절대측위 기술",
+    "descriptionNote": "",
+    "necessityRows": [
+      [
+        {
+          "html": "별도 고가 장비가 있어야만 정밀측위 활용 가능"
+        },
+        {
+          "html": "스마트폰 기반 정밀위치 활용 가능"
+        }
+      ],
+      [
+        {
+          "html": "도심/이동환경에서 측위 정확도 및 안정성 저하"
+        },
+        {
+          "html": "도심/이동환경에서 측위 정확도 및 안정성 확보"
+        }
+      ]
+    ]
+  },
+  "researchContent": {
+    "headerRows": [
+      [
+        {
+          "html": "구분",
+          "rowspan": 2
+        },
+        {
+          "html": "연구 수행 내용",
+          "colspan": 10
+        }
+      ],
+      [
+        {
+          "html": "'22 (1차년도)",
+          "colspan": 2
+        },
+        {
+          "html": "'23 (2차년도)",
+          "colspan": 2
+        },
+        {
+          "html": "'24 (3차년도)",
+          "colspan": 2
+        },
+        {
+          "html": "'25 (4차년도)",
+          "colspan": 2
+        },
+        {
+          "html": "'26 (5차년도)",
+          "colspan": 2
+        }
+      ]
+    ],
+    "rows": [
+      {
+        "label": "주요 연구 내용",
+        "cells": [
+          {
+            "html": "스마트폰 단독측위 알고리즘 개발",
+            "colspan": 2
+          },
+          {
+            "html": "서버 연동 기술 및 정밀측위 오차보정 기술 개발",
+            "colspan": 2
+          },
+          {
+            "html": "스마트폰 정밀측위 기술 초기버전 완성",
+            "colspan": 2
+          },
+          {
+            "html": "이동환경 특성을 고려한 고도화/어플리케이션 개발",
+            "colspan": 2
+          },
+          {
+            "html": "실증 확대/최적화 및 고도화",
+            "colspan": 2
+          }
+        ]
+      },
+      {
+        "label": "정량적 성능목표",
+        "labelRowspan": 2,
+        "cells": [
+          {
+            "html": "스마트폰 단독측위 정확도 &lt; 1.5m (개활지, 수평)",
+            "rowspan": 2,
+            "colspan": 2
+          },
+          {
+            "html": "스마트폰 네트워크 RTK 정확도 &lt; 50cm(개활지, 수평)",
+            "colspan": 2
+          },
+          {
+            "html": "스마트폰 네트워크 RTK 정확도 &lt; 10m(도심지, 수평)",
+            "colspan": 2
+          },
+          {
+            "html": "스마트폰 정밀측위 정확도 &lt; 1m(도심지, 수평)",
+            "colspan": 2
+          },
+          {
+            "html": "-",
+            "colspan": 2
+          }
+        ]
+      },
+      {
+        "cells": [
+          {
+            "html": "스마트폰 PPP-RTK 정확도 &lt; 1m(개활지, 수평)",
+            "colspan": 2
+          },
+          {
+            "html": "스마트폰 PPP-RTK 정확도 &lt; 10m(도심지, 수평)",
+            "colspan": 2
+          },
+          {
+            "html": "측위 결과 출력 성공률 95%",
+            "colspan": 2
+          },
+          {
+            "html": "-",
+            "colspan": 2
+          }
+        ]
+      },
+      {
+        "label": "테스트 일정·결과",
+        "labelRowspan": 2,
+        "cells": [
+          {
+            "html": "'22.11.",
+            "rowspan": 2
+          },
+          {
+            "html": "스마트폰 단독측위 정확도 &lt; 1.1m (개활지, 수평)",
+            "rowspan": 2
+          },
+          {
+            "html": "'23.08.",
+            "rowspan": 2
+          },
+          {
+            "html": "스마트폰 네트워크 RTK 정확도 &lt; 31cm(개활지, 수평)"
+          },
+          {
+            "html": "'24. 10."
+          },
+          {
+            "html": "스마트폰 네트워크 RTK 정확도 &lt; 5.5m(도심지, 수평)"
+          },
+          {
+            "html": "'25.08.",
+            "rowspan": 2
+          },
+          {
+            "html": "스마트폰 정밀측위 정확도 &lt; 0.83m(도심지, 수평)"
+          },
+          {
+            "html": "-",
+            "rowspan": 2
+          },
+          {
+            "html": "-",
+            "rowspan": 2
+          }
+        ]
+      },
+      {
+        "cells": [
+          {
+            "html": "스마트폰 PPP-RTK 정확도 &lt; 0.82m(개활지, 수평)"
+          },
+          {
+            "html": "'24. 10."
+          },
+          {
+            "html": "스마트폰 PPP-RTK 정확도 &lt; 7.1m(도심지, 수평)"
+          },
+          {
+            "html": "측위 결과 출력 성공률 100%"
+          }
+        ]
+      },
+      {
+        "label": "주요 연구 성과",
+        "cells": [
+          {
+            "groupId": "y22",
+            "summaryHtml": "정밀측위 보정정보 수신 및 디코딩 인터페이스, 논문, 학술발표, 성과홍보 등",
+            "colspan": 2
+          },
+          {
+            "groupId": "y23",
+            "summaryHtml": "스마트폰 정밀측위 SW,<br>특허 출원, 논문 등",
+            "colspan": 2
+          },
+          {
+            "groupId": "y24",
+            "summaryHtml": "스마트폰 현장시험 보고서, 논문, 학술발표, 특허출원, SW 등록 등",
+            "colspan": 2
+          },
+          {
+            "groupId": "y25",
+            "summaryHtml": "스마트폰 어플리케이션 및 라이브러리, 현장시험 보고서, 특허 출원, 논문 등",
+            "colspan": 2
+          },
+          {
+            "groupId": "y26",
+            "summaryHtml": "특허 출원, SW 등록 등",
+            "colspan": 2
+          }
+        ]
+      }
+    ]
+  },
+  "applications": {
+    "overview": "긴급구조 정밀위치결정 서비스 및 도심 보행자 내비게이션, 간이 측량 사업 분야",
+    "cards": [
+      {
+        "title": "시민 체감형 스마트 시티 안전 및 위치 기반 서비스(LBS) 고도화",
+        "current": "보급형 스마트폰의 위치 오차는 도심지에서 약 10~30m에 달해, 보행자 내비게이션의 차선 구분이 불가능하고 재난 시 신고자의 정확한 위치 파악(골든타임 확보)에 한계가 있음",
+        "improved": "Multi-GNSS 이중 주파수(L1/L5) 신호 처리 기술과 실시간 이동측위(RTK) 알고리즘을 최적화하여 스마트폰 단말기 단독으로도 도심 내 위치 오차를 **1m 이내(서브 미터급)**로 단축함으로써 정밀 길 안내 및 긴급 구조 효율성 극대화"
+      },
+      {
+        "title": "공공 시설물 현장 조사 및 간이 측량 업무의 디지털 전환",
+        "current": "가로등, 맨홀 등 단순 시설물 위치 조사 시에도 고가의 고정밀 GNSS 수신기(수천만 원대)를 별도 지참해야 하며, 스마트폰 활용 시에는 낮은 정확도로 인해 결과값의 신뢰도가 낮아 이중 작업 발생",
+        "improved": "국산 정밀측위 SW가 탑재된 스마트폰만으로 현장에서 즉시 수십 cm급 정밀도의 위치 데이터 취득이 가능해짐에 따라, 시설물 관리 비용을 약 50% 이상 절감하고 공공 공간정보 데이터베이스(DB) 갱신 주기를 대폭 단축"
+      }
+    ]
+  },
+  "process": {
+    "processImage": {
+      "src": "data/contents/research/projects/103/images/process.png",
+      "alt": "데이터 처리 프로세스"
+    },
+    "inputHtml": "- 사용자 스마트폰 Raw Data <br>- 사용자 스마트폰 위치 <br>- 사용자 스마트폰 위치에 적합한 GNSS 보정정보(단일기준국 또는 네트워크 RTK)",
+    "outputHtml": "사용자 스마트폰 정밀좌표",
+    "outputImages": [
+      {
+        "src": "data/contents/research/projects/103/images/output1.png",
+        "alt": "<스마트폰 정밀측위 어플리케이션 구동 화면>",
+        "caption": "<스마트폰 정밀측위 어플리케이션 구동 화면>"
+      },
+      {
+        "src": "data/contents/research/projects/103/images/output2.png",
+        "alt": "<스마트폰 정밀측위 정확도>",
+        "caption": "<스마트폰 정밀측위 정확도>"
+      }
+    ]
+  },
+  "demo": {
+    "src": "",
+    "height": 1200
+  },
+  "institutions": {
+    "leadContacts": [
+      {
+        "name": "박관동",
+        "role": "책임",
+        "phone": "02-6925-1516",
+        "email": "ppsol@ppsol.com"
+      }
+    ],
+    "partners": []
+  },
+  "downloads": {
+    "y22": [],
+    "y23": [],
+    "y24": [],
+    "y25": [],
+    "y26": []
+  }
+}

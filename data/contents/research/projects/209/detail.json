@@ -1,0 +1,278 @@
+{
+  "id": "209",
+  "core": "2핵심",
+  "coreColor": "core2",
+  "ctCode": "핵심기술2",
+  "ctTitle": "다차원/다시점 공간 데이터 기반 변화인식 및 공간정보 자동갱신 기술",
+  "cteCode": "세부기술5",
+  "output_code": "성과물9",
+  "title": "건물 벽면 시맨틱 정보 분류 기술",
+  "registeredAt": "",
+  "summaryInstitutions": [
+    "한국전자통신연구원"
+  ],
+  "overview": {
+    "description": "기계학습기반 건물 벽면 텍스처 영상으로부터 유리창, 출입문 등의 세부 구조물을 자동/반자동으로 분류하여 형태, 위치 등 속성정보로 도출하는 기술",
+    "descriptionNote": "",
+    "necessityRows": [
+      [
+        {
+          "html": "건물 벽면 세부구조물에 대한 시맨틱 정보를 도출할 수 있는 기술이 부재함"
+        },
+        {
+          "html": "기계학습기반 건물 벽면 세부 구조물 정보에 대해 자동/반자동 분류 가능"
+        }
+      ],
+      [
+        {
+          "html": "건물 벽면 세부구조물의 정확한 3D 형태/위치 정보를 추출하는데 한계가 있음"
+        },
+        {
+          "html": "건물 세부구조물의 정확한 3D 형태/위치 정보 기반 건물내외부 연계 기반 환경 제공"
+        }
+      ]
+    ]
+  },
+  "researchContent": {
+    "headerRows": [
+      [
+        {
+          "html": "구분",
+          "rowspan": 2
+        },
+        {
+          "html": "연구 수행 내용",
+          "colspan": 11
+        }
+      ],
+      [
+        {
+          "html": "'22 (1차년도)",
+          "colspan": 2
+        },
+        {
+          "html": "'23 (2차년도)",
+          "colspan": 2
+        },
+        {
+          "html": "'24 (3차년도)",
+          "colspan": 3
+        },
+        {
+          "html": "'25 (4차년도)",
+          "colspan": 2
+        },
+        {
+          "html": "'26 (5차년도)",
+          "colspan": 2
+        }
+      ]
+    ],
+    "rows": [
+      {
+        "label": "주요 연구 내용",
+        "cells": [
+          {
+            "html": "건물벽면 시맨틱 정보 분류 기술 동향 분석 및 설계",
+            "colspan": 2
+          },
+          {
+            "html": "건물벽면 시맨틱 정보 분류 SW 프로토타입 구현",
+            "colspan": 2
+          },
+          {
+            "html": "건물벽면 시맨틱 정보 분류 SW 고도화 구현",
+            "colspan": 3
+          },
+          {
+            "html": "학습모델 고도화 및 성능 검증",
+            "colspan": 2
+          },
+          {
+            "html": "분류성능 고도화 및 GUI기반 SW 상용화 구현",
+            "colspan": 2
+          }
+        ]
+      },
+      {
+        "label": "정량적 성능목표",
+        "cells": [
+          {
+            "html": "설계서 작성 여부 및 내용 검증",
+            "colspan": 2
+          },
+          {
+            "html": "시맨틱 정보 분류 정확도 80%",
+            "colspan": 2
+          },
+          {
+            "html": "시맨틱 분류 기술 고도화 설계 및 분석 적절성",
+            "colspan": 3
+          },
+          {
+            "html": "시맨틱 정보 분류 정확도 90%",
+            "colspan": 2
+          },
+          {
+            "html": "시맨틱 정보 분류 정확도 90%",
+            "colspan": 2
+          }
+        ]
+      },
+      {
+        "label": "테스트 일정·결과",
+        "labelRowspan": 2,
+        "cells": [
+          {
+            "html": "'22.10.",
+            "rowspan": 2
+          },
+          {
+            "html": "자문회의 적정성 판정",
+            "rowspan": 2
+          },
+          {
+            "html": "'23.10.",
+            "rowspan": 2
+          },
+          {
+            "html": "분류 정확도 80%",
+            "rowspan": 2
+          },
+          {
+            "html": "'24. 10."
+          },
+          {
+            "html": "자체 평가"
+          },
+          {
+            "html": "분류 정확도 95%"
+          },
+          {
+            "html": "'25.10.",
+            "rowspan": 2
+          },
+          {
+            "html": "전문가 검증 98%",
+            "rowspan": 2
+          },
+          {
+            "html": "'26.10. (예정)",
+            "rowspan": 2
+          },
+          {
+            "html": "-",
+            "rowspan": 2
+          }
+        ]
+      },
+      {
+        "cells": [
+          {
+            "html": "'24. 10."
+          },
+          {
+            "html": "전문가 검증"
+          },
+          {
+            "html": "분류 정확도 95%"
+          }
+        ]
+      },
+      {
+        "label": "주요 연구 성과",
+        "cells": [
+          {
+            "groupId": "y22",
+            "summaryHtml": "기술문서, 건물벽면 시맨틱 학습용 데이터",
+            "colspan": 2
+          },
+          {
+            "groupId": "y23",
+            "summaryHtml": "기술 프로토타입 구축,<br>특허 출원, 기술문서, SW 등록",
+            "colspan": 2
+          },
+          {
+            "groupId": "y24",
+            "summaryHtml": "기술문서, SW 등록",
+            "colspan": 3
+          },
+          {
+            "groupId": "y25",
+            "summaryHtml": "특허 출원, SW 등록,<br>기술문서",
+            "colspan": 2
+          },
+          {
+            "groupId": "y26",
+            "summaryHtml": "특허 출원, SW 등록,<br>논문, 기술이전",
+            "colspan": 2
+          }
+        ]
+      }
+    ]
+  },
+  "applications": {
+    "overview": "국가 3D공간DB 생성 분야, 공간정보 기반 분석·시뮬레이션·운영 분야, 물류·배송 분야",
+    "cards": [
+      {
+        "title": "실내·외 공간 통합·연계된 3D공간 분석 및 가시화 서비스 제공",
+        "current": "실내 공간DB와 실외 공간DB가 개별적으로 생성되어 연동되지 못하고, 공간DB 데이터를 활용한 수행 및 관리 업무에 적용할 수 없음",
+        "improved": "건물 벽면 시맨틱 정보를 실내·외 공간DB를 연계하기 위한 인터페이스로 활용하여 디지털 트윈 기반 실내·외가 연동된 공간분석 및 가시화 서비스 제공 가능"
+      },
+      {
+        "title": "Window-to-Window 배송 서비스 구현",
+        "current": "물류 배송이 집배원·배송원이 우편함이나 배송지에 직접 방문하여 이루어지고 드론기반 배송서비스는 구현되지 못하고 있음",
+        "improved": "개별 호수에 대한 정확한 접근 좌표가 확보 됨에 따라 드론을 활용한 Window-To-Window 배송 서비스 구현이 가능함"
+      }
+    ]
+  },
+  "process": {
+    "processImage": {
+      "src": "data/contents/research/projects/209/images/process.png",
+      "alt": "데이터 처리 프로세스"
+    },
+    "inputHtml": "①3D 건물 데이터 (형상, 텍스쳐 영상) (포맷: OBJ, GML, ...)",
+    "outputHtml": "①GML (Spatial Feature, Geometry, Semantic Attribute 포함)",
+    "outputImages": [
+      {
+        "src": "data/contents/research/projects/209/images/output1.png",
+        "alt": "기계학습기반 자동화된 건물 벽면 시맨틱 정보 분류",
+        "caption": "기계학습기반 자동화된 건물 벽면 시맨틱 정보 분류"
+      },
+      {
+        "src": "data/contents/research/projects/209/images/output2.png",
+        "alt": "3D 건물 모델 시맨틱 정보 수동 레이블링 수정",
+        "caption": "3D 건물 모델 시맨틱 정보 수동 레이블링 수정"
+      }
+    ]
+  },
+  "demo": {
+    "src": "",
+    "height": 1200
+  },
+  "institutions": {
+    "leadContacts": [
+      {
+        "name": "박지상",
+        "role": "성과물 관리",
+        "phone": "042-860-1546",
+        "email": "parkji@etri.re.kr"
+      }
+    ],
+    "partners": [
+      {
+        "name": "김현수",
+        "role": "성과물 관리",
+        "phone": "010-4853-8953",
+        "email": "ae1996@naver.com"
+      }
+    ]
+  },
+  "downloads": {
+    "y22": [],
+    "y23": [],
+    "y24": [],
+    "y25": [],
+    "y26": []
+  }
+}

@@ -1,0 +1,246 @@
+{
+  "id": "410",
+  "core": "4핵심",
+  "coreColor": "core4",
+  "ctCode": "핵심기술3",
+  "ctTitle": "동적정보 분석, 예측 및 표현기술 개발",
+  "cteCode": "세부기술6",
+  "output_code": "성과물10",
+  "title": "개인정보 보호저장 처리 기술",
+  "registeredAt": "",
+  "summaryInstitutions": [
+    "이안에스아이티"
+  ],
+  "overview": {
+    "description": "수집되는 동적정보의 위치, 시간정보를 비식별화 처리",
+    "descriptionNote": "",
+    "necessityRows": [
+      [
+        {
+          "html": "위치정보 및 시간정보를 타 개인정보(카드결제정보 등)와 연계하여 정보 추론 가능"
+        },
+        {
+          "html": "수집되는 동적정보의 위치정보, 시간정보를 타 개인정보와 연계한 정보 추론 가능성 제거"
+        }
+      ],
+      [
+        {
+          "html": "기존 기술로 수집되는 대용량 동적정보를 비식별화시 처리가 오래걸려 실용성에 한계 있음"
+        },
+        {
+          "html": "간단하면서 효과적인 알고리즘으로 대용량 동적정보를 고속으로 처리"
+        }
+      ]
+    ]
+  },
+  "researchContent": {
+    "headerRows": [
+      [
+        {
+          "html": "구분",
+          "rowspan": 2
+        },
+        {
+          "html": "연구 수행 내용",
+          "colspan": 10
+        }
+      ],
+      [
+        {
+          "html": "'22 (1차년도)",
+          "colspan": 2
+        },
+        {
+          "html": "'23 (2차년도)",
+          "colspan": 2
+        },
+        {
+          "html": "'24 (3차년도)",
+          "colspan": 2
+        },
+        {
+          "html": "'25 (4차년도)",
+          "colspan": 2
+        },
+        {
+          "html": "'26 (5차년도)",
+          "colspan": 2
+        }
+      ]
+    ],
+    "rows": [
+      {
+        "label": "주요 연구 내용",
+        "cells": [
+          {
+            "html": "-",
+            "colspan": 2
+          },
+          {
+            "html": "개인/민감정보 보호 SW 알고리즘 설계 및 검증",
+            "colspan": 2
+          },
+          {
+            "html": "개인/민감정보 보호 SW 개발",
+            "colspan": 2
+          },
+          {
+            "html": "개인/민감정보 보호 SW 고도화",
+            "colspan": 2
+          },
+          {
+            "html": "-",
+            "colspan": 2
+          }
+        ]
+      },
+      {
+        "label": "정량적 성능목표",
+        "cells": [
+          {
+            "html": "-",
+            "colspan": 2
+          },
+          {
+            "html": "알고리즘 성공률 70%",
+            "colspan": 2
+          },
+          {
+            "html": "개인/민감정보 보호 저장 성공률 80%",
+            "colspan": 2
+          },
+          {
+            "html": "개인/민감정보 보호 저장 성공률 90%",
+            "colspan": 2
+          },
+          {
+            "html": "-",
+            "colspan": 2
+          }
+        ]
+      },
+      {
+        "label": "테스트 일정·결과",
+        "cells": [
+          {
+            "html": "-"
+          },
+          {
+            "html": "-"
+          },
+          {
+            "html": "'23.11."
+          },
+          {
+            "html": "92.56%"
+          },
+          {
+            "html": "'24.11."
+          },
+          {
+            "html": "84.31%"
+          },
+          {
+            "html": "'25.09."
+          },
+          {
+            "html": "공인인증 97.98%"
+          },
+          {
+            "html": "-"
+          },
+          {
+            "html": "-"
+          }
+        ]
+      },
+      {
+        "label": "주요 연구 성과",
+        "cells": [
+          {
+            "groupId": "y22",
+            "summaryHtml": "",
+            "colspan": 2
+          },
+          {
+            "groupId": "y23",
+            "summaryHtml": "",
+            "colspan": 2
+          },
+          {
+            "groupId": "y24",
+            "summaryHtml": "SW등록 1건",
+            "colspan": 2
+          },
+          {
+            "groupId": "y25",
+            "summaryHtml": "SW등록 1건",
+            "colspan": 2
+          },
+          {
+            "groupId": "y26",
+            "summaryHtml": "-",
+            "colspan": 2
+          }
+        ]
+      }
+    ]
+  },
+  "applications": {
+    "overview": "(지방자치단체·중앙행정기관/스마트시티) 공간정보 비식별화 및 통계 분석",
+    "cards": [
+      {
+        "title": "국토부 및 지자체 등 공공기관",
+        "current": "시간, 위치 정보와 타 개인정보(등원정보, 결제정보 등)를 결합하여 추론에 의한 재식별 위험 있음",
+        "improved": "시간, 위치 정보 군집화를 통해 개인을 특정하거나 추론에 의한 재식별이 불가능함"
+      },
+      {
+        "title": "비식별화 및 통계 분석 분야",
+        "current": "재식별 위험이 낮으며 분석 활용도가 높은 고속 비식별화 SW 및 플랫폼 부족",
+        "improved": "시간, 공가적 활용도가 높은 대용량의 비식별 데이터를 고속 생산하여 실시간 통계분석 분야에 활용 가능"
+      }
+    ]
+  },
+  "process": {
+    "processImage": {
+      "src": "data/contents/research/projects/410/images/process.png",
+      "alt": "데이터 처리 프로세스"
+    },
+    "inputHtml": "CCTV/드론을 통해 수집되는 동적정보",
+    "outputHtml": "비식별화 된 동적정보",
+    "outputImages": [
+      {
+        "src": "data/contents/research/projects/410/images/output1.png",
+        "alt": "수신한 동적정보 원본 (위치, 시간)",
+        "caption": "수신한 동적정보 원본 (위치, 시간)"
+      },
+      {
+        "src": "data/contents/research/projects/410/images/output2.png",
+        "alt": "동적정보 기반 비식별화 데이터 생성 (위치, 시간)",
+        "caption": "동적정보 기반 비식별화 데이터 생성 (위치, 시간)"
+      }
+    ]
+  },
+  "demo": {
+    "src": "",
+    "height": 1200
+  },
+  "institutions": {
+    "leadContacts": [
+      {
+        "name": "박성민",
+        "role": "개발",
+        "phone": "070-8804-2267",
+        "email": "sung16biz@iansit.co.kr"
+      }
+    ],
+    "partners": []
+  },
+  "downloads": {
+    "y22": [],
+    "y23": [],
+    "y24": [],
+    "y25": [],
+    "y26": []
+  }
+}

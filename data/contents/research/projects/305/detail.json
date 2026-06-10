@@ -1,0 +1,265 @@
+{
+  "id": "305",
+  "core": "3핵심",
+  "coreColor": "core3",
+  "ctCode": "핵심기술1",
+  "ctTitle": "디지털 국토정보 수집·연계·통합 및 제공 기술",
+  "cteCode": "세부기술2",
+  "output_code": "성과물5",
+  "title": "국가 플랫폼 연동 기술",
+  "registeredAt": "",
+  "summaryInstitutions": [
+    "㈜정도UIT"
+  ],
+  "overview": {
+    "description": "공간데이터 교환 및 상호운용성 확보를 고려한 연동 기술",
+    "descriptionNote": "",
+    "necessityRows": [
+      [
+        {
+          "html": "국제표준* 및 최신 기술*을 반영한 공간정보 연동·활용 기술이 미흡 <br><br>*국제표준: OGC(Open Geospatial Consortium)표준 <br>*최신기술: OGC API, OPENAPI"
+        },
+        {
+          "html": "상호운용성과 확장성을 확보할 수 있는 국제표준 기반의 공간정보 연동 체계로의 전환"
+        }
+      ],
+      [
+        {
+          "html": "3차원 공간정보 및 시·공간정보 등 신유형 데이터에 대한 서비스·연계 기능이 부재"
+        },
+        {
+          "html": "3차원,시·공간정보 등 신유형 데이터 서비스/연계를 위한 기능을 구현하고 서비스 기반을 마련"
+        }
+      ]
+    ]
+  },
+  "researchContent": {
+    "headerRows": [
+      [
+        {
+          "html": "구분",
+          "rowspan": 2
+        },
+        {
+          "html": "연구 수행 내용",
+          "colspan": 10
+        }
+      ],
+      [
+        {
+          "html": "'22 (1차년도)"
+        },
+        {
+          "html": "'23 (2차년도)"
+        },
+        {
+          "html": "'24 (3차년도)",
+          "colspan": 3
+        },
+        {
+          "html": "'25 (4차년도)",
+          "colspan": 3
+        },
+        {
+          "html": "'26 (5차년도)",
+          "colspan": 2
+        }
+      ]
+    ],
+    "rows": [
+      {
+        "label": "주요 연구 내용",
+        "cells": [
+          {
+            "html": "공간정보 연동 관련 기술 동향 조사 분석/국가공간정보 자료 수집 및 현황 분석"
+          },
+          {
+            "html": "공간정보 연계/제공 프로그램 분석/설계"
+          },
+          {
+            "html": "국가공간정보플랫폼 연동 공동 API 구현 및 내부 연동 프로그램 개발",
+            "colspan": 3
+          },
+          {
+            "html": "공간정보연동 Feature API 구현 및 외부 연동 프로그램 개발",
+            "colspan": 3
+          },
+          {
+            "html": "공간정보 연동 API 통합테스트",
+            "colspan": 2
+          }
+        ]
+      },
+      {
+        "label": "정량적 성능목표",
+        "cells": [
+          {
+            "html": "-"
+          },
+          {
+            "html": "-"
+          },
+          {
+            "html": "동작정확도 100%",
+            "colspan": 3
+          },
+          {
+            "html": "연동율 90%이상",
+            "colspan": 3
+          },
+          {
+            "html": "연동율 100%",
+            "colspan": 2
+          }
+        ]
+      },
+      {
+        "label": "테스트 일정·결과",
+        "labelRowspan": 2,
+        "cells": [
+          {
+            "html": "",
+            "rowspan": 2
+          },
+          {
+            "html": "",
+            "rowspan": 2
+          },
+          {
+            "html": "&#39;24. 10."
+          },
+          {
+            "html": "국제 인증"
+          },
+          {
+            "html": "100%"
+          },
+          {
+            "html": "&#39;25. 12."
+          },
+          {
+            "html": "국제 인증"
+          },
+          {
+            "html": "100%"
+          },
+          {
+            "html": "'26.10. (예정)",
+            "rowspan": 2
+          },
+          {
+            "html": "-",
+            "rowspan": 2
+          }
+        ]
+      },
+      {
+        "cells": [
+          {
+            "html": "&#39;24. 10."
+          },
+          {
+            "html": "공인  인증"
+          },
+          {
+            "html": "50%"
+          },
+          {
+            "html": "&#39;25. 11."
+          },
+          {
+            "html": "공인 인증"
+          },
+          {
+            "html": "100%"
+          }
+        ]
+      },
+      {
+        "label": "주요 연구 성과",
+        "cells": [
+          {
+            "groupId": "y22",
+            "summaryHtml": "보고서 1건"
+          },
+          {
+            "groupId": "y23",
+            "summaryHtml": "설계서 1건<br>특허출원 1건"
+          },
+          {
+            "groupId": "y24",
+            "summaryHtml": "SW등록 1건<br>공인인증 1건",
+            "colspan": 3
+          },
+          {
+            "groupId": "y25",
+            "summaryHtml": "SW등록3건<br>공인인증 3건",
+            "colspan": 3
+          },
+          {
+            "groupId": "y26",
+            "summaryHtml": "논문(SCI) 1건<br>논문(비SCI) 1건<br>API연동가이드1건<br>플랫폼연동가이드 1건<br>인터페이스설명서 1건",
+            "colspan": 2
+          }
+        ]
+      }
+    ]
+  },
+  "applications": {
+    "overview": "차세대 웹 서비스 구축, AI·공간 빅데이터 분석 분야",
+    "cards": [
+      {
+        "title": "3차원 데이터를 이용한 신규 서비스 개발",
+        "current": "타 시스템에 이미 구축된 3차원 데이터를 연계·활용하기 위한 표준 모델과 인터페이스가 미흡하여 시스템 간 데이터 교환이 어려움",
+        "improved": "표준 기반 API 연계 체계를 적용하여 이기종 시스템 간 3차원 데이터 교환·활용이 가능"
+      },
+      {
+        "title": "AI 공간 빅데이터 분야 데이터 교환",
+        "current": "AI가 직접 활용할 수 있는 데이터 유형과 제공 방식이 부족하여 AI 기반 분석·서비스 적용이 어려움",
+        "improved": "REST API*를 통해 JSON* 등 기계판독형 데이터를 제공함으로써 AI가 데이터를 수집·해석·활용할 수 있음<br><br>*REST API(Representational State Transfer Application Programming Interface): HTTP 기반으로 표준 웹 프로토콜을 활용하여 시스템 간 자원을 요청하고 교환 할 수 있도록 하는 인터페이스<br>*JSON(JavaScript Object Notation): 사람이 읽기 쉽고 기계가 처리하기 쉬운 경량 데이터 교환 형식 "
+      }
+    ]
+  },
+  "process": {
+    "processImage": {
+      "src": "data/contents/research/projects/305/images/process.png",
+      "alt": "데이터 처리 프로세스"
+    },
+    "inputHtml": "지형 타일 데이터 서비스 요청 URL <br>(/suseo/terrain/tiles/WGS84_3D/{tileMatrix}/{tileRow}/{tileCol}",
+    "outputHtml": "전체 서비스의 대문 역할을 하는 Landing Page(랜딩페이지)",
+    "outputImages": [
+      {
+        "src": "data/contents/research/projects/305/images/output1.png",
+        "alt": "이 API 서비스가 제공하는 데이터에 대한 랜딩페이지 화면",
+        "caption": "이 API 서비스가 제공하는 데이터에 대한 랜딩페이지 화면"
+      },
+      {
+        "src": "data/contents/research/projects/305/images/output2.png",
+        "alt": "OGC API 3차원 지형을 호출하여 시각화",
+        "caption": "OGC API 3차원 지형을 호출하여 시각화"
+      }
+    ]
+  },
+  "demo": {
+    "src": "",
+    "height": 1200
+  },
+  "institutions": {
+    "leadContacts": [
+      {
+        "name": "박윤희",
+        "role": "책임",
+        "phone": "010-4456-7212",
+        "email": "unicong@uitgis.com"
+      }
+    ],
+    "partners": []
+  },
+  "downloads": {
+    "y22": [],
+    "y23": [],
+    "y24": [],
+    "y25": [],
+    "y26": []
+  }
+}

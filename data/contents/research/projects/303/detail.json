@@ -1,0 +1,246 @@
+{
+  "id": "303",
+  "core": "3핵심",
+  "coreColor": "core3",
+  "ctCode": "핵심기술1",
+  "ctTitle": "디지털 국토정보 수집·연계·통합 및 제공 기술",
+  "cteCode": "세부기술1",
+  "output_code": "성과물3",
+  "title": "데이터 카탈로그 관리 기술",
+  "registeredAt": "",
+  "summaryInstitutions": [
+    "㈜선도소프트"
+  ],
+  "overview": {
+    "description": "다양한 형식의 3D 공간정보를 국제 표준(OGC)인 CityGML 3.0으로 통합해 공간정보와 비공간 정보를 함께 관리하는 시스템",
+    "descriptionNote": "",
+    "necessityRows": [
+      [
+        {
+          "html": "CityGML 기반으로 3D 공간정보와 속성 데이터를 통합 관리하는 시스템이 부재함"
+        },
+        {
+          "html": "CityGML 3.0 표준 기반으로 3D 공간정보와 속성정보를 통합 카탈로그로 관리"
+        }
+      ],
+      [
+        {
+          "html": "3D 공간정보가 파일·DB 목록으로만 관리되어 실제 형상을 확인하기 어려움"
+        },
+        {
+          "html": "3D 공간 객체를 화면에서 바로 확인하면서 속성·이력·연계 데이터를 함께 조회·검증"
+        }
+      ]
+    ]
+  },
+  "researchContent": {
+    "headerRows": [
+      [
+        {
+          "html": "구분",
+          "rowspan": 2
+        },
+        {
+          "html": "연구 수행 내용",
+          "colspan": 10
+        }
+      ],
+      [
+        {
+          "html": "'22 (1차년도)",
+          "colspan": 2
+        },
+        {
+          "html": "'23 (2차년도)",
+          "colspan": 2
+        },
+        {
+          "html": "'24 (3차년도)",
+          "colspan": 2
+        },
+        {
+          "html": "'25 (4차년도)",
+          "colspan": 2
+        },
+        {
+          "html": "'26 (5차년도)",
+          "colspan": 2
+        }
+      ]
+    ],
+    "rows": [
+      {
+        "label": "주요 연구 내용",
+        "cells": [
+          {
+            "html": "3D 데이터 관리 기술 조사",
+            "colspan": 2
+          },
+          {
+            "html": "3D 데이터 관리 모듈 설계",
+            "colspan": 2
+          },
+          {
+            "html": "3D 데이터 관리 프로그램 개발",
+            "colspan": 2
+          },
+          {
+            "html": "3D 데이터 관리 프로그램 고도화",
+            "colspan": 2
+          },
+          {
+            "html": "3D 데이터 관리 프로그램 실증",
+            "colspan": 2
+          }
+        ]
+      },
+      {
+        "label": "정량적 성능목표",
+        "cells": [
+          {
+            "html": "요구사항 정의 적정성 통과",
+            "colspan": 2
+          },
+          {
+            "html": "품질 적성성 통과",
+            "colspan": 2
+          },
+          {
+            "html": "동작정확도 70%",
+            "colspan": 2
+          },
+          {
+            "html": "동작정확도 100%",
+            "colspan": 2
+          },
+          {
+            "html": "동작정확도 100%",
+            "colspan": 2
+          }
+        ]
+      },
+      {
+        "label": "테스트 일정·결과",
+        "cells": [
+          {
+            "html": "-"
+          },
+          {
+            "html": "적정성 판정"
+          },
+          {
+            "html": "-"
+          },
+          {
+            "html": "적정성 판정"
+          },
+          {
+            "html": "'24.10."
+          },
+          {
+            "html": "70%"
+          },
+          {
+            "html": "'25.10."
+          },
+          {
+            "html": "95%"
+          },
+          {
+            "html": "'26.10. (예정)"
+          },
+          {
+            "html": "-"
+          }
+        ]
+      },
+      {
+        "label": "주요 연구 성과",
+        "cells": [
+          {
+            "groupId": "y22",
+            "summaryHtml": "보고서 1건",
+            "colspan": 2
+          },
+          {
+            "groupId": "y23",
+            "summaryHtml": "설계서 1건 <br>특허출원 1건",
+            "colspan": 2
+          },
+          {
+            "groupId": "y24",
+            "summaryHtml": "보고서 1건 <br>특허출원 1건",
+            "colspan": 2
+          },
+          {
+            "groupId": "y25",
+            "summaryHtml": "보고서1건 <br>SW등록1건 <br>논문(비SCI)1건",
+            "colspan": 2
+          },
+          {
+            "groupId": "y26",
+            "summaryHtml": "공인인증 1건",
+            "colspan": 2
+          }
+        ]
+      }
+    ]
+  },
+  "applications": {
+    "overview": "국가 공간정보 포털, 자자체 공간정보 분야, 민간활용 분야",
+    "cards": [
+      {
+        "title": "V-World 데이터 카탈로그",
+        "current": "플랫폼 관리자가 특정 지역의 3D 건물 데이터를 찾으려면 건물·지역·시점·LOD 조건을 개별 시스템에서 순차 조회해야 해 데이터 탐색에 약 3시간 이상 소요됨.",
+        "improved": "GeoDCAT 기반 데이터 카탈로그를 적용해 지역·시점·LOD를 통합 조건으로 한 번에 검색할 수 있어 데이터 탐색 시간이 약 30분 이내로 단축(약 85% 감소)."
+      },
+      {
+        "title": "국가공간정보포털",
+        "current": "3D 건물 데이터와 시점·LOD 정보가 분리 관리되어 과거·최신 데이터를 비교하려면 관리 대장을 수작업으로 대조해야 하고, 외부 시스템 연계를 위해 별도 변환 작업이 필요해 연계 준비에 약 2~3시간 소요됨.",
+        "improved": "메타데이터 자동 연계를 통해 시점·LOD별 데이터가 단일 카탈로그에서 관리되며, OGC 표준 API 기반 연동으로 외부 시스템 연계 준비 시간이 약 1시간 이내로 단축(약 70% 감소)."
+      }
+    ]
+  },
+  "process": {
+    "processImage": {
+      "src": "data/contents/research/projects/303/images/process.png",
+      "alt": "데이터 처리 프로세스"
+    },
+    "inputHtml": "CityGML 3.0, 메타 데이터",
+    "outputHtml": "PostgreSQL(Database)",
+    "outputImages": [
+      {
+        "src": "data/contents/research/projects/303/images/output1.png",
+        "alt": "테스트 객체 등록 확인",
+        "caption": "테스트 객체 등록 확인"
+      },
+      {
+        "src": "data/contents/research/projects/303/images/output2.png",
+        "alt": "테스트 객체 등록 확인 (카달로그상)",
+        "caption": "테스트 객체 등록 확인 (카달로그상)"
+      }
+    ]
+  },
+  "demo": {
+    "src": "",
+    "height": 1200
+  },
+  "institutions": {
+    "leadContacts": [
+      {
+        "name": "민현기",
+        "role": "개발",
+        "phone": "02-856-1900",
+        "email": "hgmin@sundosoft.co.kr"
+      }
+    ],
+    "partners": []
+  },
+  "downloads": {
+    "y22": [],
+    "y23": [],
+    "y24": [],
+    "y25": [],
+    "y26": []
+  }
+}

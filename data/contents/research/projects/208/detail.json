@@ -1,0 +1,264 @@
+{
+  "id": "208",
+  "core": "2핵심",
+  "coreColor": "core2",
+  "ctCode": "핵심기술2",
+  "ctTitle": "다차원/다시점 공간 데이터 기반 변화인식 및 공간정보 자동갱신 기술",
+  "cteCode": "세부기술5",
+  "output_code": "성과물8",
+  "title": "건물 자동 모델링 기술",
+  "registeredAt": "",
+  "summaryInstitutions": [
+    "명지대학교"
+  ],
+  "overview": {
+    "description": "수동 또는 반자동 방식의 3D 건물 모델 생성 기법을 완전 자동화하기 위한 3D 건물 모델 자동 생성 SW",
+    "descriptionNote": "",
+    "necessityRows": [
+      [
+        {
+          "html": "수동 및 반자동 방식의 3D 건물 모델 생성으로 인력이 소요됨"
+        },
+        {
+          "html": "완전 자동 방식의 3D 건물 모델 생성으로 인력 및 시간 비용 절감 효과 상승"
+        }
+      ],
+      [
+        {
+          "html": "상용 SW 모델링 기술은 개별 건물 구분이 불가능한 Mesh 모델을 생성함"
+        },
+        {
+          "html": "개별 건물 단위로 구분된 Solid 형태의 결과물을 생성함"
+        }
+      ]
+    ]
+  },
+  "researchContent": {
+    "headerRows": [
+      [
+        {
+          "html": "구분",
+          "rowspan": 2
+        },
+        {
+          "html": "연구 수행 내용",
+          "colspan": 10
+        }
+      ],
+      [
+        {
+          "html": "'22 (1차년도)",
+          "colspan": 2
+        },
+        {
+          "html": "'23 (2차년도)",
+          "colspan": 2
+        },
+        {
+          "html": "'24 (3차년도)",
+          "colspan": 2
+        },
+        {
+          "html": "'25 (4차년도)",
+          "colspan": 2
+        },
+        {
+          "html": "'26 (5차년도)",
+          "colspan": 2
+        }
+      ]
+    ],
+    "rows": [
+      {
+        "label": "주요 연구 내용",
+        "cells": [
+          {
+            "html": "3D 모델 생성 기법 현황 분석",
+            "colspan": 2
+          },
+          {
+            "html": "3D 모델 생성 알고리즘 설계 및 구현",
+            "colspan": 2
+          },
+          {
+            "html": "3D 건물 자동 모델링 알고리즘 고도화",
+            "colspan": 2
+          },
+          {
+            "html": "3D 건물 자동 모델링 알고리즘 모듈화",
+            "colspan": 2
+          },
+          {
+            "html": "3D 건물 자동 모델링 알고리즘 모듈화 보완",
+            "colspan": 2
+          }
+        ]
+      },
+      {
+        "label": "정량적 성능목표",
+        "cells": [
+          {
+            "html": "기술문서 작성",
+            "colspan": 2
+          },
+          {
+            "html": "자동화율 80%, 정밀도 0.4m 이내",
+            "colspan": 2
+          },
+          {
+            "html": "완성도 85%",
+            "colspan": 2
+          },
+          {
+            "html": "자동화율 85%, 정밀도 0.3m",
+            "colspan": 2
+          },
+          {
+            "html": "자동화율 90%, 정밀도 0.2m",
+            "colspan": 2
+          }
+        ]
+      },
+      {
+        "label": "테스트 일정·결과",
+        "labelRowspan": 2,
+        "cells": [
+          {
+            "html": "'22.10.",
+            "rowspan": 2
+          },
+          {
+            "html": "자문회의 적정성 판정",
+            "rowspan": 2
+          },
+          {
+            "html": "'23.10.",
+            "rowspan": 2
+          },
+          {
+            "html": "자문회의 적정성 판정"
+          },
+          {
+            "html": "'24.10.",
+            "rowspan": 2
+          },
+          {
+            "html": "자문회의 적정성 판정"
+          },
+          {
+            "html": "'25.10.",
+            "rowspan": 2
+          },
+          {
+            "html": "자문회의 적정성 판정"
+          },
+          {
+            "html": "'26.10. (예정)",
+            "rowspan": 2
+          },
+          {
+            "html": "-",
+            "rowspan": 2
+          }
+        ]
+      },
+      {
+        "cells": [
+          {
+            "html": "자동화율 80%"
+          },
+          {
+            "html": "완성도 85%"
+          },
+          {
+            "html": "자동화율 85%"
+          }
+        ]
+      },
+      {
+        "label": "주요 연구 성과",
+        "cells": [
+          {
+            "groupId": "y22",
+            "summaryHtml": "기술문서",
+            "colspan": 2
+          },
+          {
+            "groupId": "y23",
+            "summaryHtml": "특허 출원,<br>알고리즘 구현",
+            "colspan": 2
+          },
+          {
+            "groupId": "y24",
+            "summaryHtml": "알고리즘 구현,<br>특허 출원",
+            "colspan": 2
+          },
+          {
+            "groupId": "y25",
+            "summaryHtml": "알고리즘 모듈화,<br>특허 등록",
+            "colspan": 2
+          },
+          {
+            "groupId": "y26",
+            "summaryHtml": "기술문서, SW 등록, 논문,",
+            "colspan": 2
+          }
+        ]
+      }
+    ]
+  },
+  "applications": {
+    "overview": "정부 및 지자체 공간정보 관련 부서, 공간정보 활용 기업 등",
+    "cards": [
+      {
+        "title": "건물 모델링 작업 간소화 및 디지털트윈 전용 3D 도시 모델 구축",
+        "current": "정부 및 지자체, 기업의 공간정보 부서 담당자는 3D 건물 모델을 생성하기 위해 수동 또는 반자동 방식의 모델링 기법을 활용하지만, 도시 단위의 건물 모델을 구축하는 과정에서 상당한 비용의 인력 및 시간이 소요됨",
+        "improved": "완전 자동 방식의 건물 자동 모델링 SW를 활용하여 옥상, 벽면 등의 시맨틱 정보가 포함된 3D 건물 모델을 인력 소요 없이 생성함"
+      }
+    ]
+  },
+  "process": {
+    "processImage": {
+      "src": "data/contents/research/projects/208/images/process.png",
+      "alt": "데이터 처리 프로세스"
+    },
+    "inputHtml": "①항공 데이터(항공 영상, 포인트클라우드, 정사영상)",
+    "outputHtml": "①.obj, .json(건물 좌표, Semantic Information-옥상, 벽 등)",
+    "outputImages": [
+      {
+        "src": "data/contents/research/projects/208/images/output2.png",
+        "alt": "3D 모델링 결과: (왼쪽)아파트(LH 수서 1,2단지) 35개동 건물 전체, (오른쪽)일부 확대",
+        "caption": "3D 모델링 결과: (왼쪽)아파트(LH 수서 1,2단지) 35개동 건물 전체, (오른쪽)일부 확대"
+      }
+    ]
+  },
+  "demo": {
+    "src": "",
+    "height": 1200
+  },
+  "institutions": {
+    "leadContacts": [
+      {
+        "name": "김현수",
+        "role": "성과물 관리",
+        "phone": "010-4853-8953",
+        "email": "ae1996@naver.com"
+      }
+    ],
+    "partners": [
+      {
+        "name": "김준수",
+        "role": "성과물 관리",
+        "phone": "010-6333-9185",
+        "email": "khea0109@geostory.co.kr"
+      }
+    ]
+  },
+  "downloads": {
+    "y22": [],
+    "y23": [],
+    "y24": [],
+    "y25": [],
+    "y26": []
+  }
+}

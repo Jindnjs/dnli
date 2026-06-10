@@ -1,0 +1,1683 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<title>연구성과 상세</title>
+
+	<link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
+	<link rel="stylesheet" type="text/css" href="css/slick.css">
+	<link rel="stylesheet" type="text/css" href="css/common.css">
+	<link rel="stylesheet" type="text/css" href="css/responsive.css">
+	<link rel="stylesheet" type="text/css" href="css/dgt.css">
+
+	<script type="text/javascript">
+	var cmAppUrl = {
+		po   : "https://www.vworld.kr",
+		data : "https://www.vworld.kr",
+		dev  : "https://www.vworld.kr",
+		user : "https://www.vworld.kr",
+		desk : "https://www.vworld.kr",
+		eng  : "https://www.vworld.kr",
+		map  : "https://map.vworld.kr",
+		apis : "https://apis.vworld.kr",
+		api  : "https://api.vworld.kr"
+	}
+	</script>
+	<script type="text/javascript" src="js/jquery-3.6.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="js/moment.min.js"></script>
+	<script type="text/javascript" src="js/slick.min.js"></script>
+	<script type="text/javascript" src="js/vue.min.js"></script>
+	<script type="text/javascript" src="js/common.js"></script>
+	<script type="text/javascript" src="js/common_fnc.js"></script>
+	<script type="text/javascript" src="js/common_login.js"></script>
+	<script type="text/javascript" src="js/common_msg.js"></script>
+	<script type="text/javascript" src="js/common_valid_msg.js"></script>
+	<script type="text/javascript" src="js/common_valid.js"></script>
+	<script type="text/javascript" src="js/common_menu.js"></script>
+	<script type="text/javascript" src="js/common_file.js"></script>
+	<script type="text/javascript" src="js/spectrum.min.js"></script>
+	<script type="text/javascript">
+		var depth1=0; var depth2=0; var depth3=0; var depth4=0; var depth5=0;
+	</script>
+</head>
+
+<body>
+	<div class="blind">
+		<a href="#sitemapMenu">전체메뉴 바로가기</a>
+		<a href="#headerMenu" class="mHide">메인메뉴 바로가기</a>
+		<a href="#section">본문 바로가기</a>
+	</div>
+	<div id="app" class="container">
+		<div class="template sub">
+
+			<header class="header fix">
+				<h1 class="logo"><a href="javascript:urlFnc.goMain();" title="메인화면으로 이동"><strong>V-world</strong>디지털트윈국토</a></h1>
+				<nav class="gnb mHide" id="headerMenu"><ul><li class="toggle"><a href="javascript:menuFnc.move('4');" class="menu">지도조회</a><ul class="dropbox"><li><a href="javascript:menuFnc.move('https://map.vworld.kr/map/dtkmap.do');" class="menu">주제도</a></li><li><a href="javascript:menuFnc.move('https://map.vworld.kr/map/dtkmap.do?mode=MAPD101');" class="menu">분석 및 시뮬레이션</a></li><li><a href="javascript:menuFnc.move('https://map.vworld.kr/map/dtkmap.do?mode=MAPD100');" class="menu">실내지도</a></li></ul></li><li class="toggle"><a href="javascript:menuFnc.move('/dtmk/dtmk_main_s001.do');" class="menu">다운로드</a><ul class="dropbox"><li><a href="javascript:menuFnc.move('/dtmk/dtmk_intdtmk_s001.do');" class="menu">공간정보 소개</a></li><li><a href="javascript:menuFnc.move('/dtmk/dtmk_ntads_s001.do');" class="menu">공간정보 다운로드</a></li></ul></li><li class="toggle"><a href="javascript:menuFnc.move('/v4po_openapi_s001.do');" class="menu">오픈API</a><ul class="dropbox"><li><a href="javascript:menuFnc.move('/dev/v4apiRefer.do');" class="menu">API레퍼런스</a></li><li><a href="javascript:menuFnc.move('/dev/v4dv_icbbeta_s001.do');" class="menu">API인큐베이터</a></li><li><a href="javascript:menuFnc.move('https://v-world.github.io/Utilization-Model/');" class="menu">브이월드 활용모델</a></li></ul></li><li class="toggle"><a href="javascript:menuFnc.move('/v4po_svi_s001.do');" class="menu">서비스</a><ul class="dropbox"><li><a href="javascript:menuFnc.move('88');" class="menu">부동산 서비스</a></li><li><a href="javascript:menuFnc.move('95');" class="menu">3D데스크톱</a></li></ul></li><li class="toggle"><a href="javascript:menuFnc.move('103');" class="menu">활용지원</a><ul class="dropbox"><li><a href="javascript:menuFnc.move('/v4po_cdntr_s004.do');" class="menu">코디네이터</a></li><li><a href="javascript:menuFnc.move('/v4po_brdfaq_s001.do');" class="menu">자주 묻는 질문</a></li><li><a href="javascript:menuFnc.move('/v4po_brdqna_s001.do');" class="menu">질의응답</a></li></ul></li><li class="toggle"><a href="javascript:menuFnc.move('134');" class="menu">소통공간</a><ul class="dropbox"><li><a href="javascript:menuFnc.move('/v4po_brdnotice_s001.do');" class="menu">공지사항</a></li><li><a href="javascript:menuFnc.move('/v4po_brddata_s001.do');" class="menu">자료실</a></li><li><a href="javascript:menuFnc.move('/v4po_brdmedia_s001.do');" class="menu">미디어소식</a></li></ul></li><li class="toggle"><a href="javascript:menuFnc.move('/dtac/dtac_search_s001.do');" class="menu">기업정보</a><ul class="dropbox"><li><a href="javascript:menuFnc.move('/dtac/dtac_search_s002.do');" class="menu">기업정보 조회</a></li><li><a href="javascript:menuFnc.move('/dtac/dtac_search_s002.do?detailTyp=02');" class="menu">기업상품 조회</a></li></ul></li></ul></nav>
+				<div class="btns">
+					<div class="toggle one">
+						<button type="button" class="bt max ico only find" title="통합검색">통합검색</button>
+						<div class="overbox rt">
+							<div class="set find">
+								<label for="header_searchIdw" class="blind">통합검색</label>
+								<input type="text" class="input validate[required]" id="header_searchIdw" name="searchIdw" value="" placeholder="통합검색" title="검색어">
+								<a href="javascript:void(0);" class="bt ico only find" id="header_searchBtn">검색</a>
+								<button type="button" class="bt ico only close">취소</button>
+							</div>
+						</div>
+					</div>
+					<div class="toggle one" id="login-before">
+						<button type="button" id="btLogin" class="bt max ico only lock customToggle" title="로그인" onclick="loginFnc.def(undefined,'Y');">로그인/회원가입</button>
+						<div class="dropbox">
+							<div class="headline">
+								<h4 class="title">로그인</h4>
+								<button type="button" class="bt ico only close">닫기</button>
+							</div>
+							<form class="field">
+								<label for="loginUsrIde" class="blind">아이디</label>
+								<input type="text" id="loginUsrIde" class="input validate[required]" placeholder="아이디" title="아이디" maxlength="18">
+								<label for="loginUsrPwd" class="blind">비밀번호</label>
+								<input type="password" id="loginUsrPwd" class="input validate[required]" placeholder="비밀번호" title="비밀번호" autocomplete="on" maxlength="18">
+								<div class="check"><input type="checkbox" id="chkUsrIde"><label for="chkUsrIde">아이디저장</label></div>
+							</form>
+							<div class="btns col">
+								<button type="button" class="bt bg primary" onclick="loginFnc.login('loginUsrIde','loginUsrPwd','chkUsrIde');">로그인</button>
+								<button type="button" class="bt bd primary" onclick="urlFnc.goJoin();">회원가입</button>
+							</div>
+							<div class="btns fs">
+								<a class="linktxt" onclick="urlFnc.goFindId();">아이디찾기</a>
+								<a class="linktxt" onclick="urlFnc.goFindPwd();">비밀번호찾기</a>
+							</div>
+						</div>
+					</div>
+					<button type="button" class="bt max ico only menu" title="전체메뉴" aria-haspopup="dialog" aria-controls="pop-sitemap">전체메뉴열기</button>
+				</div>
+			</header>
+
+			<article class="sitemap hide" aria-hidden="true" id="pop-sitemap">
+				<div class="conWrap">
+					<div class="conHead">
+						<h2 class="blind">전체메뉴</h2>
+						<button type="button" class="bt max ico only home" title="메인화면 바로가기" onclick="urlFnc.goMain();">홈</button>
+						<p class="infotxt">로그인 후 디지털트윈국토의 모든 서비스를 이용해 보세요.</p>
+						<div class="btns ml">
+							<a class="bt bd" href="javascript:anyidAdaptor.ssoLoginPage(window.location.pathname+window.location.search,'3');">로그인</a>
+							<a class="bt bd" href="javascript:urlFnc.goJoin();">회원가입</a>
+						</div>
+						<button type="button" class="bt max ico only close" title="전체메뉴 닫기">전체메뉴 닫기</button>
+					</div>
+					<div class="conBody">
+						<nav class="gnb" id="sitemapMenu"><ul><li class="toggle"><a href="javascript:menuFnc.move('/v4po_intbiz_a001.do','Y');" class="menu">브이월드 소개</a></li><li class="toggle"><a href="javascript:menuFnc.move('4','Y');" class="menu">지도조회</a><button type="button" class="bt ico only arrow">메뉴 열고닫기</button><ul class="slipbox"><li><a href="javascript:menuFnc.move('https://map.vworld.kr/map/dtkmap.do','Y');" class="menu">주제도</a></li><li><a href="javascript:menuFnc.move('https://map.vworld.kr/map/dtkmap.do?mode=MAPD101','Y');" class="menu">분석 및 시뮬레이션</a></li><li><a href="javascript:menuFnc.move('https://map.vworld.kr/map/dtkmap.do?mode=MAPD100','Y');" class="menu">실내지도</a></li></ul></li><li class="toggle"><a href="javascript:menuFnc.move('/dtmk/dtmk_main_s001.do','Y');" class="menu">다운로드</a><button type="button" class="bt ico only arrow">메뉴 열고닫기</button><ul class="slipbox"><li><a href="javascript:menuFnc.move('/dtmk/dtmk_intdtmk_s001.do','Y');" class="menu">공간정보 소개</a></li><li><a href="javascript:menuFnc.move('/dtmk/dtmk_ntads_s001.do','Y');" class="menu">공간정보 다운로드</a></li></ul></li><li class="toggle"><a href="javascript:menuFnc.move('/v4po_openapi_s001.do','Y');" class="menu">오픈API</a><button type="button" class="bt ico only arrow">메뉴 열고닫기</button><ul class="slipbox"><li><a href="javascript:menuFnc.move('/dev/v4apiRefer.do','Y');" class="menu">API레퍼런스</a></li><li><a href="javascript:menuFnc.move('/dev/v4dv_icbbeta_s001.do','Y');" class="menu">API인큐베이터</a></li></ul></li><li class="toggle"><a href="javascript:menuFnc.move('/v4po_svi_s001.do','Y');" class="menu">서비스</a><button type="button" class="bt ico only arrow">메뉴 열고닫기</button><ul class="slipbox"><li><a href="javascript:menuFnc.move('88','Y');" class="menu">부동산 서비스</a></li><li><a href="javascript:menuFnc.move('95','Y');" class="menu">3D데스크톱</a></li></ul></li><li class="toggle"><a href="javascript:menuFnc.move('103','Y');" class="menu">활용지원</a><button type="button" class="bt ico only arrow">메뉴 열고닫기</button><ul class="slipbox"><li><a href="javascript:menuFnc.move('/v4po_cdntr_s004.do','Y');" class="menu">코디네이터</a></li><li><a href="javascript:menuFnc.move('/v4po_brdfaq_s001.do','Y');" class="menu">자주 묻는 질문</a></li><li><a href="javascript:menuFnc.move('/v4po_brdqna_s001.do','Y');" class="menu">질의응답</a></li></ul></li><li class="toggle"><a href="javascript:menuFnc.move('134','Y');" class="menu">소통공간</a><button type="button" class="bt ico only arrow">메뉴 열고닫기</button><ul class="slipbox"><li><a href="javascript:menuFnc.move('/v4po_brdnotice_s001.do','Y');" class="menu">공지사항</a></li><li><a href="javascript:menuFnc.move('/v4po_brddata_s001.do','Y');" class="menu">자료실</a></li><li><a href="javascript:menuFnc.move('/v4po_brdmedia_s001.do','Y');" class="menu">미디어소식</a></li></ul></li></ul></nav>
+					</div>
+				</div>
+			</article>
+
+			<section class="section" id="section">
+				<nav class="lnb">
+					<div class="inner" id="lnbMenu">
+						<a href="index.html" class="bt ico only home" title="메인 바로가기">메인</a>
+						<h2 id="depth1" class="title"><a href="intro.html" class="menu">활용지원</a></h2>
+						<div class="one toggle" id="depth2"><a href="list.html" class="menu">연구성과</a><p class="menu"></p><button type="button" class="bt ico arrow only">메뉴선택</button></div>
+					</div>
+				</nav>
+				<aside class="location">
+					<div class="inner">
+						<div class="path" id="locationMenu"><span>홈</span><span>활용지원</span><span>연구성과</span></div>
+					</div>
+				</aside>
+
+					<script type="text/javascript">
+					$(document).ready(function() {menuFnc.locationYn = "Y";});
+					var footerObj = {
+						move : function(){
+							if($("#footerPageMove").val() == ""){
+								msgFnc.alert({text : "이동할 사이트를 선택해주세요.", callBackConfirmFnc : function(){$("#footerPageMove").focus();}});
+								return;
+							}
+							window.open($("#footerPageMove").val(), '_blank');
+						}
+					};
+
+						const RESEARCH_HEADER_ROWS = [
+							[
+								{ html: '구분', rowspan: 2 },
+								{ html: '연구 수행 내용', colspan: 10 }
+							],
+							[
+								{ html: "'22<br>(1차년도)" },
+								{ html: "'23<br>(2차년도)" },
+								{ html: "'24<br>(3차년도)", colspan: 3 },
+								{ html: "'25<br>(4차년도)", colspan: 3 },
+								{ html: "'26<br>(5차년도)", colspan: 2 }
+							]
+						];
+						const DOWNLOAD_YEAR_ORDER = ['y22', 'y23', 'y24', 'y25', 'y26'];
+						const DOWNLOAD_YEAR_LABELS = {
+							y22: "'22 (1차년도)",
+							y23: "'23 (2차년도)",
+							y24: "'24 (3차년도)",
+							y25: "'25 (4차년도)",
+							y26: "'26 (5차년도)"
+						};
+						const ADMIN_PREVIEW_STORAGE_KEY = 'admin-detail-preview';
+						const PROJECTS_ROOT_URL = 'data/contents/research/projects';
+						let currentDetail = null;
+						let downloadGroupMap = {};
+						let downloadItemMap = {};
+						let modalDownloadItems = [];
+						let modalContext = null;
+						let treeNodeCounter = 0;
+						let accordionNodeCounter = 0;
+					
+						function escapeHtml(value) {
+							return String(value ?? '')
+								.replace(/&/g, '&amp;')
+								.replace(/</g, '&lt;')
+								.replace(/>/g, '&gt;')
+								.replace(/"/g, '&quot;')
+								.replace(/'/g, '&#39;');
+						}
+					
+						function renderMaybeHtml(value) {
+							return value == null ? '' : value;
+						}
+					
+						function getResearchHeaderRows(table) {
+							return Array.isArray(table?.headerRows) && table.headerRows.length ? table.headerRows : RESEARCH_HEADER_ROWS;
+						}
+					
+						function getResearchYearSegments(table) {
+							const yearRow = getResearchHeaderRows(table)[1] || [];
+							let cursor = 0;
+							return yearRow.map((cell) => {
+								const span = Math.max(1, Number(cell?.colspan || 1));
+								const segment = {
+									html: cell.html || escapeHtml(cell.text || ''),
+									start: cursor,
+									end: cursor + span
+								};
+								cursor += span;
+								return segment;
+							});
+						}
+					
+						function getResearchLeafColumnCount(table) {
+							return getResearchYearSegments(table).reduce((max, segment) => Math.max(max, segment.end), 0);
+						}
+					
+						function getExtensionMeta(ext) {
+							const normalized = String(ext || '').toUpperCase();
+							const map = {
+								PDF: { extClass: 'sds-ext-pdf', iconName: 'file-text-red' },
+								ZIP: { extClass: 'sds-ext-zip', iconName: 'archive' },
+								CSV: { extClass: 'sds-ext-data', iconName: 'table' },
+								XLS: { extClass: 'sds-ext-data', iconName: 'table' },
+								XLSX: { extClass: 'sds-ext-data', iconName: 'table' },
+								JSON: { extClass: 'sds-ext-code', iconName: 'braces' },
+								GEOJSON: { extClass: 'sds-ext-map', iconName: 'map' },
+								TOPOJSON: { extClass: 'sds-ext-map', iconName: 'map' },
+								XML: { extClass: 'sds-ext-code', iconName: 'code-2' },
+								HTML: { extClass: 'sds-ext-code', iconName: 'code-2' },
+								KML: { extClass: 'sds-ext-map', iconName: 'map' },
+								SHP: { extClass: 'sds-ext-map', iconName: 'map' },
+								MAP: { extClass: 'sds-ext-map', iconName: 'map' },
+								PNG: { extClass: 'sds-ext-image', iconName: 'image' },
+								JPG: { extClass: 'sds-ext-image', iconName: 'image' },
+								JPEG: { extClass: 'sds-ext-image', iconName: 'image' },
+								GIF: { extClass: 'sds-ext-image', iconName: 'image' },
+								TIF: { extClass: 'sds-ext-image', iconName: 'image' },
+								TIFF: { extClass: 'sds-ext-image', iconName: 'image' },
+								BMP: { extClass: 'sds-ext-image', iconName: 'image' },
+								HWP: { extClass: 'sds-ext-doc', iconName: 'file-text-blue' },
+								HWPX: { extClass: 'sds-ext-doc', iconName: 'file-text-blue' },
+								DOC: { extClass: 'sds-ext-doc', iconName: 'file-text-blue' },
+								DOCX: { extClass: 'sds-ext-doc', iconName: 'file-text-blue' },
+								TXT: { extClass: 'sds-ext-text', iconName: 'file-text-gray' },
+								MD: { extClass: 'sds-ext-text', iconName: 'file-text-gray' },
+								PPT: { extClass: 'sds-ext-slide', iconName: 'presentation' },
+								PPTX: { extClass: 'sds-ext-slide', iconName: 'presentation' },
+								LINK: { extClass: 'sds-ext-link', iconName: 'link-2' }
+							};
+							return map[normalized] || { extClass: 'sds-ext-file', iconName: 'file' };
+						}
+					
+						function getFileExtensionToken(item) {
+							const ext = String(item?.ext || '').trim();
+							if (ext) return ext.replace(/^\./, '').toLowerCase();
+							const name = String(item?.name || '').trim();
+							const match = name.match(/\.([^.]+)$/);
+							return match ? match[1].toLowerCase() : '';
+						}
+					
+						function getGuideFormatMeta(item) {
+							const token = getFileExtensionToken(item);
+							const map = {
+								shp: ['shp', 'shp'],
+								csv: ['csv', 'csv'],
+								xls: ['xls', 'xls'],
+								xlsx: ['xlsx', 'xlsx'],
+								zip: ['zip', 'zip'],
+								pdf: ['pdf', 'pdf'],
+								hwp: ['hwp', 'hwp'],
+								hwpx: ['hwp', 'hwp'],
+								xml: ['xml', 'xml'],
+								map: ['map', 'map'],
+								json: ['json', 'json'],
+								geojson: ['json', 'geojson'],
+								topojson: ['json', 'topojson'],
+								'2d': ['d2', '2d'],
+								d2: ['d2', '2d'],
+								'3d': ['d3', '3d'],
+								d3: ['d3', '3d'],
+								ppt: ['ppt', 'ppt'],
+								pptx: ['ppt', 'ppt'],
+								doc: ['doc', 'doc'],
+								docx: ['doc', 'doc'],
+								txt: ['text', 'txt'],
+								text: ['text', 'txt'],
+								md: ['text', 'txt'],
+								png: ['img', 'png'],
+								jpg: ['img', 'jpg'],
+								jpeg: ['img', 'jpg'],
+								gif: ['img', 'gif'],
+								tif: ['img', 'tif'],
+								tiff: ['img', 'tif'],
+								bmp: ['img', 'bmp']
+							};
+							return map[token] ? { className: map[token][0], label: map[token][1] } : null;
+						}
+					
+						function formatInstitutions(value) {
+							return Array.isArray(value) ? value.join(', ') : value;
+						}
+					
+						function hasDisplayValue(value) {
+							if (Array.isArray(value)) return value.some((item) => String(item ?? '').trim());
+							return String(value ?? '').trim() !== '';
+						}
+					
+						function hasDownloadTarget(item) {
+							return Boolean(String(item?.url || '').trim() || String(item?.fileKey || '').trim());
+						}
+					
+						function getDownloadGroups(detail) {
+							return DOWNLOAD_YEAR_ORDER
+								.filter((yearKey) => Array.isArray(detail.downloads?.[yearKey]) && detail.downloads[yearKey].length > 0)
+								.map((yearKey) => ({ id: yearKey, yearLabel: DOWNLOAD_YEAR_LABELS[yearKey], folders: detail.downloads[yearKey] }))
+								.filter((group) => getGroupItems(group).length > 0);
+						}
+					
+						function getGroupItems(group) {
+							return (group?.folders || []).flatMap((folder) => {
+								const folderName = folder.name || folder.folder || '폴더';
+								return (folder.items || [])
+									.filter(hasDownloadTarget)
+									.map((item) => ({ ...item, groupId: group.id, yearLabel: group.yearLabel, folderName }));
+							});
+						}
+					
+						function getDownloadCount(groupId) {
+							return getGroupItems(downloadGroupMap[groupId]).length;
+						}
+					
+						function getDownloadLabel(groupId) {
+							const count = getDownloadCount(groupId);
+							return count > 1 ? `${count}건 다운로드` : '다운로드';
+						}
+					
+						function getItemDisplayName(item) {
+							const ext = item.ext ? `.${String(item.ext).toLowerCase()}` : '';
+							return ext && item.name.toLowerCase().endsWith(ext) ? item.name.slice(0, -ext.length) : item.name;
+						}
+					
+						function nextAccordionNodeId(prefix, key) {
+							accordionNodeCounter += 1;
+							if (prefix === 'button') return `btnArc${accordionNodeCounter}`;
+							if (prefix === 'body') return `accBody${accordionNodeCounter}`;
+							return `${prefix}${accordionNodeCounter}`;
+						}
+					
+						function showState(message, isError = false, description = '상세 페이지는 `data/contents/research/projects/{id}/detail.json`의 데이터를 기준으로 렌더링됩니다.') {
+							const state = document.getElementById('pageState');
+							state.innerHTML = `
+								<div class="sds-state-msg${isError ? ' err' : ''}">
+									<p>${escapeHtml(message)}</p>
+									${description ? `<p class="desc">${escapeHtml(description)}</p>` : ''}
+								</div>
+							`;
+							state.classList.remove('hide');
+							document.getElementById('detailPage').classList.add('hide');
+						}
+					
+						function showDetailPage() {
+							document.getElementById('pageState').classList.add('hide');
+							document.getElementById('detailPage').classList.remove('hide');
+						}
+					
+						function resolveDetailId() {
+							const params = new URLSearchParams(window.location.search);
+							const queryId = params.get('id');
+							if (queryId) return decodeURIComponent(queryId);
+							const hashId = window.location.hash.replace(/^#/, '');
+							if (hashId) return decodeURIComponent(hashId);
+							const segments = window.location.pathname.split('/').filter(Boolean).map((s) => decodeURIComponent(s));
+							const lastSegment = segments[segments.length - 1];
+							if (lastSegment && !lastSegment.endsWith('.html')) return lastSegment;
+							return null;
+						}
+					
+						function isAdminPreviewMode() {
+							const params = new URLSearchParams(window.location.search);
+							return params.get('preview') === 'admin';
+						}
+					
+						function loadAdminPreviewDetail() {
+							let raw = null;
+							try {
+								raw = sessionStorage.getItem(ADMIN_PREVIEW_STORAGE_KEY);
+							} catch (error) {
+								console.warn('sessionStorage 미리보기 데이터 읽기 실패:', error);
+							}
+					
+							if (raw) {
+								const detail = JSON.parse(raw);
+								if (!detail || typeof detail !== 'object') {
+									throw new Error('관리자 미리보기 데이터 형식이 올바르지 않습니다.');
+								}
+								return detail;
+							}
+					
+							let framePayload = null;
+							try {
+								framePayload = window.name ? JSON.parse(window.name) : null;
+							} catch (error) {
+								console.warn('iframe name 미리보기 데이터 읽기 실패:', error);
+							}
+					
+							if (framePayload?.source !== 'admin-preview' || !framePayload.detail || typeof framePayload.detail !== 'object') {
+								throw new Error('관리자 미리보기 데이터가 없습니다.');
+							}
+							return framePayload.detail;
+						}
+					
+						async function loadDetailById(id) {
+							const url = `${PROJECTS_ROOT_URL}/${encodeURIComponent(id)}/detail.json`;
+							const response = await fetch(url, { cache: 'no-store' });
+							if (response.ok) return response.json();
+							const error = new Error(`상세 JSON을 불러오지 못했습니다. (${url}, ${response.status})`);
+							error.status = response.status;
+							throw error;
+						}
+					
+						function switchTab(tabId) {
+							['intro', 'files'].forEach(id => {
+								const tabButton = document.getElementById('tab-btn-' + id);
+								const isActive = id === tabId;
+								tabButton.classList.toggle('on', isActive);
+								tabButton.title = isActive ? '선택된 탭' : '';
+								document.getElementById('content-' + id).classList.toggle('hide', id !== tabId);
+							});
+						}
+					
+						function renderSummary(detail) {
+							const chips = [detail.core, detail.ctCode, detail.cteCode, detail.output_code].filter(Boolean);
+							const pathHtml = chips.map(c => `<span>${escapeHtml(c)}</span>`).join('');
+					
+							const metaItems = [];
+							if (hasDisplayValue(detail.summaryInstitutions)) {
+								metaItems.push(`<span><b>수행기관</b><em>${escapeHtml(formatInstitutions(detail.summaryInstitutions))}</em></span>`);
+							}
+							if (hasDisplayValue(detail.registeredAt)) {
+								metaItems.push(`<span><b>등록일</b><em>${escapeHtml(detail.registeredAt)}</em></span>`);
+							}
+							const metaHtml = metaItems.length
+								? `<div class="txt br" style="margin-top: 8px;">${metaItems.join('')}</div>`
+								: '';
+					
+							document.getElementById('summaryContainer').innerHTML = `
+								<div class="item bd">
+									<div class="path bg br">${pathHtml}</div>
+									<div class="br"></div>
+									<h1 class="title">${escapeHtml(detail.title)}</h1>
+									${metaHtml}
+								</div>`;
+					
+							document.title = `${detail.title} | 연구성과 상세`;
+						}
+					
+						function handleAccordionClick(event, buttonId) {
+							const button = document.getElementById(buttonId);
+							if (!button) return;
+					
+							if (event.target === button || button.contains(event.target)) return;
+					
+							const accordion = button.closest('.sds-accordion');
+							const isOpen = accordion?.classList.contains('on') || button.classList.contains('on');
+							const title = event.target.closest('.title');
+							const isTitleClick = title && title.parentElement === accordion;
+					
+							if (!isOpen || isTitleClick) button.click();
+						}
+					
+						function renderAccordion(key, title, contentHtml, isOpen = false) {
+							const onCls = isOpen ? ' on' : '';
+							const slipStyle = isOpen ? 'display:block;' : 'display:none;';
+							accordionNodeCounter += 1;
+							const buttonId = `btnArc${accordionNodeCounter}`;
+							const bodyId = `accBody${accordionNodeCounter}`;
+							return `
+								<div class="inner sds-accordion-wrap">
+									<div class="toggle item bd${onCls} btns fe sds-accordion" data-section="${escapeHtml(key)}"
+										onclick="handleAccordionClick(event, '${buttonId}')">
+										<h2 class="title">${escapeHtml(title)}</h2>
+										<button type="button" class="bt ico arrow only${onCls}" id="${buttonId}"></button>
+										<div class="slipbox" id="${bodyId}" style="${slipStyle}">
+											<div class="field sds-accordion-body">${contentHtml}</div>
+										</div>
+									</div>
+								</div>`;
+						}
+					
+						function renderOverviewSection(detail) {
+							const rows = (detail.overview.necessityRows || []).map((row) => `
+								<tr>
+									${row.map((cell) => `
+										<td ${cell.rowspan ? `rowspan="${cell.rowspan}"` : ''}
+											${cell.colspan ? `colspan="${cell.colspan}"` : ''}>
+											${renderMaybeHtml(cell.html || escapeHtml(cell.text || ''))}
+										</td>
+									`).join('')}
+								</tr>
+							`).join('');
+							const mobileRows = (detail.overview.necessityRows || []).map((row) => `
+								<div class="sds-mobile-table-record">
+									<div class="sds-mobile-table-row">
+										<dt>As-Is</dt>
+										<dd>${renderMaybeHtml(row[0]?.html || escapeHtml(row[0]?.text || ''))}</dd>
+									</div>
+									<div class="sds-mobile-table-row">
+										<dt>To-Be</dt>
+										<dd>${renderMaybeHtml(row[1]?.html || escapeHtml(row[1]?.text || ''))}</dd>
+									</div>
+								</div>
+							`).join('');
+					
+							return `
+								<div>
+									<div class="headline sub"><h5 class="title bar">기술 설명</h4></div>
+									<div class="sds-desc-box">
+										<p>${renderMaybeHtml(detail.overview.description || '')}</p>
+										${detail.overview.descriptionNote ? `<span class="sds-note">${renderMaybeHtml(detail.overview.descriptionNote)}</span>` : ''}
+									</div>
+					
+									<div class="headline sub"><h5 class="title bar">필요성</h4></div>
+									<div class="grid sds-desktop-table">
+										<table>
+											<colgroup>
+												<col width="50%">
+												<col width="50%">
+											</colgroup>
+											<thead>
+												<tr>
+													<th>As-Is</th>
+													<th>To-Be</th>
+												</tr>
+											</thead>
+											<tbody>${rows}</tbody>
+										</table>
+									</div>
+									<dl class="sds-mobile-table sds-mobile-table-necessity">${mobileRows}</dl>
+								</div>
+							`;
+						}
+					
+						function renderResearchTableHeader(table) {
+							return getResearchHeaderRows(table).map((row) => `
+								<tr>
+									${row.map((cell) => `
+										<th ${cell.rowspan ? `rowspan="${cell.rowspan}"` : ''}
+											${cell.colspan ? `colspan="${cell.colspan}"` : ''}>
+											${renderMaybeHtml(cell.html || escapeHtml(cell.text || ''))}
+										</th>
+									`).join('')}
+								</tr>
+							`).join('');
+						}
+					
+						function renderResearchColgroup(table) {
+							const yearRow = getResearchHeaderRows(table)[1];
+							if (!Array.isArray(yearRow) || !yearRow.length) return '';
+							const labelPct = 12;
+							const yearPct = (100 - labelPct) / yearRow.length;
+							const cols = [`<col class="sds-research-col-label" style="width:${labelPct}%">`];
+							for (const yearCell of yearRow) {
+								const span = Math.max(1, Number(yearCell?.colspan || 1));
+								const subPct = yearPct / span;
+								for (let i = 0; i < span; i++) {
+									cols.push(`<col style="width:${subPct}%">`);
+								}
+							}
+							return `<colgroup>${cols.join('')}</colgroup>`;
+						}
+					
+						function getResearchCellContent(cell) {
+							if (!cell) return '';
+							return cell.groupId
+								? (cell.summaryHtml || '')
+								: (cell.html || escapeHtml(cell.text || ''));
+						}
+					
+						function getResearchPlainText(html) {
+							return String(html || '')
+								.replace(/<br\s*\/?>/gi, ' ')
+								.replace(/<[^>]*>/g, '')
+								.replace(/&nbsp;/g, ' ')
+								.replace(/\s+/g, ' ')
+								.trim();
+						}
+
+						function buildResearchBodyMatrix(table) {
+							const rows = Array.isArray(table?.rows) ? table.rows : [];
+							const totalCols = getResearchLeafColumnCount(table);
+							const activeSpans = [];
+							const matrix = [];
+							const rowLabels = [];
+							let activeLabel = '';
+							let activeLabelLeft = 0;
+					
+							rows.forEach((row, rowIndex) => {
+								const rowCells = Array(totalCols).fill(null);
+								if (row.label) {
+									activeLabel = row.label;
+									activeLabelLeft = Math.max(1, Number(row.labelRowspan || 1));
+								}
+								rowLabels[rowIndex] = activeLabelLeft > 0 ? activeLabel : '';
+								if (activeLabelLeft > 0) activeLabelLeft -= 1;
+					
+								for (let colIndex = 0; colIndex < totalCols; colIndex += 1) {
+									const span = activeSpans[colIndex];
+									if (!span) continue;
+									rowCells[colIndex] = span.descriptor;
+									span.remaining -= 1;
+									if (span.remaining <= 0) activeSpans[colIndex] = null;
+								}
+					
+								let cursor = 0;
+								(row.cells || []).forEach((cell, cellIndex) => {
+									while (cursor < totalCols && rowCells[cursor]) cursor += 1;
+									const colspan = Math.max(1, Number(cell.colspan || 1));
+									const rowspan = Math.max(1, Number(cell.rowspan || 1));
+									const descriptor = {
+										id: `${rowIndex}-${cellIndex}-${cursor}`,
+										cell,
+										start: cursor,
+										end: Math.min(totalCols, cursor + colspan)
+									};
+									for (let colIndex = cursor; colIndex < descriptor.end; colIndex += 1) {
+										rowCells[colIndex] = descriptor;
+										if (rowspan > 1) {
+											activeSpans[colIndex] = { descriptor, remaining: rowspan - 1 };
+										}
+									}
+									cursor += colspan;
+								});
+					
+								matrix.push(rowCells);
+							});
+					
+							return { matrix, rowLabels };
+						}
+					
+						function renderResearchAchievementContent(contentHtml) {
+							const parts = String(contentHtml || '')
+								.split(/<br\s*\/?>/i)
+								.map((part) => part.trim())
+								.filter((part) => getResearchPlainText(part));
+							if (parts.length <= 1) return renderMaybeHtml(contentHtml);
+							const chips = parts
+								.map((part) => `<span class="sds-research-chip">${renderMaybeHtml(part)}</span>`)
+								.join('<span class="sds-research-sep"> · </span>');
+							return `<span class="sds-research-chips">${chips}</span>`;
+						}
+
+						function renderResearchContentLinebox(contentHtml) {
+							const parts = String(contentHtml || '')
+								.split(/<br\s*\/?>/i)
+								.map((part) => part.trim())
+								.filter((part) => getResearchPlainText(part));
+							if (parts.length <= 1) return '';
+							return `
+								<span class="sds-research-linebox">
+									${parts.map((part) => `<span class="sds-research-line">${renderMaybeHtml(part)}</span>`).join('')}
+								</span>
+							`;
+						}
+
+						function renderResearchMobileEntry(descriptor, year, isAchievement, isContent) {
+							const cell = descriptor.cell || {};
+							const contentHtml = getResearchCellContent(cell);
+							if (!getResearchPlainText(contentHtml)) return '';
+
+							const hasDownloads = Boolean(cell.groupId) && getDownloadCount(cell.groupId) > 0;
+							let content;
+							if (isAchievement) {
+								content = renderResearchAchievementContent(contentHtml);
+							} else if (isContent) {
+								content = renderResearchContentLinebox(contentHtml) || `<span class="sds-research-listbox">${renderMaybeHtml(contentHtml)}</span>`;
+							} else {
+								content = renderMaybeHtml(contentHtml);
+							}
+							const overlapStart = Math.max(descriptor.start, year.start);
+							const overlapEnd = Math.min(descriptor.end, year.end);
+							const span = Math.max(1, overlapEnd - overlapStart);
+							const style = `grid-column: span ${span}`;
+							if (cell.groupId && hasDownloads) {
+								return `
+									<button type="button" class="sds-research-mobile-entry is-download"
+										style="${style}"
+										onclick="openDownloadModal('${escapeHtml(cell.groupId)}')"
+										aria-label="${escapeHtml(getDownloadLabel(cell.groupId))}">
+										<span>${content}</span>
+										<img src="data/static/icons/download.svg" width="24" height="24" aria-hidden="true">
+									</button>
+								`;
+							}
+					
+							return `<div class="sds-research-mobile-entry" style="${style}">${content}</div>`;
+						}
+					
+						function renderResearchMobileLine(entries, year, isAchievement, isContent) {
+							const columnCount = Math.max(1, year.end - year.start);
+							const entryHtml = entries.map((entry) => renderResearchMobileEntry(entry, year, isAchievement, isContent)).filter(Boolean).join('');
+							if (!entryHtml) return '';
+							return `
+								<div class="sds-research-mobile-line" style="--sds-mobile-entry-columns:${columnCount}">
+									${entryHtml}
+								</div>
+							`;
+						}
+					
+						function renderResearchMobileGroup(label, rowEntries, year) {
+							const labelText = getResearchPlainText(label);
+							const isAchievement = /성과/.test(labelText);
+							const isContent = /내용/.test(labelText);
+							const linesHtml = rowEntries.map((entries) => renderResearchMobileLine(entries, year, isAchievement, isContent)).filter(Boolean).join('');
+							if (!linesHtml) return '';
+							return `
+								<div class="sds-research-mobile-row">
+									<dt>${renderMaybeHtml(label || '내용')}</dt>
+									<dd>${linesHtml}</dd>
+								</div>
+							`;
+						}
+					
+						function renderResearchMobileView(table) {
+							const years = getResearchYearSegments(table);
+							const { matrix, rowLabels } = buildResearchBodyMatrix(table);
+							if (!years.length || !matrix.length) return '';
+					
+							const cardsHtml = years.map((year) => {
+								const groups = [];
+								const seen = new Set();
+					
+								matrix.forEach((rowCells, rowIndex) => {
+									const label = rowLabels[rowIndex] || '내용';
+									const entries = [];
+					
+									for (let colIndex = year.start; colIndex < year.end; colIndex += 1) {
+										const descriptor = rowCells[colIndex];
+										if (!descriptor) continue;
+										const key = descriptor.id;
+										if (seen.has(key)) continue;
+										seen.add(key);
+										entries.push(descriptor);
+									}
+					
+									if (!entries.length) return;
+									const prevGroup = groups[groups.length - 1];
+									if (prevGroup && prevGroup.label === label) {
+										prevGroup.rows.push(entries);
+										return;
+									}
+									groups.push({ label, rows: [entries] });
+								});
+					
+								const rowsHtml = groups
+									.map((group) => renderResearchMobileGroup(group.label, group.rows, year))
+									.filter(Boolean)
+									.join('');
+					
+								if (!rowsHtml) return '';
+								return `
+									<section class="sds-research-mobile-card">
+										<h6>${renderMaybeHtml(year.html)}</h6>
+										<dl>${rowsHtml}</dl>
+									</section>
+								`;
+							}).filter(Boolean).join('');
+					
+							return cardsHtml ? `<div class="sds-research-mobile">${cardsHtml}</div>` : '';
+						}
+					
+						function renderResearchCell(cell, listLeft) {
+							const hasDownloads = Boolean(cell.groupId) && getDownloadCount(cell.groupId) > 0;
+							const contentLinebox = listLeft ? renderResearchContentLinebox(cell.summaryHtml || cell.html || escapeHtml(cell.text || '')) : '';
+							if (cell.groupId) {
+								const cellClass = [hasDownloads ? 'sds-download-cell' : '', listLeft ? 'is-list-left' : ''].filter(Boolean).join(' ');
+								return `
+									<td ${hasDownloads ? `onclick="openDownloadModal('${escapeHtml(cell.groupId)}')"` : ''}
+										${cellClass ? `class="${cellClass}"` : ''}
+										${cell.rowspan ? `rowspan="${cell.rowspan}"` : ''}
+										${cell.colspan ? `colspan="${cell.colspan}"` : ''}>
+										${hasDownloads ? `
+											<span class="sds-download-mark" aria-label="${escapeHtml(getDownloadLabel(cell.groupId))}">
+												<img src="data/static/icons/download.svg" width="24" height="24" aria-hidden="true">
+											</span>
+										` : ''}
+										<div class="sds-cell-content">${contentLinebox || renderMaybeHtml(cell.summaryHtml || '')}</div>
+									</td>
+								`;
+							}
+							const inner = renderMaybeHtml(cell.html || escapeHtml(cell.text || ''));
+							return `
+								<td ${listLeft ? 'class="is-list-left"' : ''}
+									${cell.rowspan ? `rowspan="${cell.rowspan}"` : ''}
+									${cell.colspan ? `colspan="${cell.colspan}"` : ''}>
+									${listLeft ? `<div class="sds-cell-content">${contentLinebox || inner}</div>` : inner}
+								</td>
+							`;
+						}
+					
+						function renderResearchSection(detail) {
+							const table = detail.researchContent;
+							let activeLabelText = '';
+							const rowsHtml = table.rows.map((row) => {
+								if (row.label) activeLabelText = getResearchPlainText(row.label);
+								const listLeft = /성과|내용/.test(activeLabelText);
+								return `
+								<tr>
+									${row.label ? `<th ${row.labelRowspan ? `rowspan="${row.labelRowspan}"` : ''}>${renderMaybeHtml(row.label)}</th>` : ''}
+									${row.cells.map((cell) => renderResearchCell(cell, listLeft)).join('')}
+								</tr>
+							`;
+							}).join('');
+							const totalCols = getResearchLeafColumnCount(table) || 10;
+							const minTableWidth = Math.min(1360, Math.max(960, totalCols * 92 + 156));
+							const stackAt = 768;
+							return `
+								<div class="sds-research-wrap" data-stack-at="${stackAt}">
+									<div class="grid sds-wide-grid" style="--sds-research-min-width:${minTableWidth}px">
+										<table class="sds-research-table">
+											${renderResearchColgroup(table)}
+											<thead>${renderResearchTableHeader(table)}</thead>
+											<tbody>${rowsHtml}</tbody>
+										</table>
+									</div>
+									${renderResearchMobileView(table)}
+								</div>
+							`;
+						}
+					
+						function renderApplicationsSection(detail) {
+							const cardsHtml = detail.applications.cards.map((card) => `
+								<div class="sds-app-card">
+									<h5 class="sds-app-card-title">${escapeHtml(card.title)}</h5>
+									<div class="sds-app-card-body">
+										<div class="sds-app-box cur">
+											<div class="label"><img src="data/static/icons/clock.svg" class="sds-icon-sm" width="24" height="24" aria-hidden="true"> 현재</div>
+											${renderMaybeHtml(card.current)}
+										</div>
+										<div class="sds-app-sep"><img src="data/static/icons/arrow-down.svg" width="24" height="24" aria-hidden="true"></div>
+										<div class="sds-app-box imp">
+											<div class="label"><img src="data/static/icons/check-circle.svg" class="sds-icon-sm" width="24" height="24" aria-hidden="true"> 개선</div>
+											${renderMaybeHtml(card.improved)}
+										</div>
+									</div>
+								</div>
+							`).join('');
+							return `
+								<div class="sds-app-overview">
+									<div class="headline sub"><h5 class="title bar">개요</h5></div>
+									<p class="sds-app-overview-text">${escapeHtml(detail.applications.overview)}</p>
+									<div class="sds-app-grid">${cardsHtml}</div>
+								</div>
+							`;
+						}
+					
+						function renderProcessSection(detail) {
+							const processImageSrc = detail.process?.processImage?.src || '';
+							const outputImages = (detail.process?.outputImages || []).filter((item) => item && item.src);
+							const processImageHtml = processImageSrc
+								? `<img src="${escapeHtml(processImageSrc)}" alt="${escapeHtml(detail.process.processImage.alt || '')}" class="sds-process-img">`
+								: `<div class="sds-no-data subtle">등록된 프로세스 이미지가 없습니다.</div>`;
+							const outputImagesHtml = outputImages.length
+								? outputImages.map((item) => `
+									<div class="sds-out-img">
+										<img src="${escapeHtml(item.src)}" alt="${escapeHtml(item.alt || '')}">
+										${item.caption ? `<p class="sds-out-img-caption">${escapeHtml(item.caption)}</p>` : ''}
+									</div>
+								`).join('')
+								: `<div class="sds-no-data subtle">등록된 출력 이미지가 없습니다.</div>`;
+							const outputContent = `
+								<div class="sds-mobile-table-stack">
+									<div>${detail.process.outputHtml || ''}</div>
+									<div>${outputImagesHtml}</div>
+								</div>
+							`;
+							return `
+								<div class="grid sds-desktop-table">
+									<table>
+										<colgroup>
+											<col width="128px">
+											<col width="*">
+										</colgroup>
+										<thead>
+											<tr><th>구분</th><th>내용</th></tr>
+										</thead>
+										<tbody>
+											<tr>
+												<th>프로세스</th>
+												<td>${processImageHtml}</td>
+											</tr>
+											<tr>
+												<th>입력 데이터</th>
+												<td>${detail.process.inputHtml || ''}</td>
+											</tr>
+											<tr>
+												<th rowspan="2">출력 데이터</th>
+												<td>${detail.process.outputHtml || ''}</td>
+											</tr>
+											<tr>
+												<td>${outputImagesHtml}</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<dl class="sds-mobile-table sds-mobile-table-process">
+									<div class="sds-mobile-table-row">
+										<dt>프로세스</dt>
+										<dd>${processImageHtml}</dd>
+									</div>
+									<div class="sds-mobile-table-row">
+										<dt>입력 데이터</dt>
+										<dd>${detail.process.inputHtml || ''}</dd>
+									</div>
+									<div class="sds-mobile-table-row">
+										<dt>출력 데이터</dt>
+										<dd>${outputContent}</dd>
+									</div>
+								</dl>
+							`;
+						}
+					
+						function hasDemoSection(detail) {
+							return Boolean(String(detail.demo?.src || '').trim());
+						}
+					
+						function renderDemoSection(detail) {
+							const demoSrc = String(detail.demo?.src || '').trim();
+							return `
+								<div class="sds-demo-container">
+									<div onclick="window.open('${escapeHtml(demoSrc)}', '_blank', 'noopener,noreferrer')"
+										class="sds-external-btn">
+										<img src="data/static/icons/external-link-white.svg" class="sds-icon-sm" width="24" height="24" aria-hidden="true"> 새 탭으로 열기
+									</div>
+									<iframe src="${escapeHtml(demoSrc)}" frameborder="0" title="Demo SW"></iframe>
+								</div>
+							`;
+						}
+					
+						function normalizeInstitutionContact(contact) {
+							return {
+								name: contact?.name || '',
+								role: contact?.role || '',
+								email: contact?.email || '',
+								phone: contact?.phone || ''
+							};
+						}
+					
+						function hasInstitutionContact(contact) {
+							return Object.values(contact).some((value) => String(value || '').trim());
+						}
+					
+						function getInstitutionContacts(institutions) {
+							const leadContacts = (institutions?.leadContacts || []).map(normalizeInstitutionContact).filter(hasInstitutionContact);
+							const partnerContacts = (institutions?.partners || []).map(normalizeInstitutionContact).filter(hasInstitutionContact);
+							const legacyInquiries = (institutions?.inquiries || []).map(normalizeInstitutionContact).filter(hasInstitutionContact);
+							return {
+								leadContacts,
+								partnerContacts: partnerContacts.concat(legacyInquiries)
+							};
+						}
+					
+						function renderInstitutionRows(contacts) {
+							if (!contacts.length) {
+								return '<tr><td colspan="4" class="sds-no-table-data">등록된 담당자 정보가 없습니다.</td></tr>';
+							}
+							return contacts.map((contact) => `
+								<tr>
+									<td>${escapeHtml(contact.name)}</td>
+									<td>${escapeHtml(contact.role)}</td>
+									<td>${escapeHtml(contact.email)}</td>
+									<td>${escapeHtml(contact.phone)}</td>
+								</tr>
+							`).join('');
+						}
+					
+						function renderInstitutionMobileRows(contacts) {
+							if (!contacts.length) {
+								return `
+									<div class="sds-mobile-table-row">
+										<dd class="sds-no-table-data">등록된 담당자 정보가 없습니다.</dd>
+									</div>
+								`;
+							}
+							return contacts.map((contact) => `
+								<div class="sds-mobile-table-record">
+									<div class="sds-mobile-table-row">
+										<dt>담당자명</dt>
+										<dd>${escapeHtml(contact.name)}</dd>
+									</div>
+									<div class="sds-mobile-table-row">
+										<dt>담당업무</dt>
+										<dd>${escapeHtml(contact.role)}</dd>
+									</div>
+									<div class="sds-mobile-table-row">
+										<dt>이메일</dt>
+										<dd>${escapeHtml(contact.email)}</dd>
+									</div>
+									<div class="sds-mobile-table-row">
+										<dt>전화번호</dt>
+										<dd>${escapeHtml(contact.phone)}</dd>
+									</div>
+								</div>
+							`).join('');
+						}
+					
+						function renderInstitutionsSection(detail) {
+							const { leadContacts, partnerContacts } = getInstitutionContacts(detail.institutions || {});
+							const institutionColgroup = `<colgroup><col style="width:15%"><col style="width:20%"><col style="width:40%"><col style="width:25%"></colgroup>`;
+							const partnerSectionHtml = partnerContacts.length ? `
+										<div class="headline sub"><h5 class="title bar">수행기관(공동)</h5></div>
+										<div class="grid sds-desktop-table">
+											<table>
+												${institutionColgroup}
+												<thead>
+													<tr><th>담당자명</th><th>담당업무</th><th>이메일</th><th>전화번호</th></tr>
+												</thead>
+												<tbody>${renderInstitutionRows(partnerContacts)}</tbody>
+											</table>
+										</div>
+										<dl class="sds-mobile-table sds-mobile-table-contact">${renderInstitutionMobileRows(partnerContacts)}</dl>` : '';
+							return `
+								<div class="sds-detail-stack">
+									<div>
+										<div class="headline sub"><h5 class="title bar">수행기관(주관)</h5></div>
+										<div class="grid sds-desktop-table">
+											<table>
+												${institutionColgroup}
+												<thead>
+													<tr><th>담당자명</th><th>담당업무</th><th>이메일</th><th>전화번호</th></tr>
+												</thead>
+												<tbody>${renderInstitutionRows(leadContacts)}</tbody>
+											</table>
+										</div>
+										<dl class="sds-mobile-table sds-mobile-table-contact">${renderInstitutionMobileRows(leadContacts)}</dl>
+										${partnerSectionHtml}
+									</div>
+								</div>
+							`;
+						}
+					
+						function prepareDownloadMaps(detail) {
+							downloadGroupMap = {};
+							downloadItemMap = {};
+							getDownloadGroups(detail).forEach((group) => {
+								downloadGroupMap[group.id] = group;
+								(group.folders || []).forEach((folder, folderIndex) => {
+									(folder.items || []).forEach((item, itemIndex) => {
+										const uid = `${group.id}-${folderIndex}-${itemIndex}`;
+										const folderName = folder.name || folder.folder || '폴더';
+										item.__uid = uid;
+										downloadItemMap[uid] = { ...item, groupId: group.id, yearLabel: group.yearLabel, folderName };
+									});
+								});
+							});
+						}
+					
+						function renderDownloadModalItem(item) {
+							const extMeta = getExtensionMeta(getFileExtensionToken(item) || item.ext);
+							const actionClass = item.url ? 'link' : 'dl';
+							const actionLabel = item.url ? '링크로 이동' : '다운로드';
+							const actionIconName = item.url ? 'external-link' : 'download';
+							return `
+								<div class="sds-modal-item" role="button" tabindex="0" aria-label="${escapeHtml(`${getItemDisplayName(item)} ${actionLabel}`)}"
+									onclick="triggerDownloadByUid('${escapeHtml(item.__uid)}')"
+									onkeydown="if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); triggerDownloadByUid('${escapeHtml(item.__uid)}'); }">
+									<div class="sds-modal-item-info">
+										<div class="sds-icon-box ${extMeta.extClass}">
+											<img src="data/static/icons/${escapeHtml(extMeta.iconName)}.svg" width="24" height="24" aria-hidden="true">
+										</div>
+										<div class="sds-txt-box">
+											<div class="name">${escapeHtml(getItemDisplayName(item))}</div>
+											<div class="meta">
+												${renderDownloadFormatBadge(item)}
+												${escapeHtml(item.size || '')}
+											</div>
+										</div>
+									</div>
+									<span class="sds-modal-action-btn ${actionClass}" aria-hidden="true">
+										<img src="data/static/icons/${actionIconName}.svg" class="sds-icon-sm" width="24" height="24" aria-hidden="true">
+									</span>
+								</div>
+							`;
+						}
+					
+						function openDownloadModal(groupId) {
+							let title = '';
+							let items = [];
+							if (groupId === '__all__') {
+								title = `${currentDetail.title} 전체 성과물`;
+								items = Object.values(downloadItemMap);
+								modalContext = { type: 'all' };
+							} else {
+								const group = downloadGroupMap[groupId];
+								if (!group) return;
+								title = `${group.yearLabel} 성과물`;
+								items = getGroupItems(group);
+								modalContext = { type: 'year', groupId, yearLabel: group.yearLabel };
+							}
+							modalDownloadItems = items;
+							document.getElementById('modalTitle').textContent = title;
+							document.getElementById('modalFileList').innerHTML = items.map(renderDownloadModalItem).join('');
+							document.getElementById('modalDownloadAllBtn').disabled = !getZipDownloadItems(items).length;
+							const modal = document.getElementById('downloadModal');
+							modal.classList.remove('hide');
+							modal.setAttribute('aria-hidden', 'false');
+						}
+					
+						function closeDownloadModal() {
+							const modal = document.getElementById('downloadModal');
+							modal.classList.add('hide');
+							modal.setAttribute('aria-hidden', 'true');
+							modalDownloadItems = [];
+							modalContext = null;
+						}
+					
+						function downloadSampleFile(item) {
+							const ext = String(item.ext || '').toLowerCase();
+							const fileName = item.name || `download.${ext}`;
+							const content = `[연구성과 개방포털]\n파일명: ${fileName}\n파일키: ${item.fileKey || '-'}\n본 파일은 JSON 기반 시연용 샘플입니다.`;
+							const blob = new Blob([content], { type: 'text/plain;charset=utf-8' });
+							const url = URL.createObjectURL(blob);
+							const anchor = document.createElement('a');
+							anchor.href = url;
+							anchor.download = fileName;
+							document.body.appendChild(anchor);
+							anchor.click();
+							document.body.removeChild(anchor);
+							URL.revokeObjectURL(url);
+						}
+					
+						function resolveDownloadFileUrl(item) {
+							const raw = String(item?.fileKey || '').trim();
+							if (!raw) return '';
+							if (/^https?:\/\//i.test(raw)) return raw;
+							if (/^(?:\.{1,2}\/)?data\//i.test(raw)) return raw.replace(/^\.\//, '');
+							if (/^research\//i.test(raw)) return `data/${raw}`;
+							if (/^projects\//i.test(raw)) return `data/contents/research/${raw}`;
+							return '';
+						}
+					
+						function isZipDownloadItem(item) {
+							return !item?.url && Boolean(resolveDownloadFileUrl(item));
+						}
+					
+						function getZipDownloadItems(items) {
+							return (items || []).filter(isZipDownloadItem);
+						}
+					
+						function startDirectDownload(item) {
+							const href = resolveDownloadFileUrl(item);
+							if (!href) { downloadSampleFile(item); return; }
+							const anchor = document.createElement('a');
+							anchor.href = href;
+							if (item.name) anchor.download = item.name;
+							document.body.appendChild(anchor);
+							anchor.click();
+							document.body.removeChild(anchor);
+						}
+					
+						function sanitizeZipSegment(value, fallback = 'download') {
+							const text = String(value || '').trim()
+								.replace(/[\\/:*?"<>|]/g, '_')
+								.replace(/\s+/g, ' ');
+							return text || fallback;
+						}
+					
+						function getZipFileName() {
+							const title = sanitizeZipSegment(currentDetail?.title || 'research', 'research');
+							if (modalContext?.type === 'year' && modalContext.yearLabel) {
+								const year = sanitizeZipSegment(modalContext.yearLabel, '연도');
+								return `${title} (${year}).zip`;
+							}
+							return `${title}.zip`;
+						}
+					
+						function getZipItemFileName(item, index) {
+							const ext = getFileExtensionToken(item);
+							let fileName = sanitizeZipSegment(item?.name || '', `download-${index + 1}`);
+							if (ext && !fileName.toLowerCase().endsWith(`.${ext}`)) {
+								fileName = `${fileName}.${ext}`;
+							}
+							return fileName;
+						}
+					
+						function getZipEntryPath(item, index) {
+							return getZipItemFileName(item, index);
+						}
+					
+						function dedupeZipPath(usedPaths, candidate) {
+							if (!usedPaths.has(candidate)) {
+								usedPaths.add(candidate);
+								return candidate;
+							}
+							const dotIndex = candidate.lastIndexOf('.');
+							const base = dotIndex > 0 ? candidate.slice(0, dotIndex) : candidate;
+							const ext = dotIndex > 0 ? candidate.slice(dotIndex) : '';
+							let n = 2;
+							let next;
+							do {
+								next = `${base} (${n})${ext}`;
+								n += 1;
+							} while (usedPaths.has(next));
+							usedPaths.add(next);
+							return next;
+						}
+					
+						function getCrc32Table() {
+							if (window.__sdsCrc32Table) return window.__sdsCrc32Table;
+							const table = new Uint32Array(256);
+							for (let i = 0; i < 256; i += 1) {
+								let c = i;
+								for (let j = 0; j < 8; j += 1) c = (c & 1) ? (0xedb88320 ^ (c >>> 1)) : (c >>> 1);
+								table[i] = c >>> 0;
+							}
+							window.__sdsCrc32Table = table;
+							return table;
+						}
+					
+						function crc32(bytes) {
+							const table = getCrc32Table();
+							let crc = 0xffffffff;
+							for (let i = 0; i < bytes.length; i += 1) crc = table[(crc ^ bytes[i]) & 0xff] ^ (crc >>> 8);
+							return (crc ^ 0xffffffff) >>> 0;
+						}
+					
+						function dateToDosTime(date = new Date()) {
+							return {
+								time: (date.getHours() << 11) | (date.getMinutes() << 5) | Math.floor(date.getSeconds() / 2),
+								date: ((date.getFullYear() - 1980) << 9) | ((date.getMonth() + 1) << 5) | date.getDate()
+							};
+						}
+					
+						function writeUint16(view, offset, value) {
+							view.setUint16(offset, value, true);
+						}
+					
+						function writeUint32(view, offset, value) {
+							view.setUint32(offset, value >>> 0, true);
+						}
+					
+						function createZipBlob(entries) {
+							const encoder = new TextEncoder();
+							const chunks = [];
+							const centralChunks = [];
+							let offset = 0;
+							const { time, date } = dateToDosTime();
+					
+							entries.forEach((entry) => {
+								const nameBytes = encoder.encode(entry.path);
+								const data = entry.data instanceof Uint8Array ? entry.data : new Uint8Array(entry.data);
+								const crc = crc32(data);
+								const local = new ArrayBuffer(30);
+								const localView = new DataView(local);
+								writeUint32(localView, 0, 0x04034b50);
+								writeUint16(localView, 4, 20);
+								writeUint16(localView, 6, 0x0800);
+								writeUint16(localView, 8, 0);
+								writeUint16(localView, 10, time);
+								writeUint16(localView, 12, date);
+								writeUint32(localView, 14, crc);
+								writeUint32(localView, 18, data.length);
+								writeUint32(localView, 22, data.length);
+								writeUint16(localView, 26, nameBytes.length);
+								writeUint16(localView, 28, 0);
+								chunks.push(local, nameBytes, data);
+					
+								const central = new ArrayBuffer(46);
+								const centralView = new DataView(central);
+								writeUint32(centralView, 0, 0x02014b50);
+								writeUint16(centralView, 4, 20);
+								writeUint16(centralView, 6, 20);
+								writeUint16(centralView, 8, 0x0800);
+								writeUint16(centralView, 10, 0);
+								writeUint16(centralView, 12, time);
+								writeUint16(centralView, 14, date);
+								writeUint32(centralView, 16, crc);
+								writeUint32(centralView, 20, data.length);
+								writeUint32(centralView, 24, data.length);
+								writeUint16(centralView, 28, nameBytes.length);
+								writeUint16(centralView, 30, 0);
+								writeUint16(centralView, 32, 0);
+								writeUint16(centralView, 34, 0);
+								writeUint16(centralView, 36, 0);
+								writeUint32(centralView, 38, 0);
+								writeUint32(centralView, 42, offset);
+								centralChunks.push(central, nameBytes);
+					
+								offset += 30 + nameBytes.length + data.length;
+							});
+					
+							const centralSize = centralChunks.reduce((sum, chunk) => sum + chunk.byteLength, 0);
+							const end = new ArrayBuffer(22);
+							const endView = new DataView(end);
+							writeUint32(endView, 0, 0x06054b50);
+							writeUint16(endView, 4, 0);
+							writeUint16(endView, 6, 0);
+							writeUint16(endView, 8, entries.length);
+							writeUint16(endView, 10, entries.length);
+							writeUint32(endView, 12, centralSize);
+							writeUint32(endView, 16, offset);
+							writeUint16(endView, 20, 0);
+					
+							return new Blob([...chunks, ...centralChunks, end], { type: 'application/zip' });
+						}
+					
+						async function buildZipEntries(items) {
+							const encoder = new TextEncoder();
+							const entries = [];
+							const usedPaths = new Set();
+							for (const [index, item] of getZipDownloadItems(items).entries()) {
+								const entryPath = getZipEntryPath(item, index);
+								const href = resolveDownloadFileUrl(item);
+					
+								try {
+									const response = await fetch(href);
+									if (!response.ok) throw new Error(`${response.status} ${response.statusText}`);
+									entries.push({ path: dedupeZipPath(usedPaths, entryPath), data: new Uint8Array(await response.arrayBuffer()) });
+								} catch (error) {
+									const content = `[연구성과 개방포털]\n파일명: ${getItemDisplayName(item)}\n파일키: ${item.fileKey || '-'}\n오류: ${error.message}`;
+									entries.push({ path: dedupeZipPath(usedPaths, `${entryPath}_다운로드실패.txt`), data: encoder.encode(content) });
+								}
+							}
+							return entries;
+						}
+					
+						function saveBlob(blob, fileName) {
+							const url = URL.createObjectURL(blob);
+							const anchor = document.createElement('a');
+							anchor.href = url;
+							anchor.download = fileName;
+							document.body.appendChild(anchor);
+							anchor.click();
+							document.body.removeChild(anchor);
+							URL.revokeObjectURL(url);
+						}
+					
+						async function downloadModalItems(event) {
+							const zipItems = getZipDownloadItems(modalDownloadItems);
+							if (!zipItems.length) {
+								alert('ZIP으로 묶을 다운로드 파일이 없습니다.');
+								return;
+							}
+							const button = event?.currentTarget;
+							const originalHtml = button ? button.innerHTML : '';
+							if (button) {
+								button.disabled = true;
+								button.innerHTML = '<img src="data/static/icons/archive.svg" class="sds-icon-sm" width="24" height="24" aria-hidden="true"> ZIP 생성 중';
+							}
+							try {
+								const entries = await buildZipEntries(zipItems);
+								saveBlob(createZipBlob(entries), getZipFileName());
+								if (button) {
+									button.innerHTML = '<img src="data/static/icons/check.svg" class="sds-icon-sm" width="24" height="24" aria-hidden="true"> 완료';
+								}
+							} finally {
+								if (button) {
+									setTimeout(() => {
+										button.disabled = false;
+										button.innerHTML = originalHtml;
+									}, 1200);
+								}
+							}
+						}
+					
+						function triggerDownloadByUid(uid, event) {
+							const item = downloadItemMap[uid];
+							if (!item) return;
+							const button = event?.currentTarget;
+							const originalHtml = button ? button.innerHTML : '';
+							if (button) {
+								button.innerHTML = '<img src="data/static/icons/check.svg" class="sds-icon-sm" width="24" height="24" aria-hidden="true"> 완료';
+								button.classList.add('done');
+							}
+							if (item.url) {
+								window.open(item.url, '_blank', 'noopener,noreferrer');
+							} else {
+								startDirectDownload(item);
+							}
+							if (button) {
+								setTimeout(() => {
+									button.disabled = false;
+									button.innerHTML = originalHtml;
+									button.classList.remove('done');
+								}, 2000);
+							}
+						}
+					
+						function triggerDownloadByUidOnMobile(uid, event) {
+							if (!window.matchMedia('(max-width: 768px)').matches) return;
+							event?.preventDefault();
+							event?.stopPropagation();
+							triggerDownloadByUid(uid);
+						}
+					
+						function renderDownloadItemIcon(item) {
+							const guideFormat = getGuideFormatMeta(item);
+							const className = guideFormat?.className ? ` class="${escapeHtml(guideFormat.className)}"` : '';
+							const label = guideFormat?.label || getFileExtensionToken(item) || 'file';
+							return `
+								<span class="format sds-tree-format" aria-hidden="true">
+									<span${className}>${escapeHtml(label)}</span>
+								</span>
+							`;
+						}
+					
+						function renderDownloadFormatBadge(item) {
+							return renderDownloadItemIcon(item);
+						}
+					
+						function renderDownloadItemRow(item, isLast = false) {
+							const actionHtml = item.url
+								? `<button onclick="triggerDownloadByUid('${escapeHtml(item.__uid)}', event)"
+										class="sds-tree-btn link" type="button">
+										<img src="data/static/icons/external-link.svg" class="sds-icon-sm" width="24" height="24" aria-hidden="true">이동하기</button>`
+								: `
+									<button onclick="triggerDownloadByUid('${escapeHtml(item.__uid)}', event)"
+										class="sds-tree-btn dl" type="button">
+										<img src="data/static/icons/download-white.svg" class="sds-icon-sm" width="24" height="24" aria-hidden="true">다운로드
+									</button>
+								`;
+							return `
+								<div class="sds-tree-file-row${isLast ? ' sds-tree-file-last' : ''}">
+									${renderDownloadItemIcon(item)}
+									<span class="name" onclick="triggerDownloadByUidOnMobile('${escapeHtml(item.__uid)}', event)">${escapeHtml(item.name)} <span class="size">| ${escapeHtml(item.size || item.ext || '')}</span></span>
+									<div class="sds-dl-actions">${actionHtml}</div>
+								</div>
+							`;
+						}
+					
+						function nextTreeNodeId(prefix) {
+							treeNodeCounter += 1;
+							return `${prefix}-${treeNodeCounter}`;
+						}
+					
+						function renderTreeBranch(title, iconName, childHtml, expanded = true, isLast = false) {
+							const nodeId = nextTreeNodeId('tree');
+							return `
+								<div class="sds-tree-line${isLast ? ' sds-tree-item-last' : ''}">
+									<div class="sds-tree-row" onclick="toggleTree('${nodeId}', 'icon-${nodeId}')">
+										<div class="sds-tree-toggle" id="icon-${nodeId}">${expanded ? '-' : '+'}</div>
+										<img src="data/static/icons/${escapeHtml(iconName)}.svg" class="sds-folder-icon" width="24" height="24" aria-hidden="true">
+										<span class="sds-folder-name">${escapeHtml(title)}</span>
+									</div>
+									<div id="${nodeId}" class="sds-tree-children${expanded ? '' : ' hide'}">
+										${childHtml}
+									</div>
+								</div>
+							`;
+						}
+					
+						function renderFilesSection(detail) {
+							treeNodeCounter = 0;
+							const groups = getDownloadGroups(detail);
+							const yearBranches = groups.map((group, groupIndex) => {
+								const folderBranches = (group.folders || []).map((folder, folderIndex) => {
+									const items = folder.items || [];
+									const itemRows = items.map((item, itemIndex) => renderDownloadItemRow(item, itemIndex === items.length - 1)).join('');
+									const folderTitle = folder.name || folder.folder || '폴더';
+									return renderTreeBranch(folderTitle, 'folder-open', `<div class="sds-tree-children bundle">${itemRows}</div>`, true, folderIndex === group.folders.length - 1);
+								}).join('');
+								return renderTreeBranch(group.yearLabel, 'folder-open', folderBranches, true, groupIndex === groups.length - 1);
+							}).join('');
+							const rootBranch = renderTreeBranch(detail.title, 'folder-open', yearBranches, true, true);
+							return `
+								<div class="inner">
+									<div class="headline sds-files-headline">
+										<h3 class="title">
+											<img src="data/static/icons/folder-tree.svg" class="sds-icon-lg" width="24" height="24" aria-hidden="true"> 성과 목록
+										</h3>
+										<div class="sds-files-actions">
+											<button onclick="openAllDownloads()" class="bt sds-tree-btn">
+												<img src="data/static/icons/download.svg" class="sds-icon-sm" width="24" height="24" aria-hidden="true"> 전체 다운로드
+											</button>
+										</div>
+									</div>
+									<div class="sds-files-container">
+										${rootBranch}
+									</div>
+								</div>
+							`;
+						}
+					
+						function openAllDownloads() {
+							if (!getDownloadGroups(currentDetail || {}).length) return;
+							openDownloadModal('__all__');
+						}
+					
+						function toggleTree(id, iconId) {
+							const panel = document.getElementById(id);
+							const icon = document.getElementById(iconId);
+							if (panel.classList.contains('hide')) {
+								panel.classList.remove('hide');
+								icon.innerText = '-';
+							} else {
+								panel.classList.add('hide');
+								icon.innerText = '+';
+							}
+						}
+					
+						function renderIntro(detail) {
+							accordionNodeCounter = 0;
+							const sections = [
+								{ key: 'overview',      title: '연구 개요',           html: renderOverviewSection(detail),      open: true },
+								{ key: 'research',      title: '연구 수행 내용',      html: renderResearchSection(detail),      open: true  },
+								{ key: 'applications',  title: '활용처/분야',          html: renderApplicationsSection(detail),      open: true  },
+								{ key: 'process',       title: '데이터 처리 프로세스', html: renderProcessSection(detail),      open: true  },
+								hasDemoSection(detail)
+									? { key: 'demo',      title: '데모 (SW)',            html: renderDemoSection(detail),      open: true  }
+									: null,
+								{ key: 'institutions',  title: '수행 기관',            html: renderInstitutionsSection(detail),      open: true  }
+							].filter(Boolean);
+							document.getElementById('content-intro').innerHTML =
+								sections.map((s) => renderAccordion(s.key, s.title, s.html, s.open)).join('');
+						}
+					
+						function renderDetail(detail) {
+							currentDetail = detail;
+							prepareDownloadMaps(detail);
+							renderSummary(detail);
+							renderIntro(detail);
+							document.getElementById('content-files').innerHTML = renderFilesSection(detail);
+							switchTab('intro');
+					
+							showDetailPage();
+							bindResearchResponsiveSwitch();
+						}
+					
+						function bindResearchResponsiveSwitch() {
+							if (!window.ResizeObserver) return;
+							document.querySelectorAll('.sds-research-wrap[data-stack-at]').forEach((wrap) => {
+								if (wrap.dataset.stackBound === '1') return;
+								wrap.dataset.stackBound = '1';
+								const stackAt = Number(wrap.dataset.stackAt) || 768;
+								const observer = new ResizeObserver((entries) => {
+									for (const entry of entries) {
+										const width = entry.contentRect.width;
+										wrap.classList.toggle('is-stacked', width > 0 && width < stackAt);
+									}
+								});
+								observer.observe(wrap);
+							});
+						}
+					
+						async function init() {
+							if (isAdminPreviewMode()) {
+								try {
+									renderDetail(loadAdminPreviewDetail());
+								} catch (error) {
+									showState(`${error.message} 관리자 화면에서 다시 미리보기를 열어 주세요.`, true, '');
+								}
+								return;
+							}
+					
+							const detailId = resolveDetailId();
+							if (!detailId) {
+								showState('URL에 id 파라미터가 없습니다. (?id=101 형식으로 접근하세요.)', true);
+								return;
+							}
+							let detail;
+							try {
+								detail = await loadDetailById(detailId);
+							} catch (error) {
+								if (error.status === 404) {
+									showState('연구성과가 등록되지 않았습니다.', true, '요청하신 연구성과 상세 정보가 아직 등록되지 않았습니다.');
+									return;
+								}
+								showState(`${error.message} Live Server 등 정적 서버에서 열어 주세요.`, true);
+								return;
+							}
+							renderDetail(detail);
+						}
+					
+						document.addEventListener('DOMContentLoaded', () => {
+							init();
+						});
+					</script>
+
+				<article class="article sds detail">
+					<div class="headline">
+						<div class="inner">
+							<h3 class="title">디지털 국토정보 기술개발 사업 연구성과 시스템</h3>
+						</div>
+					</div>
+
+					<article class="content">
+						<div class="inner sds-page-main">
+							<nav class="tabs bd br fix">
+								<ul>
+									<li><a href="index.html" class="tab off" title="">메인</a></li>
+									<li><a href="intro.html" class="tab off" title="">전체개요</a></li>
+									<li><a href="tech.html" class="tab off" title="">주요핵심기술</a></li>
+									<li><a href="list.html" class="tab off on" title="선택된 탭">대표연구성과</a></li>
+								</ul>
+							</nav>
+							<div id="pageState" class="sds-state-panel">
+								데이터를 불러오는 중입니다.
+							</div>
+						</div>
+
+						<div id="detailPage" class="hide sds-animate-fade-in">
+							<div class="inner">
+								<div id="summaryContainer"></div>
+							</div>
+							<div class="inner">
+								<nav class="tabs bd max" aria-label="연구성과 상세 탭">
+									<ul>
+										<li><button type="button" class="tab on" id="tab-btn-intro" title="선택된 탭" onclick="switchTab('intro')">소개</button></li>
+										<li><button type="button" class="tab" id="tab-btn-files" title="" onclick="switchTab('files')">성과 목록 (데이터 다운로드)</button></li>
+									</ul>
+								</nav>
+							</div>
+							<div id="content-intro"></div>
+							<div id="content-files" class="hide"></div>
+						</div>
+					</article>
+
+					<!-- 다운로드 모달 (vworld 표준 .popup) -->
+					<article class="popup hide" id="downloadModal" role="dialog" aria-hidden="true" aria-labelledby="modalTitle">
+						<div class="conWrap">
+							<div class="conHead">
+								<h5 id="modalTitle" class="title"></h5>
+								<button type="button" class="bt ico close only" onclick="closeDownloadModal()">닫기</button>
+							</div>
+							<div id="modalFileList" class="conBody"></div>
+							<div class="conFoot">
+								<div class="btns">
+									<button type="button" class="bt max bd primary" onclick="downloadModalItems(event)" id="modalDownloadAllBtn">
+										<img src="data/static/icons/download.svg" class="sds-icon-sm" width="24" height="24" aria-hidden="true"> 전체 다운로드
+									</button>
+									<button type="button" class="bt max bg" onclick="closeDownloadModal()">닫기</button>
+								</div>
+							</div>
+						</div>
+					</article>
+				</article>
+			</section>
+
+			<footer class="footer">
+
+				<nav class="nav">
+					<ul>
+						<li><a href="javascript:urlFnc.goAgree();" class="menu">이용약관</a></li>
+						<li><a href="javascript:urlFnc.goPrivacy();" class="menu"><strong>개인정보처리방침</strong></a></li>
+						<li><a href="javascript:urlFnc.goUnauthEmail();" class="menu">이메일무단수집거부</a></li>
+						<li><a href="javascript:urlFnc.goCpyrht();" class="menu">저작권정책</a></li>
+						<li><a href="javascript:urlFnc.goIntrcn();" class="menu">브이월드소개</a></li>
+					</ul>
+				</nav>
+				<div class="cscenter">
+					<h6 class="title">고객센터
+					<em>
+						<div class="btns">
+							<a href="tel:16610115" class="bt ico call bg">1661 - 0115</a>
+							<a href="mailto:vworld@spacen.or.kr" class="bt ico mail bg">vworld@spacen.or.kr</a>
+						</div>
+					</em>
+					</h6>
+					<div class="btns"><em>평일 09:00 ~ 18:00 (중식 12:00 ~ 13:00) / 주말 및 공휴일 휴무</em></div>
+					<div class="spacen">
+						<div class="logo"><strong>공간정보산업진흥원</strong></div>
+						<p class="address">[13487] 경기 성남시 분당구 판교로 242 PDC타워 C동 601호 공간정보산업진흥원</p>
+					</div>
+				</div>
+				<div class="organizer">
+					<div class="logo"><strong>V-world</strong>디지털트윈국토</div>
+					<p class="address">[30103] 세종특별자치시 도움6로 11 국토교통부</p>
+					<p class="copyright">Copyright (C) Ministry of Land, Infrastructure and Transport 2023. All Rights Reserved.</p>
+				</div>
+				<div class="set">
+					<label for="footerPageMove" class="blind">사이트 바로가기</label>
+					<select class="select" id="footerPageMove">
+						<option value="" selected="">사이트 바로가기</option>
+						<option value="https://www.molit.go.kr/">국토교통부</option>
+						<option value="https://www.ngii.go.kr/">국토지리정보원</option>
+						<option value="http://spacen.or.kr/">공간정보산업진흥원</option>
+						<option value="https://www.spacein.kr/">공간정보교육포털</option>
+						<option value="https://www.lx.or.kr/kor.do">한국국토정보공사</option>
+					</select>
+					<button class="bt bg" onclick="footerObj.move();">이동</button>
+				</div>
+				<a href="#top" class="bt ico go only">상단 이동</a>
+			</footer>
+
+		</div><!-- /template.sub -->
+	</div><!-- /container -->
+
+	
+</body>
+</html>

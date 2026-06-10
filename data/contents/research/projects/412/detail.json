@@ -1,0 +1,246 @@
+{
+  "id": "412",
+  "core": "4핵심",
+  "coreColor": "core4",
+  "ctCode": "핵심기술3",
+  "ctTitle": "동적정보 분석, 예측 및 표현기술 개발",
+  "cteCode": "세부기술6",
+  "output_code": "성과물12",
+  "title": "다차원 시계열 동적정보 가시화 기술",
+  "registeredAt": "",
+  "summaryInstitutions": [
+    "이안에스아이티"
+  ],
+  "overview": {
+    "description": "동적주제도 구축 및 갱신 통합 SW를 통해 구축되는 다차원적인 동적주제도 및 동적정보를 가시화하는 시스템",
+    "descriptionNote": "",
+    "necessityRows": [
+      [
+        {
+          "html": "다차원 시계열 동적정보 시각화 시스템 부재"
+        },
+        {
+          "html": "다차원 시계열 동적정보 및 동적주제도 시각화"
+        }
+      ],
+      [
+        {
+          "html": "실시간 대용량 동적정보 및 동적주제도를 3차원 시각화하는 시스템 부재"
+        },
+        {
+          "html": "실시간 대용량의 동적정보 및 동적주제도를 고속으로 3차원 시각화"
+        }
+      ]
+    ]
+  },
+  "researchContent": {
+    "headerRows": [
+      [
+        {
+          "html": "구분",
+          "rowspan": 2
+        },
+        {
+          "html": "연구 수행 내용",
+          "colspan": 10
+        }
+      ],
+      [
+        {
+          "html": "'22 (1차년도)",
+          "colspan": 2
+        },
+        {
+          "html": "'23 (2차년도)",
+          "colspan": 2
+        },
+        {
+          "html": "'24 (3차년도)",
+          "colspan": 2
+        },
+        {
+          "html": "'25 (4차년도)",
+          "colspan": 2
+        },
+        {
+          "html": "'26 (5차년도)",
+          "colspan": 2
+        }
+      ]
+    ],
+    "rows": [
+      {
+        "label": "주요 연구 내용",
+        "cells": [
+          {
+            "html": "다차원 동적정보 가시화 방안 수립",
+            "colspan": 2
+          },
+          {
+            "html": "3차원 공간 동적정보 가시화 기술 개발",
+            "colspan": 2
+          },
+          {
+            "html": "LOD별 동적정보 가시화 기술 개발",
+            "colspan": 2
+          },
+          {
+            "html": "시계열 동적주제도 가시화 기술 개발",
+            "colspan": 2
+          },
+          {
+            "html": "다차원 동적정보 가시화 기술 개발",
+            "colspan": 2
+          }
+        ]
+      },
+      {
+        "label": "정량적 성능목표",
+        "cells": [
+          {
+            "html": "다차원 동적정보 가시화 방안 적정판정",
+            "colspan": 2
+          },
+          {
+            "html": "3차원 공간 동적정보 가시화 1분이내",
+            "colspan": 2
+          },
+          {
+            "html": "LOD별 가시화 1분이내",
+            "colspan": 2
+          },
+          {
+            "html": "시계열 동적주제도 가시화 1분이내",
+            "colspan": 2
+          },
+          {
+            "html": "다차원 동적정보 가시화 1분이내",
+            "colspan": 2
+          }
+        ]
+      },
+      {
+        "label": "테스트 일정·결과",
+        "cells": [
+          {
+            "html": "'22.12."
+          },
+          {
+            "html": "전문가 적정판정"
+          },
+          {
+            "html": "'23.11."
+          },
+          {
+            "html": "전문가 적정판정"
+          },
+          {
+            "html": "'24.11."
+          },
+          {
+            "html": "전문가 적정판정"
+          },
+          {
+            "html": "'25.12."
+          },
+          {
+            "html": "전문가 적정판정"
+          },
+          {
+            "html": "'26.10. (예정)"
+          },
+          {
+            "html": "-"
+          }
+        ]
+      },
+      {
+        "label": "주요 연구 성과",
+        "cells": [
+          {
+            "groupId": "y22",
+            "summaryHtml": "SW등록 1건",
+            "colspan": 2
+          },
+          {
+            "groupId": "y23",
+            "summaryHtml": "SW등록 1건",
+            "colspan": 2
+          },
+          {
+            "groupId": "y24",
+            "summaryHtml": "SW등록 1건<br>특허출원 1건",
+            "colspan": 2
+          },
+          {
+            "groupId": "y25",
+            "summaryHtml": "SW등록 1건<br>특허등록 1건",
+            "colspan": 2
+          },
+          {
+            "groupId": "y26",
+            "summaryHtml": "SW등록 1건",
+            "colspan": 2
+          }
+        ]
+      }
+    ]
+  },
+  "applications": {
+    "overview": "(지방자치단체·중앙행정기관/스마트시) 공간 데이터 시각화 및 분석",
+    "cards": [
+      {
+        "title": "주행/보행 환경 분석 / 주요 과밀 지역 모니터링 및 예측",
+        "current": "이면도로 등 취약지역에 대한 모니터링 및 예측, 의사결정을 지원하는 시스템이 부족",
+        "improved": "동적주제도를 기반으로 주행/보행환경 위험지역 및 과밀지역에 대한 모니터링 및 위험 예측 판단으로 의사결정을 지원함"
+      },
+      {
+        "title": "준실시간 시민 생활권 동적정보/동적주제도 분석 / 스마트 시티 프로젝트 지원",
+        "current": "공공‧민간에서의 3D 공간 데이터 시각화 SW 및 플랫폼 부족, 시민 생활권 내 준실시간 정보 취득 SW 및 플랫폼 부족",
+        "improved": "대규모 3D 데이터 실시간 시각화 기능을 통해 시민 생활권 내 다양한 도시문제 분석의 정확성을 높임"
+      }
+    ]
+  },
+  "process": {
+    "processImage": {
+      "src": "data/contents/research/projects/412/images/process.png",
+      "alt": "데이터 처리 프로세스"
+    },
+    "inputHtml": "시각화를 위한 형상 정보 데이터와 동적정보 및 동적주제도 데이터",
+    "outputHtml": "동적정보 및 동적주제도 시각화 결과",
+    "outputImages": [
+      {
+        "src": "data/contents/research/projects/412/images/output1.png",
+        "alt": "동적주제도 서비스 컨셉",
+        "caption": "동적주제도 서비스 컨셉"
+      },
+      {
+        "src": "data/contents/research/projects/412/images/output2.png",
+        "alt": "동적주제도 시각화 화면",
+        "caption": "동적주제도 시각화 화면"
+      }
+    ]
+  },
+  "demo": {
+    "src": "",
+    "height": 1200
+  },
+  "institutions": {
+    "leadContacts": [
+      {
+        "name": "최환철",
+        "role": "개발",
+        "phone": "070-8804-2267",
+        "email": "ianchc@iansit.co.kr"
+      }
+    ],
+    "partners": []
+  },
+  "downloads": {
+    "y22": [],
+    "y23": [],
+    "y24": [],
+    "y25": [],
+    "y26": []
+  }
+}
